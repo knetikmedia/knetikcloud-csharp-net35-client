@@ -52,9 +52,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var id = 789;  // long? | The video id
             var userId = new IntWrapper(); // IntWrapper | The user id (optional) 
@@ -86,7 +83,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -115,9 +112,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var videoResource = new VideoResource(); // VideoResource | The video object (optional) 
 
@@ -148,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -177,9 +171,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var videoId = 56;  // int? | The video id 
             var commentResource = new CommentResource(); // CommentResource | The comment object (optional) 
@@ -212,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -241,9 +232,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var videoId = 789;  // long? | The video id
             var contributionResource = new ContributionResource(); // ContributionResource | The contribution object (optional) 
@@ -275,7 +263,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -304,9 +292,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var videoId = 789;  // long? | The video id
             var reason = new StringWrapper(); // StringWrapper | The flag reason (optional) 
@@ -339,7 +324,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -368,9 +353,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var videoId = 789;  // long? | The video id
             var videoRelationshipResource = new VideoRelationshipResource(); // VideoRelationshipResource | The video relationship object  (optional) 
@@ -403,7 +385,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -432,9 +414,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var videoId = 56;  // int? | The video id
             var dispositionResource = new DispositionResource(); // DispositionResource | The disposition object (optional) 
@@ -467,7 +446,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -496,9 +475,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var id = 789;  // long? | The video id
 
@@ -528,7 +504,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -557,9 +533,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var videoId = 789;  // long? | The video id
             var id = 789;  // long? | The comment id
@@ -591,7 +564,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -620,9 +593,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var dispositionId = 789;  // long? | The disposition id
 
@@ -652,7 +622,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -681,9 +651,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var videoId = 789;  // long? | The video id
 
@@ -713,7 +680,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -742,9 +709,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var videoId = 789;  // long? | The video id
             var id = 789;  // long? | The relationship id
@@ -776,7 +740,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -805,9 +769,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var userId = 56;  // int? | The user id
             var excludeFlagged = true;  // bool? | Skip videos that have been flagged by the current user (optional)  (default to true)
@@ -844,7 +805,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -873,9 +834,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var id = 789;  // long? | The video id
 
@@ -906,7 +864,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1213,9 +1171,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var videoId = 789;  // long? | The video id
             var id = 56;  // int? | The user id
@@ -1247,7 +1202,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1276,9 +1231,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var videoId = 789;  // long? | The video id
             var id = 56;  // int? | The contributor id
@@ -1310,7 +1262,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1339,9 +1291,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var id = 789;  // long? | The video id
             var videoResource = new VideoResource(); // VideoResource | The video object (optional) 
@@ -1373,7 +1322,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1402,9 +1351,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var videoId = 789;  // long? | The video id
             var id = 789;  // long? | The comment id
@@ -1438,7 +1384,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1467,9 +1413,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new MediaVideosApi();
             var videoId = 789;  // long? | The video id
             var relationshipId = 789;  // long? | The relationship id
@@ -1503,7 +1446,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

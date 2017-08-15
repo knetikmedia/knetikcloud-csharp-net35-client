@@ -33,9 +33,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new BRERuleEngineTriggersApi();
             var breTriggerResource = new BreTriggerResource(); // BreTriggerResource | The BRE trigger resource object (optional) 
 
@@ -66,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -97,9 +94,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new BRERuleEngineTriggersApi();
             var eventName = eventName_example;  // string | The trigger event name
 
@@ -129,7 +123,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -158,9 +152,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new BRERuleEngineTriggersApi();
             var eventName = eventName_example;  // string | The trigger event name
 
@@ -191,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -220,9 +211,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new BRERuleEngineTriggersApi();
             var filterSystem = true;  // bool? | Filter for triggers that are system triggers when true, or not when false. Leave off for both mixed (optional) 
             var filterCategory = filterCategory_example;  // string | Filter for triggers that are within a specific category (optional) 
@@ -265,7 +253,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -296,9 +284,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new BRERuleEngineTriggersApi();
             var eventName = eventName_example;  // string | The trigger event name
             var breTriggerResource = new BreTriggerResource(); // BreTriggerResource | The BRE trigger resource object (optional) 
@@ -331,7 +316,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

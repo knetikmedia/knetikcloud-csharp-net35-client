@@ -33,9 +33,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new BRERuleEngineGlobalsApi();
             var breGlobalResource = new BreGlobalResource(); // BreGlobalResource | The BRE global resource object (optional) 
 
@@ -66,7 +63,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -97,9 +94,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new BRERuleEngineGlobalsApi();
             var id = id_example;  // string | The id of the global definition
 
@@ -129,7 +123,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -158,9 +152,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new BRERuleEngineGlobalsApi();
             var id = id_example;  // string | The id of the global definition
 
@@ -191,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -220,9 +211,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new BRERuleEngineGlobalsApi();
             var filterSystem = true;  // bool? | Filter for globals that are system globals when true, or not when false. Leave off for both mixed (optional) 
             var size = 56;  // int? | The number of objects returned per page (optional)  (default to 25)
@@ -257,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -288,9 +276,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new BRERuleEngineGlobalsApi();
             var id = id_example;  // string | The id of the global definition
             var breGlobalResource = new BreGlobalResource(); // BreGlobalResource | The BRE global resource object (optional) 
@@ -323,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

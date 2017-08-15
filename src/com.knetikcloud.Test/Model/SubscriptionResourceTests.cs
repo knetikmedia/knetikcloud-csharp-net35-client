@@ -81,6 +81,14 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'Availability'
         }
         /// <summary>
+        /// Test the property 'Behaviors'
+        /// </summary>
+        [Test]
+        public void BehaviorsTest()
+        {
+            // TODO unit test for the property 'Behaviors'
+        }
+        /// <summary>
         /// Test the property 'Category'
         /// </summary>
         [Test]

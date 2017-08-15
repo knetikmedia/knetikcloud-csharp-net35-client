@@ -433,12 +433,6 @@ namespace com.knetikcloud.Api
                 localVarPostBody = taxResource; // byte array
             }
 
-            // authentication (OAuth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -516,12 +510,6 @@ namespace com.knetikcloud.Api
                 localVarPostBody = taxResource; // byte array
             }
 
-            // authentication (OAuth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -588,12 +576,6 @@ namespace com.knetikcloud.Api
 
             if (countryCodeIso3 != null) localVarPathParams.Add("country_code_iso3", Configuration.ApiClient.ParameterToString(countryCodeIso3)); // path parameter
 
-            // authentication (OAuth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -666,12 +648,6 @@ namespace com.knetikcloud.Api
             if (countryCodeIso3 != null) localVarPathParams.Add("country_code_iso3", Configuration.ApiClient.ParameterToString(countryCodeIso3)); // path parameter
             if (stateCode != null) localVarPathParams.Add("state_code", Configuration.ApiClient.ParameterToString(stateCode)); // path parameter
 
-            // authentication (OAuth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1105,12 +1081,6 @@ namespace com.knetikcloud.Api
                 localVarPostBody = taxResource; // byte array
             }
 
-            // authentication (OAuth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1194,12 +1164,6 @@ namespace com.knetikcloud.Api
                 localVarPostBody = taxResource; // byte array
             }
 
-            // authentication (OAuth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,

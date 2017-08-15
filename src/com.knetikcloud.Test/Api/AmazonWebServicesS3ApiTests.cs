@@ -65,6 +65,20 @@ namespace com.knetikcloud.Test
 
         
         /// <summary>
+        /// Test GetDownloadURL
+        /// </summary>
+        [Test]
+        public void GetDownloadURLTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string bucket = null;
+            //string path = null;
+            //int? expiration = null;
+            //var response = instance.GetDownloadURL(bucket, path, expiration);
+            //Assert.IsInstanceOf<string> (response, "response is string");
+        }
+        
+        /// <summary>
         /// Test GetSignedS3URL
         /// </summary>
         [Test]

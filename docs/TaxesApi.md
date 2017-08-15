@@ -37,9 +37,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new TaxesApi();
             var taxResource = new CountryTaxResource(); // CountryTaxResource | The tax object (optional) 
 
@@ -70,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -99,9 +96,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new TaxesApi();
             var countryCodeIso3 = countryCodeIso3_example;  // string | The iso3 code of the country
             var taxResource = new StateTaxResource(); // StateTaxResource | The tax object (optional) 
@@ -134,7 +128,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -163,9 +157,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new TaxesApi();
             var countryCodeIso3 = countryCodeIso3_example;  // string | The iso3 code of the country
 
@@ -195,7 +186,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -224,9 +215,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new TaxesApi();
             var countryCodeIso3 = countryCodeIso3_example;  // string | The iso3 code of the country
             var stateCode = stateCode_example;  // string | The code of the state
@@ -258,7 +246,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -604,9 +592,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new TaxesApi();
             var countryCodeIso3 = countryCodeIso3_example;  // string | The iso3 code of the country
             var taxResource = new CountryTaxResource(); // CountryTaxResource | The tax object (optional) 
@@ -639,7 +624,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -668,9 +653,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new TaxesApi();
             var countryCodeIso3 = countryCodeIso3_example;  // string | The iso3 code of the country
             var stateCode = stateCode_example;  // string | The code of the state
@@ -705,7 +687,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

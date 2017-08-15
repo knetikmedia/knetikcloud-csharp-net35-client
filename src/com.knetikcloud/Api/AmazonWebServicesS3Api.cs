@@ -25,10 +25,35 @@ namespace com.knetikcloud.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get a signed S3 URL
+        /// Get a temporary signed S3 URL for download
         /// </summary>
         /// <remarks>
-        /// Requires the file name and file content type (i.e., &#39;video/mpeg&#39;)
+        /// To give access to files in your own S3 account, you will need to grant KnetikcCloud access to the file by adjusting your bucket policy accordingly. See S3 documentation for details.
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bucket">S3 bucket name (optional)</param>
+        /// <param name="path">The path to the file relative the bucket (the s3 object key) (optional)</param>
+        /// <param name="expiration">The number of seconds this URL will be valid. Default to 60 (optional, default to 60)</param>
+        /// <returns>string</returns>
+        string GetDownloadURL (string bucket = null, string path = null, int? expiration = null);
+
+        /// <summary>
+        /// Get a temporary signed S3 URL for download
+        /// </summary>
+        /// <remarks>
+        /// To give access to files in your own S3 account, you will need to grant KnetikcCloud access to the file by adjusting your bucket policy accordingly. See S3 documentation for details.
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bucket">S3 bucket name (optional)</param>
+        /// <param name="path">The path to the file relative the bucket (the s3 object key) (optional)</param>
+        /// <param name="expiration">The number of seconds this URL will be valid. Default to 60 (optional, default to 60)</param>
+        /// <returns>ApiResponse of string</returns>
+        ApiResponse<string> GetDownloadURLWithHttpInfo (string bucket = null, string path = null, int? expiration = null);
+        /// <summary>
+        /// Get a signed S3 URL for upload
+        /// </summary>
+        /// <remarks>
+        /// Requires the file name and file content type (i.e., &#39;video/mpeg&#39;). Make a PUT to the resulting url to upload the file and use the cdn_url to retrieve it after.
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">The file name (optional)</param>
@@ -37,10 +62,10 @@ namespace com.knetikcloud.Api
         AmazonS3Activity GetSignedS3URL (string filename = null, string contentType = null);
 
         /// <summary>
-        /// Get a signed S3 URL
+        /// Get a signed S3 URL for upload
         /// </summary>
         /// <remarks>
-        /// Requires the file name and file content type (i.e., &#39;video/mpeg&#39;)
+        /// Requires the file name and file content type (i.e., &#39;video/mpeg&#39;). Make a PUT to the resulting url to upload the file and use the cdn_url to retrieve it after.
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">The file name (optional)</param>
@@ -148,7 +173,77 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a signed S3 URL Requires the file name and file content type (i.e., &#39;video/mpeg&#39;)
+        /// Get a temporary signed S3 URL for download To give access to files in your own S3 account, you will need to grant KnetikcCloud access to the file by adjusting your bucket policy accordingly. See S3 documentation for details.
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bucket">S3 bucket name (optional)</param>
+        /// <param name="path">The path to the file relative the bucket (the s3 object key) (optional)</param>
+        /// <param name="expiration">The number of seconds this URL will be valid. Default to 60 (optional, default to 60)</param>
+        /// <returns>string</returns>
+        public string GetDownloadURL (string bucket = null, string path = null, int? expiration = null)
+        {
+             ApiResponse<string> localVarResponse = GetDownloadURLWithHttpInfo(bucket, path, expiration);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a temporary signed S3 URL for download To give access to files in your own S3 account, you will need to grant KnetikcCloud access to the file by adjusting your bucket policy accordingly. See S3 documentation for details.
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="bucket">S3 bucket name (optional)</param>
+        /// <param name="path">The path to the file relative the bucket (the s3 object key) (optional)</param>
+        /// <param name="expiration">The number of seconds this URL will be valid. Default to 60 (optional, default to 60)</param>
+        /// <returns>ApiResponse of string</returns>
+        public ApiResponse< string > GetDownloadURLWithHttpInfo (string bucket = null, string path = null, int? expiration = null)
+        {
+
+            var localVarPath = "/amazon/s3/downloadurl";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (bucket != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "bucket", bucket)); // query parameter
+            if (path != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "path", path)); // query parameter
+            if (expiration != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "expiration", expiration)); // query parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDownloadURL", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<string>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
+        }
+
+        /// <summary>
+        /// Get a signed S3 URL for upload Requires the file name and file content type (i.e., &#39;video/mpeg&#39;). Make a PUT to the resulting url to upload the file and use the cdn_url to retrieve it after.
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">The file name (optional)</param>
@@ -161,7 +256,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a signed S3 URL Requires the file name and file content type (i.e., &#39;video/mpeg&#39;)
+        /// Get a signed S3 URL for upload Requires the file name and file content type (i.e., &#39;video/mpeg&#39;). Make a PUT to the resulting url to upload the file and use the cdn_url to retrieve it after.
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filename">The file name (optional)</param>
@@ -195,12 +290,6 @@ namespace com.knetikcloud.Api
             if (filename != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filename", filename)); // query parameter
             if (contentType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "content_type", contentType)); // query parameter
 
-            // authentication (OAuth2) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,

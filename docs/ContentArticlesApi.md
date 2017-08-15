@@ -38,9 +38,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new ContentArticlesApi();
             var articleResource = new ArticleResource(); // ArticleResource | The new article (optional) 
 
@@ -71,7 +68,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -102,9 +99,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new ContentArticlesApi();
             var articleTemplateResource = new TemplateResource(); // TemplateResource | The article template resource object (optional) 
 
@@ -135,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -164,9 +158,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new ContentArticlesApi();
             var id = id_example;  // string | The article id
 
@@ -196,7 +187,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -227,9 +218,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new ContentArticlesApi();
             var id = id_example;  // string | The id of the template
             var cascade = cascade_example;  // string | The value needed to delete used templates (optional) 
@@ -261,7 +249,7 @@ void (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -349,9 +337,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new ContentArticlesApi();
             var id = id_example;  // string | The id of the template
 
@@ -382,7 +367,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -411,9 +396,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new ContentArticlesApi();
             var size = 56;  // int? | The number of objects returned per page (optional)  (default to 25)
             var page = 56;  // int? | The number of the page returned, starting with 1 (optional)  (default to 1)
@@ -448,7 +430,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -459,7 +441,7 @@ Name | Type | Description  | Notes
 
 <a name="getarticles"></a>
 # **GetArticles**
-> PageResourceArticleResource GetArticles (string filterCategory = null, string filterTagset = null, string filterTagIntersection = null, string filterTagExclusion = null, string filterTitle = null, int? size = null, int? page = null, string order = null)
+> PageResourceArticleResource GetArticles (bool? filterActiveOnly = null, string filterCategory = null, string filterTagset = null, string filterTagIntersection = null, string filterTagExclusion = null, string filterTitle = null, int? size = null, int? page = null, string order = null)
 
 List and search articles
 
@@ -480,6 +462,7 @@ namespace Example
         public void main()
         {
             var apiInstance = new ContentArticlesApi();
+            var filterActiveOnly = true;  // bool? | Filter for articles that are active (true) or inactive (false) (optional) 
             var filterCategory = filterCategory_example;  // string | Filter for articles from a specific category by id (optional) 
             var filterTagset = filterTagset_example;  // string | Filter for articles with at least one of a specified set of tags (separated by comma) (optional) 
             var filterTagIntersection = filterTagIntersection_example;  // string | Filter for articles with all of a specified set of tags (separated by comma) (optional) 
@@ -492,7 +475,7 @@ namespace Example
             try
             {
                 // List and search articles
-                PageResourceArticleResource result = apiInstance.GetArticles(filterCategory, filterTagset, filterTagIntersection, filterTagExclusion, filterTitle, size, page, order);
+                PageResourceArticleResource result = apiInstance.GetArticles(filterActiveOnly, filterCategory, filterTagset, filterTagIntersection, filterTagExclusion, filterTitle, size, page, order);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -508,6 +491,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **filterActiveOnly** | **bool?**| Filter for articles that are active (true) or inactive (false) | [optional] 
  **filterCategory** | **string**| Filter for articles from a specific category by id | [optional] 
  **filterTagset** | **string**| Filter for articles with at least one of a specified set of tags (separated by comma) | [optional] 
  **filterTagIntersection** | **string**| Filter for articles with all of a specified set of tags (separated by comma) | [optional] 
@@ -552,9 +536,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new ContentArticlesApi();
             var id = id_example;  // string | The article id
             var articleResource = new ArticleResource(); // ArticleResource | The article object (optional) 
@@ -587,7 +568,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -616,9 +597,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new ContentArticlesApi();
             var id = id_example;  // string | The id of the template
             var articleTemplateResource = new TemplateResource(); // TemplateResource | The article template resource object (optional) 
@@ -651,7 +629,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

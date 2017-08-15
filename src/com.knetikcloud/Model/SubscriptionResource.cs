@@ -94,6 +94,7 @@ namespace com.knetikcloud.Model
         /// </summary>
         /// <param name="AdditionalProperties">A map of item additional properties, keyed on the property name. Must match the names and types defined in the template for this item type..</param>
         /// <param name="Availability">Who can purchase this subscription.</param>
+        /// <param name="Behaviors">The behaviors linked to the item, describing various options and interactions. May not be included in item lists.</param>
         /// <param name="Category">A category for filtering items.</param>
         /// <param name="ConsolidationDayOfMonth">The day of the month 1..31 this subscription will renew.</param>
         /// <param name="GeoCountryList">A list of country iso3 codes to include in the blacklist/whitelist geo policy.</param>
@@ -109,7 +110,7 @@ namespace com.knetikcloud.Model
         /// <param name="Template">An item template this item is validated against. May be null and no validation of additional properties will be done..</param>
         /// <param name="UniqueKey">The unique key for the item.</param>
         /// <param name="VendorId">The vendor who provides the item (required).</param>
-        public SubscriptionResource(Dictionary<string, Property> AdditionalProperties = default(Dictionary<string, Property>), AvailabilityEnum? Availability = default(AvailabilityEnum?), string Category = default(string), int? ConsolidationDayOfMonth = default(int?), List<string> GeoCountryList = default(List<string>), GeoPolicyTypeEnum? GeoPolicyType = default(GeoPolicyTypeEnum?), string LongDescription = default(string), string Name = default(string), List<SubscriptionPlanResource> Plans = default(List<SubscriptionPlanResource>), string ShortDescription = default(string), int? Sort = default(int?), long? StoreEnd = default(long?), long? StoreStart = default(long?), List<string> Tags = default(List<string>), string Template = default(string), string UniqueKey = default(string), int? VendorId = default(int?))
+        public SubscriptionResource(Dictionary<string, Property> AdditionalProperties = default(Dictionary<string, Property>), AvailabilityEnum? Availability = default(AvailabilityEnum?), List<Behavior> Behaviors = default(List<Behavior>), string Category = default(string), int? ConsolidationDayOfMonth = default(int?), List<string> GeoCountryList = default(List<string>), GeoPolicyTypeEnum? GeoPolicyType = default(GeoPolicyTypeEnum?), string LongDescription = default(string), string Name = default(string), List<SubscriptionPlanResource> Plans = default(List<SubscriptionPlanResource>), string ShortDescription = default(string), int? Sort = default(int?), long? StoreEnd = default(long?), long? StoreStart = default(long?), List<string> Tags = default(List<string>), string Template = default(string), string UniqueKey = default(string), int? VendorId = default(int?))
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -131,6 +132,7 @@ namespace com.knetikcloud.Model
             }
             this.AdditionalProperties = AdditionalProperties;
             this.Availability = Availability;
+            this.Behaviors = Behaviors;
             this.Category = Category;
             this.ConsolidationDayOfMonth = ConsolidationDayOfMonth;
             this.GeoCountryList = GeoCountryList;
@@ -153,6 +155,13 @@ namespace com.knetikcloud.Model
         [DataMember(Name="additional_properties", EmitDefaultValue=false)]
         public Dictionary<string, Property> AdditionalProperties { get; set; }
 
+
+        /// <summary>
+        /// The behaviors linked to the item, describing various options and interactions. May not be included in item lists
+        /// </summary>
+        /// <value>The behaviors linked to the item, describing various options and interactions. May not be included in item lists</value>
+        [DataMember(Name="behaviors", EmitDefaultValue=false)]
+        public List<Behavior> Behaviors { get; set; }
 
         /// <summary>
         /// A category for filtering items
@@ -284,6 +293,7 @@ namespace com.knetikcloud.Model
             sb.Append("class SubscriptionResource {\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  Availability: ").Append(Availability).Append("\n");
+            sb.Append("  Behaviors: ").Append(Behaviors).Append("\n");
             sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  ConsolidationDayOfMonth: ").Append(ConsolidationDayOfMonth).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
@@ -345,6 +355,11 @@ namespace com.knetikcloud.Model
                     this.Availability == input.Availability ||
                     (this.Availability != null &&
                     this.Availability.Equals(input.Availability))
+                ) && 
+                (
+                    this.Behaviors == input.Behaviors ||
+                    (this.Behaviors != null &&
+                    this.Behaviors.SequenceEqual(input.Behaviors))
                 ) && 
                 (
                     this.Category == input.Category ||
@@ -451,6 +466,8 @@ namespace com.knetikcloud.Model
                     hashCode = hashCode * 59 + this.AdditionalProperties.GetHashCode();
                 if (this.Availability != null)
                     hashCode = hashCode * 59 + this.Availability.GetHashCode();
+                if (this.Behaviors != null)
+                    hashCode = hashCode * 59 + this.Behaviors.GetHashCode();
                 if (this.Category != null)
                     hashCode = hashCode * 59 + this.Category.GetHashCode();
                 if (this.ConsolidationDayOfMonth != null)

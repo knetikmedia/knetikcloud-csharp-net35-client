@@ -158,6 +158,7 @@ namespace com.knetikcloud.Test
         public void GetArticlesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //bool? filterActiveOnly = null;
             //string filterCategory = null;
             //string filterTagset = null;
             //string filterTagIntersection = null;
@@ -166,7 +167,7 @@ namespace com.knetikcloud.Test
             //int? size = null;
             //int? page = null;
             //string order = null;
-            //var response = instance.GetArticles(filterCategory, filterTagset, filterTagIntersection, filterTagExclusion, filterTitle, size, page, order);
+            //var response = instance.GetArticles(filterActiveOnly, filterCategory, filterTagset, filterTagIntersection, filterTagExclusion, filterTitle, size, page, order);
             //Assert.IsInstanceOf<PageResourceArticleResource> (response, "response is PageResourceArticleResource");
         }
         

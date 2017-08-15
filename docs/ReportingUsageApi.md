@@ -32,9 +32,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new ReportingUsageApi();
             var startDate = 789;  // long? | The beginning of the range being requested, unix timestamp in seconds
             var endDate = 789;  // long? | The ending of the range being requested, unix timestamp in seconds
@@ -77,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -106,9 +103,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new ReportingUsageApi();
             var startDate = 789;  // long? | The beginning of the range being requested, unix timestamp in seconds
             var endDate = 789;  // long? | The ending of the range being requested, unix timestamp in seconds
@@ -151,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -180,9 +174,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new ReportingUsageApi();
             var startDate = 789;  // long? | The beginning of the range being requested, unix timestamp in seconds
             var endDate = 789;  // long? | The ending of the range being requested, unix timestamp in seconds
@@ -225,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -254,9 +245,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new ReportingUsageApi();
             var startDate = 789;  // long? | The beginning of the range being requested, unix timestamp in seconds
             var endDate = 789;  // long? | The ending of the range being requested, unix timestamp in seconds
@@ -299,7 +287,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -328,9 +316,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new ReportingUsageApi();
             var startDate = 789;  // long? | The beginning of the range being requested, unix timestamp in seconds
             var endDate = 789;  // long? | The ending of the range being requested, unix timestamp in seconds
@@ -373,7 +358,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -402,9 +387,6 @@ namespace Example
     {
         public void main()
         {
-            // Configure OAuth2 access token for authorization: OAuth2
-            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
-
             var apiInstance = new ReportingUsageApi();
             var startDate = 789;  // long? | The beginning of the range being requested, unix timestamp in seconds
             var endDate = 789;  // long? | The ending of the range being requested, unix timestamp in seconds
@@ -437,7 +419,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
