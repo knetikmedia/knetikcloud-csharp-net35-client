@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.knetikcloud", "src\com.knetikcloud\com.knetikcloud.csproj", "{C77F656F-8D50-42C0-AECA-642B69892EB1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.knetikcloud", "src\com.knetikcloud\com.knetikcloud.csproj", "{CD65F29A-AF86-4669-A679-BEB1D9C82330}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.knetikcloud.Test", "src\com.knetikcloud.Test\com.knetikcloud.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Debug|Any CPU = Debug|Any CPU
 Release|Any CPU = Release|Any CPU
 EndGlobalSection
 GlobalSection(ProjectConfigurationPlatforms) = postSolution
-{C77F656F-8D50-42C0-AECA-642B69892EB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-{C77F656F-8D50-42C0-AECA-642B69892EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-{C77F656F-8D50-42C0-AECA-642B69892EB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-{C77F656F-8D50-42C0-AECA-642B69892EB1}.Release|Any CPU.Build.0 = Release|Any CPU
+{CD65F29A-AF86-4669-A679-BEB1D9C82330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{CD65F29A-AF86-4669-A679-BEB1D9C82330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{CD65F29A-AF86-4669-A679-BEB1D9C82330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{CD65F29A-AF86-4669-A679-BEB1D9C82330}.Release|Any CPU.Build.0 = Release|Any CPU
 {19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 {19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 {19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU

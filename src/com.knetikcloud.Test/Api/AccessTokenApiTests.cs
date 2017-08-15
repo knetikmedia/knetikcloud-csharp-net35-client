@@ -76,7 +76,9 @@ namespace com.knetikcloud.Test
             //string clientSecret = null;
             //string username = null;
             //string password = null;
-            //var response = instance.GetOAuthToken(grantType, clientId, clientSecret, username, password);
+            //string token = null;
+            //string refreshToken = null;
+            //var response = instance.GetOAuthToken(grantType, clientId, clientSecret, username, password, token, refreshToken);
             //Assert.IsInstanceOf<OAuth2Resource> (response, "response is OAuth2Resource");
         }
         
