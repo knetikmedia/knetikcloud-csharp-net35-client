@@ -72,6 +72,14 @@ namespace com.knetikcloud.Test
         {
             // TODO unit test for the property 'PaymentMethod'
         }
+        /// <summary>
+        /// Test the property 'UserId'
+        /// </summary>
+        [Test]
+        public void UserIdTest()
+        {
+            // TODO unit test for the property 'UserId'
+        }
 
     }
 

@@ -39,7 +39,8 @@ namespace com.knetikcloud.Model
         /// Initializes a new instance of the <see cref="PayBySavedMethodRequest" /> class.
         /// </summary>
         /// <param name="PaymentMethod">The id of the payment method to use. Must belong to the caller, be public or have PAYMENTS_ADMIN permission (required).</param>
-        public PayBySavedMethodRequest(int? PaymentMethod = default(int?))
+        /// <param name="UserId">The id of a user to bill. Must have PAYMENTS_ADMIN permission.</param>
+        public PayBySavedMethodRequest(int? PaymentMethod = default(int?), int? UserId = default(int?))
         {
             // to ensure "PaymentMethod" is required (not null)
             if (PaymentMethod == null)
@@ -50,6 +51,7 @@ namespace com.knetikcloud.Model
             {
                 this.PaymentMethod = PaymentMethod;
             }
+            this.UserId = UserId;
         }
         
         /// <summary>
@@ -60,6 +62,13 @@ namespace com.knetikcloud.Model
         public int? PaymentMethod { get; set; }
 
         /// <summary>
+        /// The id of a user to bill. Must have PAYMENTS_ADMIN permission
+        /// </summary>
+        /// <value>The id of a user to bill. Must have PAYMENTS_ADMIN permission</value>
+        [DataMember(Name="user_id", EmitDefaultValue=false)]
+        public int? UserId { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -68,6 +77,7 @@ namespace com.knetikcloud.Model
             var sb = new StringBuilder();
             sb.Append("class PayBySavedMethodRequest {\n");
             sb.Append("  PaymentMethod: ").Append(PaymentMethod).Append("\n");
+            sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,6 +116,11 @@ namespace com.knetikcloud.Model
                     this.PaymentMethod == input.PaymentMethod ||
                     (this.PaymentMethod != null &&
                     this.PaymentMethod.Equals(input.PaymentMethod))
+                ) && 
+                (
+                    this.UserId == input.UserId ||
+                    (this.UserId != null &&
+                    this.UserId.Equals(input.UserId))
                 );
         }
 
@@ -120,6 +135,8 @@ namespace com.knetikcloud.Model
                 int hashCode = 41;
                 if (this.PaymentMethod != null)
                     hashCode = hashCode * 59 + this.PaymentMethod.GetHashCode();
+                if (this.UserId != null)
+                    hashCode = hashCode * 59 + this.UserId.GetHashCode();
                 return hashCode;
             }
         }
