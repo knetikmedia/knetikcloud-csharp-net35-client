@@ -42,6 +42,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new UsersApi();
             var userId = 56;  // int? | The id of the user
             var tag = new StringWrapper(); // StringWrapper | tag
@@ -73,7 +78,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -104,6 +109,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new UsersApi();
             var userTemplateResource = new TemplateResource(); // TemplateResource | The user template resource object (optional) 
 
@@ -134,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -165,6 +175,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new UsersApi();
             var id = id_example;  // string | The id of the template
             var cascade = cascade_example;  // string | The value needed to delete used templates (optional) 
@@ -196,7 +211,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -286,6 +301,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new UsersApi();
             var userId = 56;  // int? | The id of the user
 
@@ -316,7 +336,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -345,6 +365,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new UsersApi();
             var id = id_example;  // string | The id of the template
 
@@ -375,7 +400,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -404,6 +429,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new UsersApi();
             var size = 56;  // int? | The number of objects returned per page (optional)  (default to 25)
             var page = 56;  // int? | The number of the page returned, starting with 1 (optional)  (default to 1)
@@ -438,7 +468,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -675,6 +705,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new UsersApi();
             var userId = 56;  // int? | The id of the user
             var tag = tag_example;  // string | The tag to remove
@@ -706,7 +741,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -737,6 +772,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new UsersApi();
             var id = 56;  // int? | The id of the user
             var password = new StringWrapper(); // StringWrapper | The new plain text password (optional) 
@@ -768,7 +808,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -919,6 +959,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new UsersApi();
             var id = id_example;  // string | The id of the user or 'me'
             var userResource = new UserResource(); // UserResource | The user resource object (optional) 
@@ -950,7 +995,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -979,6 +1024,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new UsersApi();
             var id = id_example;  // string | The id of the template
             var userTemplateResource = new TemplateResource(); // TemplateResource | The user template resource object (optional) 
@@ -1011,7 +1061,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

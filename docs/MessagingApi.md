@@ -30,6 +30,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new MessagingApi();
             var rawEmailResource = new RawEmailResource(); // RawEmailResource | The new raw email to be sent (optional) 
 
@@ -59,7 +64,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -90,6 +95,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new MessagingApi();
             var rawSMSResource = new RawSMSResource(); // RawSMSResource | The new raw SMS to be sent (optional) 
 
@@ -119,7 +129,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -148,6 +158,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new MessagingApi();
             var messageResource = new TemplateEmailResource(); // TemplateEmailResource | The new template email to be sent (optional) 
 
@@ -177,7 +192,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -208,6 +223,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new MessagingApi();
             var templateSMSResource = new TemplateSMSResource(); // TemplateSMSResource | The new template SMS to be sent (optional) 
 
@@ -237,7 +257,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

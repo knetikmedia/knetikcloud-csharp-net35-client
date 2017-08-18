@@ -36,6 +36,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new AuthRolesApi();
             var roleResource = new RoleResource(); // RoleResource | The role resource object (optional) 
 
@@ -66,7 +71,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -95,6 +100,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new AuthRolesApi();
             var role = role_example;  // string | The role value
             var force = true;  // bool? | If true, removes role from users/clients (optional) 
@@ -126,7 +136,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -155,6 +165,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new AuthRolesApi();
             var clientKey = clientKey_example;  // string | The client key
 
@@ -185,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -214,6 +229,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new AuthRolesApi();
             var role = role_example;  // string | The role value
 
@@ -244,7 +264,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -273,6 +293,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new AuthRolesApi();
             var filterName = filterName_example;  // string | Filter for roles that have a name starting with specified string (optional) 
             var filterRole = filterRole_example;  // string | Filter for roles that have a role starting with specified string (optional) 
@@ -311,7 +336,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -340,6 +365,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new AuthRolesApi();
             var userId = 56;  // int? | The user's id
 
@@ -370,7 +400,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -399,6 +429,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new AuthRolesApi();
             var clientKey = clientKey_example;  // string | The client key
             var rolesList = ;  // List<string> | The list of unique roles (optional) 
@@ -431,7 +466,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -460,6 +495,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new AuthRolesApi();
             var role = role_example;  // string | The role value
             var permissionsList = ;  // List<string> | The list of unique permissions (optional) 
@@ -492,7 +532,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -521,6 +561,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new AuthRolesApi();
             var userId = 56;  // int? | The user's id
             var rolesList = ;  // List<string> | The list of unique roles (optional) 
@@ -553,7 +598,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -582,6 +627,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new AuthRolesApi();
             var role = role_example;  // string | The role value
             var roleResource = new RoleResource(); // RoleResource | The role resource object (optional) 
@@ -614,7 +664,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

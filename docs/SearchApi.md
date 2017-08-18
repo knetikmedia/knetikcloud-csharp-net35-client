@@ -33,6 +33,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new SearchApi();
             var type = type_example;  // string | The index type
             var id = id_example;  // string | The ID of the object
@@ -66,7 +71,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -97,6 +102,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new SearchApi();
             var mappings = new List<SearchReferenceMapping>(); // List<SearchReferenceMapping> | The mappings to add (optional) 
 
@@ -126,7 +136,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -157,6 +167,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new SearchApi();
             var type = type_example;  // string | The index type
             var id = id_example;  // string | The ID of the object to delete
@@ -188,7 +203,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -219,6 +234,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new SearchApi();
             var type = type_example;  // string | The index type
 
@@ -248,7 +268,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

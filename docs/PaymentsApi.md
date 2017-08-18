@@ -33,6 +33,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new PaymentsApi();
             var userId = 56;  // int? | ID of the user for whom the payment method is being created
             var paymentMethod = new PaymentMethodResource(); // PaymentMethodResource | Payment method being created (optional) 
@@ -65,7 +70,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -94,6 +99,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new PaymentsApi();
             var userId = 56;  // int? | ID of the user for whom the payment method is being updated
             var id = 56;  // int? | ID of the payment method being deleted
@@ -125,7 +135,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -154,6 +164,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new PaymentsApi();
             var userId = 56;  // int? | ID of the user for whom the payment method is being retrieved
             var id = 56;  // int? | ID of the payment method being retrieved
@@ -186,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -215,6 +230,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new PaymentsApi();
             var userId = 56;  // int? | ID of the user for whom the payment methods are being retrieved
             var filterName = filterName_example;  // string | Filter for payment methods whose name starts with a given string (optional) 
@@ -259,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -288,6 +308,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new PaymentsApi();
             var request = new PaymentAuthorizationResource(); // PaymentAuthorizationResource | Payment authorization request (optional) 
 
@@ -318,7 +343,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -347,6 +372,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new PaymentsApi();
             var id = 56;  // int? | ID of the payment authorization to capture
 
@@ -376,7 +406,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -405,6 +435,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new PaymentsApi();
             var userId = 56;  // int? | ID of the user for whom the payment method is being updated
             var id = 56;  // int? | ID of the payment method being updated
@@ -439,7 +474,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

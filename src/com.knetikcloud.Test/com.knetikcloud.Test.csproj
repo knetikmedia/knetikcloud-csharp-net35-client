@@ -75,7 +75,7 @@ Contact: support@knetik.com
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\com.knetikcloud\com.knetikcloud.csproj">
-          <Project>{D19E2637-B547-41DC-A599-D6CC21224049}</Project>
+          <Project>{64FD1B88-CDD7-4652-B49D-946B9011FA09}</Project>
           <Name>com.knetikcloud</Name>
       </ProjectReference>
   </ItemGroup>
