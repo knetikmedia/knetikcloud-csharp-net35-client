@@ -339,7 +339,8 @@ namespace com.knetikcloud.Test
             //long? id = null;
             //long? challengeId = null;
             //ChallengeActivityResource challengeActivityResource = null;
-            //var response = instance.UpdateChallengeActivity(id, challengeId, challengeActivityResource);
+            //bool? validateSettings = null;
+            //var response = instance.UpdateChallengeActivity(id, challengeId, challengeActivityResource, validateSettings);
             //Assert.IsInstanceOf<ChallengeActivityResource> (response, "response is ChallengeActivityResource");
         }
         

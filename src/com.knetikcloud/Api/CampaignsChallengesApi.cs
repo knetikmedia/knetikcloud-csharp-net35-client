@@ -504,8 +504,9 @@ namespace com.knetikcloud.Api
         /// <param name="id">The challenge_activity id</param>
         /// <param name="challengeId">The challenge id</param>
         /// <param name="challengeActivityResource">The challenge activity resource object (optional)</param>
+        /// <param name="validateSettings">Whether to validate the settings being sent against the available settings on the base activity. (optional, default to false)</param>
         /// <returns>ChallengeActivityResource</returns>
-        ChallengeActivityResource UpdateChallengeActivity (long? id, long? challengeId, ChallengeActivityResource challengeActivityResource = null);
+        ChallengeActivityResource UpdateChallengeActivity (long? id, long? challengeId, ChallengeActivityResource challengeActivityResource = null, bool? validateSettings = null);
 
         /// <summary>
         /// Update a challenge activity
@@ -517,8 +518,9 @@ namespace com.knetikcloud.Api
         /// <param name="id">The challenge_activity id</param>
         /// <param name="challengeId">The challenge id</param>
         /// <param name="challengeActivityResource">The challenge activity resource object (optional)</param>
+        /// <param name="validateSettings">Whether to validate the settings being sent against the available settings on the base activity. (optional, default to false)</param>
         /// <returns>ApiResponse of ChallengeActivityResource</returns>
-        ApiResponse<ChallengeActivityResource> UpdateChallengeActivityWithHttpInfo (long? id, long? challengeId, ChallengeActivityResource challengeActivityResource = null);
+        ApiResponse<ChallengeActivityResource> UpdateChallengeActivityWithHttpInfo (long? id, long? challengeId, ChallengeActivityResource challengeActivityResource = null, bool? validateSettings = null);
         /// <summary>
         /// Update an challenge activity template
         /// </summary>
@@ -799,7 +801,7 @@ namespace com.knetikcloud.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (challengeId != null) localVarPathParams.Add("challenge_id", Configuration.ApiClient.ParameterToString(challengeId)); // path parameter
-            if (validateSettings != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "validateSettings", validateSettings)); // query parameter
+            if (validateSettings != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "validate_settings", validateSettings)); // query parameter
             if (challengeActivityResource != null && challengeActivityResource.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(challengeActivityResource); // http body (model) parameter
@@ -1456,6 +1458,18 @@ namespace com.knetikcloud.Api
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
 
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1532,6 +1546,18 @@ namespace com.knetikcloud.Api
             if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (order != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "order", order)); // query parameter
 
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1605,6 +1631,18 @@ namespace com.knetikcloud.Api
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (challengeId != null) localVarPathParams.Add("challenge_id", Configuration.ApiClient.ParameterToString(challengeId)); // path parameter
 
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1833,6 +1871,18 @@ namespace com.knetikcloud.Api
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
 
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1915,6 +1965,18 @@ namespace com.knetikcloud.Api
             if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (order != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "order", order)); // query parameter
 
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2155,6 +2217,18 @@ namespace com.knetikcloud.Api
             if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
             if (order != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "order", order)); // query parameter
 
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2270,10 +2344,11 @@ namespace com.knetikcloud.Api
         /// <param name="id">The challenge_activity id</param>
         /// <param name="challengeId">The challenge id</param>
         /// <param name="challengeActivityResource">The challenge activity resource object (optional)</param>
+        /// <param name="validateSettings">Whether to validate the settings being sent against the available settings on the base activity. (optional, default to false)</param>
         /// <returns>ChallengeActivityResource</returns>
-        public ChallengeActivityResource UpdateChallengeActivity (long? id, long? challengeId, ChallengeActivityResource challengeActivityResource = null)
+        public ChallengeActivityResource UpdateChallengeActivity (long? id, long? challengeId, ChallengeActivityResource challengeActivityResource = null, bool? validateSettings = null)
         {
-             ApiResponse<ChallengeActivityResource> localVarResponse = UpdateChallengeActivityWithHttpInfo(id, challengeId, challengeActivityResource);
+             ApiResponse<ChallengeActivityResource> localVarResponse = UpdateChallengeActivityWithHttpInfo(id, challengeId, challengeActivityResource, validateSettings);
              return localVarResponse.Data;
         }
 
@@ -2284,8 +2359,9 @@ namespace com.knetikcloud.Api
         /// <param name="id">The challenge_activity id</param>
         /// <param name="challengeId">The challenge id</param>
         /// <param name="challengeActivityResource">The challenge activity resource object (optional)</param>
+        /// <param name="validateSettings">Whether to validate the settings being sent against the available settings on the base activity. (optional, default to false)</param>
         /// <returns>ApiResponse of ChallengeActivityResource</returns>
-        public ApiResponse< ChallengeActivityResource > UpdateChallengeActivityWithHttpInfo (long? id, long? challengeId, ChallengeActivityResource challengeActivityResource = null)
+        public ApiResponse< ChallengeActivityResource > UpdateChallengeActivityWithHttpInfo (long? id, long? challengeId, ChallengeActivityResource challengeActivityResource = null, bool? validateSettings = null)
         {
             // verify the required parameter 'id' is set
             if (id == null)
@@ -2318,6 +2394,7 @@ namespace com.knetikcloud.Api
 
             if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
             if (challengeId != null) localVarPathParams.Add("challenge_id", Configuration.ApiClient.ParameterToString(challengeId)); // path parameter
+            if (validateSettings != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "validateSettings", validateSettings)); // query parameter
             if (challengeActivityResource != null && challengeActivityResource.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(challengeActivityResource); // http body (model) parameter
