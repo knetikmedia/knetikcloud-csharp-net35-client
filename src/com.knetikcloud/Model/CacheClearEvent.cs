@@ -47,9 +47,8 @@ namespace com.knetikcloud.Model
         /// <param name="Synchronous">Synchronous.</param>
         /// <param name="Timestamp">Timestamp.</param>
         /// <param name="Type">The type of the event. Used for polymorphic type recognition and thus must match an expected type (required).</param>
-        /// <param name="CustomerSetup">CustomerSetup.</param>
-        /// <param name="CustomerTeardown">CustomerTeardown.</param>
-        public CacheClearEvent(string _Client = default(string), string Customer = default(string), bool? DoNotBroadcast = default(bool?), string Section = default(string), Object Source = default(Object), string Specifics = default(string), bool? Synchronous = default(bool?), long? Timestamp = default(long?), string Type = default(string), bool? CustomerSetup = default(bool?), bool? CustomerTeardown = default(bool?))
+        /// <param name="Teardown">Teardown.</param>
+        public CacheClearEvent(string _Client = default(string), string Customer = default(string), bool? DoNotBroadcast = default(bool?), string Section = default(string), Object Source = default(Object), string Specifics = default(string), bool? Synchronous = default(bool?), long? Timestamp = default(long?), string Type = default(string), bool? Teardown = default(bool?))
         {
             // to ensure "Type" is required (not null)
             if (Type == null)
@@ -68,8 +67,7 @@ namespace com.knetikcloud.Model
             this.Specifics = Specifics;
             this.Synchronous = Synchronous;
             this.Timestamp = Timestamp;
-            this.CustomerSetup = CustomerSetup;
-            this.CustomerTeardown = CustomerTeardown;
+            this.Teardown = Teardown;
         }
         
         /// <summary>
@@ -128,16 +126,10 @@ namespace com.knetikcloud.Model
         public string Type { get; set; }
 
         /// <summary>
-        /// Gets or Sets CustomerSetup
+        /// Gets or Sets Teardown
         /// </summary>
-        [DataMember(Name="customer_setup", EmitDefaultValue=false)]
-        public bool? CustomerSetup { get; set; }
-
-        /// <summary>
-        /// Gets or Sets CustomerTeardown
-        /// </summary>
-        [DataMember(Name="customer_teardown", EmitDefaultValue=false)]
-        public bool? CustomerTeardown { get; set; }
+        [DataMember(Name="teardown", EmitDefaultValue=false)]
+        public bool? Teardown { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -156,8 +148,7 @@ namespace com.knetikcloud.Model
             sb.Append("  Synchronous: ").Append(Synchronous).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  CustomerSetup: ").Append(CustomerSetup).Append("\n");
-            sb.Append("  CustomerTeardown: ").Append(CustomerTeardown).Append("\n");
+            sb.Append("  Teardown: ").Append(Teardown).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -238,14 +229,9 @@ namespace com.knetikcloud.Model
                     this.Type.Equals(input.Type))
                 ) && 
                 (
-                    this.CustomerSetup == input.CustomerSetup ||
-                    (this.CustomerSetup != null &&
-                    this.CustomerSetup.Equals(input.CustomerSetup))
-                ) && 
-                (
-                    this.CustomerTeardown == input.CustomerTeardown ||
-                    (this.CustomerTeardown != null &&
-                    this.CustomerTeardown.Equals(input.CustomerTeardown))
+                    this.Teardown == input.Teardown ||
+                    (this.Teardown != null &&
+                    this.Teardown.Equals(input.Teardown))
                 );
         }
 
@@ -276,10 +262,8 @@ namespace com.knetikcloud.Model
                     hashCode = hashCode * 59 + this.Timestamp.GetHashCode();
                 if (this.Type != null)
                     hashCode = hashCode * 59 + this.Type.GetHashCode();
-                if (this.CustomerSetup != null)
-                    hashCode = hashCode * 59 + this.CustomerSetup.GetHashCode();
-                if (this.CustomerTeardown != null)
-                    hashCode = hashCode * 59 + this.CustomerTeardown.GetHashCode();
+                if (this.Teardown != null)
+                    hashCode = hashCode * 59 + this.Teardown.GetHashCode();
                 return hashCode;
             }
         }

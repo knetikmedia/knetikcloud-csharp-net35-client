@@ -129,6 +129,13 @@ namespace com.knetikcloud.Model
         public long? EndDate { get; set; }
 
         /// <summary>
+        /// How many times the rule has been evaluated (it&#39;s conditions checked, whether it then runs or not)
+        /// </summary>
+        /// <value>How many times the rule has been evaluated (it&#39;s conditions checked, whether it then runs or not)</value>
+        [DataMember(Name="evaluation_count", EmitDefaultValue=false)]
+        public long? EvaluationCount { get; private set; }
+
+        /// <summary>
         /// The event name of the trigger this rule runs for. Affects which parameters are available
         /// </summary>
         /// <value>The event name of the trigger this rule runs for. Affects which parameters are available</value>
@@ -148,6 +155,13 @@ namespace com.knetikcloud.Model
         /// <value>The human readable name of the rule</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// How many times the rule has run
+        /// </summary>
+        /// <value>How many times the rule has run</value>
+        [DataMember(Name="run_count", EmitDefaultValue=false)]
+        public long? RunCount { get; private set; }
 
         /// <summary>
         /// Used to sort rules to control the order they run in. Larger numbered sort values run first.  Default 500
@@ -184,9 +198,11 @@ namespace com.knetikcloud.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            sb.Append("  EvaluationCount: ").Append(EvaluationCount).Append("\n");
             sb.Append("  EventName: ").Append(EventName).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  RunCount: ").Append(RunCount).Append("\n");
             sb.Append("  Sort: ").Append(Sort).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  SystemRule: ").Append(SystemRule).Append("\n");
@@ -255,6 +271,11 @@ namespace com.knetikcloud.Model
                     this.EndDate.Equals(input.EndDate))
                 ) && 
                 (
+                    this.EvaluationCount == input.EvaluationCount ||
+                    (this.EvaluationCount != null &&
+                    this.EvaluationCount.Equals(input.EvaluationCount))
+                ) && 
+                (
                     this.EventName == input.EventName ||
                     (this.EventName != null &&
                     this.EventName.Equals(input.EventName))
@@ -268,6 +289,11 @@ namespace com.knetikcloud.Model
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.RunCount == input.RunCount ||
+                    (this.RunCount != null &&
+                    this.RunCount.Equals(input.RunCount))
                 ) && 
                 (
                     this.Sort == input.Sort ||
@@ -307,12 +333,16 @@ namespace com.knetikcloud.Model
                     hashCode = hashCode * 59 + this.Enabled.GetHashCode();
                 if (this.EndDate != null)
                     hashCode = hashCode * 59 + this.EndDate.GetHashCode();
+                if (this.EvaluationCount != null)
+                    hashCode = hashCode * 59 + this.EvaluationCount.GetHashCode();
                 if (this.EventName != null)
                     hashCode = hashCode * 59 + this.EventName.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.RunCount != null)
+                    hashCode = hashCode * 59 + this.RunCount.GetHashCode();
                 if (this.Sort != null)
                     hashCode = hashCode * 59 + this.Sort.GetHashCode();
                 if (this.StartDate != null)

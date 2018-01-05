@@ -89,6 +89,14 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'CreatedDate'
         }
         /// <summary>
+        /// Test the property 'DefaultCurrency'
+        /// </summary>
+        [Test]
+        public void DefaultCurrencyTest()
+        {
+            // TODO unit test for the property 'DefaultCurrency'
+        }
+        /// <summary>
         /// Test the property 'Factor'
         /// </summary>
         [Test]

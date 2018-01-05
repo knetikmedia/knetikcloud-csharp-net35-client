@@ -95,12 +95,13 @@ namespace com.knetikcloud.Test
         public void GetCurrenciesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
+            //bool? filterDefault = null;
             //bool? filterEnabledCurrencies = null;
             //string filterType = null;
             //int? size = null;
             //int? page = null;
             //string order = null;
-            //var response = instance.GetCurrencies(filterEnabledCurrencies, filterType, size, page, order);
+            //var response = instance.GetCurrencies(filterDefault, filterEnabledCurrencies, filterType, size, page, order);
             //Assert.IsInstanceOf<PageResourceCurrencyResource> (response, "response is PageResourceCurrencyResource");
         }
         

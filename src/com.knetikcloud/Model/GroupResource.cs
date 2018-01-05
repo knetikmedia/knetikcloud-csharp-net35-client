@@ -71,9 +71,10 @@ namespace com.knetikcloud.Model
         /// <param name="Name">The name of the group. Max 50 characters (required).</param>
         /// <param name="Parent">The unique name of another group that this group is a subset of.</param>
         /// <param name="Status">The status which describes whether other users can freely join the group or not (required).</param>
+        /// <param name="Tags">Tags for search.</param>
         /// <param name="Template">A group template this group is validated against. May be null and no validation of additional_properties will be done.</param>
-        /// <param name="UniqueName">Unique name used in url and references. Uppercase, lowercase, numbers and hyphens only. Max 50 characters. Cannot be altered once created (required).</param>
-        public GroupResource(Dictionary<string, Property> AdditionalProperties = default(Dictionary<string, Property>), string Description = default(string), string MessageOfTheDay = default(string), string Name = default(string), string Parent = default(string), StatusEnum? Status = default(StatusEnum?), string Template = default(string), string UniqueName = default(string))
+        /// <param name="UniqueName">Unique name used in url and references. Uppercase, lowercase, numbers and hyphens only. Max 50 characters. Cannot be altered once created. Default: random UUID.</param>
+        public GroupResource(Dictionary<string, Property> AdditionalProperties = default(Dictionary<string, Property>), string Description = default(string), string MessageOfTheDay = default(string), string Name = default(string), string Parent = default(string), StatusEnum? Status = default(StatusEnum?), List<string> Tags = default(List<string>), string Template = default(string), string UniqueName = default(string))
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -93,20 +94,13 @@ namespace com.knetikcloud.Model
             {
                 this.Status = Status;
             }
-            // to ensure "UniqueName" is required (not null)
-            if (UniqueName == null)
-            {
-                throw new InvalidDataException("UniqueName is a required property for GroupResource and cannot be null");
-            }
-            else
-            {
-                this.UniqueName = UniqueName;
-            }
             this.AdditionalProperties = AdditionalProperties;
             this.Description = Description;
             this.MessageOfTheDay = MessageOfTheDay;
             this.Parent = Parent;
+            this.Tags = Tags;
             this.Template = Template;
+            this.UniqueName = UniqueName;
         }
         
         /// <summary>
@@ -160,6 +154,13 @@ namespace com.knetikcloud.Model
         public int? SubMemberCount { get; private set; }
 
         /// <summary>
+        /// Tags for search
+        /// </summary>
+        /// <value>Tags for search</value>
+        [DataMember(Name="tags", EmitDefaultValue=false)]
+        public List<string> Tags { get; set; }
+
+        /// <summary>
         /// A group template this group is validated against. May be null and no validation of additional_properties will be done
         /// </summary>
         /// <value>A group template this group is validated against. May be null and no validation of additional_properties will be done</value>
@@ -167,9 +168,9 @@ namespace com.knetikcloud.Model
         public string Template { get; set; }
 
         /// <summary>
-        /// Unique name used in url and references. Uppercase, lowercase, numbers and hyphens only. Max 50 characters. Cannot be altered once created
+        /// Unique name used in url and references. Uppercase, lowercase, numbers and hyphens only. Max 50 characters. Cannot be altered once created. Default: random UUID
         /// </summary>
-        /// <value>Unique name used in url and references. Uppercase, lowercase, numbers and hyphens only. Max 50 characters. Cannot be altered once created</value>
+        /// <value>Unique name used in url and references. Uppercase, lowercase, numbers and hyphens only. Max 50 characters. Cannot be altered once created. Default: random UUID</value>
         [DataMember(Name="unique_name", EmitDefaultValue=false)]
         public string UniqueName { get; set; }
 
@@ -189,6 +190,7 @@ namespace com.knetikcloud.Model
             sb.Append("  Parent: ").Append(Parent).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  SubMemberCount: ").Append(SubMemberCount).Append("\n");
+            sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  Template: ").Append(Template).Append("\n");
             sb.Append("  UniqueName: ").Append(UniqueName).Append("\n");
             sb.Append("}\n");
@@ -266,6 +268,11 @@ namespace com.knetikcloud.Model
                     this.SubMemberCount.Equals(input.SubMemberCount))
                 ) && 
                 (
+                    this.Tags == input.Tags ||
+                    (this.Tags != null &&
+                    this.Tags.SequenceEqual(input.Tags))
+                ) && 
+                (
                     this.Template == input.Template ||
                     (this.Template != null &&
                     this.Template.Equals(input.Template))
@@ -302,6 +309,8 @@ namespace com.knetikcloud.Model
                     hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.SubMemberCount != null)
                     hashCode = hashCode * 59 + this.SubMemberCount.GetHashCode();
+                if (this.Tags != null)
+                    hashCode = hashCode * 59 + this.Tags.GetHashCode();
                 if (this.Template != null)
                     hashCode = hashCode * 59 + this.Template.GetHashCode();
                 if (this.UniqueName != null)

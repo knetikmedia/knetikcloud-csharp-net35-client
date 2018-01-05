@@ -178,10 +178,10 @@ namespace com.knetikcloud.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //string templateId = null;
-            //int? entitlementId = null;
+            //int? objectId = null;
             //bool? cascade = null;
-            //EntitlementItem objectItem = null;
-            //instance.UpdateObjectItem(templateId, entitlementId, cascade, objectItem);
+            //ObjectResource objectItem = null;
+            //instance.UpdateObjectItem(templateId, objectId, cascade, objectItem);
             
         }
         

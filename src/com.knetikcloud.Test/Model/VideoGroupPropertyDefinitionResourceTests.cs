@@ -65,6 +65,14 @@ namespace com.knetikcloud.Test
         }
 
         /// <summary>
+        /// Test the property 'Description'
+        /// </summary>
+        [Test]
+        public void DescriptionTest()
+        {
+            // TODO unit test for the property 'Description'
+        }
+        /// <summary>
         /// Test the property 'FieldList'
         /// </summary>
         [Test]
@@ -73,12 +81,44 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'FieldList'
         }
         /// <summary>
+        /// Test the property 'FriendlyName'
+        /// </summary>
+        [Test]
+        public void FriendlyNameTest()
+        {
+            // TODO unit test for the property 'FriendlyName'
+        }
+        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Test]
         public void NameTest()
         {
             // TODO unit test for the property 'Name'
+        }
+        /// <summary>
+        /// Test the property 'OptionLabelPath'
+        /// </summary>
+        [Test]
+        public void OptionLabelPathTest()
+        {
+            // TODO unit test for the property 'OptionLabelPath'
+        }
+        /// <summary>
+        /// Test the property 'OptionValuePath'
+        /// </summary>
+        [Test]
+        public void OptionValuePathTest()
+        {
+            // TODO unit test for the property 'OptionValuePath'
+        }
+        /// <summary>
+        /// Test the property 'OptionsUrl'
+        /// </summary>
+        [Test]
+        public void OptionsUrlTest()
+        {
+            // TODO unit test for the property 'OptionsUrl'
         }
         /// <summary>
         /// Test the property 'Required'

@@ -38,8 +38,13 @@ namespace com.knetikcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VideoPropertyDefinitionResource" /> class.
         /// </summary>
+        /// <param name="Description">The description of the property.</param>
         /// <param name="FieldList">A list of the fields on both the property definition and property of this type.</param>
+        /// <param name="FriendlyName">The friendly front-facing name of the property.</param>
         /// <param name="Name">The name of the property (required).</param>
+        /// <param name="OptionLabelPath">The JSON path to the option label.</param>
+        /// <param name="OptionValuePath">The JSON path to the option value.</param>
+        /// <param name="OptionsUrl">URL of service containing the property options (assumed JSON array).</param>
         /// <param name="Required">Whether the property is required (required).</param>
         /// <param name="Type">The type of the property. Used for polymorphic type recognition and thus must match an expected type with additional properties. (required).</param>
         /// <param name="FileType">If provided, a file type that teh property must match.</param>
@@ -49,7 +54,7 @@ namespace com.knetikcloud.Model
         /// <param name="MinHeight">If provided, the minimum height of the video.</param>
         /// <param name="MinLength">If provided, the minimum length of the video.</param>
         /// <param name="MinWidth">If provided, the minimum width of the video.</param>
-        public VideoPropertyDefinitionResource(PropertyFieldListResource FieldList = default(PropertyFieldListResource), string Name = default(string), bool? Required = default(bool?), string Type = default(string), string FileType = default(string), int? MaxHeight = default(int?), int? MaxLength = default(int?), int? MaxWidth = default(int?), int? MinHeight = default(int?), int? MinLength = default(int?), int? MinWidth = default(int?))
+        public VideoPropertyDefinitionResource(string Description = default(string), PropertyFieldListResource FieldList = default(PropertyFieldListResource), string FriendlyName = default(string), string Name = default(string), string OptionLabelPath = default(string), string OptionValuePath = default(string), string OptionsUrl = default(string), bool? Required = default(bool?), string Type = default(string), string FileType = default(string), int? MaxHeight = default(int?), int? MaxLength = default(int?), int? MaxWidth = default(int?), int? MinHeight = default(int?), int? MinLength = default(int?), int? MinWidth = default(int?))
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -78,7 +83,12 @@ namespace com.knetikcloud.Model
             {
                 this.Type = Type;
             }
+            this.Description = Description;
             this.FieldList = FieldList;
+            this.FriendlyName = FriendlyName;
+            this.OptionLabelPath = OptionLabelPath;
+            this.OptionValuePath = OptionValuePath;
+            this.OptionsUrl = OptionsUrl;
             this.FileType = FileType;
             this.MaxHeight = MaxHeight;
             this.MaxLength = MaxLength;
@@ -89,6 +99,13 @@ namespace com.knetikcloud.Model
         }
         
         /// <summary>
+        /// The description of the property
+        /// </summary>
+        /// <value>The description of the property</value>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
+
+        /// <summary>
         /// A list of the fields on both the property definition and property of this type
         /// </summary>
         /// <value>A list of the fields on both the property definition and property of this type</value>
@@ -96,11 +113,39 @@ namespace com.knetikcloud.Model
         public PropertyFieldListResource FieldList { get; set; }
 
         /// <summary>
+        /// The friendly front-facing name of the property
+        /// </summary>
+        /// <value>The friendly front-facing name of the property</value>
+        [DataMember(Name="friendly_name", EmitDefaultValue=false)]
+        public string FriendlyName { get; set; }
+
+        /// <summary>
         /// The name of the property
         /// </summary>
         /// <value>The name of the property</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+        /// <summary>
+        /// The JSON path to the option label
+        /// </summary>
+        /// <value>The JSON path to the option label</value>
+        [DataMember(Name="option_label_path", EmitDefaultValue=false)]
+        public string OptionLabelPath { get; set; }
+
+        /// <summary>
+        /// The JSON path to the option value
+        /// </summary>
+        /// <value>The JSON path to the option value</value>
+        [DataMember(Name="option_value_path", EmitDefaultValue=false)]
+        public string OptionValuePath { get; set; }
+
+        /// <summary>
+        /// URL of service containing the property options (assumed JSON array)
+        /// </summary>
+        /// <value>URL of service containing the property options (assumed JSON array)</value>
+        [DataMember(Name="options_url", EmitDefaultValue=false)]
+        public string OptionsUrl { get; set; }
 
         /// <summary>
         /// Whether the property is required
@@ -173,8 +218,13 @@ namespace com.knetikcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VideoPropertyDefinitionResource {\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  FieldList: ").Append(FieldList).Append("\n");
+            sb.Append("  FriendlyName: ").Append(FriendlyName).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  OptionLabelPath: ").Append(OptionLabelPath).Append("\n");
+            sb.Append("  OptionValuePath: ").Append(OptionValuePath).Append("\n");
+            sb.Append("  OptionsUrl: ").Append(OptionsUrl).Append("\n");
             sb.Append("  Required: ").Append(Required).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  FileType: ").Append(FileType).Append("\n");
@@ -219,14 +269,39 @@ namespace com.knetikcloud.Model
 
             return 
                 (
+                    this.Description == input.Description ||
+                    (this.Description != null &&
+                    this.Description.Equals(input.Description))
+                ) && 
+                (
                     this.FieldList == input.FieldList ||
                     (this.FieldList != null &&
                     this.FieldList.Equals(input.FieldList))
                 ) && 
                 (
+                    this.FriendlyName == input.FriendlyName ||
+                    (this.FriendlyName != null &&
+                    this.FriendlyName.Equals(input.FriendlyName))
+                ) && 
+                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
+                ) && 
+                (
+                    this.OptionLabelPath == input.OptionLabelPath ||
+                    (this.OptionLabelPath != null &&
+                    this.OptionLabelPath.Equals(input.OptionLabelPath))
+                ) && 
+                (
+                    this.OptionValuePath == input.OptionValuePath ||
+                    (this.OptionValuePath != null &&
+                    this.OptionValuePath.Equals(input.OptionValuePath))
+                ) && 
+                (
+                    this.OptionsUrl == input.OptionsUrl ||
+                    (this.OptionsUrl != null &&
+                    this.OptionsUrl.Equals(input.OptionsUrl))
                 ) && 
                 (
                     this.Required == input.Required ||
@@ -284,10 +359,20 @@ namespace com.knetikcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Description != null)
+                    hashCode = hashCode * 59 + this.Description.GetHashCode();
                 if (this.FieldList != null)
                     hashCode = hashCode * 59 + this.FieldList.GetHashCode();
+                if (this.FriendlyName != null)
+                    hashCode = hashCode * 59 + this.FriendlyName.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
+                if (this.OptionLabelPath != null)
+                    hashCode = hashCode * 59 + this.OptionLabelPath.GetHashCode();
+                if (this.OptionValuePath != null)
+                    hashCode = hashCode * 59 + this.OptionValuePath.GetHashCode();
+                if (this.OptionsUrl != null)
+                    hashCode = hashCode * 59 + this.OptionsUrl.GetHashCode();
                 if (this.Required != null)
                     hashCode = hashCode * 59 + this.Required.GetHashCode();
                 if (this.Type != null)

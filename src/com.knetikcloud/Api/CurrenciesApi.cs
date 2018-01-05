@@ -73,13 +73,14 @@ namespace com.knetikcloud.Api
         /// 
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterDefault">Filter for the one currency that is set as default (true), or all that are not (false) (optional)</param>
         /// <param name="filterEnabledCurrencies">Filter for alternate currencies setup explicitely in system config (optional)</param>
         /// <param name="filterType">Filter currencies by type.  Allowable values: (&#39;virtual&#39;, &#39;real&#39;) (optional)</param>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
         /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
         /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to name:ASC)</param>
         /// <returns>PageResourceCurrencyResource</returns>
-        PageResourceCurrencyResource GetCurrencies (bool? filterEnabledCurrencies = null, string filterType = null, int? size = null, int? page = null, string order = null);
+        PageResourceCurrencyResource GetCurrencies (bool? filterDefault = null, bool? filterEnabledCurrencies = null, string filterType = null, int? size = null, int? page = null, string order = null);
 
         /// <summary>
         /// List and search currencies
@@ -88,13 +89,14 @@ namespace com.knetikcloud.Api
         /// 
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterDefault">Filter for the one currency that is set as default (true), or all that are not (false) (optional)</param>
         /// <param name="filterEnabledCurrencies">Filter for alternate currencies setup explicitely in system config (optional)</param>
         /// <param name="filterType">Filter currencies by type.  Allowable values: (&#39;virtual&#39;, &#39;real&#39;) (optional)</param>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
         /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
         /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to name:ASC)</param>
         /// <returns>ApiResponse of PageResourceCurrencyResource</returns>
-        ApiResponse<PageResourceCurrencyResource> GetCurrenciesWithHttpInfo (bool? filterEnabledCurrencies = null, string filterType = null, int? size = null, int? page = null, string order = null);
+        ApiResponse<PageResourceCurrencyResource> GetCurrenciesWithHttpInfo (bool? filterDefault = null, bool? filterEnabledCurrencies = null, string filterType = null, int? size = null, int? page = null, string order = null);
         /// <summary>
         /// Get a single currency
         /// </summary>
@@ -404,15 +406,16 @@ namespace com.knetikcloud.Api
         /// List and search currencies 
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterDefault">Filter for the one currency that is set as default (true), or all that are not (false) (optional)</param>
         /// <param name="filterEnabledCurrencies">Filter for alternate currencies setup explicitely in system config (optional)</param>
         /// <param name="filterType">Filter currencies by type.  Allowable values: (&#39;virtual&#39;, &#39;real&#39;) (optional)</param>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
         /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
         /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to name:ASC)</param>
         /// <returns>PageResourceCurrencyResource</returns>
-        public PageResourceCurrencyResource GetCurrencies (bool? filterEnabledCurrencies = null, string filterType = null, int? size = null, int? page = null, string order = null)
+        public PageResourceCurrencyResource GetCurrencies (bool? filterDefault = null, bool? filterEnabledCurrencies = null, string filterType = null, int? size = null, int? page = null, string order = null)
         {
-             ApiResponse<PageResourceCurrencyResource> localVarResponse = GetCurrenciesWithHttpInfo(filterEnabledCurrencies, filterType, size, page, order);
+             ApiResponse<PageResourceCurrencyResource> localVarResponse = GetCurrenciesWithHttpInfo(filterDefault, filterEnabledCurrencies, filterType, size, page, order);
              return localVarResponse.Data;
         }
 
@@ -420,13 +423,14 @@ namespace com.knetikcloud.Api
         /// List and search currencies 
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterDefault">Filter for the one currency that is set as default (true), or all that are not (false) (optional)</param>
         /// <param name="filterEnabledCurrencies">Filter for alternate currencies setup explicitely in system config (optional)</param>
         /// <param name="filterType">Filter currencies by type.  Allowable values: (&#39;virtual&#39;, &#39;real&#39;) (optional)</param>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
         /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
         /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to name:ASC)</param>
         /// <returns>ApiResponse of PageResourceCurrencyResource</returns>
-        public ApiResponse< PageResourceCurrencyResource > GetCurrenciesWithHttpInfo (bool? filterEnabledCurrencies = null, string filterType = null, int? size = null, int? page = null, string order = null)
+        public ApiResponse< PageResourceCurrencyResource > GetCurrenciesWithHttpInfo (bool? filterDefault = null, bool? filterEnabledCurrencies = null, string filterType = null, int? size = null, int? page = null, string order = null)
         {
 
             var localVarPath = "/currencies";
@@ -451,6 +455,7 @@ namespace com.knetikcloud.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
+            if (filterDefault != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filter_default", filterDefault)); // query parameter
             if (filterEnabledCurrencies != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filter_enabled_currencies", filterEnabledCurrencies)); // query parameter
             if (filterType != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filter_type", filterType)); // query parameter
             if (size != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "size", size)); // query parameter

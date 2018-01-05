@@ -67,11 +67,12 @@ namespace com.knetikcloud.Model
         /// </summary>
         /// <param name="Active">Whether the currency is active. Default true.</param>
         /// <param name="Code">The unique id code for the currency. Maximum 5 characters (required).</param>
-        /// <param name="Factor">The decimal to multiply the system base currency (from config &#39;currency&#39;) to localize to this one. Should be 1 for the base currency itself. (required).</param>
+        /// <param name="DefaultCurrency">Whether this is the default currency. All real money wallets will be in this currency, and the &#39;factor&#39; on each currency is in relation to the default. There must be one default currency and the current will be changed if you set another as the default. Cannot be combined with virtual currency. Take extreme caution when changing.</param>
+        /// <param name="Factor">The decimal to multiply the default currency to localize to this one. Should be 1 for the default currency itself. (required).</param>
         /// <param name="Icon">The url for an icon of the currency.</param>
         /// <param name="Name">The name of the currency (required).</param>
         /// <param name="Type">The type of currency. Default &#39;real&#39;.</param>
-        public CurrencyResource(bool? Active = default(bool?), string Code = default(string), decimal? Factor = default(decimal?), string Icon = default(string), string Name = default(string), TypeEnum? Type = default(TypeEnum?))
+        public CurrencyResource(bool? Active = default(bool?), string Code = default(string), bool? DefaultCurrency = default(bool?), decimal? Factor = default(decimal?), string Icon = default(string), string Name = default(string), TypeEnum? Type = default(TypeEnum?))
         {
             // to ensure "Code" is required (not null)
             if (Code == null)
@@ -101,6 +102,7 @@ namespace com.knetikcloud.Model
                 this.Name = Name;
             }
             this.Active = Active;
+            this.DefaultCurrency = DefaultCurrency;
             this.Icon = Icon;
             this.Type = Type;
         }
@@ -127,9 +129,16 @@ namespace com.knetikcloud.Model
         public long? CreatedDate { get; private set; }
 
         /// <summary>
-        /// The decimal to multiply the system base currency (from config &#39;currency&#39;) to localize to this one. Should be 1 for the base currency itself.
+        /// Whether this is the default currency. All real money wallets will be in this currency, and the &#39;factor&#39; on each currency is in relation to the default. There must be one default currency and the current will be changed if you set another as the default. Cannot be combined with virtual currency. Take extreme caution when changing
         /// </summary>
-        /// <value>The decimal to multiply the system base currency (from config &#39;currency&#39;) to localize to this one. Should be 1 for the base currency itself.</value>
+        /// <value>Whether this is the default currency. All real money wallets will be in this currency, and the &#39;factor&#39; on each currency is in relation to the default. There must be one default currency and the current will be changed if you set another as the default. Cannot be combined with virtual currency. Take extreme caution when changing</value>
+        [DataMember(Name="default_currency", EmitDefaultValue=false)]
+        public bool? DefaultCurrency { get; set; }
+
+        /// <summary>
+        /// The decimal to multiply the default currency to localize to this one. Should be 1 for the default currency itself.
+        /// </summary>
+        /// <value>The decimal to multiply the default currency to localize to this one. Should be 1 for the default currency itself.</value>
         [DataMember(Name="factor", EmitDefaultValue=false)]
         public decimal? Factor { get; set; }
 
@@ -166,6 +175,7 @@ namespace com.knetikcloud.Model
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("  Code: ").Append(Code).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
+            sb.Append("  DefaultCurrency: ").Append(DefaultCurrency).Append("\n");
             sb.Append("  Factor: ").Append(Factor).Append("\n");
             sb.Append("  Icon: ").Append(Icon).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -221,6 +231,11 @@ namespace com.knetikcloud.Model
                     this.CreatedDate.Equals(input.CreatedDate))
                 ) && 
                 (
+                    this.DefaultCurrency == input.DefaultCurrency ||
+                    (this.DefaultCurrency != null &&
+                    this.DefaultCurrency.Equals(input.DefaultCurrency))
+                ) && 
+                (
                     this.Factor == input.Factor ||
                     (this.Factor != null &&
                     this.Factor.Equals(input.Factor))
@@ -262,6 +277,8 @@ namespace com.knetikcloud.Model
                     hashCode = hashCode * 59 + this.Code.GetHashCode();
                 if (this.CreatedDate != null)
                     hashCode = hashCode * 59 + this.CreatedDate.GetHashCode();
+                if (this.DefaultCurrency != null)
+                    hashCode = hashCode * 59 + this.DefaultCurrency.GetHashCode();
                 if (this.Factor != null)
                     hashCode = hashCode * 59 + this.Factor.GetHashCode();
                 if (this.Icon != null)

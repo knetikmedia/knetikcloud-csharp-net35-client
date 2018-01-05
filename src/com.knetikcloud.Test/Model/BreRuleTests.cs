@@ -113,6 +113,14 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'EndDate'
         }
         /// <summary>
+        /// Test the property 'EvaluationCount'
+        /// </summary>
+        [Test]
+        public void EvaluationCountTest()
+        {
+            // TODO unit test for the property 'EvaluationCount'
+        }
+        /// <summary>
         /// Test the property 'EventName'
         /// </summary>
         [Test]
@@ -135,6 +143,14 @@ namespace com.knetikcloud.Test
         public void NameTest()
         {
             // TODO unit test for the property 'Name'
+        }
+        /// <summary>
+        /// Test the property 'RunCount'
+        /// </summary>
+        [Test]
+        public void RunCountTest()
+        {
+            // TODO unit test for the property 'RunCount'
         }
         /// <summary>
         /// Test the property 'Sort'

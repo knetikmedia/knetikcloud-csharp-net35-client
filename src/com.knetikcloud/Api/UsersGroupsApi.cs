@@ -134,10 +134,10 @@ namespace com.knetikcloud.Api
         /// <returns>ApiResponse of TemplateResource</returns>
         ApiResponse<TemplateResource> CreateGroupTemplateWithHttpInfo (TemplateResource groupTemplateResource = null);
         /// <summary>
-        /// Removes a group from the system IF no resources are attached to it
+        /// Removes a group from the system
         /// </summary>
         /// <remarks>
-        /// 
+        /// All groups listing this as the parent are also removed and users are in turn removed from this and those groups. This may result in users no longer being in this group&#39;s parent if they were not added to it directly as well.
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uniqueName">The group unique name</param>
@@ -145,10 +145,10 @@ namespace com.knetikcloud.Api
         void DeleteGroup (string uniqueName);
 
         /// <summary>
-        /// Removes a group from the system IF no resources are attached to it
+        /// Removes a group from the system
         /// </summary>
         /// <remarks>
-        /// 
+        /// All groups listing this as the parent are also removed and users are in turn removed from this and those groups. This may result in users no longer being in this group&#39;s parent if they were not added to it directly as well.
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uniqueName">The group unique name</param>
@@ -221,6 +221,27 @@ namespace com.knetikcloud.Api
         /// <param name="uniqueName">The group unique name</param>
         /// <returns>ApiResponse of GroupResource</returns>
         ApiResponse<GroupResource> GetGroupWithHttpInfo (string uniqueName);
+        /// <summary>
+        /// Get group ancestors
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of ancestor groups in reverse order (parent, then grandparent, etc
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uniqueName">The group unique name</param>
+        /// <returns>List&lt;GroupResource&gt;</returns>
+        List<GroupResource> GetGroupAncestors (string uniqueName);
+
+        /// <summary>
+        /// Get group ancestors
+        /// </summary>
+        /// <remarks>
+        /// Returns a list of ancestor groups in reverse order (parent, then grandparent, etc
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uniqueName">The group unique name</param>
+        /// <returns>ApiResponse of List&lt;GroupResource&gt;</returns>
+        ApiResponse<List<GroupResource>> GetGroupAncestorsWithHttpInfo (string uniqueName);
         /// <summary>
         /// Get a user from a group
         /// </summary>
@@ -450,7 +471,7 @@ namespace com.knetikcloud.Api
         /// Update a group
         /// </summary>
         /// <remarks>
-        /// 
+        /// If adding/removing/changing parent, user membership in group/new parent groups may be modified. The parent being removed will remove members from this sub group unless they were added explicitly to the parent and the new parent will gain members unless they were already a part of it.
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uniqueName">The group unique name</param>
@@ -462,7 +483,7 @@ namespace com.knetikcloud.Api
         /// Update a group
         /// </summary>
         /// <remarks>
-        /// 
+        /// If adding/removing/changing parent, user membership in group/new parent groups may be modified. The parent being removed will remove members from this sub group unless they were added explicitly to the parent and the new parent will gain members unless they were already a part of it.
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uniqueName">The group unique name</param>
@@ -1124,7 +1145,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Removes a group from the system IF no resources are attached to it 
+        /// Removes a group from the system All groups listing this as the parent are also removed and users are in turn removed from this and those groups. This may result in users no longer being in this group&#39;s parent if they were not added to it directly as well.
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uniqueName">The group unique name</param>
@@ -1135,7 +1156,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Removes a group from the system IF no resources are attached to it 
+        /// Removes a group from the system All groups listing this as the parent are also removed and users are in turn removed from this and those groups. This may result in users no longer being in this group&#39;s parent if they were not added to it directly as well.
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uniqueName">The group unique name</param>
@@ -1440,6 +1461,73 @@ namespace com.knetikcloud.Api
             return new ApiResponse<GroupResource>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (GroupResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(GroupResource)));
+        }
+
+        /// <summary>
+        /// Get group ancestors Returns a list of ancestor groups in reverse order (parent, then grandparent, etc
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uniqueName">The group unique name</param>
+        /// <returns>List&lt;GroupResource&gt;</returns>
+        public List<GroupResource> GetGroupAncestors (string uniqueName)
+        {
+             ApiResponse<List<GroupResource>> localVarResponse = GetGroupAncestorsWithHttpInfo(uniqueName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get group ancestors Returns a list of ancestor groups in reverse order (parent, then grandparent, etc
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uniqueName">The group unique name</param>
+        /// <returns>ApiResponse of List&lt;GroupResource&gt;</returns>
+        public ApiResponse< List<GroupResource> > GetGroupAncestorsWithHttpInfo (string uniqueName)
+        {
+            // verify the required parameter 'uniqueName' is set
+            if (uniqueName == null)
+                throw new ApiException(400, "Missing required parameter 'uniqueName' when calling UsersGroupsApi->GetGroupAncestors");
+
+            var localVarPath = "/users/groups/{unique_name}/ancestors";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (uniqueName != null) localVarPathParams.Add("unique_name", Configuration.ApiClient.ParameterToString(uniqueName)); // path parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetGroupAncestors", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<List<GroupResource>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (List<GroupResource>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<GroupResource>)));
         }
 
         /// <summary>
@@ -2204,7 +2292,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a group 
+        /// Update a group If adding/removing/changing parent, user membership in group/new parent groups may be modified. The parent being removed will remove members from this sub group unless they were added explicitly to the parent and the new parent will gain members unless they were already a part of it.
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uniqueName">The group unique name</param>
@@ -2216,7 +2304,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a group 
+        /// Update a group If adding/removing/changing parent, user membership in group/new parent groups may be modified. The parent being removed will remove members from this sub group unless they were added explicitly to the parent and the new parent will gain members unless they were already a part of it.
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="uniqueName">The group unique name</param>

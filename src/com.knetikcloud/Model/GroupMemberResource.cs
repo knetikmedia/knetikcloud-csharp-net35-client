@@ -66,22 +66,24 @@ namespace com.knetikcloud.Model
         /// Initializes a new instance of the <see cref="GroupMemberResource" /> class.
         /// </summary>
         /// <param name="AdditionalProperties">A map of additional properties, keyed on the property name (private). Must match the names and types defined in the template for this type, or be an extra not from the template.</param>
-        /// <param name="Id">The id of the user (required).</param>
+        /// <param name="Group">The group. Id is the unique name.</param>
         /// <param name="Order">The position of the member in the group if applicable. Read notes for details.</param>
         /// <param name="Status">The member&#39;s access level. Default: member.</param>
         /// <param name="Template">A template this member additional properties are validated against (private). May be null and no validation of properties will be done.</param>
-        public GroupMemberResource(Dictionary<string, Property> AdditionalProperties = default(Dictionary<string, Property>), int? Id = default(int?), string Order = default(string), StatusEnum? Status = default(StatusEnum?), string Template = default(string))
+        /// <param name="User">The user (required).</param>
+        public GroupMemberResource(Dictionary<string, Property> AdditionalProperties = default(Dictionary<string, Property>), SimpleGroupResource Group = default(SimpleGroupResource), string Order = default(string), StatusEnum? Status = default(StatusEnum?), string Template = default(string), SimpleUserResource User = default(SimpleUserResource))
         {
-            // to ensure "Id" is required (not null)
-            if (Id == null)
+            // to ensure "User" is required (not null)
+            if (User == null)
             {
-                throw new InvalidDataException("Id is a required property for GroupMemberResource and cannot be null");
+                throw new InvalidDataException("User is a required property for GroupMemberResource and cannot be null");
             }
             else
             {
-                this.Id = Id;
+                this.User = User;
             }
             this.AdditionalProperties = AdditionalProperties;
+            this.Group = Group;
             this.Order = Order;
             this.Status = Status;
             this.Template = Template;
@@ -95,25 +97,25 @@ namespace com.knetikcloud.Model
         public Dictionary<string, Property> AdditionalProperties { get; set; }
 
         /// <summary>
-        /// The url of the user&#39;s avatar image
+        /// The group. Id is the unique name
         /// </summary>
-        /// <value>The url of the user&#39;s avatar image</value>
-        [DataMember(Name="avatar_url", EmitDefaultValue=false)]
-        public string AvatarUrl { get; private set; }
+        /// <value>The group. Id is the unique name</value>
+        [DataMember(Name="group", EmitDefaultValue=false)]
+        public SimpleGroupResource Group { get; set; }
 
         /// <summary>
-        /// The public username of the user
+        /// Whether this membership is explicit (the user was added directly to the group) or implicit (the user was added only to one or more child groups)
         /// </summary>
-        /// <value>The public username of the user</value>
-        [DataMember(Name="display_name", EmitDefaultValue=false)]
-        public string DisplayName { get; private set; }
+        /// <value>Whether this membership is explicit (the user was added directly to the group) or implicit (the user was added only to one or more child groups)</value>
+        [DataMember(Name="implicit", EmitDefaultValue=false)]
+        public bool? _Implicit { get; private set; }
 
         /// <summary>
-        /// The id of the user
+        /// The id of the membership entry
         /// </summary>
-        /// <value>The id of the user</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public int? Id { get; set; }
+        /// <value>The id of the membership entry</value>
+        [DataMember(Name="membership_id", EmitDefaultValue=false)]
+        public long? MembershipId { get; private set; }
 
         /// <summary>
         /// The position of the member in the group if applicable. Read notes for details
@@ -131,11 +133,11 @@ namespace com.knetikcloud.Model
         public string Template { get; set; }
 
         /// <summary>
-        /// The username of the user
+        /// The user
         /// </summary>
-        /// <value>The username of the user</value>
-        [DataMember(Name="username", EmitDefaultValue=false)]
-        public string Username { get; private set; }
+        /// <value>The user</value>
+        [DataMember(Name="user", EmitDefaultValue=false)]
+        public SimpleUserResource User { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -146,13 +148,13 @@ namespace com.knetikcloud.Model
             var sb = new StringBuilder();
             sb.Append("class GroupMemberResource {\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            sb.Append("  AvatarUrl: ").Append(AvatarUrl).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Group: ").Append(Group).Append("\n");
+            sb.Append("  _Implicit: ").Append(_Implicit).Append("\n");
+            sb.Append("  MembershipId: ").Append(MembershipId).Append("\n");
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Template: ").Append(Template).Append("\n");
-            sb.Append("  Username: ").Append(Username).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -193,19 +195,19 @@ namespace com.knetikcloud.Model
                     this.AdditionalProperties.SequenceEqual(input.AdditionalProperties))
                 ) && 
                 (
-                    this.AvatarUrl == input.AvatarUrl ||
-                    (this.AvatarUrl != null &&
-                    this.AvatarUrl.Equals(input.AvatarUrl))
+                    this.Group == input.Group ||
+                    (this.Group != null &&
+                    this.Group.Equals(input.Group))
                 ) && 
                 (
-                    this.DisplayName == input.DisplayName ||
-                    (this.DisplayName != null &&
-                    this.DisplayName.Equals(input.DisplayName))
+                    this._Implicit == input._Implicit ||
+                    (this._Implicit != null &&
+                    this._Implicit.Equals(input._Implicit))
                 ) && 
                 (
-                    this.Id == input.Id ||
-                    (this.Id != null &&
-                    this.Id.Equals(input.Id))
+                    this.MembershipId == input.MembershipId ||
+                    (this.MembershipId != null &&
+                    this.MembershipId.Equals(input.MembershipId))
                 ) && 
                 (
                     this.Order == input.Order ||
@@ -223,9 +225,9 @@ namespace com.knetikcloud.Model
                     this.Template.Equals(input.Template))
                 ) && 
                 (
-                    this.Username == input.Username ||
-                    (this.Username != null &&
-                    this.Username.Equals(input.Username))
+                    this.User == input.User ||
+                    (this.User != null &&
+                    this.User.Equals(input.User))
                 );
         }
 
@@ -240,20 +242,20 @@ namespace com.knetikcloud.Model
                 int hashCode = 41;
                 if (this.AdditionalProperties != null)
                     hashCode = hashCode * 59 + this.AdditionalProperties.GetHashCode();
-                if (this.AvatarUrl != null)
-                    hashCode = hashCode * 59 + this.AvatarUrl.GetHashCode();
-                if (this.DisplayName != null)
-                    hashCode = hashCode * 59 + this.DisplayName.GetHashCode();
-                if (this.Id != null)
-                    hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Group != null)
+                    hashCode = hashCode * 59 + this.Group.GetHashCode();
+                if (this._Implicit != null)
+                    hashCode = hashCode * 59 + this._Implicit.GetHashCode();
+                if (this.MembershipId != null)
+                    hashCode = hashCode * 59 + this.MembershipId.GetHashCode();
                 if (this.Order != null)
                     hashCode = hashCode * 59 + this.Order.GetHashCode();
                 if (this.Status != null)
                     hashCode = hashCode * 59 + this.Status.GetHashCode();
                 if (this.Template != null)
                     hashCode = hashCode * 59 + this.Template.GetHashCode();
-                if (this.Username != null)
-                    hashCode = hashCode * 59 + this.Username.GetHashCode();
+                if (this.User != null)
+                    hashCode = hashCode * 59 + this.User.GetHashCode();
                 return hashCode;
             }
         }

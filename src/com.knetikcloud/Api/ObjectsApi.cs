@@ -220,11 +220,11 @@ namespace com.knetikcloud.Api
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">The id of the template this object is part of</param>
-        /// <param name="entitlementId">The id of the entitlement</param>
+        /// <param name="objectId">The id of the object</param>
         /// <param name="cascade">Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)</param>
         /// <param name="objectItem">The object item object (optional)</param>
         /// <returns></returns>
-        void UpdateObjectItem (string templateId, int? entitlementId, bool? cascade = null, EntitlementItem objectItem = null);
+        void UpdateObjectItem (string templateId, int? objectId, bool? cascade = null, ObjectResource objectItem = null);
 
         /// <summary>
         /// Update an object
@@ -234,11 +234,11 @@ namespace com.knetikcloud.Api
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">The id of the template this object is part of</param>
-        /// <param name="entitlementId">The id of the entitlement</param>
+        /// <param name="objectId">The id of the object</param>
         /// <param name="cascade">Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)</param>
         /// <param name="objectItem">The object item object (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateObjectItemWithHttpInfo (string templateId, int? entitlementId, bool? cascade = null, EntitlementItem objectItem = null);
+        ApiResponse<Object> UpdateObjectItemWithHttpInfo (string templateId, int? objectId, bool? cascade = null, ObjectResource objectItem = null);
         /// <summary>
         /// Update an entitlement template
         /// </summary>
@@ -1041,13 +1041,13 @@ namespace com.knetikcloud.Api
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">The id of the template this object is part of</param>
-        /// <param name="entitlementId">The id of the entitlement</param>
+        /// <param name="objectId">The id of the object</param>
         /// <param name="cascade">Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)</param>
         /// <param name="objectItem">The object item object (optional)</param>
         /// <returns></returns>
-        public void UpdateObjectItem (string templateId, int? entitlementId, bool? cascade = null, EntitlementItem objectItem = null)
+        public void UpdateObjectItem (string templateId, int? objectId, bool? cascade = null, ObjectResource objectItem = null)
         {
-             UpdateObjectItemWithHttpInfo(templateId, entitlementId, cascade, objectItem);
+             UpdateObjectItemWithHttpInfo(templateId, objectId, cascade, objectItem);
         }
 
         /// <summary>
@@ -1055,18 +1055,18 @@ namespace com.knetikcloud.Api
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateId">The id of the template this object is part of</param>
-        /// <param name="entitlementId">The id of the entitlement</param>
+        /// <param name="objectId">The id of the object</param>
         /// <param name="cascade">Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)</param>
         /// <param name="objectItem">The object item object (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateObjectItemWithHttpInfo (string templateId, int? entitlementId, bool? cascade = null, EntitlementItem objectItem = null)
+        public ApiResponse<Object> UpdateObjectItemWithHttpInfo (string templateId, int? objectId, bool? cascade = null, ObjectResource objectItem = null)
         {
             // verify the required parameter 'templateId' is set
             if (templateId == null)
                 throw new ApiException(400, "Missing required parameter 'templateId' when calling ObjectsApi->UpdateObjectItem");
-            // verify the required parameter 'entitlementId' is set
-            if (entitlementId == null)
-                throw new ApiException(400, "Missing required parameter 'entitlementId' when calling ObjectsApi->UpdateObjectItem");
+            // verify the required parameter 'objectId' is set
+            if (objectId == null)
+                throw new ApiException(400, "Missing required parameter 'objectId' when calling ObjectsApi->UpdateObjectItem");
 
             var localVarPath = "/objects/{template_id}/{object_id}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1091,7 +1091,7 @@ namespace com.knetikcloud.Api
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (templateId != null) localVarPathParams.Add("template_id", Configuration.ApiClient.ParameterToString(templateId)); // path parameter
-            if (entitlementId != null) localVarPathParams.Add("entitlement_id", Configuration.ApiClient.ParameterToString(entitlementId)); // path parameter
+            if (objectId != null) localVarPathParams.Add("object_id", Configuration.ApiClient.ParameterToString(objectId)); // path parameter
             if (cascade != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "cascade", cascade)); // query parameter
             if (objectItem != null && objectItem.GetType() != typeof(byte[]))
             {

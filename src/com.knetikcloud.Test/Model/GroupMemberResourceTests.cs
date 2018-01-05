@@ -73,28 +73,28 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'AdditionalProperties'
         }
         /// <summary>
-        /// Test the property 'AvatarUrl'
+        /// Test the property 'Group'
         /// </summary>
         [Test]
-        public void AvatarUrlTest()
+        public void GroupTest()
         {
-            // TODO unit test for the property 'AvatarUrl'
+            // TODO unit test for the property 'Group'
         }
         /// <summary>
-        /// Test the property 'DisplayName'
+        /// Test the property '_Implicit'
         /// </summary>
         [Test]
-        public void DisplayNameTest()
+        public void _ImplicitTest()
         {
-            // TODO unit test for the property 'DisplayName'
+            // TODO unit test for the property '_Implicit'
         }
         /// <summary>
-        /// Test the property 'Id'
+        /// Test the property 'MembershipId'
         /// </summary>
         [Test]
-        public void IdTest()
+        public void MembershipIdTest()
         {
-            // TODO unit test for the property 'Id'
+            // TODO unit test for the property 'MembershipId'
         }
         /// <summary>
         /// Test the property 'Order'
@@ -121,12 +121,12 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'Template'
         }
         /// <summary>
-        /// Test the property 'Username'
+        /// Test the property 'User'
         /// </summary>
         [Test]
-        public void UsernameTest()
+        public void UserTest()
         {
-            // TODO unit test for the property 'Username'
+            // TODO unit test for the property 'User'
         }
 
     }

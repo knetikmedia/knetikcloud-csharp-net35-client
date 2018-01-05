@@ -25,7 +25,7 @@ namespace com.knetikcloud.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Search an index
+        /// Search an index with no template
         /// </summary>
         /// <remarks>
         /// The body is an ElasticSearch query in JSON format. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options. The searchable object&#39;s format depends on on the type but mostly matches the resource from it&#39;s main endpoint. Exceptions include referenced objects (like user) being replaced with the full user resource to allow deeper searching.
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         PageResourceMapstringobject SearchIndex (string type, Object query = null, int? size = null, int? page = null);
 
         /// <summary>
-        /// Search an index
+        /// Search an index with no template
         /// </summary>
         /// <remarks>
         /// The body is an ElasticSearch query in JSON format. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options. The searchable object&#39;s format depends on on the type but mostly matches the resource from it&#39;s main endpoint. Exceptions include referenced objects (like user) being replaced with the full user resource to allow deeper searching.
@@ -51,6 +51,35 @@ namespace com.knetikcloud.Api
         /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
         /// <returns>ApiResponse of PageResourceMapstringobject</returns>
         ApiResponse<PageResourceMapstringobject> SearchIndexWithHttpInfo (string type, Object query = null, int? size = null, int? page = null);
+        /// <summary>
+        /// Search an index with a template
+        /// </summary>
+        /// <remarks>
+        /// The body is an ElasticSearch query in JSON format. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options. The searchable object&#39;s format depends on on the type but mostly matches the resource from it&#39;s main endpoint. Exceptions include referenced objects (like user) being replaced with the full user resource to allow deeper searching.
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">The index type</param>
+        /// <param name="template">The index template</param>
+        /// <param name="query">The query to be used for the search (optional)</param>
+        /// <param name="size">The number of documents returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <returns>PageResourceMapstringobject</returns>
+        PageResourceMapstringobject SearchIndexWithTemplate (string type, string template, Object query = null, int? size = null, int? page = null);
+
+        /// <summary>
+        /// Search an index with a template
+        /// </summary>
+        /// <remarks>
+        /// The body is an ElasticSearch query in JSON format. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options. The searchable object&#39;s format depends on on the type but mostly matches the resource from it&#39;s main endpoint. Exceptions include referenced objects (like user) being replaced with the full user resource to allow deeper searching.
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">The index type</param>
+        /// <param name="template">The index template</param>
+        /// <param name="query">The query to be used for the search (optional)</param>
+        /// <param name="size">The number of documents returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <returns>ApiResponse of PageResourceMapstringobject</returns>
+        ApiResponse<PageResourceMapstringobject> SearchIndexWithTemplateWithHttpInfo (string type, string template, Object query = null, int? size = null, int? page = null);
         #endregion Synchronous Operations
     }
 
@@ -152,7 +181,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Search an index The body is an ElasticSearch query in JSON format. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options. The searchable object&#39;s format depends on on the type but mostly matches the resource from it&#39;s main endpoint. Exceptions include referenced objects (like user) being replaced with the full user resource to allow deeper searching.
+        /// Search an index with no template The body is an ElasticSearch query in JSON format. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options. The searchable object&#39;s format depends on on the type but mostly matches the resource from it&#39;s main endpoint. Exceptions include referenced objects (like user) being replaced with the full user resource to allow deeper searching.
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">The index type</param>
@@ -167,7 +196,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Search an index The body is an ElasticSearch query in JSON format. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options. The searchable object&#39;s format depends on on the type but mostly matches the resource from it&#39;s main endpoint. Exceptions include referenced objects (like user) being replaced with the full user resource to allow deeper searching.
+        /// Search an index with no template The body is an ElasticSearch query in JSON format. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options. The searchable object&#39;s format depends on on the type but mostly matches the resource from it&#39;s main endpoint. Exceptions include referenced objects (like user) being replaced with the full user resource to allow deeper searching.
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">The index type</param>
@@ -238,6 +267,95 @@ namespace com.knetikcloud.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("SearchIndex", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PageResourceMapstringobject>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageResourceMapstringobject) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageResourceMapstringobject)));
+        }
+
+        /// <summary>
+        /// Search an index with a template The body is an ElasticSearch query in JSON format. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options. The searchable object&#39;s format depends on on the type but mostly matches the resource from it&#39;s main endpoint. Exceptions include referenced objects (like user) being replaced with the full user resource to allow deeper searching.
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">The index type</param>
+        /// <param name="template">The index template</param>
+        /// <param name="query">The query to be used for the search (optional)</param>
+        /// <param name="size">The number of documents returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <returns>PageResourceMapstringobject</returns>
+        public PageResourceMapstringobject SearchIndexWithTemplate (string type, string template, Object query = null, int? size = null, int? page = null)
+        {
+             ApiResponse<PageResourceMapstringobject> localVarResponse = SearchIndexWithTemplateWithHttpInfo(type, template, query, size, page);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search an index with a template The body is an ElasticSearch query in JSON format. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options. The searchable object&#39;s format depends on on the type but mostly matches the resource from it&#39;s main endpoint. Exceptions include referenced objects (like user) being replaced with the full user resource to allow deeper searching.
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">The index type</param>
+        /// <param name="template">The index template</param>
+        /// <param name="query">The query to be used for the search (optional)</param>
+        /// <param name="size">The number of documents returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <returns>ApiResponse of PageResourceMapstringobject</returns>
+        public ApiResponse< PageResourceMapstringobject > SearchIndexWithTemplateWithHttpInfo (string type, string template, Object query = null, int? size = null, int? page = null)
+        {
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling SearchApi->SearchIndexWithTemplate");
+            // verify the required parameter 'template' is set
+            if (template == null)
+                throw new ApiException(400, "Missing required parameter 'template' when calling SearchApi->SearchIndexWithTemplate");
+
+            var localVarPath = "/search/index/{type}/{template}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (type != null) localVarPathParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // path parameter
+            if (template != null) localVarPathParams.Add("template", Configuration.ApiClient.ParameterToString(template)); // path parameter
+            if (size != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "size", size)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (query != null && query.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(query); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = query; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SearchIndexWithTemplate", localVarResponse);
                 if (exception != null) throw exception;
             }
 

@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 <a name="updateobjectitem"></a>
 # **UpdateObjectItem**
-> void UpdateObjectItem (string templateId, int? entitlementId, bool? cascade = null, EntitlementItem objectItem = null)
+> void UpdateObjectItem (string templateId, int? objectId, bool? cascade = null, ObjectResource objectItem = null)
 
 Update an object
 
@@ -577,14 +577,14 @@ namespace Example
 
             var apiInstance = new ObjectsApi();
             var templateId = templateId_example;  // string | The id of the template this object is part of
-            var entitlementId = 56;  // int? | The id of the entitlement
+            var objectId = 56;  // int? | The id of the object
             var cascade = true;  // bool? | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional)  (default to false)
-            var objectItem = new EntitlementItem(); // EntitlementItem | The object item object (optional) 
+            var objectItem = new ObjectResource(); // ObjectResource | The object item object (optional) 
 
             try
             {
                 // Update an object
-                apiInstance.UpdateObjectItem(templateId, entitlementId, cascade, objectItem);
+                apiInstance.UpdateObjectItem(templateId, objectId, cascade, objectItem);
             }
             catch (Exception e)
             {
@@ -600,9 +600,9 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **templateId** | **string**| The id of the template this object is part of | 
- **entitlementId** | **int?**| The id of the entitlement | 
+ **objectId** | **int?**| The id of the object | 
  **cascade** | **bool?**| Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. | [optional] [default to false]
- **objectItem** | [**EntitlementItem**](EntitlementItem.md)| The object item object | [optional] 
+ **objectItem** | [**ObjectResource**](ObjectResource.md)| The object item object | [optional] 
 
 ### Return type
 

@@ -79,6 +79,22 @@ namespace com.knetikcloud.Test
             //Assert.IsInstanceOf<PageResourceMapstringobject> (response, "response is PageResourceMapstringobject");
         }
         
+        /// <summary>
+        /// Test SearchIndexWithTemplate
+        /// </summary>
+        [Test]
+        public void SearchIndexWithTemplateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string type = null;
+            //string template = null;
+            //Object query = null;
+            //int? size = null;
+            //int? page = null;
+            //var response = instance.SearchIndexWithTemplate(type, template, query, size, page);
+            //Assert.IsInstanceOf<PageResourceMapstringobject> (response, "response is PageResourceMapstringobject");
+        }
+        
     }
 
 }

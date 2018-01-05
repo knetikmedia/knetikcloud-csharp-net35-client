@@ -137,20 +137,12 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'Type'
         }
         /// <summary>
-        /// Test the property 'CustomerSetup'
+        /// Test the property 'Teardown'
         /// </summary>
         [Test]
-        public void CustomerSetupTest()
+        public void TeardownTest()
         {
-            // TODO unit test for the property 'CustomerSetup'
-        }
-        /// <summary>
-        /// Test the property 'CustomerTeardown'
-        /// </summary>
-        [Test]
-        public void CustomerTeardownTest()
-        {
-            // TODO unit test for the property 'CustomerTeardown'
+            // TODO unit test for the property 'Teardown'
         }
 
     }

@@ -129,6 +129,14 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'SubMemberCount'
         }
         /// <summary>
+        /// Test the property 'Tags'
+        /// </summary>
+        [Test]
+        public void TagsTest()
+        {
+            // TODO unit test for the property 'Tags'
+        }
+        /// <summary>
         /// Test the property 'Template'
         /// </summary>
         [Test]

@@ -177,6 +177,18 @@ namespace com.knetikcloud.Test
         }
         
         /// <summary>
+        /// Test GetGroupAncestors
+        /// </summary>
+        [Test]
+        public void GetGroupAncestorsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string uniqueName = null;
+            //var response = instance.GetGroupAncestors(uniqueName);
+            //Assert.IsInstanceOf<List<GroupResource>> (response, "response is List<GroupResource>");
+        }
+        
+        /// <summary>
         /// Test GetGroupMember
         /// </summary>
         [Test]

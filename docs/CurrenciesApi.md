@@ -140,7 +140,7 @@ void (empty response body)
 
 <a name="getcurrencies"></a>
 # **GetCurrencies**
-> PageResourceCurrencyResource GetCurrencies (bool? filterEnabledCurrencies = null, string filterType = null, int? size = null, int? page = null, string order = null)
+> PageResourceCurrencyResource GetCurrencies (bool? filterDefault = null, bool? filterEnabledCurrencies = null, string filterType = null, int? size = null, int? page = null, string order = null)
 
 List and search currencies
 
@@ -164,6 +164,7 @@ namespace Example
             Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
 
             var apiInstance = new CurrenciesApi();
+            var filterDefault = true;  // bool? | Filter for the one currency that is set as default (true), or all that are not (false) (optional) 
             var filterEnabledCurrencies = true;  // bool? | Filter for alternate currencies setup explicitely in system config (optional) 
             var filterType = filterType_example;  // string | Filter currencies by type.  Allowable values: ('virtual', 'real') (optional) 
             var size = 56;  // int? | The number of objects returned per page (optional)  (default to 25)
@@ -173,7 +174,7 @@ namespace Example
             try
             {
                 // List and search currencies
-                PageResourceCurrencyResource result = apiInstance.GetCurrencies(filterEnabledCurrencies, filterType, size, page, order);
+                PageResourceCurrencyResource result = apiInstance.GetCurrencies(filterDefault, filterEnabledCurrencies, filterType, size, page, order);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -189,6 +190,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **filterDefault** | **bool?**| Filter for the one currency that is set as default (true), or all that are not (false) | [optional] 
  **filterEnabledCurrencies** | **bool?**| Filter for alternate currencies setup explicitely in system config | [optional] 
  **filterType** | **string**| Filter currencies by type.  Allowable values: (&#39;virtual&#39;, &#39;real&#39;) | [optional] 
  **size** | **int?**| The number of objects returned per page | [optional] [default to 25]
