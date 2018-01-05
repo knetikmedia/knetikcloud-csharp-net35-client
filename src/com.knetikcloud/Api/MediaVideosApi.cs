@@ -184,6 +184,27 @@ namespace com.knetikcloud.Api
         /// <returns>ApiResponse of DispositionResource</returns>
         ApiResponse<DispositionResource> CreateVideoDispositionWithHttpInfo (int? videoId, DispositionResource dispositionResource = null);
         /// <summary>
+        /// Create a video template
+        /// </summary>
+        /// <remarks>
+        /// Video Templates define a type of video and the properties they have
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="videoTemplateResource">The video template resource object (optional)</param>
+        /// <returns>TemplateResource</returns>
+        TemplateResource CreateVideoTemplate (TemplateResource videoTemplateResource = null);
+
+        /// <summary>
+        /// Create a video template
+        /// </summary>
+        /// <remarks>
+        /// Video Templates define a type of video and the properties they have
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="videoTemplateResource">The video template resource object (optional)</param>
+        /// <returns>ApiResponse of TemplateResource</returns>
+        ApiResponse<TemplateResource> CreateVideoTemplateWithHttpInfo (TemplateResource videoTemplateResource = null);
+        /// <summary>
         /// Deletes a video from the system if no resources are attached to it
         /// </summary>
         /// <remarks>
@@ -292,6 +313,29 @@ namespace com.knetikcloud.Api
         /// <param name="id">The relationship id</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteVideoRelationshipWithHttpInfo (long? videoId, long? id);
+        /// <summary>
+        /// Delete a video template
+        /// </summary>
+        /// <remarks>
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The id of the template</param>
+        /// <param name="cascade">The value needed to delete used templates (optional)</param>
+        /// <returns></returns>
+        void DeleteVideoTemplate (string id, string cascade = null);
+
+        /// <summary>
+        /// Delete a video template
+        /// </summary>
+        /// <remarks>
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The id of the template</param>
+        /// <param name="cascade">The value needed to delete used templates (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteVideoTemplateWithHttpInfo (string id, string cascade = null);
         /// <summary>
         /// Get user videos
         /// </summary>
@@ -415,6 +459,52 @@ namespace com.knetikcloud.Api
         /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
         /// <returns>ApiResponse of PageResourceVideoRelationshipResource</returns>
         ApiResponse<PageResourceVideoRelationshipResource> GetVideoRelationshipsWithHttpInfo (long? videoId, int? size = null, int? page = null);
+        /// <summary>
+        /// Get a single video template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The id of the template</param>
+        /// <returns>TemplateResource</returns>
+        TemplateResource GetVideoTemplate (string id);
+
+        /// <summary>
+        /// Get a single video template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The id of the template</param>
+        /// <returns>ApiResponse of TemplateResource</returns>
+        ApiResponse<TemplateResource> GetVideoTemplateWithHttpInfo (string id);
+        /// <summary>
+        /// List and search video templates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)</param>
+        /// <returns>PageResourceTemplateResource</returns>
+        PageResourceTemplateResource GetVideoTemplates (int? size = null, int? page = null, string order = null);
+
+        /// <summary>
+        /// List and search video templates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)</param>
+        /// <returns>ApiResponse of PageResourceTemplateResource</returns>
+        ApiResponse<PageResourceTemplateResource> GetVideoTemplatesWithHttpInfo (int? size = null, int? page = null, string order = null);
         /// <summary>
         /// Search videos using the documented filters
         /// </summary>
@@ -583,6 +673,29 @@ namespace com.knetikcloud.Api
         /// <param name="details">The video relationship details (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> UpdateVideoRelationshipWithHttpInfo (long? videoId, long? relationshipId, StringWrapper details = null);
+        /// <summary>
+        /// Update a video template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The id of the template</param>
+        /// <param name="videoTemplateResource">The video template resource object (optional)</param>
+        /// <returns>TemplateResource</returns>
+        TemplateResource UpdateVideoTemplate (string id, TemplateResource videoTemplateResource = null);
+
+        /// <summary>
+        /// Update a video template
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The id of the template</param>
+        /// <param name="videoTemplateResource">The video template resource object (optional)</param>
+        /// <returns>ApiResponse of TemplateResource</returns>
+        ApiResponse<TemplateResource> UpdateVideoTemplateWithHttpInfo (string id, TemplateResource videoTemplateResource = null);
         /// <summary>
         /// Increment a video&#39;s view count
         /// </summary>
@@ -1320,6 +1433,89 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
+        /// Create a video template Video Templates define a type of video and the properties they have
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="videoTemplateResource">The video template resource object (optional)</param>
+        /// <returns>TemplateResource</returns>
+        public TemplateResource CreateVideoTemplate (TemplateResource videoTemplateResource = null)
+        {
+             ApiResponse<TemplateResource> localVarResponse = CreateVideoTemplateWithHttpInfo(videoTemplateResource);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a video template Video Templates define a type of video and the properties they have
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="videoTemplateResource">The video template resource object (optional)</param>
+        /// <returns>ApiResponse of TemplateResource</returns>
+        public ApiResponse< TemplateResource > CreateVideoTemplateWithHttpInfo (TemplateResource videoTemplateResource = null)
+        {
+
+            var localVarPath = "/media/videos/templates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (videoTemplateResource != null && videoTemplateResource.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(videoTemplateResource); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = videoTemplateResource; // byte array
+            }
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateVideoTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TemplateResource>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TemplateResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TemplateResource)));
+        }
+
+        /// <summary>
         /// Deletes a video from the system if no resources are attached to it 
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1713,6 +1909,87 @@ namespace com.knetikcloud.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("DeleteVideoRelationship", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Delete a video template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The id of the template</param>
+        /// <param name="cascade">The value needed to delete used templates (optional)</param>
+        /// <returns></returns>
+        public void DeleteVideoTemplate (string id, string cascade = null)
+        {
+             DeleteVideoTemplateWithHttpInfo(id, cascade);
+        }
+
+        /// <summary>
+        /// Delete a video template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The id of the template</param>
+        /// <param name="cascade">The value needed to delete used templates (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteVideoTemplateWithHttpInfo (string id, string cascade = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling MediaVideosApi->DeleteVideoTemplate");
+
+            var localVarPath = "/media/videos/templates/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (cascade != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "cascade", cascade)); // query parameter
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteVideoTemplate", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2141,6 +2418,167 @@ namespace com.knetikcloud.Api
             return new ApiResponse<PageResourceVideoRelationshipResource>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (PageResourceVideoRelationshipResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageResourceVideoRelationshipResource)));
+        }
+
+        /// <summary>
+        /// Get a single video template 
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The id of the template</param>
+        /// <returns>TemplateResource</returns>
+        public TemplateResource GetVideoTemplate (string id)
+        {
+             ApiResponse<TemplateResource> localVarResponse = GetVideoTemplateWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a single video template 
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The id of the template</param>
+        /// <returns>ApiResponse of TemplateResource</returns>
+        public ApiResponse< TemplateResource > GetVideoTemplateWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling MediaVideosApi->GetVideoTemplate");
+
+            var localVarPath = "/media/videos/templates/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetVideoTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TemplateResource>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TemplateResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TemplateResource)));
+        }
+
+        /// <summary>
+        /// List and search video templates 
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)</param>
+        /// <returns>PageResourceTemplateResource</returns>
+        public PageResourceTemplateResource GetVideoTemplates (int? size = null, int? page = null, string order = null)
+        {
+             ApiResponse<PageResourceTemplateResource> localVarResponse = GetVideoTemplatesWithHttpInfo(size, page, order);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List and search video templates 
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)</param>
+        /// <returns>ApiResponse of PageResourceTemplateResource</returns>
+        public ApiResponse< PageResourceTemplateResource > GetVideoTemplatesWithHttpInfo (int? size = null, int? page = null, string order = null)
+        {
+
+            var localVarPath = "/media/videos/templates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (size != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "size", size)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (order != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "order", order)); // query parameter
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetVideoTemplates", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PageResourceTemplateResource>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageResourceTemplateResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageResourceTemplateResource)));
         }
 
         /// <summary>
@@ -2703,6 +3141,95 @@ namespace com.knetikcloud.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+        }
+
+        /// <summary>
+        /// Update a video template 
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The id of the template</param>
+        /// <param name="videoTemplateResource">The video template resource object (optional)</param>
+        /// <returns>TemplateResource</returns>
+        public TemplateResource UpdateVideoTemplate (string id, TemplateResource videoTemplateResource = null)
+        {
+             ApiResponse<TemplateResource> localVarResponse = UpdateVideoTemplateWithHttpInfo(id, videoTemplateResource);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a video template 
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The id of the template</param>
+        /// <param name="videoTemplateResource">The video template resource object (optional)</param>
+        /// <returns>ApiResponse of TemplateResource</returns>
+        public ApiResponse< TemplateResource > UpdateVideoTemplateWithHttpInfo (string id, TemplateResource videoTemplateResource = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling MediaVideosApi->UpdateVideoTemplate");
+
+            var localVarPath = "/media/videos/templates/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (videoTemplateResource != null && videoTemplateResource.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(videoTemplateResource); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = videoTemplateResource; // byte array
+            }
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateVideoTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<TemplateResource>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (TemplateResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TemplateResource)));
         }
 
         /// <summary>

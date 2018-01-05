@@ -53,12 +53,12 @@ namespace com.knetikcloud.Client
         public ApiClient()
         {
             Configuration = com.knetikcloud.Client.Configuration.Default;
-            RestClient = new RestClient("https://sandbox.knetikcloud.com");
+            RestClient = new RestClient("https://devsandbox.knetikcloud.com");
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default base path (https://sandbox.knetikcloud.com).
+        /// with default base path (https://devsandbox.knetikcloud.com).
         /// </summary>
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config)
@@ -73,7 +73,7 @@ namespace com.knetikcloud.Client
         /// with default configuration.
         /// </summary>
         /// <param name="basePath">The base path.</param>
-        public ApiClient(String basePath = "https://sandbox.knetikcloud.com")
+        public ApiClient(String basePath = "https://devsandbox.knetikcloud.com")
         {
            if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");

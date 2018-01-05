@@ -155,6 +155,18 @@ namespace com.knetikcloud.Test
         }
         
         /// <summary>
+        /// Test CreateVideoTemplate
+        /// </summary>
+        [Test]
+        public void CreateVideoTemplateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //TemplateResource videoTemplateResource = null;
+            //var response = instance.CreateVideoTemplate(videoTemplateResource);
+            //Assert.IsInstanceOf<TemplateResource> (response, "response is TemplateResource");
+        }
+        
+        /// <summary>
         /// Test DeleteVideo
         /// </summary>
         [Test]
@@ -213,6 +225,19 @@ namespace com.knetikcloud.Test
             //long? videoId = null;
             //long? id = null;
             //instance.DeleteVideoRelationship(videoId, id);
+            
+        }
+        
+        /// <summary>
+        /// Test DeleteVideoTemplate
+        /// </summary>
+        [Test]
+        public void DeleteVideoTemplateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //string cascade = null;
+            //instance.DeleteVideoTemplate(id, cascade);
             
         }
         
@@ -283,6 +308,32 @@ namespace com.knetikcloud.Test
             //int? page = null;
             //var response = instance.GetVideoRelationships(videoId, size, page);
             //Assert.IsInstanceOf<PageResourceVideoRelationshipResource> (response, "response is PageResourceVideoRelationshipResource");
+        }
+        
+        /// <summary>
+        /// Test GetVideoTemplate
+        /// </summary>
+        [Test]
+        public void GetVideoTemplateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //var response = instance.GetVideoTemplate(id);
+            //Assert.IsInstanceOf<TemplateResource> (response, "response is TemplateResource");
+        }
+        
+        /// <summary>
+        /// Test GetVideoTemplates
+        /// </summary>
+        [Test]
+        public void GetVideoTemplatesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? size = null;
+            //int? page = null;
+            //string order = null;
+            //var response = instance.GetVideoTemplates(size, page, order);
+            //Assert.IsInstanceOf<PageResourceTemplateResource> (response, "response is PageResourceTemplateResource");
         }
         
         /// <summary>
@@ -376,6 +427,19 @@ namespace com.knetikcloud.Test
             //StringWrapper details = null;
             //instance.UpdateVideoRelationship(videoId, relationshipId, details);
             
+        }
+        
+        /// <summary>
+        /// Test UpdateVideoTemplate
+        /// </summary>
+        [Test]
+        public void UpdateVideoTemplateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //TemplateResource videoTemplateResource = null;
+            //var response = instance.UpdateVideoTemplate(id, videoTemplateResource);
+            //Assert.IsInstanceOf<TemplateResource> (response, "response is TemplateResource");
         }
         
         /// <summary>

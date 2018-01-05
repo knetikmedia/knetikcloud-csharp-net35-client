@@ -115,31 +115,6 @@ namespace com.knetikcloud.Api
         /// <returns>ApiResponse of PageResourceCommentResource</returns>
         ApiResponse<PageResourceCommentResource> GetCommentsWithHttpInfo (string context, int? contextId, int? size = null, int? page = null);
         /// <summary>
-        /// Search the comment index
-        /// </summary>
-        /// <remarks>
-        /// The body is an ElasticSearch query json. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options
-        /// </remarks>
-        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="query">The search query (optional)</param>
-        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
-        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
-        /// <returns>PageResourceCommentResource</returns>
-        PageResourceCommentResource SearchComments (Object query = null, int? size = null, int? page = null);
-
-        /// <summary>
-        /// Search the comment index
-        /// </summary>
-        /// <remarks>
-        /// The body is an ElasticSearch query json. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options
-        /// </remarks>
-        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="query">The search query (optional)</param>
-        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
-        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
-        /// <returns>ApiResponse of PageResourceCommentResource</returns>
-        ApiResponse<PageResourceCommentResource> SearchCommentsWithHttpInfo (Object query = null, int? size = null, int? page = null);
-        /// <summary>
         /// Update a comment
         /// </summary>
         /// <remarks>
@@ -585,95 +560,6 @@ namespace com.knetikcloud.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("GetComments", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<PageResourceCommentResource>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (PageResourceCommentResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageResourceCommentResource)));
-        }
-
-        /// <summary>
-        /// Search the comment index The body is an ElasticSearch query json. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options
-        /// </summary>
-        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="query">The search query (optional)</param>
-        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
-        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
-        /// <returns>PageResourceCommentResource</returns>
-        public PageResourceCommentResource SearchComments (Object query = null, int? size = null, int? page = null)
-        {
-             ApiResponse<PageResourceCommentResource> localVarResponse = SearchCommentsWithHttpInfo(query, size, page);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Search the comment index The body is an ElasticSearch query json. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options
-        /// </summary>
-        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="query">The search query (optional)</param>
-        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
-        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
-        /// <returns>ApiResponse of PageResourceCommentResource</returns>
-        public ApiResponse< PageResourceCommentResource > SearchCommentsWithHttpInfo (Object query = null, int? size = null, int? page = null)
-        {
-
-            var localVarPath = "/comments/search";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (size != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "size", size)); // query parameter
-            if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
-            if (query != null && query.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(query); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = query; // byte array
-            }
-
-            // authentication (oauth2_client_credentials_grant) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-            // authentication (oauth2_password_grant) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SearchComments", localVarResponse);
                 if (exception != null) throw exception;
             }
 

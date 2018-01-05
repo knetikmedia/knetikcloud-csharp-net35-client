@@ -73,6 +73,14 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'Active'
         }
         /// <summary>
+        /// Test the property 'AdditionalProperties'
+        /// </summary>
+        [Test]
+        public void AdditionalPropertiesTest()
+        {
+            // TODO unit test for the property 'AdditionalProperties'
+        }
+        /// <summary>
         /// Test the property 'Author'
         /// </summary>
         [Test]
@@ -247,6 +255,14 @@ namespace com.knetikcloud.Test
         public void TagsTest()
         {
             // TODO unit test for the property 'Tags'
+        }
+        /// <summary>
+        /// Test the property 'Template'
+        /// </summary>
+        [Test]
+        public void TemplateTest()
+        {
+            // TODO unit test for the property 'Template'
         }
         /// <summary>
         /// Test the property 'Thumbnail'

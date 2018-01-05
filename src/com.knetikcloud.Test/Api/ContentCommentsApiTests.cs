@@ -116,20 +116,6 @@ namespace com.knetikcloud.Test
         }
         
         /// <summary>
-        /// Test SearchComments
-        /// </summary>
-        [Test]
-        public void SearchCommentsTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //Object query = null;
-            //int? size = null;
-            //int? page = null;
-            //var response = instance.SearchComments(query, size, page);
-            //Assert.IsInstanceOf<PageResourceCommentResource> (response, "response is PageResourceCommentResource");
-        }
-        
-        /// <summary>
         /// Test UpdateComment
         /// </summary>
         [Test]

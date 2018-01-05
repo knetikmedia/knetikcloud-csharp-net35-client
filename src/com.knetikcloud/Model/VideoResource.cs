@@ -71,6 +71,7 @@ namespace com.knetikcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VideoResource" /> class.
         /// </summary>
+        /// <param name="AdditionalProperties">A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type.</param>
         /// <param name="Author">The original artist of the media.</param>
         /// <param name="Authored">The date the media was created as a unix timestamp in seconds.</param>
         /// <param name="Category">The category of the video (required).</param>
@@ -90,10 +91,11 @@ namespace com.knetikcloud.Model
         /// <param name="ShortDescription">The user friendly name of that resource. Defaults to blank string.</param>
         /// <param name="Size">The size of the media. Minimum 0 if supplied.</param>
         /// <param name="Tags">The tags for the video.</param>
+        /// <param name="Template">A video template this video is validated against (private). May be null and no validation of additional_properties will be done.</param>
         /// <param name="Thumbnail">The country of a thumbnail version. Typically a url.</param>
         /// <param name="Uploader">The user the media was uploaded by. May be null for system uploaded media. May only be set to a user other than the current caller if VIDEOS_ADMIN permission. Null will mean the caller is the uploader unless the caller has VIDEOS_ADMIN permission, in which case it will be set to null.</param>
         /// <param name="Width">The width of the video in px (required).</param>
-        public VideoResource(SimpleReferenceResourcelong Author = default(SimpleReferenceResourcelong), long? Authored = default(long?), SimpleReferenceResourcestring Category = default(SimpleReferenceResourcestring), List<CommentResource> Comments = default(List<CommentResource>), List<ContributionResource> Contributors = default(List<ContributionResource>), string Embed = default(string), string Extension = default(string), int? Height = default(int?), int? Length = default(int?), string Location = default(string), string LongDescription = default(string), string MimeType = default(string), string Name = default(string), int? Priority = default(int?), PrivacyEnum? Privacy = default(PrivacyEnum?), bool? Published = default(bool?), string ShortDescription = default(string), long? Size = default(long?), List<string> Tags = default(List<string>), string Thumbnail = default(string), SimpleUserResource Uploader = default(SimpleUserResource), int? Width = default(int?))
+        public VideoResource(Dictionary<string, Property> AdditionalProperties = default(Dictionary<string, Property>), SimpleReferenceResourcelong Author = default(SimpleReferenceResourcelong), long? Authored = default(long?), SimpleReferenceResourcestring Category = default(SimpleReferenceResourcestring), List<CommentResource> Comments = default(List<CommentResource>), List<ContributionResource> Contributors = default(List<ContributionResource>), string Embed = default(string), string Extension = default(string), int? Height = default(int?), int? Length = default(int?), string Location = default(string), string LongDescription = default(string), string MimeType = default(string), string Name = default(string), int? Priority = default(int?), PrivacyEnum? Privacy = default(PrivacyEnum?), bool? Published = default(bool?), string ShortDescription = default(string), long? Size = default(long?), List<string> Tags = default(List<string>), string Template = default(string), string Thumbnail = default(string), SimpleUserResource Uploader = default(SimpleUserResource), int? Width = default(int?))
         {
             // to ensure "Category" is required (not null)
             if (Category == null)
@@ -158,6 +160,7 @@ namespace com.knetikcloud.Model
             {
                 this.Width = Width;
             }
+            this.AdditionalProperties = AdditionalProperties;
             this.Author = Author;
             this.Authored = Authored;
             this.Comments = Comments;
@@ -171,6 +174,7 @@ namespace com.knetikcloud.Model
             this.ShortDescription = ShortDescription;
             this.Size = Size;
             this.Tags = Tags;
+            this.Template = Template;
             this.Thumbnail = Thumbnail;
             this.Uploader = Uploader;
         }
@@ -181,6 +185,13 @@ namespace com.knetikcloud.Model
         /// <value>Whether the video is available, based on various factors</value>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; private set; }
+
+        /// <summary>
+        /// A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type
+        /// </summary>
+        /// <value>A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type</value>
+        [DataMember(Name="additional_properties", EmitDefaultValue=false)]
+        public Dictionary<string, Property> AdditionalProperties { get; set; }
 
         /// <summary>
         /// The original artist of the media
@@ -331,6 +342,13 @@ namespace com.knetikcloud.Model
         public List<string> Tags { get; set; }
 
         /// <summary>
+        /// A video template this video is validated against (private). May be null and no validation of additional_properties will be done
+        /// </summary>
+        /// <value>A video template this video is validated against (private). May be null and no validation of additional_properties will be done</value>
+        [DataMember(Name="template", EmitDefaultValue=false)]
+        public string Template { get; set; }
+
+        /// <summary>
         /// The country of a thumbnail version. Typically a url
         /// </summary>
         /// <value>The country of a thumbnail version. Typically a url</value>
@@ -374,6 +392,7 @@ namespace com.knetikcloud.Model
             var sb = new StringBuilder();
             sb.Append("class VideoResource {\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  Author: ").Append(Author).Append("\n");
             sb.Append("  Authored: ").Append(Authored).Append("\n");
             sb.Append("  Banned: ").Append(Banned).Append("\n");
@@ -396,6 +415,7 @@ namespace com.knetikcloud.Model
             sb.Append("  ShortDescription: ").Append(ShortDescription).Append("\n");
             sb.Append("  Size: ").Append(Size).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
+            sb.Append("  Template: ").Append(Template).Append("\n");
             sb.Append("  Thumbnail: ").Append(Thumbnail).Append("\n");
             sb.Append("  UpdatedDate: ").Append(UpdatedDate).Append("\n");
             sb.Append("  Uploader: ").Append(Uploader).Append("\n");
@@ -439,6 +459,11 @@ namespace com.knetikcloud.Model
                     this.Active == input.Active ||
                     (this.Active != null &&
                     this.Active.Equals(input.Active))
+                ) && 
+                (
+                    this.AdditionalProperties == input.AdditionalProperties ||
+                    (this.AdditionalProperties != null &&
+                    this.AdditionalProperties.SequenceEqual(input.AdditionalProperties))
                 ) && 
                 (
                     this.Author == input.Author ||
@@ -551,6 +576,11 @@ namespace com.knetikcloud.Model
                     this.Tags.SequenceEqual(input.Tags))
                 ) && 
                 (
+                    this.Template == input.Template ||
+                    (this.Template != null &&
+                    this.Template.Equals(input.Template))
+                ) && 
+                (
                     this.Thumbnail == input.Thumbnail ||
                     (this.Thumbnail != null &&
                     this.Thumbnail.Equals(input.Thumbnail))
@@ -588,6 +618,8 @@ namespace com.knetikcloud.Model
                 int hashCode = 41;
                 if (this.Active != null)
                     hashCode = hashCode * 59 + this.Active.GetHashCode();
+                if (this.AdditionalProperties != null)
+                    hashCode = hashCode * 59 + this.AdditionalProperties.GetHashCode();
                 if (this.Author != null)
                     hashCode = hashCode * 59 + this.Author.GetHashCode();
                 if (this.Authored != null)
@@ -632,6 +664,8 @@ namespace com.knetikcloud.Model
                     hashCode = hashCode * 59 + this.Size.GetHashCode();
                 if (this.Tags != null)
                     hashCode = hashCode * 59 + this.Tags.GetHashCode();
+                if (this.Template != null)
+                    hashCode = hashCode * 59 + this.Template.GetHashCode();
                 if (this.Thumbnail != null)
                     hashCode = hashCode * 59 + this.Thumbnail.GetHashCode();
                 if (this.UpdatedDate != null)
