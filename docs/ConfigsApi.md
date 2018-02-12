@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.ConfigsApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,6 +16,8 @@ Method | HTTP request | Description
 > Config CreateConfig (Config config = null)
 
 Create a new config
+
+<b>Permissions Needed:</b> TOPICS_ADMIN
 
 ### Example
 ```csharp
@@ -81,6 +83,8 @@ Name | Type | Description  | Notes
 
 Delete an existing config
 
+<b>Permissions Needed:</b> CONFIGS_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -133,7 +137,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -144,7 +148,7 @@ void (empty response body)
 
 Get a single config
 
-Only configs that are public readable will be shown without admin access
+Only configs that are public readable will be shown without admin access. <br><br><b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -199,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -209,6 +213,8 @@ Name | Type | Description  | Notes
 > PageResourceConfig GetConfigs (string filterSearch = null, int? size = null, int? page = null, string order = null)
 
 List and search configs
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -233,7 +239,7 @@ namespace Example
             var filterSearch = filterSearch_example;  // string | Filter for configs whose name contains the given string (optional) 
             var size = 56;  // int? | The number of objects returned per page (optional)  (default to 25)
             var page = 56;  // int? | The number of the page returned (optional)  (default to 1)
-            var order = order_example;  // string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)  (default to 1)
+            var order = order_example;  // string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional) 
 
             try
             {
@@ -257,7 +263,7 @@ Name | Type | Description  | Notes
  **filterSearch** | **string**| Filter for configs whose name contains the given string | [optional] 
  **size** | **int?**| The number of objects returned per page | [optional] [default to 25]
  **page** | **int?**| The number of the page returned | [optional] [default to 1]
- **order** | **string**| A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] | [optional] [default to 1]
+ **order** | **string**| A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] | [optional] 
 
 ### Return type
 
@@ -269,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -279,6 +285,8 @@ Name | Type | Description  | Notes
 > void UpdateConfig (string name, Config config = null)
 
 Update an existing config
+
+<b>Permissions Needed:</b> CONFIGS_ADMIN
 
 ### Example
 ```csharp

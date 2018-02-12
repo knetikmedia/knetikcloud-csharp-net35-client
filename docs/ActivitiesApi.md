@@ -1,9 +1,10 @@
 # com.knetikcloud.Api.ActivitiesApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**AddUser**](ActivitiesApi.md#adduser) | **POST** /activity-occurrences/{activity_occurrence_id}/users | Add a user to an occurrence
 [**CreateActivity**](ActivitiesApi.md#createactivity) | **POST** /activities | Create an activity
 [**CreateActivityOccurrence**](ActivitiesApi.md#createactivityoccurrence) | **POST** /activity-occurrences | Create a new activity occurrence. Ex: start a game
 [**CreateActivityTemplate**](ActivitiesApi.md#createactivitytemplate) | **POST** /activities/templates | Create a activity template
@@ -15,17 +16,94 @@ Method | HTTP request | Description
 [**GetActivityTemplate**](ActivitiesApi.md#getactivitytemplate) | **GET** /activities/templates/{id} | Get a single activity template
 [**GetActivityTemplates**](ActivitiesApi.md#getactivitytemplates) | **GET** /activities/templates | List and search activity templates
 [**ListActivityOccurrences**](ActivitiesApi.md#listactivityoccurrences) | **GET** /activity-occurrences | List activity occurrences
+[**RemoveUser**](ActivitiesApi.md#removeuser) | **DELETE** /activity-occurrences/{activity_occurrence_id}/users/{user_id} | Remove a user from an occurrence
 [**SetActivityOccurrenceResults**](ActivitiesApi.md#setactivityoccurrenceresults) | **POST** /activity-occurrences/{activity_occurrence_id}/results | Sets the status of an activity occurrence to FINISHED and logs metrics
+[**SetActivityOccurrenceSettings**](ActivitiesApi.md#setactivityoccurrencesettings) | **PUT** /activity-occurrences/{activity_occurrence_id}/settings | Sets the settings of an activity occurrence
+[**SetUserStatus**](ActivitiesApi.md#setuserstatus) | **PUT** /activity-occurrences/{activity_occurrence_id}/users/{user_id}/status | Set a user&#39;s status within an occurrence
 [**UpdateActivity**](ActivitiesApi.md#updateactivity) | **PUT** /activities/{id} | Update an activity
-[**UpdateActivityOccurrence**](ActivitiesApi.md#updateactivityoccurrence) | **PUT** /activity-occurrences/{activity_occurrence_id}/status | Updated the status of an activity occurrence
+[**UpdateActivityOccurrenceStatus**](ActivitiesApi.md#updateactivityoccurrencestatus) | **PUT** /activity-occurrences/{activity_occurrence_id}/status | Update the status of an activity occurrence
 [**UpdateActivityTemplate**](ActivitiesApi.md#updateactivitytemplate) | **PUT** /activities/templates/{id} | Update an activity template
 
+
+<a name="adduser"></a>
+# **AddUser**
+> ActivityOccurrenceResource AddUser (long? activityOccurrenceId, bool? test = null, bool? bypassRestrictions = null, IntWrapper userId = null)
+
+Add a user to an occurrence
+
+If called with no body, defaults to the user making the call.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using com.knetikcloud.Api;
+using com.knetikcloud.Client;
+using com.knetikcloud.Model;
+
+namespace Example
+{
+    public class AddUserExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ActivitiesApi();
+            var activityOccurrenceId = 789;  // long? | The id of the activity occurrence
+            var test = true;  // bool? | if true, indicates that the user should NOT be added. This can be used to test for eligibility (optional)  (default to false)
+            var bypassRestrictions = true;  // bool? | if true, indicates that restrictions such as max player count should be ignored. Can only be used with ACTIVITIES_ADMIN (optional)  (default to false)
+            var userId = new IntWrapper(); // IntWrapper | The id of the user, or null for 'caller' (optional) 
+
+            try
+            {
+                // Add a user to an occurrence
+                ActivityOccurrenceResource result = apiInstance.AddUser(activityOccurrenceId, test, bypassRestrictions, userId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ActivitiesApi.AddUser: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **activityOccurrenceId** | **long?**| The id of the activity occurrence | 
+ **test** | **bool?**| if true, indicates that the user should NOT be added. This can be used to test for eligibility | [optional] [default to false]
+ **bypassRestrictions** | **bool?**| if true, indicates that restrictions such as max player count should be ignored. Can only be used with ACTIVITIES_ADMIN | [optional] [default to false]
+ **userId** | [**IntWrapper**](IntWrapper.md)| The id of the user, or null for &#39;caller&#39; | [optional] 
+
+### Return type
+
+[**ActivityOccurrenceResource**](ActivityOccurrenceResource.md)
+
+### Authorization
+
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="createactivity"></a>
 # **CreateActivity**
 > ActivityResource CreateActivity (ActivityResource activityResource = null)
 
 Create an activity
+
+<b>Permissions Needed:</b> ACTIVITIES_ADMIN
 
 ### Example
 ```csharp
@@ -91,7 +169,7 @@ Name | Type | Description  | Notes
 
 Create a new activity occurrence. Ex: start a game
 
-Has to enforce extra rules if not used as an admin
+Has to enforce extra rules if not used as an admin. <br><br><b>Permissions Needed:</b> ACTIVITIES_USER or ACTIVITIES_ADMIN
 
 ### Example
 ```csharp
@@ -159,7 +237,7 @@ Name | Type | Description  | Notes
 
 Create a activity template
 
-Activity Templates define a type of activity and the properties they have
+Activity Templates define a type of activity and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
 
 ### Example
 ```csharp
@@ -225,6 +303,8 @@ Name | Type | Description  | Notes
 
 Delete an activity
 
+<b>Permissions Needed:</b> ACTIVITIES_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -277,7 +357,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -288,7 +368,7 @@ void (empty response body)
 
 Delete a activity template
 
-If cascade = 'detach', it will force delete the template even if it's attached to other objects
+If cascade = 'detach', it will force delete the template even if it's attached to other objects. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
 
 ### Example
 ```csharp
@@ -344,7 +424,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -354,6 +434,8 @@ void (empty response body)
 > PageResourceBareActivityResource GetActivities (bool? filterTemplate = null, string filterName = null, string filterId = null, int? size = null, int? page = null, string order = null)
 
 List activity definitions
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -418,7 +500,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -428,6 +510,8 @@ Name | Type | Description  | Notes
 > ActivityResource GetActivity (long? id)
 
 Get a single activity
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -482,7 +566,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -492,6 +576,8 @@ Name | Type | Description  | Notes
 > ActivityOccurrenceResource GetActivityOccurrenceDetails (long? activityOccurrenceId)
 
 Load a single activity occurrence details
+
+<b>Permissions Needed:</b> ACTIVITIES_ADMIN
 
 ### Example
 ```csharp
@@ -546,7 +632,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -556,6 +642,8 @@ Name | Type | Description  | Notes
 > TemplateResource GetActivityTemplate (string id)
 
 Get a single activity template
+
+<b>Permissions Needed:</b> TEMPLATE_ADMIN or ACTIVITIES_ADMIN
 
 ### Example
 ```csharp
@@ -610,7 +698,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -620,6 +708,8 @@ Name | Type | Description  | Notes
 > PageResourceTemplateResource GetActivityTemplates (int? size = null, int? page = null, string order = null)
 
 List and search activity templates
+
+<b>Permissions Needed:</b> TEMPLATE_ADMIN or ACTIVITIES_ADMIN
 
 ### Example
 ```csharp
@@ -678,7 +768,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -688,6 +778,8 @@ Name | Type | Description  | Notes
 > PageResourceActivityOccurrenceResource ListActivityOccurrences (string filterActivity = null, string filterStatus = null, int? filterEvent = null, int? filterChallenge = null, int? size = null, int? page = null, string order = null)
 
 List activity occurrences
+
+<b>Permissions Needed:</b> ACTIVITIES_ADMIN
 
 ### Example
 ```csharp
@@ -710,7 +802,7 @@ namespace Example
 
             var apiInstance = new ActivitiesApi();
             var filterActivity = filterActivity_example;  // string | Filter for occurrences of the given activity ID (optional) 
-            var filterStatus = filterStatus_example;  // string | Filter for occurrences of the given activity ID (optional) 
+            var filterStatus = filterStatus_example;  // string | Filter for occurrences in the given status (optional) 
             var filterEvent = 56;  // int? | Filter for occurrences played during the given event (optional) 
             var filterChallenge = 56;  // int? | Filter for occurrences played within the given challenge (optional) 
             var size = 56;  // int? | The number of objects returned per page (optional)  (default to 25)
@@ -737,7 +829,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **filterActivity** | **string**| Filter for occurrences of the given activity ID | [optional] 
- **filterStatus** | **string**| Filter for occurrences of the given activity ID | [optional] 
+ **filterStatus** | **string**| Filter for occurrences in the given status | [optional] 
  **filterEvent** | **int?**| Filter for occurrences played during the given event | [optional] 
  **filterChallenge** | **int?**| Filter for occurrences played within the given challenge | [optional] 
  **size** | **int?**| The number of objects returned per page | [optional] [default to 25]
@@ -754,7 +846,76 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="removeuser"></a>
+# **RemoveUser**
+> void RemoveUser (long? activityOccurrenceId, string userId, bool? ban = null, bool? bypassRestrictions = null)
+
+Remove a user from an occurrence
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using com.knetikcloud.Api;
+using com.knetikcloud.Client;
+using com.knetikcloud.Model;
+
+namespace Example
+{
+    public class RemoveUserExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ActivitiesApi();
+            var activityOccurrenceId = 789;  // long? | The id of the activity occurrence
+            var userId = userId_example;  // string | The id of the user, or 'me'
+            var ban = true;  // bool? | if true, indicates that the user should not be allowed to re-join. Can only be set by host or admin (optional)  (default to false)
+            var bypassRestrictions = true;  // bool? | if true, indicates that restrictions such as current status should be ignored. Can only be used with ACTIVITIES_ADMIN (optional)  (default to false)
+
+            try
+            {
+                // Remove a user from an occurrence
+                apiInstance.RemoveUser(activityOccurrenceId, userId, ban, bypassRestrictions);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ActivitiesApi.RemoveUser: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **activityOccurrenceId** | **long?**| The id of the activity occurrence | 
+ **userId** | **string**| The id of the user, or &#39;me&#39; | 
+ **ban** | **bool?**| if true, indicates that the user should not be allowed to re-join. Can only be set by host or admin | [optional] [default to false]
+ **bypassRestrictions** | **bool?**| if true, indicates that restrictions such as current status should be ignored. Can only be used with ACTIVITIES_ADMIN | [optional] [default to false]
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -764,6 +925,8 @@ Name | Type | Description  | Notes
 > ActivityOccurrenceResults SetActivityOccurrenceResults (long? activityOccurrenceId, ActivityOccurrenceResultsResource activityOccurrenceResults = null)
 
 Sets the status of an activity occurrence to FINISHED and logs metrics
+
+In addition to user permissions requirements there is security based on the core_settings.results_trust setting.
 
 ### Example
 ```csharp
@@ -825,11 +988,147 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="setactivityoccurrencesettings"></a>
+# **SetActivityOccurrenceSettings**
+> ActivityOccurrenceResource SetActivityOccurrenceSettings (long? activityOccurrenceId, ActivityOccurrenceSettingsResource settings = null)
+
+Sets the settings of an activity occurrence
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using com.knetikcloud.Api;
+using com.knetikcloud.Client;
+using com.knetikcloud.Model;
+
+namespace Example
+{
+    public class SetActivityOccurrenceSettingsExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ActivitiesApi();
+            var activityOccurrenceId = 789;  // long? | The id of the activity occurrence
+            var settings = new ActivityOccurrenceSettingsResource(); // ActivityOccurrenceSettingsResource | The new settings (optional) 
+
+            try
+            {
+                // Sets the settings of an activity occurrence
+                ActivityOccurrenceResource result = apiInstance.SetActivityOccurrenceSettings(activityOccurrenceId, settings);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ActivitiesApi.SetActivityOccurrenceSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **activityOccurrenceId** | **long?**| The id of the activity occurrence | 
+ **settings** | [**ActivityOccurrenceSettingsResource**](ActivityOccurrenceSettingsResource.md)| The new settings | [optional] 
+
+### Return type
+
+[**ActivityOccurrenceResource**](ActivityOccurrenceResource.md)
+
+### Authorization
+
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="setuserstatus"></a>
+# **SetUserStatus**
+> ActivityUserResource SetUserStatus (long? activityOccurrenceId, string userId, string status = null)
+
+Set a user's status within an occurrence
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using com.knetikcloud.Api;
+using com.knetikcloud.Client;
+using com.knetikcloud.Model;
+
+namespace Example
+{
+    public class SetUserStatusExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new ActivitiesApi();
+            var activityOccurrenceId = 789;  // long? | The id of the activity occurrence
+            var userId = userId_example;  // string | The id of the user
+            var status = status_example;  // string | The new status (optional) 
+
+            try
+            {
+                // Set a user's status within an occurrence
+                ActivityUserResource result = apiInstance.SetUserStatus(activityOccurrenceId, userId, status);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ActivitiesApi.SetUserStatus: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **activityOccurrenceId** | **long?**| The id of the activity occurrence | 
+ **userId** | **string**| The id of the user | 
+ **status** | **string**| The new status | [optional] 
+
+### Return type
+
+[**ActivityUserResource**](ActivityUserResource.md)
+
+### Authorization
+
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="updateactivity"></a>
 # **UpdateActivity**
 > ActivityResource UpdateActivity (long? id, ActivityResource activityResource = null)
 
 Update an activity
+
+<b>Permissions Needed:</b> ACTIVITIES_ADMIN
 
 ### Example
 ```csharp
@@ -891,13 +1190,13 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateactivityoccurrence"></a>
-# **UpdateActivityOccurrence**
-> void UpdateActivityOccurrence (long? activityOccurrenceId, string activityOccurrenceStatus = null)
+<a name="updateactivityoccurrencestatus"></a>
+# **UpdateActivityOccurrenceStatus**
+> void UpdateActivityOccurrenceStatus (long? activityOccurrenceId, ValueWrapperstring activityOccurrenceStatus = null)
 
-Updated the status of an activity occurrence
+Update the status of an activity occurrence
 
-If setting to 'FINISHED' reward will be run based on current metrics that have been recorded already. Aternatively, see results endpoint to finish and record all metrics at once.
+If setting to 'FINISHED' reward will be run based on current metrics that have been recorded already. Alternatively, see results endpoint to finish and record all metrics at once. Can be called by non-host participants if non_host_status_control is true
 
 ### Example
 ```csharp
@@ -909,7 +1208,7 @@ using com.knetikcloud.Model;
 
 namespace Example
 {
-    public class UpdateActivityOccurrenceExample
+    public class UpdateActivityOccurrenceStatusExample
     {
         public void main()
         {
@@ -920,16 +1219,16 @@ namespace Example
 
             var apiInstance = new ActivitiesApi();
             var activityOccurrenceId = 789;  // long? | The id of the activity occurrence
-            var activityOccurrenceStatus = activityOccurrenceStatus_example;  // string | The activity occurrence status object (optional) 
+            var activityOccurrenceStatus = new ValueWrapperstring(); // ValueWrapperstring | The activity occurrence status object (optional) 
 
             try
             {
-                // Updated the status of an activity occurrence
-                apiInstance.UpdateActivityOccurrence(activityOccurrenceId, activityOccurrenceStatus);
+                // Update the status of an activity occurrence
+                apiInstance.UpdateActivityOccurrenceStatus(activityOccurrenceId, activityOccurrenceStatus);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ActivitiesApi.UpdateActivityOccurrence: " + e.Message );
+                Debug.Print("Exception when calling ActivitiesApi.UpdateActivityOccurrenceStatus: " + e.Message );
             }
         }
     }
@@ -941,7 +1240,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activityOccurrenceId** | **long?**| The id of the activity occurrence | 
- **activityOccurrenceStatus** | **string**| The activity occurrence status object | [optional] 
+ **activityOccurrenceStatus** | [**ValueWrapperstring**](ValueWrapperstring.md)| The activity occurrence status object | [optional] 
 
 ### Return type
 
@@ -963,6 +1262,8 @@ void (empty response body)
 > TemplateResource UpdateActivityTemplate (string id, TemplateResource activityTemplateResource = null)
 
 Update an activity template
+
+<b>Permissions Needed:</b> TEMPLATE_ADMIN
 
 ### Example
 ```csharp

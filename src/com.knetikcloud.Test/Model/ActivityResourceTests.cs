@@ -73,6 +73,14 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'AdditionalProperties'
         }
         /// <summary>
+        /// Test the property 'CoreSettings'
+        /// </summary>
+        [Test]
+        public void CoreSettingsTest()
+        {
+            // TODO unit test for the property 'CoreSettings'
+        }
+        /// <summary>
         /// Test the property 'CreatedDate'
         /// </summary>
         [Test]

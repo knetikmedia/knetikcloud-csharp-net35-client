@@ -65,6 +65,21 @@ namespace com.knetikcloud.Test
 
         
         /// <summary>
+        /// Test AddUser
+        /// </summary>
+        [Test]
+        public void AddUserTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? activityOccurrenceId = null;
+            //bool? test = null;
+            //bool? bypassRestrictions = null;
+            //IntWrapper userId = null;
+            //var response = instance.AddUser(activityOccurrenceId, test, bypassRestrictions, userId);
+            //Assert.IsInstanceOf<ActivityOccurrenceResource> (response, "response is ActivityOccurrenceResource");
+        }
+        
+        /// <summary>
         /// Test CreateActivity
         /// </summary>
         [Test]
@@ -212,6 +227,21 @@ namespace com.knetikcloud.Test
         }
         
         /// <summary>
+        /// Test RemoveUser
+        /// </summary>
+        [Test]
+        public void RemoveUserTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? activityOccurrenceId = null;
+            //string userId = null;
+            //bool? ban = null;
+            //bool? bypassRestrictions = null;
+            //instance.RemoveUser(activityOccurrenceId, userId, ban, bypassRestrictions);
+            
+        }
+        
+        /// <summary>
         /// Test SetActivityOccurrenceResults
         /// </summary>
         [Test]
@@ -222,6 +252,33 @@ namespace com.knetikcloud.Test
             //ActivityOccurrenceResultsResource activityOccurrenceResults = null;
             //var response = instance.SetActivityOccurrenceResults(activityOccurrenceId, activityOccurrenceResults);
             //Assert.IsInstanceOf<ActivityOccurrenceResults> (response, "response is ActivityOccurrenceResults");
+        }
+        
+        /// <summary>
+        /// Test SetActivityOccurrenceSettings
+        /// </summary>
+        [Test]
+        public void SetActivityOccurrenceSettingsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? activityOccurrenceId = null;
+            //ActivityOccurrenceSettingsResource settings = null;
+            //var response = instance.SetActivityOccurrenceSettings(activityOccurrenceId, settings);
+            //Assert.IsInstanceOf<ActivityOccurrenceResource> (response, "response is ActivityOccurrenceResource");
+        }
+        
+        /// <summary>
+        /// Test SetUserStatus
+        /// </summary>
+        [Test]
+        public void SetUserStatusTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //long? activityOccurrenceId = null;
+            //string userId = null;
+            //string status = null;
+            //var response = instance.SetUserStatus(activityOccurrenceId, userId, status);
+            //Assert.IsInstanceOf<ActivityUserResource> (response, "response is ActivityUserResource");
         }
         
         /// <summary>
@@ -238,15 +295,15 @@ namespace com.knetikcloud.Test
         }
         
         /// <summary>
-        /// Test UpdateActivityOccurrence
+        /// Test UpdateActivityOccurrenceStatus
         /// </summary>
         [Test]
-        public void UpdateActivityOccurrenceTest()
+        public void UpdateActivityOccurrenceStatusTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? activityOccurrenceId = null;
-            //string activityOccurrenceStatus = null;
-            //instance.UpdateActivityOccurrence(activityOccurrenceId, activityOccurrenceStatus);
+            //ValueWrapperstring activityOccurrenceStatus = null;
+            //instance.UpdateActivityOccurrenceStatus(activityOccurrenceId, activityOccurrenceStatus);
             
         }
         

@@ -165,6 +165,20 @@ namespace com.knetikcloud.Test
         }
         
         /// <summary>
+        /// Test DisableGroupNotification
+        /// </summary>
+        [Test]
+        public void DisableGroupNotificationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string uniqueName = null;
+            //string userId = null;
+            //ValueWrapperboolean disabled = null;
+            //instance.DisableGroupNotification(uniqueName, userId, disabled);
+            
+        }
+        
+        /// <summary>
         /// Test GetGroup
         /// </summary>
         [Test]
@@ -243,6 +257,20 @@ namespace com.knetikcloud.Test
         }
         
         /// <summary>
+        /// Test GetGroupMessages
+        /// </summary>
+        [Test]
+        public void GetGroupMessagesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string uniqueName = null;
+            //int? size = null;
+            //int? page = null;
+            //var response = instance.GetGroupMessages(uniqueName, size, page);
+            //Assert.IsInstanceOf<PageResourceChatMessageResource> (response, "response is PageResourceChatMessageResource");
+        }
+        
+        /// <summary>
         /// Test GetGroupTemplate
         /// </summary>
         [Test]
@@ -299,6 +327,19 @@ namespace com.knetikcloud.Test
             //string order = null;
             //var response = instance.ListGroups(filterTemplate, filterMemberCount, filterName, filterUniqueName, filterParent, filterStatus, size, page, order);
             //Assert.IsInstanceOf<PageResourceGroupResource> (response, "response is PageResourceGroupResource");
+        }
+        
+        /// <summary>
+        /// Test PostGroupMessage
+        /// </summary>
+        [Test]
+        public void PostGroupMessageTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string uniqueName = null;
+            //ChatMessageRequest chatMessageRequest = null;
+            //var response = instance.PostGroupMessage(uniqueName, chatMessageRequest);
+            //Assert.IsInstanceOf<ChatMessageResource> (response, "response is ChatMessageResource");
         }
         
         /// <summary>

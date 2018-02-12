@@ -65,6 +65,83 @@ namespace com.knetikcloud.Test
 
         
         /// <summary>
+        /// Test CompileMessageTemplate
+        /// </summary>
+        [Test]
+        public void CompileMessageTemplateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //MessageTemplateBulkRequest request = null;
+            //var response = instance.CompileMessageTemplate(request);
+            //Assert.IsInstanceOf<Dictionary<string, string>> (response, "response is Dictionary<string, string>");
+        }
+        
+        /// <summary>
+        /// Test CreateMessageTemplate
+        /// </summary>
+        [Test]
+        public void CreateMessageTemplateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //MessageTemplateResource messageTemplate = null;
+            //var response = instance.CreateMessageTemplate(messageTemplate);
+            //Assert.IsInstanceOf<MessageTemplateResource> (response, "response is MessageTemplateResource");
+        }
+        
+        /// <summary>
+        /// Test DeleteMessageTemplate
+        /// </summary>
+        [Test]
+        public void DeleteMessageTemplateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //instance.DeleteMessageTemplate(id);
+            
+        }
+        
+        /// <summary>
+        /// Test GetMessageTemplate
+        /// </summary>
+        [Test]
+        public void GetMessageTemplateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //var response = instance.GetMessageTemplate(id);
+            //Assert.IsInstanceOf<MessageTemplateResource> (response, "response is MessageTemplateResource");
+        }
+        
+        /// <summary>
+        /// Test GetMessageTemplates
+        /// </summary>
+        [Test]
+        public void GetMessageTemplatesTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string filterTagset = null;
+            //string filterTagIntersection = null;
+            //string filterTagExclusion = null;
+            //int? size = null;
+            //int? page = null;
+            //string order = null;
+            //var response = instance.GetMessageTemplates(filterTagset, filterTagIntersection, filterTagExclusion, size, page, order);
+            //Assert.IsInstanceOf<PageResourceMessageTemplateResource> (response, "response is PageResourceMessageTemplateResource");
+        }
+        
+        /// <summary>
+        /// Test SendMessage1
+        /// </summary>
+        [Test]
+        public void SendMessage1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //MessageResource messageResource = null;
+            //instance.SendMessage1(messageResource);
+            
+        }
+        
+        /// <summary>
         /// Test SendRawEmail
         /// </summary>
         [Test]
@@ -134,6 +211,31 @@ namespace com.knetikcloud.Test
             //TemplateSMSResource templateSMSResource = null;
             //instance.SendTemplatedSMS(templateSMSResource);
             
+        }
+        
+        /// <summary>
+        /// Test SendWebsocket
+        /// </summary>
+        [Test]
+        public void SendWebsocketTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //WebsocketMessageResource websocketResource = null;
+            //instance.SendWebsocket(websocketResource);
+            
+        }
+        
+        /// <summary>
+        /// Test UpdateMessageTemplate
+        /// </summary>
+        [Test]
+        public void UpdateMessageTemplateTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //string id = null;
+            //MessageTemplateResource messageTemplateResource = null;
+            //var response = instance.UpdateMessageTemplate(id, messageTemplateResource);
+            //Assert.IsInstanceOf<MessageTemplateResource> (response, "response is MessageTemplateResource");
         }
         
     }

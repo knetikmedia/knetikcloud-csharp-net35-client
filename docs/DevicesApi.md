@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.DevicesApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -24,6 +24,8 @@ Method | HTTP request | Description
 > DeviceResource AddDeviceUsers (List<SimpleUserResource> userResources, string id)
 
 Add device users
+
+<b>Permissions Needed:</b> DEVICES_ADMIN or owner
 
 ### Example
 ```csharp
@@ -91,6 +93,8 @@ Name | Type | Description  | Notes
 
 Create a device
 
+<b>Permissions Needed:</b> ANY
+
 ### Example
 ```csharp
 using System;
@@ -155,7 +159,7 @@ Name | Type | Description  | Notes
 
 Create a device template
 
-Device Templates define a type of device and the properties they have
+Device Templates define a type of device and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
 
 ### Example
 ```csharp
@@ -221,6 +225,8 @@ Name | Type | Description  | Notes
 
 Delete a device
 
+<b>Permissions Needed:</b> DEVICES_ADMIN or owner
+
 ### Example
 ```csharp
 using System;
@@ -273,7 +279,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -284,7 +290,7 @@ void (empty response body)
 
 Delete an device template
 
-If cascade = 'detach', it will force delete the template even if it's attached to other objects
+If cascade = 'detach', it will force delete the template even if it's attached to other objects. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
 
 ### Example
 ```csharp
@@ -340,7 +346,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -350,6 +356,8 @@ void (empty response body)
 > void DeleteDeviceUser (string id, int? userId)
 
 Delete a device user
+
+<b>Permissions Needed:</b> DEVICES_ADMIN or owner
 
 ### Example
 ```csharp
@@ -405,7 +413,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -415,6 +423,8 @@ void (empty response body)
 > void DeleteDeviceUsers (string id, string filterId = null)
 
 Delete all device users
+
+<b>Permissions Needed:</b> DEVICES_ADMIN or owner
 
 ### Example
 ```csharp
@@ -470,7 +480,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -480,6 +490,8 @@ void (empty response body)
 > DeviceResource GetDevice (string id)
 
 Get a single device
+
+<b>Permissions Needed:</b> DEVICES_ADMIN or owner
 
 ### Example
 ```csharp
@@ -534,7 +546,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -544,6 +556,8 @@ Name | Type | Description  | Notes
 > TemplateResource GetDeviceTemplate (string id)
 
 Get a single device template
+
+<b>Permissions Needed:</b> description
 
 ### Example
 ```csharp
@@ -598,7 +612,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -608,6 +622,8 @@ Name | Type | Description  | Notes
 > PageResourceTemplateResource GetDeviceTemplates (int? size = null, int? page = null, string order = null)
 
 List and search device templates
+
+<b>Permissions Needed:</b> TEMPLATE_ADMIN or DEVICES_ADMIN
 
 ### Example
 ```csharp
@@ -666,7 +682,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -677,7 +693,7 @@ Name | Type | Description  | Notes
 
 List and search devices
 
-Get a list of devices with optional filtering
+Get a list of devices with optional filtering. <br><br><b>Permissions Needed:</b> DEVICES_ADMIN or user
 
 ### Example
 ```csharp
@@ -748,7 +764,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -758,6 +774,8 @@ Name | Type | Description  | Notes
 > DeviceResource UpdateDevice (DeviceResource device, string id)
 
 Update a device
+
+<b>Permissions Needed:</b> CUSTOMERS_ADMIN
 
 ### Example
 ```csharp
@@ -824,6 +842,8 @@ Name | Type | Description  | Notes
 > TemplateResource UpdateDeviceTemplate (string id, TemplateResource deviceTemplateResource = null)
 
 Update an device template
+
+<b>Permissions Needed:</b> TEMPLATE_ADMIN
 
 ### Example
 ```csharp

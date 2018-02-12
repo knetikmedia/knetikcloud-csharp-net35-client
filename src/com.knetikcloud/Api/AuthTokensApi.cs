@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Delete tokens by username, client id, or both
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">The username of the user (optional)</param>
@@ -40,7 +40,7 @@ namespace com.knetikcloud.Api
         /// Delete tokens by username, client id, or both
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">The username of the user (optional)</param>
@@ -51,7 +51,7 @@ namespace com.knetikcloud.Api
         /// Get a single token by username and client id
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">The username of the user</param>
@@ -63,7 +63,7 @@ namespace com.knetikcloud.Api
         /// Get a single token by username and client id
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">The username of the user</param>
@@ -74,7 +74,7 @@ namespace com.knetikcloud.Api
         /// List usernames and client ids
         /// </summary>
         /// <remarks>
-        /// Token value not shown
+        /// Token value not shown. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterClientId">Filters for token whose client id matches provided string (optional)</param>
@@ -89,7 +89,7 @@ namespace com.knetikcloud.Api
         /// List usernames and client ids
         /// </summary>
         /// <remarks>
-        /// Token value not shown
+        /// Token value not shown. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterClientId">Filters for token whose client id matches provided string (optional)</param>
@@ -200,7 +200,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete tokens by username, client id, or both 
+        /// Delete tokens by username, client id, or both &lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">The username of the user (optional)</param>
@@ -212,7 +212,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete tokens by username, client id, or both 
+        /// Delete tokens by username, client id, or both &lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">The username of the user (optional)</param>
@@ -231,7 +231,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -278,7 +277,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single token by username and client id 
+        /// Get a single token by username and client id &lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">The username of the user</param>
@@ -291,7 +290,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single token by username and client id 
+        /// Get a single token by username and client id &lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="username">The username of the user</param>
@@ -316,7 +315,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -363,7 +361,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List usernames and client ids Token value not shown
+        /// List usernames and client ids Token value not shown. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterClientId">Filters for token whose client id matches provided string (optional)</param>
@@ -379,7 +377,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List usernames and client ids Token value not shown
+        /// List usernames and client ids Token value not shown. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterClientId">Filters for token whose client id matches provided string (optional)</param>
@@ -401,7 +399,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 

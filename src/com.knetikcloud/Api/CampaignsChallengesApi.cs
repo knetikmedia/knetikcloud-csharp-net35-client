@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Create a challenge
         /// </summary>
         /// <remarks>
-        /// Challenges do not run on their own.  They must be added to a campaign before events will spawn.
+        /// Challenges do not run on their own.  They must be added to a campaign before events will spawn. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeResource">The challenge resource object (optional)</param>
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         /// Create a challenge
         /// </summary>
         /// <remarks>
-        /// Challenges do not run on their own.  They must be added to a campaign before events will spawn.
+        /// Challenges do not run on their own.  They must be added to a campaign before events will spawn. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeResource">The challenge resource object (optional)</param>
@@ -49,7 +49,7 @@ namespace com.knetikcloud.Api
         /// Create a challenge activity
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeId">The challenge id</param>
@@ -62,7 +62,7 @@ namespace com.knetikcloud.Api
         /// Create a challenge activity
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeId">The challenge id</param>
@@ -74,7 +74,7 @@ namespace com.knetikcloud.Api
         /// Create a challenge activity template
         /// </summary>
         /// <remarks>
-        /// Challenge Activity Templates define a type of challenge activity and the properties they have
+        /// Challenge Activity Templates define a type of challenge activity and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeActivityTemplateResource">The challengeActivity template resource object (optional)</param>
@@ -85,7 +85,7 @@ namespace com.knetikcloud.Api
         /// Create a challenge activity template
         /// </summary>
         /// <remarks>
-        /// Challenge Activity Templates define a type of challenge activity and the properties they have
+        /// Challenge Activity Templates define a type of challenge activity and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeActivityTemplateResource">The challengeActivity template resource object (optional)</param>
@@ -95,7 +95,7 @@ namespace com.knetikcloud.Api
         /// Create a challenge template
         /// </summary>
         /// <remarks>
-        /// Challenge Templates define a type of challenge and the properties they have
+        /// Challenge Templates define a type of challenge and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeTemplateResource">The challenge template resource object (optional)</param>
@@ -106,7 +106,7 @@ namespace com.knetikcloud.Api
         /// Create a challenge template
         /// </summary>
         /// <remarks>
-        /// Challenge Templates define a type of challenge and the properties they have
+        /// Challenge Templates define a type of challenge and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeTemplateResource">The challenge template resource object (optional)</param>
@@ -116,7 +116,7 @@ namespace com.knetikcloud.Api
         /// Delete a challenge
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge id</param>
@@ -127,7 +127,7 @@ namespace com.knetikcloud.Api
         /// Delete a challenge
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge id</param>
@@ -137,7 +137,7 @@ namespace com.knetikcloud.Api
         /// Delete a challenge activity
         /// </summary>
         /// <remarks>
-        /// A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+        /// A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge_activity id</param>
@@ -149,7 +149,7 @@ namespace com.knetikcloud.Api
         /// Delete a challenge activity
         /// </summary>
         /// <remarks>
-        /// A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+        /// A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge_activity id</param>
@@ -160,7 +160,7 @@ namespace com.knetikcloud.Api
         /// Delete a challenge activity template
         /// </summary>
         /// <remarks>
-        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -172,7 +172,7 @@ namespace com.knetikcloud.Api
         /// Delete a challenge activity template
         /// </summary>
         /// <remarks>
-        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -183,7 +183,7 @@ namespace com.knetikcloud.Api
         /// Delete a challenge event
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge event id</param>
@@ -194,7 +194,7 @@ namespace com.knetikcloud.Api
         /// Delete a challenge event
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge event id</param>
@@ -204,7 +204,7 @@ namespace com.knetikcloud.Api
         /// Delete a challenge template
         /// </summary>
         /// <remarks>
-        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -216,7 +216,7 @@ namespace com.knetikcloud.Api
         /// Delete a challenge template
         /// </summary>
         /// <remarks>
-        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -227,7 +227,7 @@ namespace com.knetikcloud.Api
         /// Retrieve a challenge
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge id</param>
@@ -238,7 +238,7 @@ namespace com.knetikcloud.Api
         /// Retrieve a challenge
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge id</param>
@@ -248,7 +248,7 @@ namespace com.knetikcloud.Api
         /// List and search challenge activities
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeId">The challenge id</param>
@@ -262,7 +262,7 @@ namespace com.knetikcloud.Api
         /// List and search challenge activities
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeId">The challenge id</param>
@@ -275,7 +275,7 @@ namespace com.knetikcloud.Api
         /// Get a single challenge activity
         /// </summary>
         /// <remarks>
-        /// A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+        /// A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge_activity id</param>
@@ -287,7 +287,7 @@ namespace com.knetikcloud.Api
         /// Get a single challenge activity
         /// </summary>
         /// <remarks>
-        /// A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+        /// A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge_activity id</param>
@@ -298,7 +298,7 @@ namespace com.knetikcloud.Api
         /// Get a single challenge activity template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -309,7 +309,7 @@ namespace com.knetikcloud.Api
         /// Get a single challenge activity template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -319,7 +319,7 @@ namespace com.knetikcloud.Api
         /// List and search challenge activity templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -332,7 +332,7 @@ namespace com.knetikcloud.Api
         /// List and search challenge activity templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -344,7 +344,7 @@ namespace com.knetikcloud.Api
         /// Retrieve a single challenge event details
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge event id</param>
@@ -355,7 +355,7 @@ namespace com.knetikcloud.Api
         /// Retrieve a single challenge event details
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge event id</param>
@@ -365,7 +365,7 @@ namespace com.knetikcloud.Api
         /// Retrieve a list of challenge events
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterStartDate">A comma separated string without spaces.  First value is the operator to search on, second value is the event start date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE). (optional)</param>
@@ -382,7 +382,7 @@ namespace com.knetikcloud.Api
         /// Retrieve a list of challenge events
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterStartDate">A comma separated string without spaces.  First value is the operator to search on, second value is the event start date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE). (optional)</param>
@@ -398,7 +398,7 @@ namespace com.knetikcloud.Api
         /// Get a single challenge template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -409,7 +409,7 @@ namespace com.knetikcloud.Api
         /// Get a single challenge template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -419,7 +419,7 @@ namespace com.knetikcloud.Api
         /// List and search challenge templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -432,7 +432,7 @@ namespace com.knetikcloud.Api
         /// List and search challenge templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -444,7 +444,7 @@ namespace com.knetikcloud.Api
         /// Retrieve a list of challenges
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterActiveCampaign">Filter for challenges that are tied to active campaigns (optional)</param>
@@ -460,7 +460,7 @@ namespace com.knetikcloud.Api
         /// Retrieve a list of challenges
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterActiveCampaign">Filter for challenges that are tied to active campaigns (optional)</param>
@@ -475,7 +475,7 @@ namespace com.knetikcloud.Api
         /// Update a challenge
         /// </summary>
         /// <remarks>
-        /// If the challenge is a copy, changes will propagate to all the related challenges
+        /// If the challenge is a copy, changes will propagate to all the related challenges. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge id</param>
@@ -487,7 +487,7 @@ namespace com.knetikcloud.Api
         /// Update a challenge
         /// </summary>
         /// <remarks>
-        /// If the challenge is a copy, changes will propagate to all the related challenges
+        /// If the challenge is a copy, changes will propagate to all the related challenges. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge id</param>
@@ -498,7 +498,7 @@ namespace com.knetikcloud.Api
         /// Update a challenge activity
         /// </summary>
         /// <remarks>
-        /// A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+        /// A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge_activity id</param>
@@ -512,7 +512,7 @@ namespace com.knetikcloud.Api
         /// Update a challenge activity
         /// </summary>
         /// <remarks>
-        /// A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+        /// A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge_activity id</param>
@@ -525,7 +525,7 @@ namespace com.knetikcloud.Api
         /// Update an challenge activity template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -537,7 +537,7 @@ namespace com.knetikcloud.Api
         /// Update an challenge activity template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -548,7 +548,7 @@ namespace com.knetikcloud.Api
         /// Update a challenge template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -560,7 +560,7 @@ namespace com.knetikcloud.Api
         /// Update a challenge template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -668,7 +668,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a challenge Challenges do not run on their own.  They must be added to a campaign before events will spawn.
+        /// Create a challenge Challenges do not run on their own.  They must be added to a campaign before events will spawn. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeResource">The challenge resource object (optional)</param>
@@ -680,7 +680,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a challenge Challenges do not run on their own.  They must be added to a campaign before events will spawn.
+        /// Create a challenge Challenges do not run on their own.  They must be added to a campaign before events will spawn. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeResource">The challenge resource object (optional)</param>
@@ -751,7 +751,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a challenge activity 
+        /// Create a challenge activity &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeId">The challenge id</param>
@@ -765,7 +765,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a challenge activity 
+        /// Create a challenge activity &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeId">The challenge id</param>
@@ -843,7 +843,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a challenge activity template Challenge Activity Templates define a type of challenge activity and the properties they have
+        /// Create a challenge activity template Challenge Activity Templates define a type of challenge activity and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeActivityTemplateResource">The challengeActivity template resource object (optional)</param>
@@ -855,7 +855,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a challenge activity template Challenge Activity Templates define a type of challenge activity and the properties they have
+        /// Create a challenge activity template Challenge Activity Templates define a type of challenge activity and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeActivityTemplateResource">The challengeActivity template resource object (optional)</param>
@@ -926,7 +926,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a challenge template Challenge Templates define a type of challenge and the properties they have
+        /// Create a challenge template Challenge Templates define a type of challenge and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeTemplateResource">The challenge template resource object (optional)</param>
@@ -938,7 +938,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a challenge template Challenge Templates define a type of challenge and the properties they have
+        /// Create a challenge template Challenge Templates define a type of challenge and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeTemplateResource">The challenge template resource object (optional)</param>
@@ -1009,7 +1009,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a challenge 
+        /// Delete a challenge &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge id</param>
@@ -1020,7 +1020,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a challenge 
+        /// Delete a challenge &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge id</param>
@@ -1041,7 +1041,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1087,7 +1086,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a challenge activity A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+        /// Delete a challenge activity A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge_activity id</param>
@@ -1099,7 +1098,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a challenge activity A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+        /// Delete a challenge activity A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge_activity id</param>
@@ -1124,7 +1123,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1171,7 +1169,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a challenge activity template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// Delete a challenge activity template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1183,7 +1181,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a challenge activity template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// Delete a challenge activity template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1205,7 +1203,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1252,7 +1249,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a challenge event 
+        /// Delete a challenge event &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge event id</param>
@@ -1263,7 +1260,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a challenge event 
+        /// Delete a challenge event &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge event id</param>
@@ -1284,7 +1281,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1330,7 +1326,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a challenge template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// Delete a challenge template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1342,7 +1338,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a challenge template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// Delete a challenge template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1364,7 +1360,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1411,7 +1406,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve a challenge 
+        /// Retrieve a challenge &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge id</param>
@@ -1423,7 +1418,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve a challenge 
+        /// Retrieve a challenge &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge id</param>
@@ -1444,7 +1439,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1490,7 +1484,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search challenge activities 
+        /// List and search challenge activities &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeId">The challenge id</param>
@@ -1505,7 +1499,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search challenge activities 
+        /// List and search challenge activities &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="challengeId">The challenge id</param>
@@ -1529,7 +1523,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1578,7 +1571,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single challenge activity A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+        /// Get a single challenge activity A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge_activity id</param>
@@ -1591,7 +1584,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single challenge activity A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+        /// Get a single challenge activity A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge_activity id</param>
@@ -1616,7 +1609,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1663,7 +1655,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single challenge activity template 
+        /// Get a single challenge activity template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1675,7 +1667,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single challenge activity template 
+        /// Get a single challenge activity template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1696,7 +1688,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1742,7 +1733,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search challenge activity templates 
+        /// List and search challenge activity templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -1756,7 +1747,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search challenge activity templates 
+        /// List and search challenge activity templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -1776,7 +1767,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1824,7 +1814,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve a single challenge event details 
+        /// Retrieve a single challenge event details &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge event id</param>
@@ -1836,7 +1826,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve a single challenge event details 
+        /// Retrieve a single challenge event details &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge event id</param>
@@ -1857,7 +1847,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1903,7 +1892,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve a list of challenge events 
+        /// Retrieve a list of challenge events &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterStartDate">A comma separated string without spaces.  First value is the operator to search on, second value is the event start date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE). (optional)</param>
@@ -1921,7 +1910,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve a list of challenge events 
+        /// Retrieve a list of challenge events &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterStartDate">A comma separated string without spaces.  First value is the operator to search on, second value is the event start date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE). (optional)</param>
@@ -1945,7 +1934,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1997,7 +1985,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single challenge template 
+        /// Get a single challenge template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -2009,7 +1997,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single challenge template 
+        /// Get a single challenge template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -2030,7 +2018,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2076,7 +2063,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search challenge templates 
+        /// List and search challenge templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -2090,7 +2077,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search challenge templates 
+        /// List and search challenge templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -2110,7 +2097,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2158,7 +2144,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve a list of challenges 
+        /// Retrieve a list of challenges &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterActiveCampaign">Filter for challenges that are tied to active campaigns (optional)</param>
@@ -2175,7 +2161,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve a list of challenges 
+        /// Retrieve a list of challenges &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterActiveCampaign">Filter for challenges that are tied to active campaigns (optional)</param>
@@ -2198,7 +2184,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -2249,7 +2234,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a challenge If the challenge is a copy, changes will propagate to all the related challenges
+        /// Update a challenge If the challenge is a copy, changes will propagate to all the related challenges. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge id</param>
@@ -2262,7 +2247,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a challenge If the challenge is a copy, changes will propagate to all the related challenges
+        /// Update a challenge If the challenge is a copy, changes will propagate to all the related challenges. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge id</param>
@@ -2338,7 +2323,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a challenge activity A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+        /// Update a challenge activity A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge_activity id</param>
@@ -2353,7 +2338,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a challenge activity A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+        /// Update a challenge activity A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The challenge_activity id</param>
@@ -2436,7 +2421,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update an challenge activity template 
+        /// Update an challenge activity template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -2449,7 +2434,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update an challenge activity template 
+        /// Update an challenge activity template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -2525,7 +2510,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a challenge template 
+        /// Update a challenge template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -2538,7 +2523,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a challenge template 
+        /// Update a challenge template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>

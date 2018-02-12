@@ -89,6 +89,14 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'ChallengeId'
         }
         /// <summary>
+        /// Test the property 'CoreSettings'
+        /// </summary>
+        [Test]
+        public void CoreSettingsTest()
+        {
+            // TODO unit test for the property 'CoreSettings'
+        }
+        /// <summary>
         /// Test the property 'Entitlement'
         /// </summary>
         [Test]

@@ -84,6 +84,12 @@ namespace com.knetikcloud.Model
             OPEN,
             
             /// <summary>
+            /// Enum LAUNCHING for "LAUNCHING"
+            /// </summary>
+            [EnumMember(Value = "LAUNCHING")]
+            LAUNCHING,
+            
+            /// <summary>
             /// Enum PLAYING for "PLAYING"
             /// </summary>
             [EnumMember(Value = "PLAYING")]
@@ -123,14 +129,17 @@ namespace com.knetikcloud.Model
         /// Initializes a new instance of the <see cref="ActivityOccurrenceResource" /> class.
         /// </summary>
         /// <param name="ActivityId">The id of the activity (required).</param>
+        /// <param name="Bans">The ids of banned users that cannot join the occurrence. See occurrence-user delete endpoint.</param>
         /// <param name="ChallengeActivityId">The id of the challenge activity (as part of the event, required if eventId set).</param>
+        /// <param name="CoreSettings">Defines core settings about the activity occurrence that affect how it behaves in the system. Validated against core settings in activity/challenge-activity..</param>
         /// <param name="Entitlement">The entitlement item required to enter the occurrence. Required if not part of an event. Must come from the set of entitlement items listed in the activity.</param>
         /// <param name="EventId">The id of the event.</param>
+        /// <param name="Host">The host of the occurrence, if not a participant (will be left out of users array). Must be the caller that creates the occurrence unless admin. Requires activity/challenge to allow host_option of &#39;non_player&#39; if not admin as well.</param>
         /// <param name="Settings">The values selected from the available settings defined for the activity. Ex: difficulty: hard. Can be left out if the activity is played during an event and the settings are already set at the event level. Ex: every monday, difficulty: hard, number of questions: 10, category: sport. Otherwise, the set must exactly match those of the activity..</param>
         /// <param name="Simulated">Whether this occurrence will be ran as a simulation. Simulations will not be rewarded. Useful for bot play or trials.</param>
         /// <param name="Status">The current status of the occurrence (default: OPEN).</param>
         /// <param name="Users">The list of users participating in this occurrence. Can only be set directly with ACTIVITIES_ADMIN permission.</param>
-        public ActivityOccurrenceResource(long? ActivityId = default(long?), long? ChallengeActivityId = default(long?), ActivityEntitlementResource Entitlement = default(ActivityEntitlementResource), long? EventId = default(long?), List<SelectedSettingResource> Settings = default(List<SelectedSettingResource>), bool? Simulated = default(bool?), StatusEnum? Status = default(StatusEnum?), List<ActivityUserResource> Users = default(List<ActivityUserResource>))
+        public ActivityOccurrenceResource(long? ActivityId = default(long?), List<int?> Bans = default(List<int?>), long? ChallengeActivityId = default(long?), CoreActivityOccurrenceSettings CoreSettings = default(CoreActivityOccurrenceSettings), ActivityEntitlementResource Entitlement = default(ActivityEntitlementResource), long? EventId = default(long?), SimpleUserResource Host = default(SimpleUserResource), List<SelectedSettingResource> Settings = default(List<SelectedSettingResource>), bool? Simulated = default(bool?), StatusEnum? Status = default(StatusEnum?), List<ActivityUserResource> Users = default(List<ActivityUserResource>))
         {
             // to ensure "ActivityId" is required (not null)
             if (ActivityId == null)
@@ -141,9 +150,12 @@ namespace com.knetikcloud.Model
             {
                 this.ActivityId = ActivityId;
             }
+            this.Bans = Bans;
             this.ChallengeActivityId = ChallengeActivityId;
+            this.CoreSettings = CoreSettings;
             this.Entitlement = Entitlement;
             this.EventId = EventId;
+            this.Host = Host;
             this.Settings = Settings;
             this.Simulated = Simulated;
             this.Status = Status;
@@ -158,11 +170,25 @@ namespace com.knetikcloud.Model
         public long? ActivityId { get; set; }
 
         /// <summary>
+        /// The ids of banned users that cannot join the occurrence. See occurrence-user delete endpoint
+        /// </summary>
+        /// <value>The ids of banned users that cannot join the occurrence. See occurrence-user delete endpoint</value>
+        [DataMember(Name="bans", EmitDefaultValue=false)]
+        public List<int?> Bans { get; set; }
+
+        /// <summary>
         /// The id of the challenge activity (as part of the event, required if eventId set)
         /// </summary>
         /// <value>The id of the challenge activity (as part of the event, required if eventId set)</value>
         [DataMember(Name="challenge_activity_id", EmitDefaultValue=false)]
         public long? ChallengeActivityId { get; set; }
+
+        /// <summary>
+        /// Defines core settings about the activity occurrence that affect how it behaves in the system. Validated against core settings in activity/challenge-activity.
+        /// </summary>
+        /// <value>Defines core settings about the activity occurrence that affect how it behaves in the system. Validated against core settings in activity/challenge-activity.</value>
+        [DataMember(Name="core_settings", EmitDefaultValue=false)]
+        public CoreActivityOccurrenceSettings CoreSettings { get; set; }
 
         /// <summary>
         /// The date this occurrence was created, unix timestamp in seconds
@@ -184,6 +210,13 @@ namespace com.knetikcloud.Model
         /// <value>The id of the event</value>
         [DataMember(Name="event_id", EmitDefaultValue=false)]
         public long? EventId { get; set; }
+
+        /// <summary>
+        /// The host of the occurrence, if not a participant (will be left out of users array). Must be the caller that creates the occurrence unless admin. Requires activity/challenge to allow host_option of &#39;non_player&#39; if not admin as well
+        /// </summary>
+        /// <value>The host of the occurrence, if not a participant (will be left out of users array). Must be the caller that creates the occurrence unless admin. Requires activity/challenge to allow host_option of &#39;non_player&#39; if not admin as well</value>
+        [DataMember(Name="host", EmitDefaultValue=false)]
+        public SimpleUserResource Host { get; set; }
 
         /// <summary>
         /// The id of the activity occurrence
@@ -238,10 +271,13 @@ namespace com.knetikcloud.Model
             var sb = new StringBuilder();
             sb.Append("class ActivityOccurrenceResource {\n");
             sb.Append("  ActivityId: ").Append(ActivityId).Append("\n");
+            sb.Append("  Bans: ").Append(Bans).Append("\n");
             sb.Append("  ChallengeActivityId: ").Append(ChallengeActivityId).Append("\n");
+            sb.Append("  CoreSettings: ").Append(CoreSettings).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  Entitlement: ").Append(Entitlement).Append("\n");
             sb.Append("  EventId: ").Append(EventId).Append("\n");
+            sb.Append("  Host: ").Append(Host).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RewardStatus: ").Append(RewardStatus).Append("\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
@@ -290,9 +326,19 @@ namespace com.knetikcloud.Model
                     this.ActivityId.Equals(input.ActivityId))
                 ) && 
                 (
+                    this.Bans == input.Bans ||
+                    (this.Bans != null &&
+                    this.Bans.SequenceEqual(input.Bans))
+                ) && 
+                (
                     this.ChallengeActivityId == input.ChallengeActivityId ||
                     (this.ChallengeActivityId != null &&
                     this.ChallengeActivityId.Equals(input.ChallengeActivityId))
+                ) && 
+                (
+                    this.CoreSettings == input.CoreSettings ||
+                    (this.CoreSettings != null &&
+                    this.CoreSettings.Equals(input.CoreSettings))
                 ) && 
                 (
                     this.CreatedDate == input.CreatedDate ||
@@ -308,6 +354,11 @@ namespace com.knetikcloud.Model
                     this.EventId == input.EventId ||
                     (this.EventId != null &&
                     this.EventId.Equals(input.EventId))
+                ) && 
+                (
+                    this.Host == input.Host ||
+                    (this.Host != null &&
+                    this.Host.Equals(input.Host))
                 ) && 
                 (
                     this.Id == input.Id ||
@@ -362,14 +413,20 @@ namespace com.knetikcloud.Model
                 int hashCode = 41;
                 if (this.ActivityId != null)
                     hashCode = hashCode * 59 + this.ActivityId.GetHashCode();
+                if (this.Bans != null)
+                    hashCode = hashCode * 59 + this.Bans.GetHashCode();
                 if (this.ChallengeActivityId != null)
                     hashCode = hashCode * 59 + this.ChallengeActivityId.GetHashCode();
+                if (this.CoreSettings != null)
+                    hashCode = hashCode * 59 + this.CoreSettings.GetHashCode();
                 if (this.CreatedDate != null)
                     hashCode = hashCode * 59 + this.CreatedDate.GetHashCode();
                 if (this.Entitlement != null)
                     hashCode = hashCode * 59 + this.Entitlement.GetHashCode();
                 if (this.EventId != null)
                     hashCode = hashCode * 59 + this.EventId.GetHashCode();
+                if (this.Host != null)
+                    hashCode = hashCode * 59 + this.Host.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.RewardStatus != null)

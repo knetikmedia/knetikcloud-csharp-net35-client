@@ -81,6 +81,14 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'Recipients'
         }
         /// <summary>
+        /// Test the property 'Subject'
+        /// </summary>
+        [Test]
+        public void SubjectTest()
+        {
+            // TODO unit test for the property 'Subject'
+        }
+        /// <summary>
         /// Test the property 'TemplateKey'
         /// </summary>
         [Test]

@@ -33,11 +33,19 @@ namespace com.knetikcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BreRuleLog" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        public BreRuleLog()
+        /// <param name="Actions">The actions of the BRE rule.</param>
+        public BreRuleLog(List<BreActionLog> Actions = default(List<BreActionLog>))
         {
+            this.Actions = Actions;
         }
         
+        /// <summary>
+        /// The actions of the BRE rule
+        /// </summary>
+        /// <value>The actions of the BRE rule</value>
+        [DataMember(Name="actions", EmitDefaultValue=false)]
+        public List<BreActionLog> Actions { get; set; }
+
         /// <summary>
         /// Whether the rule ran
         /// </summary>
@@ -88,6 +96,7 @@ namespace com.knetikcloud.Model
         {
             var sb = new StringBuilder();
             sb.Append("class BreRuleLog {\n");
+            sb.Append("  Actions: ").Append(Actions).Append("\n");
             sb.Append("  Ran: ").Append(Ran).Append("\n");
             sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("  RuleEndDate: ").Append(RuleEndDate).Append("\n");
@@ -129,6 +138,11 @@ namespace com.knetikcloud.Model
 
             return 
                 (
+                    this.Actions == input.Actions ||
+                    (this.Actions != null &&
+                    this.Actions.SequenceEqual(input.Actions))
+                ) && 
+                (
                     this.Ran == input.Ran ||
                     (this.Ran != null &&
                     this.Ran.Equals(input.Ran))
@@ -169,6 +183,8 @@ namespace com.knetikcloud.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.Actions != null)
+                    hashCode = hashCode * 59 + this.Actions.GetHashCode();
                 if (this.Ran != null)
                     hashCode = hashCode * 59 + this.Ran.GetHashCode();
                 if (this.Reason != null)

@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.ReportingUsageApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,6 +17,8 @@ Method | HTTP request | Description
 > PageResourceUsageInfo GetUsageByDay (long? startDate, long? endDate, bool? combineEndpoints = null, string method = null, string url = null, int? size = null, int? page = null)
 
 Returns aggregated endpoint usage information by day
+
+<b>Permissions Needed:</b> USAGE_ADMIN
 
 ### Example
 ```csharp
@@ -83,7 +85,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -93,6 +95,8 @@ Name | Type | Description  | Notes
 > PageResourceUsageInfo GetUsageByHour (long? startDate, long? endDate, bool? combineEndpoints = null, string method = null, string url = null, int? size = null, int? page = null)
 
 Returns aggregated endpoint usage information by hour
+
+<b>Permissions Needed:</b> USAGE_ADMIN
 
 ### Example
 ```csharp
@@ -159,7 +163,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -169,6 +173,8 @@ Name | Type | Description  | Notes
 > PageResourceUsageInfo GetUsageByMinute (long? startDate, long? endDate, bool? combineEndpoints = null, string method = null, string url = null, int? size = null, int? page = null)
 
 Returns aggregated endpoint usage information by minute
+
+<b>Permissions Needed:</b> USAGE_ADMIN
 
 ### Example
 ```csharp
@@ -235,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -245,6 +251,8 @@ Name | Type | Description  | Notes
 > PageResourceUsageInfo GetUsageByMonth (long? startDate, long? endDate, bool? combineEndpoints = null, string method = null, string url = null, int? size = null, int? page = null)
 
 Returns aggregated endpoint usage information by month
+
+<b>Permissions Needed:</b> USAGE_ADMIN
 
 ### Example
 ```csharp
@@ -311,7 +319,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -321,6 +329,8 @@ Name | Type | Description  | Notes
 > PageResourceUsageInfo GetUsageByYear (long? startDate, long? endDate, bool? combineEndpoints = null, string method = null, string url = null, int? size = null, int? page = null)
 
 Returns aggregated endpoint usage information by year
+
+<b>Permissions Needed:</b> USAGE_ADMIN
 
 ### Example
 ```csharp
@@ -387,7 +397,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -397,6 +407,8 @@ Name | Type | Description  | Notes
 > List<string> GetUsageEndpoints (long? startDate, long? endDate)
 
 Returns list of endpoints called (method and url)
+
+<b>Permissions Needed:</b> USAGE_ADMIN
 
 ### Example
 ```csharp
@@ -453,7 +465,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

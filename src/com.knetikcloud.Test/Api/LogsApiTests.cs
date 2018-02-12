@@ -101,7 +101,8 @@ namespace com.knetikcloud.Test
             //int? size = null;
             //int? page = null;
             //string order = null;
-            //var response = instance.GetBREEventLogs(filterStartDate, filterEventName, filterEventId, size, page, order);
+            //string filterRuleId = null;
+            //var response = instance.GetBREEventLogs(filterStartDate, filterEventName, filterEventId, size, page, order, filterRuleId);
             //Assert.IsInstanceOf<PageResourceBreEventLog> (response, "response is PageResourceBreEventLog");
         }
         
@@ -127,10 +128,11 @@ namespace com.knetikcloud.Test
             //string filterStartDate = null;
             //string filterEndDate = null;
             //int? filterStatusCode = null;
+            //int? filterUrl = null;
             //int? size = null;
             //int? page = null;
             //string order = null;
-            //var response = instance.GetBREForwardLogs(filterStartDate, filterEndDate, filterStatusCode, size, page, order);
+            //var response = instance.GetBREForwardLogs(filterStartDate, filterEndDate, filterStatusCode, filterUrl, size, page, order);
             //Assert.IsInstanceOf<PageResourceForwardLog> (response, "response is PageResourceForwardLog");
         }
         

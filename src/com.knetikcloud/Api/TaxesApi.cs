@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Create a country tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxResource">The tax object (optional)</param>
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         /// Create a country tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxResource">The tax object (optional)</param>
@@ -49,7 +49,7 @@ namespace com.knetikcloud.Api
         /// Create a state tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -61,7 +61,7 @@ namespace com.knetikcloud.Api
         /// Create a state tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -72,7 +72,7 @@ namespace com.knetikcloud.Api
         /// Delete an existing tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -83,7 +83,7 @@ namespace com.knetikcloud.Api
         /// Delete an existing tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -93,7 +93,7 @@ namespace com.knetikcloud.Api
         /// Delete an existing state tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -105,7 +105,7 @@ namespace com.knetikcloud.Api
         /// Delete an existing state tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -116,7 +116,7 @@ namespace com.knetikcloud.Api
         /// Get a single tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -127,7 +127,7 @@ namespace com.knetikcloud.Api
         /// Get a single tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -137,7 +137,7 @@ namespace com.knetikcloud.Api
         /// List and search taxes
         /// </summary>
         /// <remarks>
-        /// Get a list of taxes
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -150,7 +150,7 @@ namespace com.knetikcloud.Api
         /// List and search taxes
         /// </summary>
         /// <remarks>
-        /// Get a list of taxes
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -162,7 +162,7 @@ namespace com.knetikcloud.Api
         /// Get a single state tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -174,7 +174,7 @@ namespace com.knetikcloud.Api
         /// Get a single state tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -185,7 +185,7 @@ namespace com.knetikcloud.Api
         /// List and search taxes across all countries
         /// </summary>
         /// <remarks>
-        /// Get a list of taxes
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -198,7 +198,7 @@ namespace com.knetikcloud.Api
         /// List and search taxes across all countries
         /// </summary>
         /// <remarks>
-        /// Get a list of taxes
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -210,7 +210,7 @@ namespace com.knetikcloud.Api
         /// List and search taxes within a country
         /// </summary>
         /// <remarks>
-        /// Get a list of taxes
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -224,7 +224,7 @@ namespace com.knetikcloud.Api
         /// List and search taxes within a country
         /// </summary>
         /// <remarks>
-        /// Get a list of taxes
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -237,7 +237,7 @@ namespace com.knetikcloud.Api
         /// Create or update a tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -249,7 +249,7 @@ namespace com.knetikcloud.Api
         /// Create or update a tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -260,7 +260,7 @@ namespace com.knetikcloud.Api
         /// Create or update a state tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -273,7 +273,7 @@ namespace com.knetikcloud.Api
         /// Create or update a state tax
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -382,7 +382,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a country tax 
+        /// Create a country tax &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxResource">The tax object (optional)</param>
@@ -394,7 +394,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a country tax 
+        /// Create a country tax &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taxResource">The tax object (optional)</param>
@@ -465,7 +465,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a state tax 
+        /// Create a state tax &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -478,7 +478,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a state tax 
+        /// Create a state tax &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -554,7 +554,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete an existing tax 
+        /// Delete an existing tax &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -565,7 +565,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete an existing tax 
+        /// Delete an existing tax &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -586,7 +586,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -632,7 +631,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete an existing state tax 
+        /// Delete an existing state tax &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -644,7 +643,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete an existing state tax 
+        /// Delete an existing state tax &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -669,7 +668,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -716,7 +714,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single tax 
+        /// Get a single tax &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -728,7 +726,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single tax 
+        /// Get a single tax &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -749,7 +747,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -795,7 +792,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search taxes Get a list of taxes
+        /// List and search taxes &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -809,7 +806,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search taxes Get a list of taxes
+        /// List and search taxes &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -829,7 +826,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -877,7 +873,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single state tax 
+        /// Get a single state tax &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -890,7 +886,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single state tax 
+        /// Get a single state tax &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -915,7 +911,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -962,7 +957,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search taxes across all countries Get a list of taxes
+        /// List and search taxes across all countries &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -976,7 +971,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search taxes across all countries Get a list of taxes
+        /// List and search taxes across all countries &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -996,7 +991,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1044,7 +1038,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search taxes within a country Get a list of taxes
+        /// List and search taxes within a country &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -1059,7 +1053,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search taxes within a country Get a list of taxes
+        /// List and search taxes within a country &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -1083,7 +1077,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1132,7 +1125,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create or update a tax 
+        /// Create or update a tax &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -1145,7 +1138,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create or update a tax 
+        /// Create or update a tax &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -1221,7 +1214,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create or update a state tax 
+        /// Create or update a state tax &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -1235,7 +1228,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create or update a state tax 
+        /// Create or update a state tax &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>

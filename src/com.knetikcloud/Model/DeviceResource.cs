@@ -35,8 +35,8 @@ namespace com.knetikcloud.Model
         /// </summary>
         /// <param name="AdditionalProperties">A map of additional properties, keyed on the property name.  Must match the names and types defined in the template if one is specified.</param>
         /// <param name="Description">The description of the device.</param>
-        /// <param name="DeviceType">The type of device. Use mobile to specifically register mobile devices. This particular type will be used to send and receive notifications.</param>
-        /// <param name="Id">The unique ID for this device.</param>
+        /// <param name="DeviceType">The type of device. Use mobile_device to specifically register mobile devices. This particular type will be used to send and receive notifications.</param>
+        /// <param name="Id">The unique ID for this device. Cannot be changed after creation. Default: random.</param>
         /// <param name="Location">The physical location of the device, coordinates or named place (office, living room, etc).</param>
         /// <param name="MacAddress">The MAC (media access control) address of the device.</param>
         /// <param name="Make">The make of the device.</param>
@@ -89,16 +89,16 @@ namespace com.knetikcloud.Model
         public string Description { get; set; }
 
         /// <summary>
-        /// The type of device. Use mobile to specifically register mobile devices. This particular type will be used to send and receive notifications
+        /// The type of device. Use mobile_device to specifically register mobile devices. This particular type will be used to send and receive notifications
         /// </summary>
-        /// <value>The type of device. Use mobile to specifically register mobile devices. This particular type will be used to send and receive notifications</value>
+        /// <value>The type of device. Use mobile_device to specifically register mobile devices. This particular type will be used to send and receive notifications</value>
         [DataMember(Name="device_type", EmitDefaultValue=false)]
         public string DeviceType { get; set; }
 
         /// <summary>
-        /// The unique ID for this device
+        /// The unique ID for this device. Cannot be changed after creation. Default: random
         /// </summary>
-        /// <value>The unique ID for this device</value>
+        /// <value>The unique ID for this device. Cannot be changed after creation. Default: random</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

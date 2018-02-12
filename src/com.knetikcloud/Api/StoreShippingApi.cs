@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Create a shipping item
         /// </summary>
         /// <remarks>
-        /// A shipping item represents a shipping option and cost. SKUs have to be unique in the entire store.
+        /// A shipping item represents a shipping option and cost. SKUs have to be unique in the entire store. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cascade">Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)</param>
@@ -40,7 +40,7 @@ namespace com.knetikcloud.Api
         /// Create a shipping item
         /// </summary>
         /// <remarks>
-        /// A shipping item represents a shipping option and cost. SKUs have to be unique in the entire store.
+        /// A shipping item represents a shipping option and cost. SKUs have to be unique in the entire store. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cascade">Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)</param>
@@ -72,7 +72,7 @@ namespace com.knetikcloud.Api
         /// Delete a shipping item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the shipping item</param>
@@ -83,7 +83,7 @@ namespace com.knetikcloud.Api
         /// Delete a shipping item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the shipping item</param>
@@ -93,7 +93,7 @@ namespace com.knetikcloud.Api
         /// Delete a shipping template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -105,7 +105,7 @@ namespace com.knetikcloud.Api
         /// Delete a shipping template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -116,7 +116,7 @@ namespace com.knetikcloud.Api
         /// Get a single shipping item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the shipping item</param>
@@ -127,7 +127,7 @@ namespace com.knetikcloud.Api
         /// Get a single shipping item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the shipping item</param>
@@ -137,7 +137,7 @@ namespace com.knetikcloud.Api
         /// Get a single shipping template
         /// </summary>
         /// <remarks>
-        /// Shipping Templates define a type of shipping and the properties they have.
+        /// Shipping Templates define a type of shipping and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SHIPPING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -148,7 +148,7 @@ namespace com.knetikcloud.Api
         /// Get a single shipping template
         /// </summary>
         /// <remarks>
-        /// Shipping Templates define a type of shipping and the properties they have.
+        /// Shipping Templates define a type of shipping and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SHIPPING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -158,7 +158,7 @@ namespace com.knetikcloud.Api
         /// List and search shipping templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SHIPPING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -171,7 +171,7 @@ namespace com.knetikcloud.Api
         /// List and search shipping templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SHIPPING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -183,7 +183,7 @@ namespace com.knetikcloud.Api
         /// Update a shipping item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the shipping item</param>
@@ -196,7 +196,7 @@ namespace com.knetikcloud.Api
         /// Update a shipping item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the shipping item</param>
@@ -208,7 +208,7 @@ namespace com.knetikcloud.Api
         /// Update a shipping template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -220,7 +220,7 @@ namespace com.knetikcloud.Api
         /// Update a shipping template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -328,7 +328,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a shipping item A shipping item represents a shipping option and cost. SKUs have to be unique in the entire store.
+        /// Create a shipping item A shipping item represents a shipping option and cost. SKUs have to be unique in the entire store. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cascade">Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)</param>
@@ -341,7 +341,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a shipping item A shipping item represents a shipping option and cost. SKUs have to be unique in the entire store.
+        /// Create a shipping item A shipping item represents a shipping option and cost. SKUs have to be unique in the entire store. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cascade">Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)</param>
@@ -497,7 +497,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a shipping item 
+        /// Delete a shipping item &lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the shipping item</param>
@@ -508,7 +508,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a shipping item 
+        /// Delete a shipping item &lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the shipping item</param>
@@ -529,7 +529,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -575,7 +574,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a shipping template 
+        /// Delete a shipping template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -587,7 +586,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a shipping template 
+        /// Delete a shipping template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -609,7 +608,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -656,7 +654,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single shipping item 
+        /// Get a single shipping item &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the shipping item</param>
@@ -668,7 +666,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single shipping item 
+        /// Get a single shipping item &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the shipping item</param>
@@ -689,7 +687,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -735,7 +732,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single shipping template Shipping Templates define a type of shipping and the properties they have.
+        /// Get a single shipping template Shipping Templates define a type of shipping and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SHIPPING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -747,7 +744,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single shipping template Shipping Templates define a type of shipping and the properties they have.
+        /// Get a single shipping template Shipping Templates define a type of shipping and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SHIPPING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -768,7 +765,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -814,7 +810,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search shipping templates 
+        /// List and search shipping templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SHIPPING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -828,7 +824,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search shipping templates 
+        /// List and search shipping templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SHIPPING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -848,7 +844,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -896,7 +891,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a shipping item 
+        /// Update a shipping item &lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the shipping item</param>
@@ -910,7 +905,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a shipping item 
+        /// Update a shipping item &lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the shipping item</param>
@@ -988,7 +983,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a shipping template 
+        /// Update a shipping template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1001,7 +996,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a shipping template 
+        /// Update a shipping template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>

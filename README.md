@@ -119,11 +119,12 @@ namespace Example
 <a name="documentation-for-api-endpoints"></a>
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AccessTokenApi* | [**GetOAuthToken**](docs/AccessTokenApi.md#getoauthtoken) | **POST** /oauth/token | Get access token
+*ActivitiesApi* | [**AddUser**](docs/ActivitiesApi.md#adduser) | **POST** /activity-occurrences/{activity_occurrence_id}/users | Add a user to an occurrence
 *ActivitiesApi* | [**CreateActivity**](docs/ActivitiesApi.md#createactivity) | **POST** /activities | Create an activity
 *ActivitiesApi* | [**CreateActivityOccurrence**](docs/ActivitiesApi.md#createactivityoccurrence) | **POST** /activity-occurrences | Create a new activity occurrence. Ex: start a game
 *ActivitiesApi* | [**CreateActivityTemplate**](docs/ActivitiesApi.md#createactivitytemplate) | **POST** /activities/templates | Create a activity template
@@ -135,9 +136,12 @@ Class | Method | HTTP request | Description
 *ActivitiesApi* | [**GetActivityTemplate**](docs/ActivitiesApi.md#getactivitytemplate) | **GET** /activities/templates/{id} | Get a single activity template
 *ActivitiesApi* | [**GetActivityTemplates**](docs/ActivitiesApi.md#getactivitytemplates) | **GET** /activities/templates | List and search activity templates
 *ActivitiesApi* | [**ListActivityOccurrences**](docs/ActivitiesApi.md#listactivityoccurrences) | **GET** /activity-occurrences | List activity occurrences
+*ActivitiesApi* | [**RemoveUser**](docs/ActivitiesApi.md#removeuser) | **DELETE** /activity-occurrences/{activity_occurrence_id}/users/{user_id} | Remove a user from an occurrence
 *ActivitiesApi* | [**SetActivityOccurrenceResults**](docs/ActivitiesApi.md#setactivityoccurrenceresults) | **POST** /activity-occurrences/{activity_occurrence_id}/results | Sets the status of an activity occurrence to FINISHED and logs metrics
+*ActivitiesApi* | [**SetActivityOccurrenceSettings**](docs/ActivitiesApi.md#setactivityoccurrencesettings) | **PUT** /activity-occurrences/{activity_occurrence_id}/settings | Sets the settings of an activity occurrence
+*ActivitiesApi* | [**SetUserStatus**](docs/ActivitiesApi.md#setuserstatus) | **PUT** /activity-occurrences/{activity_occurrence_id}/users/{user_id}/status | Set a user's status within an occurrence
 *ActivitiesApi* | [**UpdateActivity**](docs/ActivitiesApi.md#updateactivity) | **PUT** /activities/{id} | Update an activity
-*ActivitiesApi* | [**UpdateActivityOccurrence**](docs/ActivitiesApi.md#updateactivityoccurrence) | **PUT** /activity-occurrences/{activity_occurrence_id}/status | Updated the status of an activity occurrence
+*ActivitiesApi* | [**UpdateActivityOccurrenceStatus**](docs/ActivitiesApi.md#updateactivityoccurrencestatus) | **PUT** /activity-occurrences/{activity_occurrence_id}/status | Update the status of an activity occurrence
 *ActivitiesApi* | [**UpdateActivityTemplate**](docs/ActivitiesApi.md#updateactivitytemplate) | **PUT** /activities/templates/{id} | Update an activity template
 *AmazonWebServicesS3Api* | [**GetDownloadURL**](docs/AmazonWebServicesS3Api.md#getdownloadurl) | **GET** /amazon/s3/downloadurl | Get a temporary signed S3 URL for download
 *AmazonWebServicesS3Api* | [**GetSignedS3URL**](docs/AmazonWebServicesS3Api.md#getsigneds3url) | **GET** /amazon/s3/signedposturl | Get a signed S3 URL for upload
@@ -178,7 +182,7 @@ Class | Method | HTTP request | Description
 *BRERuleEngineCategoriesApi* | [**UpdateBRECategoryTemplate**](docs/BRERuleEngineCategoriesApi.md#updatebrecategorytemplate) | **PUT** /bre/categories/templates/{id} | Update a BRE category template
 *BRERuleEngineEventsApi* | [**SendBREEvent**](docs/BRERuleEngineEventsApi.md#sendbreevent) | **POST** /bre/events | Fire a new event, based on an existing trigger
 *BRERuleEngineExpressionsApi* | [**GetBREExpression**](docs/BRERuleEngineExpressionsApi.md#getbreexpression) | **GET** /bre/expressions/{type} | Lookup a specific expression
-*BRERuleEngineExpressionsApi* | [**GetBREExpressions**](docs/BRERuleEngineExpressionsApi.md#getbreexpressions) | **GET** /bre/expressions | Get a list of supported expressions to use in conditions or actions.
+*BRERuleEngineExpressionsApi* | [**GetBREExpressions**](docs/BRERuleEngineExpressionsApi.md#getbreexpressions) | **GET** /bre/expressions | Get a list of supported expressions to use in conditions or actions
 *BRERuleEngineExpressionsApi* | [**GetExpressionAsText**](docs/BRERuleEngineExpressionsApi.md#getexpressionastext) | **POST** /bre/expressions | Returns the textual representation of an expression
 *BRERuleEngineGlobalsApi* | [**CreateBREGlobal**](docs/BRERuleEngineGlobalsApi.md#createbreglobal) | **POST** /bre/globals/definitions | Create a global definition
 *BRERuleEngineGlobalsApi* | [**DeleteBREGlobal**](docs/BRERuleEngineGlobalsApi.md#deletebreglobal) | **DELETE** /bre/globals/definitions/{id} | Delete a global
@@ -251,6 +255,18 @@ Class | Method | HTTP request | Description
 *CategoriesApi* | [**GetTags**](docs/CategoriesApi.md#gettags) | **GET** /tags | List all trivia tags in the system
 *CategoriesApi* | [**UpdateCategory**](docs/CategoriesApi.md#updatecategory) | **PUT** /categories/{id} | Update an existing category
 *CategoriesApi* | [**UpdateCategoryTemplate**](docs/CategoriesApi.md#updatecategorytemplate) | **PUT** /categories/templates/{id} | Update a category template
+*ChatApi* | [**AcknowledgeChatMessage**](docs/ChatApi.md#acknowledgechatmessage) | **PUT** /chat/threads/{id}/acknowledge | Acknowledge number of messages in a thread
+*ChatApi* | [**AddChatMessageBlacklist**](docs/ChatApi.md#addchatmessageblacklist) | **POST** /chat/users/{id}/blacklist/{blacklisted_user_id} | Add a user to a chat message blacklist
+*ChatApi* | [**DeleteChatMessage**](docs/ChatApi.md#deletechatmessage) | **DELETE** /chat/messages/{id} | Delete a message
+*ChatApi* | [**EditChatMessage**](docs/ChatApi.md#editchatmessage) | **PUT** /chat/messages/{id} | Edit your message
+*ChatApi* | [**GetChatMessage**](docs/ChatApi.md#getchatmessage) | **GET** /chat/messages/{id} | Get a message
+*ChatApi* | [**GetChatMessageBlacklist**](docs/ChatApi.md#getchatmessageblacklist) | **GET** /chat/users/{id}/blacklist | Get a list of blocked users for chat messaging
+*ChatApi* | [**GetChatThreads**](docs/ChatApi.md#getchatthreads) | **GET** /chat/threads | List your threads
+*ChatApi* | [**GetDirectMessages**](docs/ChatApi.md#getdirectmessages) | **GET** /chat/users/{id}/messages | List messages with a user
+*ChatApi* | [**GetThreadMessages**](docs/ChatApi.md#getthreadmessages) | **GET** /chat/threads/{id}/messages | List messages in a thread
+*ChatApi* | [**GetTopicMessages**](docs/ChatApi.md#gettopicmessages) | **GET** /chat/topics/{id}/messages | List messages in a topic
+*ChatApi* | [**RemoveChatBlacklist**](docs/ChatApi.md#removechatblacklist) | **DELETE** /chat/users/{id}/blacklist/{blacklisted_user_id} | Remove a user from a blacklist
+*ChatApi* | [**SendMessage**](docs/ChatApi.md#sendmessage) | **POST** /chat/messages | Send a message
 *ConfigsApi* | [**CreateConfig**](docs/ConfigsApi.md#createconfig) | **POST** /configs | Create a new config
 *ConfigsApi* | [**DeleteConfig**](docs/ConfigsApi.md#deleteconfig) | **DELETE** /configs/{name} | Delete an existing config
 *ConfigsApi* | [**GetConfig**](docs/ConfigsApi.md#getconfig) | **GET** /configs/{name} | Get a single config
@@ -442,12 +458,35 @@ Class | Method | HTTP request | Description
 *MediaVideosApi* | [**UpdateVideoRelationship**](docs/MediaVideosApi.md#updatevideorelationship) | **PUT** /media/videos/{video_id}/related/{id}/relationship_details | Update a video's relationship details
 *MediaVideosApi* | [**UpdateVideoTemplate**](docs/MediaVideosApi.md#updatevideotemplate) | **PUT** /media/videos/templates/{id} | Update a video template
 *MediaVideosApi* | [**ViewVideo**](docs/MediaVideosApi.md#viewvideo) | **POST** /media/videos/{id}/views | Increment a video's view count
+*MessagingApi* | [**CompileMessageTemplate**](docs/MessagingApi.md#compilemessagetemplate) | **POST** /messaging/templates/compilations | Compile a message template
+*MessagingApi* | [**CreateMessageTemplate**](docs/MessagingApi.md#createmessagetemplate) | **POST** /messaging/templates | Create a message template
+*MessagingApi* | [**DeleteMessageTemplate**](docs/MessagingApi.md#deletemessagetemplate) | **DELETE** /messaging/templates/{id} | Delete an existing message template
+*MessagingApi* | [**GetMessageTemplate**](docs/MessagingApi.md#getmessagetemplate) | **GET** /messaging/templates/{id} | Get a single message template
+*MessagingApi* | [**GetMessageTemplates**](docs/MessagingApi.md#getmessagetemplates) | **GET** /messaging/templates | List and search message templates
+*MessagingApi* | [**SendMessage1**](docs/MessagingApi.md#sendmessage1) | **POST** /messaging/message | Send a message
 *MessagingApi* | [**SendRawEmail**](docs/MessagingApi.md#sendrawemail) | **POST** /messaging/raw-email | Send a raw email to one or more users
 *MessagingApi* | [**SendRawPush**](docs/MessagingApi.md#sendrawpush) | **POST** /messaging/raw-push | Send a raw push notification
 *MessagingApi* | [**SendRawSMS**](docs/MessagingApi.md#sendrawsms) | **POST** /messaging/raw-sms | Send a raw SMS
 *MessagingApi* | [**SendTemplatedEmail**](docs/MessagingApi.md#sendtemplatedemail) | **POST** /messaging/templated-email | Send a templated email to one or more users
 *MessagingApi* | [**SendTemplatedPush**](docs/MessagingApi.md#sendtemplatedpush) | **POST** /messaging/templated-push | Send a templated push notification
 *MessagingApi* | [**SendTemplatedSMS**](docs/MessagingApi.md#sendtemplatedsms) | **POST** /messaging/templated-sms | Send a new templated SMS
+*MessagingApi* | [**SendWebsocket**](docs/MessagingApi.md#sendwebsocket) | **POST** /messaging/websocket-message | Send a websocket message
+*MessagingApi* | [**UpdateMessageTemplate**](docs/MessagingApi.md#updatemessagetemplate) | **PUT** /messaging/templates/{id} | Update an existing message template
+*MessagingTopicsApi* | [**DisableTopicSubscriber**](docs/MessagingTopicsApi.md#disabletopicsubscriber) | **PUT** /messaging/topics/{id}/subscribers/{user_id}/disabled | Enable or disable messages for a user
+*MessagingTopicsApi* | [**GetTopicSubscriber**](docs/MessagingTopicsApi.md#gettopicsubscriber) | **GET** /messaging/topics/{id}/subscribers/{user_id} | Get a subscriber to a topic
+*MessagingTopicsApi* | [**GetTopicSubscribers**](docs/MessagingTopicsApi.md#gettopicsubscribers) | **GET** /messaging/topics/{id}/subscribers | Get all subscribers to a topic
+*MessagingTopicsApi* | [**GetUserTopics**](docs/MessagingTopicsApi.md#getusertopics) | **GET** /users/{id}/topics | Get all messaging topics for a given user
+*NotificationsApi* | [**CreateNotificationType**](docs/NotificationsApi.md#createnotificationtype) | **POST** /notifications/types | Create a notification type
+*NotificationsApi* | [**DeleteNotificationType**](docs/NotificationsApi.md#deletenotificationtype) | **DELETE** /notifications/types/{id} | Delete a notification type
+*NotificationsApi* | [**GetNotificationType**](docs/NotificationsApi.md#getnotificationtype) | **GET** /notifications/types/{id} | Get a single notification type
+*NotificationsApi* | [**GetNotificationTypes**](docs/NotificationsApi.md#getnotificationtypes) | **GET** /notifications/types | List and search notification types
+*NotificationsApi* | [**GetUserNotificationInfo**](docs/NotificationsApi.md#getusernotificationinfo) | **GET** /users/{user_id}/notifications/types/{type_id} | View a user's notification settings for a type
+*NotificationsApi* | [**GetUserNotificationInfoList**](docs/NotificationsApi.md#getusernotificationinfolist) | **GET** /users/{user_id}/notifications/types | View a user's notification settings
+*NotificationsApi* | [**GetUserNotifications**](docs/NotificationsApi.md#getusernotifications) | **GET** /users/{id}/notifications | Get notifications
+*NotificationsApi* | [**SendNotification**](docs/NotificationsApi.md#sendnotification) | **POST** /notifications | Send a notification
+*NotificationsApi* | [**SetUserNotificationStatus**](docs/NotificationsApi.md#setusernotificationstatus) | **PUT** /users/{user_id}/notifications/{notification_id}/status | Set notification status
+*NotificationsApi* | [**SilenceDirectNotifications**](docs/NotificationsApi.md#silencedirectnotifications) | **PUT** /users/{user_id}/notifications/types/{type_id}/silenced | Enable or disable direct notifications for a user
+*NotificationsApi* | [**UpdateNotificationType**](docs/NotificationsApi.md#updatenotificationtype) | **PUT** /notifications/types/{id} | Update a notificationType
 *ObjectsApi* | [**CreateObjectItem**](docs/ObjectsApi.md#createobjectitem) | **POST** /objects/{template_id} | Create an object
 *ObjectsApi* | [**CreateObjectTemplate**](docs/ObjectsApi.md#createobjecttemplate) | **POST** /objects/templates | Create an object template
 *ObjectsApi* | [**DeleteObjectItem**](docs/ObjectsApi.md#deleteobjectitem) | **DELETE** /objects/{template_id}/{object_id} | Delete an object
@@ -622,12 +661,14 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**AddUserTag**](docs/UsersApi.md#addusertag) | **POST** /users/{user_id}/tags | Add a tag to a user
 *UsersApi* | [**CreateUserTemplate**](docs/UsersApi.md#createusertemplate) | **POST** /users/templates | Create a user template
 *UsersApi* | [**DeleteUserTemplate**](docs/UsersApi.md#deleteusertemplate) | **DELETE** /users/templates/{id} | Delete a user template
+*UsersApi* | [**GetDirectMessages1**](docs/UsersApi.md#getdirectmessages1) | **GET** /users/users/{recipient_id}/messages | Get a list of direct messages with this user
 *UsersApi* | [**GetUser**](docs/UsersApi.md#getuser) | **GET** /users/{id} | Get a single user
 *UsersApi* | [**GetUserTags**](docs/UsersApi.md#getusertags) | **GET** /users/{user_id}/tags | List tags for a user
 *UsersApi* | [**GetUserTemplate**](docs/UsersApi.md#getusertemplate) | **GET** /users/templates/{id} | Get a single user template
 *UsersApi* | [**GetUserTemplates**](docs/UsersApi.md#getusertemplates) | **GET** /users/templates | List and search user templates
 *UsersApi* | [**GetUsers**](docs/UsersApi.md#getusers) | **GET** /users | List and search users
 *UsersApi* | [**PasswordReset**](docs/UsersApi.md#passwordreset) | **PUT** /users/{id}/password-reset | Choose a new password after a reset
+*UsersApi* | [**PostUserMessage**](docs/UsersApi.md#postusermessage) | **POST** /users/{recipient_id}/messages | Send a user message
 *UsersApi* | [**RegisterUser**](docs/UsersApi.md#registeruser) | **POST** /users | Register a new user
 *UsersApi* | [**RemoveUserTag**](docs/UsersApi.md#removeusertag) | **DELETE** /users/{user_id}/tags/{tag} | Remove a tag from a user
 *UsersApi* | [**SetPassword**](docs/UsersApi.md#setpassword) | **PUT** /users/{id}/password | Set a user's password
@@ -654,16 +695,19 @@ Class | Method | HTTP request | Description
 *UsersGroupsApi* | [**DeleteGroup**](docs/UsersGroupsApi.md#deletegroup) | **DELETE** /users/groups/{unique_name} | Removes a group from the system
 *UsersGroupsApi* | [**DeleteGroupMemberTemplate**](docs/UsersGroupsApi.md#deletegroupmembertemplate) | **DELETE** /users/groups/members/templates/{id} | Delete an group member template
 *UsersGroupsApi* | [**DeleteGroupTemplate**](docs/UsersGroupsApi.md#deletegrouptemplate) | **DELETE** /users/groups/templates/{id} | Delete a group template
+*UsersGroupsApi* | [**DisableGroupNotification**](docs/UsersGroupsApi.md#disablegroupnotification) | **PUT** /users/groups/{unique_name}/members/{user_id}/messages/disabled | Enable or disable notification of group messages
 *UsersGroupsApi* | [**GetGroup**](docs/UsersGroupsApi.md#getgroup) | **GET** /users/groups/{unique_name} | Loads a specific group's details
 *UsersGroupsApi* | [**GetGroupAncestors**](docs/UsersGroupsApi.md#getgroupancestors) | **GET** /users/groups/{unique_name}/ancestors | Get group ancestors
 *UsersGroupsApi* | [**GetGroupMember**](docs/UsersGroupsApi.md#getgroupmember) | **GET** /users/groups/{unique_name}/members/{user_id} | Get a user from a group
 *UsersGroupsApi* | [**GetGroupMemberTemplate**](docs/UsersGroupsApi.md#getgroupmembertemplate) | **GET** /users/groups/members/templates/{id} | Get a single group member template
 *UsersGroupsApi* | [**GetGroupMemberTemplates**](docs/UsersGroupsApi.md#getgroupmembertemplates) | **GET** /users/groups/members/templates | List and search group member templates
 *UsersGroupsApi* | [**GetGroupMembers**](docs/UsersGroupsApi.md#getgroupmembers) | **GET** /users/groups/{unique_name}/members | Lists members of the group
+*UsersGroupsApi* | [**GetGroupMessages**](docs/UsersGroupsApi.md#getgroupmessages) | **GET** /users/groups/{unique_name}/messages | Get a list of group messages
 *UsersGroupsApi* | [**GetGroupTemplate**](docs/UsersGroupsApi.md#getgrouptemplate) | **GET** /users/groups/templates/{id} | Get a single group template
 *UsersGroupsApi* | [**GetGroupTemplates**](docs/UsersGroupsApi.md#getgrouptemplates) | **GET** /users/groups/templates | List and search group templates
 *UsersGroupsApi* | [**GetGroupsForUser**](docs/UsersGroupsApi.md#getgroupsforuser) | **GET** /users/{user_id}/groups | List groups a user is in
 *UsersGroupsApi* | [**ListGroups**](docs/UsersGroupsApi.md#listgroups) | **GET** /users/groups | List and search groups
+*UsersGroupsApi* | [**PostGroupMessage**](docs/UsersGroupsApi.md#postgroupmessage) | **POST** /users/groups/{unique_name}/messages | Send a group message
 *UsersGroupsApi* | [**RemoveGroupMember**](docs/UsersGroupsApi.md#removegroupmember) | **DELETE** /users/groups/{unique_name}/members/{user_id} | Removes a user from a group
 *UsersGroupsApi* | [**UpdateGroup**](docs/UsersGroupsApi.md#updategroup) | **PUT** /users/groups/{unique_name} | Update a group
 *UsersGroupsApi* | [**UpdateGroupMemberProperties**](docs/UsersGroupsApi.md#updategroupmemberproperties) | **PUT** /users/groups/{unique_name}/members/{user_id}/order | Change a user's order
@@ -730,6 +774,7 @@ Class | Method | HTTP request | Description
  - [Model.ActivityOccurrenceResource](docs/ActivityOccurrenceResource.md)
  - [Model.ActivityOccurrenceResults](docs/ActivityOccurrenceResults.md)
  - [Model.ActivityOccurrenceResultsResource](docs/ActivityOccurrenceResultsResource.md)
+ - [Model.ActivityOccurrenceSettingsResource](docs/ActivityOccurrenceSettingsResource.md)
  - [Model.ActivityResource](docs/ActivityResource.md)
  - [Model.ActivityUserResource](docs/ActivityUserResource.md)
  - [Model.AddressResource](docs/AddressResource.md)
@@ -752,6 +797,7 @@ Class | Method | HTTP request | Description
  - [Model.BehaviorDefinitionResource](docs/BehaviorDefinitionResource.md)
  - [Model.BillingReport](docs/BillingReport.md)
  - [Model.BooleanResource](docs/BooleanResource.md)
+ - [Model.BreActionLog](docs/BreActionLog.md)
  - [Model.BreCategoryResource](docs/BreCategoryResource.md)
  - [Model.BreEvent](docs/BreEvent.md)
  - [Model.BreEventLog](docs/BreEventLog.md)
@@ -777,12 +823,20 @@ Class | Method | HTTP request | Description
  - [Model.ChallengeEventParticipantResource](docs/ChallengeEventParticipantResource.md)
  - [Model.ChallengeEventResource](docs/ChallengeEventResource.md)
  - [Model.ChallengeResource](docs/ChallengeResource.md)
+ - [Model.ChatBlacklistResource](docs/ChatBlacklistResource.md)
+ - [Model.ChatMessageRequest](docs/ChatMessageRequest.md)
+ - [Model.ChatMessageResource](docs/ChatMessageResource.md)
+ - [Model.ChatThreadResource](docs/ChatThreadResource.md)
+ - [Model.ChatUserThreadResource](docs/ChatUserThreadResource.md)
  - [Model.ClientResource](docs/ClientResource.md)
  - [Model.CommentResource](docs/CommentResource.md)
  - [Model.Config](docs/Config.md)
  - [Model.ConfigLookupResource](docs/ConfigLookupResource.md)
  - [Model.ConstantResource](docs/ConstantResource.md)
  - [Model.ContributionResource](docs/ContributionResource.md)
+ - [Model.CoreActivityOccurrenceSettings](docs/CoreActivityOccurrenceSettings.md)
+ - [Model.CoreActivitySettings](docs/CoreActivitySettings.md)
+ - [Model.CoreChallengeActivitySettings](docs/CoreChallengeActivitySettings.md)
  - [Model.Country](docs/Country.md)
  - [Model.CountryResource](docs/CountryResource.md)
  - [Model.CountryTaxResource](docs/CountryTaxResource.md)
@@ -822,7 +876,6 @@ Class | Method | HTTP request | Description
  - [Model.GrantTypeResource](docs/GrantTypeResource.md)
  - [Model.GroupMemberResource](docs/GroupMemberResource.md)
  - [Model.GroupResource](docs/GroupResource.md)
- - [Model.IOConfig](docs/IOConfig.md)
  - [Model.IdRef](docs/IdRef.md)
  - [Model.ImportJobOutputResource](docs/ImportJobOutputResource.md)
  - [Model.ImportJobResource](docs/ImportJobResource.md)
@@ -847,11 +900,18 @@ Class | Method | HTTP request | Description
  - [Model.LookupResource](docs/LookupResource.md)
  - [Model.Maintenance](docs/Maintenance.md)
  - [Model.MapResource](docs/MapResource.md)
+ - [Model.MessageContentResource](docs/MessageContentResource.md)
+ - [Model.MessageResource](docs/MessageResource.md)
+ - [Model.MessageTemplateBulkRequest](docs/MessageTemplateBulkRequest.md)
+ - [Model.MessageTemplateResource](docs/MessageTemplateResource.md)
  - [Model.MetricResource](docs/MetricResource.md)
  - [Model.ModelOperator](docs/ModelOperator.md)
  - [Model.MongoDatabaseConfig](docs/MongoDatabaseConfig.md)
  - [Model.NestedCategory](docs/NestedCategory.md)
  - [Model.NewPasswordRequest](docs/NewPasswordRequest.md)
+ - [Model.NotificationResource](docs/NotificationResource.md)
+ - [Model.NotificationTypeResource](docs/NotificationTypeResource.md)
+ - [Model.NotificationUserTypeResource](docs/NotificationUserTypeResource.md)
  - [Model.OAuth2Resource](docs/OAuth2Resource.md)
  - [Model.OauthAccessTokenResource](docs/OauthAccessTokenResource.md)
  - [Model.ObjectResource](docs/ObjectResource.md)
@@ -880,6 +940,8 @@ Class | Method | HTTP request | Description
  - [Model.PageResourceChallengeEventParticipantResource](docs/PageResourceChallengeEventParticipantResource.md)
  - [Model.PageResourceChallengeEventResource](docs/PageResourceChallengeEventResource.md)
  - [Model.PageResourceChallengeResource](docs/PageResourceChallengeResource.md)
+ - [Model.PageResourceChatMessageResource](docs/PageResourceChatMessageResource.md)
+ - [Model.PageResourceChatUserThreadResource](docs/PageResourceChatUserThreadResource.md)
  - [Model.PageResourceClientResource](docs/PageResourceClientResource.md)
  - [Model.PageResourceCommentResource](docs/PageResourceCommentResource.md)
  - [Model.PageResourceConfig](docs/PageResourceConfig.md)
@@ -900,6 +962,9 @@ Class | Method | HTTP request | Description
  - [Model.PageResourceItemTemplateResource](docs/PageResourceItemTemplateResource.md)
  - [Model.PageResourceLevelingResource](docs/PageResourceLevelingResource.md)
  - [Model.PageResourceLocationLogResource](docs/PageResourceLocationLogResource.md)
+ - [Model.PageResourceMessageTemplateResource](docs/PageResourceMessageTemplateResource.md)
+ - [Model.PageResourceNotificationTypeResource](docs/PageResourceNotificationTypeResource.md)
+ - [Model.PageResourceNotificationUserTypeResource](docs/PageResourceNotificationUserTypeResource.md)
  - [Model.PageResourceOauthAccessTokenResource](docs/PageResourceOauthAccessTokenResource.md)
  - [Model.PageResourceObjectResource](docs/PageResourceObjectResource.md)
  - [Model.PageResourcePaymentMethodTypeResource](docs/PageResourcePaymentMethodTypeResource.md)
@@ -921,6 +986,8 @@ Class | Method | HTTP request | Description
  - [Model.PageResourceSubscriptionResource](docs/PageResourceSubscriptionResource.md)
  - [Model.PageResourceSubscriptionTemplateResource](docs/PageResourceSubscriptionTemplateResource.md)
  - [Model.PageResourceTemplateResource](docs/PageResourceTemplateResource.md)
+ - [Model.PageResourceTopicResource](docs/PageResourceTopicResource.md)
+ - [Model.PageResourceTopicSubscriberResource](docs/PageResourceTopicSubscriberResource.md)
  - [Model.PageResourceTransactionResource](docs/PageResourceTransactionResource.md)
  - [Model.PageResourceUsageInfo](docs/PageResourceUsageInfo.md)
  - [Model.PageResourceUserAchievementGroupResource](docs/PageResourceUserAchievementGroupResource.md)
@@ -929,6 +996,7 @@ Class | Method | HTTP request | Description
  - [Model.PageResourceUserInventoryResource](docs/PageResourceUserInventoryResource.md)
  - [Model.PageResourceUserItemLogResource](docs/PageResourceUserItemLogResource.md)
  - [Model.PageResourceUserLevelingResource](docs/PageResourceUserLevelingResource.md)
+ - [Model.PageResourceUserNotificationResource](docs/PageResourceUserNotificationResource.md)
  - [Model.PageResourceUserRelationshipResource](docs/PageResourceUserRelationshipResource.md)
  - [Model.PageResourceVendorResource](docs/PageResourceVendorResource.md)
  - [Model.PageResourceVideoRelationshipResource](docs/PageResourceVideoRelationshipResource.md)
@@ -1004,8 +1072,13 @@ Class | Method | HTTP request | Description
  - [Model.TemplatePushResource](docs/TemplatePushResource.md)
  - [Model.TemplateResource](docs/TemplateResource.md)
  - [Model.TemplateSMSResource](docs/TemplateSMSResource.md)
+ - [Model.TemplatedEmail](docs/TemplatedEmail.md)
  - [Model.TierResource](docs/TierResource.md)
  - [Model.TokenDetailsResource](docs/TokenDetailsResource.md)
+ - [Model.Topic](docs/Topic.md)
+ - [Model.TopicResource](docs/TopicResource.md)
+ - [Model.TopicSubscriber](docs/TopicSubscriber.md)
+ - [Model.TopicSubscriberResource](docs/TopicSubscriberResource.md)
  - [Model.TransactionResource](docs/TransactionResource.md)
  - [Model.TypeHintLookupResource](docs/TypeHintLookupResource.md)
  - [Model.UsageInfo](docs/UsageInfo.md)
@@ -1019,10 +1092,13 @@ Class | Method | HTTP request | Description
  - [Model.UserInventoryResource](docs/UserInventoryResource.md)
  - [Model.UserItemLogResource](docs/UserItemLogResource.md)
  - [Model.UserLevelingResource](docs/UserLevelingResource.md)
+ - [Model.UserNotificationResource](docs/UserNotificationResource.md)
  - [Model.UserRelationshipReferenceResource](docs/UserRelationshipReferenceResource.md)
  - [Model.UserRelationshipResource](docs/UserRelationshipResource.md)
  - [Model.UserResource](docs/UserResource.md)
  - [Model.UsernameLookupResource](docs/UsernameLookupResource.md)
+ - [Model.ValueWrapperboolean](docs/ValueWrapperboolean.md)
+ - [Model.ValueWrapperstring](docs/ValueWrapperstring.md)
  - [Model.VariableTypeResource](docs/VariableTypeResource.md)
  - [Model.VendorEmailLookupResource](docs/VendorEmailLookupResource.md)
  - [Model.VendorResource](docs/VendorResource.md)
@@ -1032,6 +1108,7 @@ Class | Method | HTTP request | Description
  - [Model.WalletAlterRequest](docs/WalletAlterRequest.md)
  - [Model.WalletTotalResponse](docs/WalletTotalResponse.md)
  - [Model.WalletTransactionResource](docs/WalletTransactionResource.md)
+ - [Model.WebsocketMessageResource](docs/WebsocketMessageResource.md)
  - [Model.XsollaPaymentRequest](docs/XsollaPaymentRequest.md)
  - [Model.AudioPropertyDefinitionResource](docs/AudioPropertyDefinitionResource.md)
  - [Model.BooleanProperty](docs/BooleanProperty.md)
@@ -1075,6 +1152,11 @@ Class | Method | HTTP request | Description
  - [Model.TimePeriodGettable](docs/TimePeriodGettable.md)
  - [Model.TimePeriodUsable](docs/TimePeriodUsable.md)
  - [Model.VideoPropertyDefinitionResource](docs/VideoPropertyDefinitionResource.md)
+ - [Model.WebsocketRemoveTopicEvent](docs/WebsocketRemoveTopicEvent.md)
+ - [Model.WebsocketSendMessageEvent](docs/WebsocketSendMessageEvent.md)
+ - [Model.WebsocketSendTopicMessageEvent](docs/WebsocketSendTopicMessageEvent.md)
+ - [Model.WebsocketSubscribeEvent](docs/WebsocketSubscribeEvent.md)
+ - [Model.WebsocketUnsubscribeEvent](docs/WebsocketUnsubscribeEvent.md)
  - [Model.AudioGroupProperty](docs/AudioGroupProperty.md)
  - [Model.AudioGroupPropertyDefinitionResource](docs/AudioGroupPropertyDefinitionResource.md)
  - [Model.AudioProperty](docs/AudioProperty.md)

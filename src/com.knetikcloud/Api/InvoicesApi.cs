@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Create an invoice
         /// </summary>
         /// <remarks>
-        /// Create an invoice(s) by providing a cart GUID. Note that there may be multiple invoices created, one per vendor.
+        /// Create an invoice(s) by providing a cart GUID. Note that there may be multiple invoices created, one per vendor. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER or INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="req">Invoice to be created (optional)</param>
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         /// Create an invoice
         /// </summary>
         /// <remarks>
-        /// Create an invoice(s) by providing a cart GUID. Note that there may be multiple invoices created, one per vendor.
+        /// Create an invoice(s) by providing a cart GUID. Note that there may be multiple invoices created, one per vendor. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER or INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="req">Invoice to be created (optional)</param>
@@ -49,7 +49,7 @@ namespace com.knetikcloud.Api
         /// Lists available fulfillment statuses
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;string&gt;</returns>
@@ -59,7 +59,7 @@ namespace com.knetikcloud.Api
         /// Lists available fulfillment statuses
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
@@ -68,7 +68,7 @@ namespace com.knetikcloud.Api
         /// Retrieve an invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -79,7 +79,7 @@ namespace com.knetikcloud.Api
         /// Retrieve an invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -89,7 +89,7 @@ namespace com.knetikcloud.Api
         /// List invoice logs
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -102,7 +102,7 @@ namespace com.knetikcloud.Api
         /// List invoice logs
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -114,7 +114,7 @@ namespace com.knetikcloud.Api
         /// Retrieve invoices
         /// </summary>
         /// <remarks>
-        /// Without INVOICES_ADMIN permission the results are automatically filtered for only the logged in user&#39;s invoices. It is recomended however that filter_user be added to avoid issues for admin users accidentally getting additional invoices.
+        /// Without INVOICES_ADMIN permission the results are automatically filtered for only the logged in user&#39;s invoices. It is recomended however that filter_user be added to avoid issues for admin users accidentally getting additional invoices. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterUser">The id of a user to get invoices for. Automtically added if not being called with admin permissions. (optional)</param>
@@ -133,7 +133,7 @@ namespace com.knetikcloud.Api
         /// <param name="filterSku">Filters invoices by item sku (optional)</param>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
         /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
-        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to 1)</param>
+        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)</param>
         /// <returns>PageResourceInvoiceResource</returns>
         PageResourceInvoiceResource GetInvoices (int? filterUser = null, string filterEmail = null, string filterFulfillmentStatus = null, string filterPaymentStatus = null, string filterItemName = null, string filterExternalRef = null, string filterCreatedDate = null, string filterVendorIds = null, string filterCurrency = null, string filterShippingStateName = null, string filterShippingCountryName = null, string filterShipping = null, string filterVendorName = null, string filterSku = null, int? size = null, int? page = null, string order = null);
 
@@ -141,7 +141,7 @@ namespace com.knetikcloud.Api
         /// Retrieve invoices
         /// </summary>
         /// <remarks>
-        /// Without INVOICES_ADMIN permission the results are automatically filtered for only the logged in user&#39;s invoices. It is recomended however that filter_user be added to avoid issues for admin users accidentally getting additional invoices.
+        /// Without INVOICES_ADMIN permission the results are automatically filtered for only the logged in user&#39;s invoices. It is recomended however that filter_user be added to avoid issues for admin users accidentally getting additional invoices. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterUser">The id of a user to get invoices for. Automtically added if not being called with admin permissions. (optional)</param>
@@ -160,14 +160,14 @@ namespace com.knetikcloud.Api
         /// <param name="filterSku">Filters invoices by item sku (optional)</param>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
         /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
-        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to 1)</param>
+        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)</param>
         /// <returns>ApiResponse of PageResourceInvoiceResource</returns>
         ApiResponse<PageResourceInvoiceResource> GetInvoicesWithHttpInfo (int? filterUser = null, string filterEmail = null, string filterFulfillmentStatus = null, string filterPaymentStatus = null, string filterItemName = null, string filterExternalRef = null, string filterCreatedDate = null, string filterVendorIds = null, string filterCurrency = null, string filterShippingStateName = null, string filterShippingCountryName = null, string filterShipping = null, string filterVendorName = null, string filterSku = null, int? size = null, int? page = null, string order = null);
         /// <summary>
         /// Lists available payment statuses
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;string&gt;</returns>
@@ -177,7 +177,7 @@ namespace com.knetikcloud.Api
         /// Lists available payment statuses
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
@@ -186,7 +186,7 @@ namespace com.knetikcloud.Api
         /// Pay an invoice using a saved payment method
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -198,7 +198,7 @@ namespace com.knetikcloud.Api
         /// Pay an invoice using a saved payment method
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -209,7 +209,7 @@ namespace com.knetikcloud.Api
         /// Set the fulfillment status of a bundled invoice item
         /// </summary>
         /// <remarks>
-        /// This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+        /// This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -223,7 +223,7 @@ namespace com.knetikcloud.Api
         /// Set the fulfillment status of a bundled invoice item
         /// </summary>
         /// <remarks>
-        /// This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+        /// This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -236,7 +236,7 @@ namespace com.knetikcloud.Api
         /// Set the external reference of an invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -248,7 +248,7 @@ namespace com.knetikcloud.Api
         /// Set the external reference of an invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -259,7 +259,7 @@ namespace com.knetikcloud.Api
         /// Set the fulfillment status of an invoice item
         /// </summary>
         /// <remarks>
-        /// This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+        /// This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -272,7 +272,7 @@ namespace com.knetikcloud.Api
         /// Set the fulfillment status of an invoice item
         /// </summary>
         /// <remarks>
-        /// This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+        /// This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -284,7 +284,7 @@ namespace com.knetikcloud.Api
         /// Set the order notes of an invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -296,7 +296,7 @@ namespace com.knetikcloud.Api
         /// Set the order notes of an invoice
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -307,7 +307,7 @@ namespace com.knetikcloud.Api
         /// Set the payment status of an invoice
         /// </summary>
         /// <remarks>
-        /// This may trigger fulfillment if setting the status to &#39;paid&#39;. This is mainly intended to support external payment systems that cannot be incorporated into the payment method system. Payment status changes are restricted by a specific flow determining which status can lead to which.
+        /// This may trigger fulfillment if setting the status to &#39;paid&#39;. This is mainly intended to support external payment systems that cannot be incorporated into the payment method system. Payment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -319,7 +319,7 @@ namespace com.knetikcloud.Api
         /// Set the payment status of an invoice
         /// </summary>
         /// <remarks>
-        /// This may trigger fulfillment if setting the status to &#39;paid&#39;. This is mainly intended to support external payment systems that cannot be incorporated into the payment method system. Payment status changes are restricted by a specific flow determining which status can lead to which.
+        /// This may trigger fulfillment if setting the status to &#39;paid&#39;. This is mainly intended to support external payment systems that cannot be incorporated into the payment method system. Payment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -330,7 +330,7 @@ namespace com.knetikcloud.Api
         /// Set or update billing info
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -342,7 +342,7 @@ namespace com.knetikcloud.Api
         /// Set or update billing info
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -450,7 +450,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create an invoice Create an invoice(s) by providing a cart GUID. Note that there may be multiple invoices created, one per vendor.
+        /// Create an invoice Create an invoice(s) by providing a cart GUID. Note that there may be multiple invoices created, one per vendor. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER or INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="req">Invoice to be created (optional)</param>
@@ -462,7 +462,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create an invoice Create an invoice(s) by providing a cart GUID. Note that there may be multiple invoices created, one per vendor.
+        /// Create an invoice Create an invoice(s) by providing a cart GUID. Note that there may be multiple invoices created, one per vendor. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER or INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="req">Invoice to be created (optional)</param>
@@ -533,7 +533,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Lists available fulfillment statuses 
+        /// Lists available fulfillment statuses &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;string&gt;</returns>
@@ -544,7 +544,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Lists available fulfillment statuses 
+        /// Lists available fulfillment statuses &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
@@ -561,7 +561,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -606,7 +605,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve an invoice 
+        /// Retrieve an invoice &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -618,7 +617,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve an invoice 
+        /// Retrieve an invoice &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -639,7 +638,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -685,7 +683,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List invoice logs 
+        /// List invoice logs &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -699,7 +697,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List invoice logs 
+        /// List invoice logs &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -722,7 +720,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -770,7 +767,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve invoices Without INVOICES_ADMIN permission the results are automatically filtered for only the logged in user&#39;s invoices. It is recomended however that filter_user be added to avoid issues for admin users accidentally getting additional invoices.
+        /// Retrieve invoices Without INVOICES_ADMIN permission the results are automatically filtered for only the logged in user&#39;s invoices. It is recomended however that filter_user be added to avoid issues for admin users accidentally getting additional invoices. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterUser">The id of a user to get invoices for. Automtically added if not being called with admin permissions. (optional)</param>
@@ -789,7 +786,7 @@ namespace com.knetikcloud.Api
         /// <param name="filterSku">Filters invoices by item sku (optional)</param>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
         /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
-        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to 1)</param>
+        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)</param>
         /// <returns>PageResourceInvoiceResource</returns>
         public PageResourceInvoiceResource GetInvoices (int? filterUser = null, string filterEmail = null, string filterFulfillmentStatus = null, string filterPaymentStatus = null, string filterItemName = null, string filterExternalRef = null, string filterCreatedDate = null, string filterVendorIds = null, string filterCurrency = null, string filterShippingStateName = null, string filterShippingCountryName = null, string filterShipping = null, string filterVendorName = null, string filterSku = null, int? size = null, int? page = null, string order = null)
         {
@@ -798,7 +795,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve invoices Without INVOICES_ADMIN permission the results are automatically filtered for only the logged in user&#39;s invoices. It is recomended however that filter_user be added to avoid issues for admin users accidentally getting additional invoices.
+        /// Retrieve invoices Without INVOICES_ADMIN permission the results are automatically filtered for only the logged in user&#39;s invoices. It is recomended however that filter_user be added to avoid issues for admin users accidentally getting additional invoices. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterUser">The id of a user to get invoices for. Automtically added if not being called with admin permissions. (optional)</param>
@@ -817,7 +814,7 @@ namespace com.knetikcloud.Api
         /// <param name="filterSku">Filters invoices by item sku (optional)</param>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
         /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
-        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to 1)</param>
+        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)</param>
         /// <returns>ApiResponse of PageResourceInvoiceResource</returns>
         public ApiResponse< PageResourceInvoiceResource > GetInvoicesWithHttpInfo (int? filterUser = null, string filterEmail = null, string filterFulfillmentStatus = null, string filterPaymentStatus = null, string filterItemName = null, string filterExternalRef = null, string filterCreatedDate = null, string filterVendorIds = null, string filterCurrency = null, string filterShippingStateName = null, string filterShippingCountryName = null, string filterShipping = null, string filterVendorName = null, string filterSku = null, int? size = null, int? page = null, string order = null)
         {
@@ -832,7 +829,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -894,7 +890,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Lists available payment statuses 
+        /// Lists available payment statuses &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;string&gt;</returns>
@@ -905,7 +901,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Lists available payment statuses 
+        /// Lists available payment statuses &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
@@ -922,7 +918,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -967,7 +962,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Pay an invoice using a saved payment method 
+        /// Pay an invoice using a saved payment method &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -979,7 +974,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Pay an invoice using a saved payment method 
+        /// Pay an invoice using a saved payment method &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -1055,7 +1050,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the fulfillment status of a bundled invoice item This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+        /// Set the fulfillment status of a bundled invoice item This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -1069,7 +1064,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the fulfillment status of a bundled invoice item This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+        /// Set the fulfillment status of a bundled invoice item This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -1158,7 +1153,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the external reference of an invoice 
+        /// Set the external reference of an invoice &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -1170,7 +1165,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the external reference of an invoice 
+        /// Set the external reference of an invoice &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -1246,7 +1241,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the fulfillment status of an invoice item This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+        /// Set the fulfillment status of an invoice item This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -1259,7 +1254,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the fulfillment status of an invoice item This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+        /// Set the fulfillment status of an invoice item This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -1343,7 +1338,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the order notes of an invoice 
+        /// Set the order notes of an invoice &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -1355,7 +1350,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the order notes of an invoice 
+        /// Set the order notes of an invoice &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -1431,7 +1426,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the payment status of an invoice This may trigger fulfillment if setting the status to &#39;paid&#39;. This is mainly intended to support external payment systems that cannot be incorporated into the payment method system. Payment status changes are restricted by a specific flow determining which status can lead to which.
+        /// Set the payment status of an invoice This may trigger fulfillment if setting the status to &#39;paid&#39;. This is mainly intended to support external payment systems that cannot be incorporated into the payment method system. Payment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -1443,7 +1438,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the payment status of an invoice This may trigger fulfillment if setting the status to &#39;paid&#39;. This is mainly intended to support external payment systems that cannot be incorporated into the payment method system. Payment status changes are restricted by a specific flow determining which status can lead to which.
+        /// Set the payment status of an invoice This may trigger fulfillment if setting the status to &#39;paid&#39;. This is mainly intended to support external payment systems that cannot be incorporated into the payment method system. Payment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -1519,7 +1514,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set or update billing info 
+        /// Set or update billing info &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>
@@ -1531,7 +1526,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set or update billing info 
+        /// Set or update billing info &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the invoice</param>

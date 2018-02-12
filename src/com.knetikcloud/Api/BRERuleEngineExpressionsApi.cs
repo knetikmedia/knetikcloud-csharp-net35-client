@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Lookup a specific expression
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Specifiy the type of expression as returned by the listing endpoint</param>
@@ -39,17 +39,17 @@ namespace com.knetikcloud.Api
         /// Lookup a specific expression
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Specifiy the type of expression as returned by the listing endpoint</param>
         /// <returns>ApiResponse of ExpressionResource</returns>
         ApiResponse<ExpressionResource> GetBREExpressionWithHttpInfo (string type);
         /// <summary>
-        /// Get a list of supported expressions to use in conditions or actions.
+        /// Get a list of supported expressions to use in conditions or actions
         /// </summary>
         /// <remarks>
-        /// Each resource contains a type and a definition that are read-only, all the other fields must be provided when using the expression in a rule.
+        /// Each resource contains a type and a definition that are read-only, all the other fields must be provided when using the expression in a rule. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTypeGroup">Filter for expressions by type group (optional)</param>
@@ -57,10 +57,10 @@ namespace com.knetikcloud.Api
         List<ExpressionResource> GetBREExpressions (string filterTypeGroup = null);
 
         /// <summary>
-        /// Get a list of supported expressions to use in conditions or actions.
+        /// Get a list of supported expressions to use in conditions or actions
         /// </summary>
         /// <remarks>
-        /// Each resource contains a type and a definition that are read-only, all the other fields must be provided when using the expression in a rule.
+        /// Each resource contains a type and a definition that are read-only, all the other fields must be provided when using the expression in a rule. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTypeGroup">Filter for expressions by type group (optional)</param>
@@ -70,7 +70,7 @@ namespace com.knetikcloud.Api
         /// Returns the textual representation of an expression
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expression">The expression resource to be converted (optional)</param>
@@ -81,7 +81,7 @@ namespace com.knetikcloud.Api
         /// Returns the textual representation of an expression
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expression">The expression resource to be converted (optional)</param>
@@ -188,7 +188,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Lookup a specific expression 
+        /// Lookup a specific expression &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Specifiy the type of expression as returned by the listing endpoint</param>
@@ -200,7 +200,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Lookup a specific expression 
+        /// Lookup a specific expression &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="type">Specifiy the type of expression as returned by the listing endpoint</param>
@@ -221,7 +221,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -267,7 +266,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a list of supported expressions to use in conditions or actions. Each resource contains a type and a definition that are read-only, all the other fields must be provided when using the expression in a rule.
+        /// Get a list of supported expressions to use in conditions or actions Each resource contains a type and a definition that are read-only, all the other fields must be provided when using the expression in a rule. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTypeGroup">Filter for expressions by type group (optional)</param>
@@ -279,7 +278,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a list of supported expressions to use in conditions or actions. Each resource contains a type and a definition that are read-only, all the other fields must be provided when using the expression in a rule.
+        /// Get a list of supported expressions to use in conditions or actions Each resource contains a type and a definition that are read-only, all the other fields must be provided when using the expression in a rule. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTypeGroup">Filter for expressions by type group (optional)</param>
@@ -297,7 +296,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -343,7 +341,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns the textual representation of an expression 
+        /// Returns the textual representation of an expression &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expression">The expression resource to be converted (optional)</param>
@@ -355,7 +353,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns the textual representation of an expression 
+        /// Returns the textual representation of an expression &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expression">The expression resource to be converted (optional)</param>

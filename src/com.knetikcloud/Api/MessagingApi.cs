@@ -25,10 +25,146 @@ namespace com.knetikcloud.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Compile a message template
+        /// </summary>
+        /// <remarks>
+        /// Processes a set of input data against the template and returnes the compiled result. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request (optional)</param>
+        /// <returns>Dictionary&lt;string, string&gt;</returns>
+        Dictionary<string, string> CompileMessageTemplate (MessageTemplateBulkRequest request = null);
+
+        /// <summary>
+        /// Compile a message template
+        /// </summary>
+        /// <remarks>
+        /// Processes a set of input data against the template and returnes the compiled result. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request (optional)</param>
+        /// <returns>ApiResponse of Dictionary&lt;string, string&gt;</returns>
+        ApiResponse<Dictionary<string, string>> CompileMessageTemplateWithHttpInfo (MessageTemplateBulkRequest request = null);
+        /// <summary>
+        /// Create a message template
+        /// </summary>
+        /// <remarks>
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageTemplate">The new template email to be sent (optional)</param>
+        /// <returns>MessageTemplateResource</returns>
+        MessageTemplateResource CreateMessageTemplate (MessageTemplateResource messageTemplate = null);
+
+        /// <summary>
+        /// Create a message template
+        /// </summary>
+        /// <remarks>
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageTemplate">The new template email to be sent (optional)</param>
+        /// <returns>ApiResponse of MessageTemplateResource</returns>
+        ApiResponse<MessageTemplateResource> CreateMessageTemplateWithHttpInfo (MessageTemplateResource messageTemplate = null);
+        /// <summary>
+        /// Delete an existing message template
+        /// </summary>
+        /// <remarks>
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The message_template id</param>
+        /// <returns></returns>
+        void DeleteMessageTemplate (string id);
+
+        /// <summary>
+        /// Delete an existing message template
+        /// </summary>
+        /// <remarks>
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The message_template id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteMessageTemplateWithHttpInfo (string id);
+        /// <summary>
+        /// Get a single message template
+        /// </summary>
+        /// <remarks>
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The message_template id</param>
+        /// <returns>MessageTemplateResource</returns>
+        MessageTemplateResource GetMessageTemplate (string id);
+
+        /// <summary>
+        /// Get a single message template
+        /// </summary>
+        /// <remarks>
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The message_template id</param>
+        /// <returns>ApiResponse of MessageTemplateResource</returns>
+        ApiResponse<MessageTemplateResource> GetMessageTemplateWithHttpInfo (string id);
+        /// <summary>
+        /// List and search message templates
+        /// </summary>
+        /// <remarks>
+        /// Get a list of message templates with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterTagset">Filter for message templates with at least one of a specified set of tags (separated by comma) (optional)</param>
+        /// <param name="filterTagIntersection">Filter for message templates with all of a specified set of tags (separated by comma) (optional)</param>
+        /// <param name="filterTagExclusion">Filter for message templates with none of a specified set of tags (separated by comma) (optional)</param>
+        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)</param>
+        /// <returns>PageResourceMessageTemplateResource</returns>
+        PageResourceMessageTemplateResource GetMessageTemplates (string filterTagset = null, string filterTagIntersection = null, string filterTagExclusion = null, int? size = null, int? page = null, string order = null);
+
+        /// <summary>
+        /// List and search message templates
+        /// </summary>
+        /// <remarks>
+        /// Get a list of message templates with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterTagset">Filter for message templates with at least one of a specified set of tags (separated by comma) (optional)</param>
+        /// <param name="filterTagIntersection">Filter for message templates with all of a specified set of tags (separated by comma) (optional)</param>
+        /// <param name="filterTagExclusion">Filter for message templates with none of a specified set of tags (separated by comma) (optional)</param>
+        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)</param>
+        /// <returns>ApiResponse of PageResourceMessageTemplateResource</returns>
+        ApiResponse<PageResourceMessageTemplateResource> GetMessageTemplatesWithHttpInfo (string filterTagset = null, string filterTagIntersection = null, string filterTagExclusion = null, int? size = null, int? page = null, string order = null);
+        /// <summary>
+        /// Send a message
+        /// </summary>
+        /// <remarks>
+        /// Sends a message with one or more formats to one or more users. Fill in any message formats desired (email, sms, websockets) and each user will recieve all valid formats. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageResource">The message to be sent (optional)</param>
+        /// <returns></returns>
+        void SendMessage1 (MessageResource messageResource = null);
+
+        /// <summary>
+        /// Send a message
+        /// </summary>
+        /// <remarks>
+        /// Sends a message with one or more formats to one or more users. Fill in any message formats desired (email, sms, websockets) and each user will recieve all valid formats. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageResource">The message to be sent (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SendMessage1WithHttpInfo (MessageResource messageResource = null);
+        /// <summary>
         /// Send a raw email to one or more users
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rawEmailResource">The new raw email to be sent (optional)</param>
@@ -39,7 +175,7 @@ namespace com.knetikcloud.Api
         /// Send a raw email to one or more users
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rawEmailResource">The new raw email to be sent (optional)</param>
@@ -49,7 +185,7 @@ namespace com.knetikcloud.Api
         /// Send a raw push notification
         /// </summary>
         /// <remarks>
-        /// Sends a raw push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped.
+        /// Sends a raw push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rawPushResource">The new raw push notification to be sent (optional)</param>
@@ -60,7 +196,7 @@ namespace com.knetikcloud.Api
         /// Send a raw push notification
         /// </summary>
         /// <remarks>
-        /// Sends a raw push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped.
+        /// Sends a raw push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rawPushResource">The new raw push notification to be sent (optional)</param>
@@ -70,7 +206,7 @@ namespace com.knetikcloud.Api
         /// Send a raw SMS
         /// </summary>
         /// <remarks>
-        /// Sends a raw SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped.
+        /// Sends a raw SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rawSMSResource">The new raw SMS to be sent (optional)</param>
@@ -81,7 +217,7 @@ namespace com.knetikcloud.Api
         /// Send a raw SMS
         /// </summary>
         /// <remarks>
-        /// Sends a raw SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped.
+        /// Sends a raw SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rawSMSResource">The new raw SMS to be sent (optional)</param>
@@ -91,7 +227,7 @@ namespace com.knetikcloud.Api
         /// Send a templated email to one or more users
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageResource">The new template email to be sent (optional)</param>
@@ -102,7 +238,7 @@ namespace com.knetikcloud.Api
         /// Send a templated email to one or more users
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageResource">The new template email to be sent (optional)</param>
@@ -112,7 +248,7 @@ namespace com.knetikcloud.Api
         /// Send a templated push notification
         /// </summary>
         /// <remarks>
-        /// Sends a templated push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped.
+        /// Sends a templated push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templatePushResource">The new templated push notification to be sent (optional)</param>
@@ -123,7 +259,7 @@ namespace com.knetikcloud.Api
         /// Send a templated push notification
         /// </summary>
         /// <remarks>
-        /// Sends a templated push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped.
+        /// Sends a templated push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templatePushResource">The new templated push notification to be sent (optional)</param>
@@ -133,7 +269,7 @@ namespace com.knetikcloud.Api
         /// Send a new templated SMS
         /// </summary>
         /// <remarks>
-        /// Sends a templated SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped.
+        /// Sends a templated SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateSMSResource">The new template SMS to be sent (optional)</param>
@@ -144,12 +280,56 @@ namespace com.knetikcloud.Api
         /// Send a new templated SMS
         /// </summary>
         /// <remarks>
-        /// Sends a templated SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped.
+        /// Sends a templated SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateSMSResource">The new template SMS to be sent (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> SendTemplatedSMSWithHttpInfo (TemplateSMSResource templateSMSResource = null);
+        /// <summary>
+        /// Send a websocket message
+        /// </summary>
+        /// <remarks>
+        /// Sends a websocket message to one or more users. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="websocketResource">The new websocket message to be sent (optional)</param>
+        /// <returns></returns>
+        void SendWebsocket (WebsocketMessageResource websocketResource = null);
+
+        /// <summary>
+        /// Send a websocket message
+        /// </summary>
+        /// <remarks>
+        /// Sends a websocket message to one or more users. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="websocketResource">The new websocket message to be sent (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> SendWebsocketWithHttpInfo (WebsocketMessageResource websocketResource = null);
+        /// <summary>
+        /// Update an existing message template
+        /// </summary>
+        /// <remarks>
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The message_template id</param>
+        /// <param name="messageTemplateResource">The message template (optional)</param>
+        /// <returns>MessageTemplateResource</returns>
+        MessageTemplateResource UpdateMessageTemplate (string id, MessageTemplateResource messageTemplateResource = null);
+
+        /// <summary>
+        /// Update an existing message template
+        /// </summary>
+        /// <remarks>
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The message_template id</param>
+        /// <param name="messageTemplateResource">The message template (optional)</param>
+        /// <returns>ApiResponse of MessageTemplateResource</returns>
+        ApiResponse<MessageTemplateResource> UpdateMessageTemplateWithHttpInfo (string id, MessageTemplateResource messageTemplateResource = null);
         #endregion Synchronous Operations
     }
 
@@ -251,7 +431,500 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Send a raw email to one or more users 
+        /// Compile a message template Processes a set of input data against the template and returnes the compiled result. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request (optional)</param>
+        /// <returns>Dictionary&lt;string, string&gt;</returns>
+        public Dictionary<string, string> CompileMessageTemplate (MessageTemplateBulkRequest request = null)
+        {
+             ApiResponse<Dictionary<string, string>> localVarResponse = CompileMessageTemplateWithHttpInfo(request);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Compile a message template Processes a set of input data against the template and returnes the compiled result. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">request (optional)</param>
+        /// <returns>ApiResponse of Dictionary&lt;string, string&gt;</returns>
+        public ApiResponse< Dictionary<string, string> > CompileMessageTemplateWithHttpInfo (MessageTemplateBulkRequest request = null)
+        {
+
+            var localVarPath = "/messaging/templates/compilations";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CompileMessageTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Dictionary<string, string>>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (Dictionary<string, string>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, string>)));
+        }
+
+        /// <summary>
+        /// Create a message template &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageTemplate">The new template email to be sent (optional)</param>
+        /// <returns>MessageTemplateResource</returns>
+        public MessageTemplateResource CreateMessageTemplate (MessageTemplateResource messageTemplate = null)
+        {
+             ApiResponse<MessageTemplateResource> localVarResponse = CreateMessageTemplateWithHttpInfo(messageTemplate);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a message template &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageTemplate">The new template email to be sent (optional)</param>
+        /// <returns>ApiResponse of MessageTemplateResource</returns>
+        public ApiResponse< MessageTemplateResource > CreateMessageTemplateWithHttpInfo (MessageTemplateResource messageTemplate = null)
+        {
+
+            var localVarPath = "/messaging/templates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (messageTemplate != null && messageTemplate.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(messageTemplate); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = messageTemplate; // byte array
+            }
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("CreateMessageTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MessageTemplateResource>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MessageTemplateResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessageTemplateResource)));
+        }
+
+        /// <summary>
+        /// Delete an existing message template &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The message_template id</param>
+        /// <returns></returns>
+        public void DeleteMessageTemplate (string id)
+        {
+             DeleteMessageTemplateWithHttpInfo(id);
+        }
+
+        /// <summary>
+        /// Delete an existing message template &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The message_template id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteMessageTemplateWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling MessagingApi->DeleteMessageTemplate");
+
+            var localVarPath = "/messaging/templates/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("DeleteMessageTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Get a single message template &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The message_template id</param>
+        /// <returns>MessageTemplateResource</returns>
+        public MessageTemplateResource GetMessageTemplate (string id)
+        {
+             ApiResponse<MessageTemplateResource> localVarResponse = GetMessageTemplateWithHttpInfo(id);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a single message template &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The message_template id</param>
+        /// <returns>ApiResponse of MessageTemplateResource</returns>
+        public ApiResponse< MessageTemplateResource > GetMessageTemplateWithHttpInfo (string id)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling MessagingApi->GetMessageTemplate");
+
+            var localVarPath = "/messaging/templates/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetMessageTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MessageTemplateResource>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MessageTemplateResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessageTemplateResource)));
+        }
+
+        /// <summary>
+        /// List and search message templates Get a list of message templates with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterTagset">Filter for message templates with at least one of a specified set of tags (separated by comma) (optional)</param>
+        /// <param name="filterTagIntersection">Filter for message templates with all of a specified set of tags (separated by comma) (optional)</param>
+        /// <param name="filterTagExclusion">Filter for message templates with none of a specified set of tags (separated by comma) (optional)</param>
+        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)</param>
+        /// <returns>PageResourceMessageTemplateResource</returns>
+        public PageResourceMessageTemplateResource GetMessageTemplates (string filterTagset = null, string filterTagIntersection = null, string filterTagExclusion = null, int? size = null, int? page = null, string order = null)
+        {
+             ApiResponse<PageResourceMessageTemplateResource> localVarResponse = GetMessageTemplatesWithHttpInfo(filterTagset, filterTagIntersection, filterTagExclusion, size, page, order);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List and search message templates Get a list of message templates with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterTagset">Filter for message templates with at least one of a specified set of tags (separated by comma) (optional)</param>
+        /// <param name="filterTagIntersection">Filter for message templates with all of a specified set of tags (separated by comma) (optional)</param>
+        /// <param name="filterTagExclusion">Filter for message templates with none of a specified set of tags (separated by comma) (optional)</param>
+        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <param name="order">A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)</param>
+        /// <returns>ApiResponse of PageResourceMessageTemplateResource</returns>
+        public ApiResponse< PageResourceMessageTemplateResource > GetMessageTemplatesWithHttpInfo (string filterTagset = null, string filterTagIntersection = null, string filterTagExclusion = null, int? size = null, int? page = null, string order = null)
+        {
+
+            var localVarPath = "/messaging/templates";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (filterTagset != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filter_tagset", filterTagset)); // query parameter
+            if (filterTagIntersection != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filter_tag_intersection", filterTagIntersection)); // query parameter
+            if (filterTagExclusion != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "filter_tag_exclusion", filterTagExclusion)); // query parameter
+            if (size != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "size", size)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+            if (order != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "order", order)); // query parameter
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetMessageTemplates", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PageResourceMessageTemplateResource>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageResourceMessageTemplateResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageResourceMessageTemplateResource)));
+        }
+
+        /// <summary>
+        /// Send a message Sends a message with one or more formats to one or more users. Fill in any message formats desired (email, sms, websockets) and each user will recieve all valid formats. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageResource">The message to be sent (optional)</param>
+        /// <returns></returns>
+        public void SendMessage1 (MessageResource messageResource = null)
+        {
+             SendMessage1WithHttpInfo(messageResource);
+        }
+
+        /// <summary>
+        /// Send a message Sends a message with one or more formats to one or more users. Fill in any message formats desired (email, sms, websockets) and each user will recieve all valid formats. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageResource">The message to be sent (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> SendMessage1WithHttpInfo (MessageResource messageResource = null)
+        {
+
+            var localVarPath = "/messaging/message";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (messageResource != null && messageResource.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(messageResource); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = messageResource; // byte array
+            }
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendMessage1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Send a raw email to one or more users &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rawEmailResource">The new raw email to be sent (optional)</param>
@@ -262,7 +935,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Send a raw email to one or more users 
+        /// Send a raw email to one or more users &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rawEmailResource">The new raw email to be sent (optional)</param>
@@ -333,7 +1006,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Send a raw push notification Sends a raw push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped.
+        /// Send a raw push notification Sends a raw push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rawPushResource">The new raw push notification to be sent (optional)</param>
@@ -344,7 +1017,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Send a raw push notification Sends a raw push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped.
+        /// Send a raw push notification Sends a raw push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rawPushResource">The new raw push notification to be sent (optional)</param>
@@ -415,7 +1088,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Send a raw SMS Sends a raw SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped.
+        /// Send a raw SMS Sends a raw SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rawSMSResource">The new raw SMS to be sent (optional)</param>
@@ -426,7 +1099,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Send a raw SMS Sends a raw SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped.
+        /// Send a raw SMS Sends a raw SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rawSMSResource">The new raw SMS to be sent (optional)</param>
@@ -497,7 +1170,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Send a templated email to one or more users 
+        /// Send a templated email to one or more users &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageResource">The new template email to be sent (optional)</param>
@@ -508,7 +1181,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Send a templated email to one or more users 
+        /// Send a templated email to one or more users &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageResource">The new template email to be sent (optional)</param>
@@ -579,7 +1252,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Send a templated push notification Sends a templated push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped.
+        /// Send a templated push notification Sends a templated push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templatePushResource">The new templated push notification to be sent (optional)</param>
@@ -590,7 +1263,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Send a templated push notification Sends a templated push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped.
+        /// Send a templated push notification Sends a templated push notification message to one or more users. User&#39;s without registered mobile device for the application will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templatePushResource">The new templated push notification to be sent (optional)</param>
@@ -661,7 +1334,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Send a new templated SMS Sends a templated SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped.
+        /// Send a new templated SMS Sends a templated SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateSMSResource">The new template SMS to be sent (optional)</param>
@@ -672,7 +1345,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Send a new templated SMS Sends a templated SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped.
+        /// Send a new templated SMS Sends a templated SMS text message to one or more users. User&#39;s without registered mobile numbers will be skipped. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="templateSMSResource">The new template SMS to be sent (optional)</param>
@@ -740,6 +1413,177 @@ namespace com.knetikcloud.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 null);
+        }
+
+        /// <summary>
+        /// Send a websocket message Sends a websocket message to one or more users. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="websocketResource">The new websocket message to be sent (optional)</param>
+        /// <returns></returns>
+        public void SendWebsocket (WebsocketMessageResource websocketResource = null)
+        {
+             SendWebsocketWithHttpInfo(websocketResource);
+        }
+
+        /// <summary>
+        /// Send a websocket message Sends a websocket message to one or more users. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="websocketResource">The new websocket message to be sent (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> SendWebsocketWithHttpInfo (WebsocketMessageResource websocketResource = null)
+        {
+
+            var localVarPath = "/messaging/websocket-message";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (websocketResource != null && websocketResource.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(websocketResource); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = websocketResource; // byte array
+            }
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SendWebsocket", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Update an existing message template &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The message_template id</param>
+        /// <param name="messageTemplateResource">The message template (optional)</param>
+        /// <returns>MessageTemplateResource</returns>
+        public MessageTemplateResource UpdateMessageTemplate (string id, MessageTemplateResource messageTemplateResource = null)
+        {
+             ApiResponse<MessageTemplateResource> localVarResponse = UpdateMessageTemplateWithHttpInfo(id, messageTemplateResource);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an existing message template &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">The message_template id</param>
+        /// <param name="messageTemplateResource">The message template (optional)</param>
+        /// <returns>ApiResponse of MessageTemplateResource</returns>
+        public ApiResponse< MessageTemplateResource > UpdateMessageTemplateWithHttpInfo (string id, MessageTemplateResource messageTemplateResource = null)
+        {
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling MessagingApi->UpdateMessageTemplate");
+
+            var localVarPath = "/messaging/templates/{id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (id != null) localVarPathParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // path parameter
+            if (messageTemplateResource != null && messageTemplateResource.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(messageTemplateResource); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = messageTemplateResource; // byte array
+            }
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("UpdateMessageTemplate", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<MessageTemplateResource>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (MessageTemplateResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessageTemplateResource)));
         }
 
     }

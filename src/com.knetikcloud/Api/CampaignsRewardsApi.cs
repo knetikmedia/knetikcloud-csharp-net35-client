@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Create a reward set
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rewardSetResource">The reward set resource object (optional)</param>
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         /// Create a reward set
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rewardSetResource">The reward set resource object (optional)</param>
@@ -49,7 +49,7 @@ namespace com.knetikcloud.Api
         /// Delete a reward set
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The reward id</param>
@@ -60,7 +60,7 @@ namespace com.knetikcloud.Api
         /// Delete a reward set
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The reward id</param>
@@ -70,7 +70,7 @@ namespace com.knetikcloud.Api
         /// Get a single reward set
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The reward id</param>
@@ -81,7 +81,7 @@ namespace com.knetikcloud.Api
         /// Get a single reward set
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The reward id</param>
@@ -91,7 +91,7 @@ namespace com.knetikcloud.Api
         /// List and search reward sets
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -104,7 +104,7 @@ namespace com.knetikcloud.Api
         /// List and search reward sets
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -116,7 +116,7 @@ namespace com.knetikcloud.Api
         /// Update a reward set
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The reward id</param>
@@ -128,7 +128,7 @@ namespace com.knetikcloud.Api
         /// Update a reward set
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The reward id</param>
@@ -236,7 +236,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a reward set 
+        /// Create a reward set &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rewardSetResource">The reward set resource object (optional)</param>
@@ -248,7 +248,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a reward set 
+        /// Create a reward set &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="rewardSetResource">The reward set resource object (optional)</param>
@@ -319,7 +319,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a reward set 
+        /// Delete a reward set &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The reward id</param>
@@ -330,7 +330,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a reward set 
+        /// Delete a reward set &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The reward id</param>
@@ -351,7 +351,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -397,7 +396,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single reward set 
+        /// Get a single reward set &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The reward id</param>
@@ -409,7 +408,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single reward set 
+        /// Get a single reward set &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The reward id</param>
@@ -430,7 +429,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -476,7 +474,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search reward sets 
+        /// List and search reward sets &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -490,7 +488,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search reward sets 
+        /// List and search reward sets &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -510,7 +508,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -558,7 +555,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a reward set 
+        /// Update a reward set &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The reward id</param>
@@ -571,7 +568,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a reward set 
+        /// Update a reward set &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The reward id</param>

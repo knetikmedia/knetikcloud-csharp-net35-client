@@ -43,7 +43,7 @@ namespace com.knetikcloud.Model
         /// <param name="Name">The user friendly name of that resource (required).</param>
         /// <param name="ShortDescription">The user friendly name of that resource. Defaults to blank string.</param>
         /// <param name="Template">Whether this activity is a template for other activities. Default: false.</param>
-        /// <param name="Type">The type of the activity (required).</param>
+        /// <param name="Type">The type of the activity.</param>
         /// <param name="UniqueKey">The unique key (for static reference in code) of the activity.</param>
         public BareActivityResource(string Launch = default(string), string LongDescription = default(string), string Name = default(string), string ShortDescription = default(string), bool? Template = default(bool?), string Type = default(string), string UniqueKey = default(string))
         {
@@ -56,19 +56,11 @@ namespace com.knetikcloud.Model
             {
                 this.Name = Name;
             }
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for BareActivityResource and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
             this.Launch = Launch;
             this.LongDescription = LongDescription;
             this.ShortDescription = ShortDescription;
             this.Template = Template;
+            this.Type = Type;
             this.UniqueKey = UniqueKey;
         }
         

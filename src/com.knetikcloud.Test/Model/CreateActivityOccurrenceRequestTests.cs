@@ -81,6 +81,14 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'ChallengeActivityId'
         }
         /// <summary>
+        /// Test the property 'CoreSettings'
+        /// </summary>
+        [Test]
+        public void CoreSettingsTest()
+        {
+            // TODO unit test for the property 'CoreSettings'
+        }
+        /// <summary>
         /// Test the property 'Entitlement'
         /// </summary>
         [Test]
@@ -95,6 +103,14 @@ namespace com.knetikcloud.Test
         public void EventIdTest()
         {
             // TODO unit test for the property 'EventId'
+        }
+        /// <summary>
+        /// Test the property 'Host'
+        /// </summary>
+        [Test]
+        public void HostTest()
+        {
+            // TODO unit test for the property 'Host'
         }
         /// <summary>
         /// Test the property 'Settings'

@@ -103,6 +103,20 @@ namespace com.knetikcloud.Test
         }
         
         /// <summary>
+        /// Test GetDirectMessages1
+        /// </summary>
+        [Test]
+        public void GetDirectMessages1Test()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? recipientId = null;
+            //int? size = null;
+            //int? page = null;
+            //var response = instance.GetDirectMessages1(recipientId, size, page);
+            //Assert.IsInstanceOf<PageResourceChatMessageResource> (response, "response is PageResourceChatMessageResource");
+        }
+        
+        /// <summary>
         /// Test GetUser
         /// </summary>
         [Test]
@@ -189,6 +203,19 @@ namespace com.knetikcloud.Test
             //NewPasswordRequest newPasswordRequest = null;
             //instance.PasswordReset(id, newPasswordRequest);
             
+        }
+        
+        /// <summary>
+        /// Test PostUserMessage
+        /// </summary>
+        [Test]
+        public void PostUserMessageTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? recipientId = null;
+            //ChatMessageRequest chatMessageRequest = null;
+            //var response = instance.PostUserMessage(recipientId, chatMessageRequest);
+            //Assert.IsInstanceOf<ChatMessageResource> (response, "response is ChatMessageResource");
         }
         
         /// <summary>

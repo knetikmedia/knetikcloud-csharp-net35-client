@@ -81,14 +81,6 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'Database'
         }
         /// <summary>
-        /// Test the property 'Io'
-        /// </summary>
-        [Test]
-        public void IoTest()
-        {
-            // TODO unit test for the property 'Io'
-        }
-        /// <summary>
         /// Test the property 'Name'
         /// </summary>
         [Test]

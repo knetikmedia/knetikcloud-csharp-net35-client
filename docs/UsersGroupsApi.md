@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.UsersGroupsApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,16 +12,19 @@ Method | HTTP request | Description
 [**DeleteGroup**](UsersGroupsApi.md#deletegroup) | **DELETE** /users/groups/{unique_name} | Removes a group from the system
 [**DeleteGroupMemberTemplate**](UsersGroupsApi.md#deletegroupmembertemplate) | **DELETE** /users/groups/members/templates/{id} | Delete an group member template
 [**DeleteGroupTemplate**](UsersGroupsApi.md#deletegrouptemplate) | **DELETE** /users/groups/templates/{id} | Delete a group template
+[**DisableGroupNotification**](UsersGroupsApi.md#disablegroupnotification) | **PUT** /users/groups/{unique_name}/members/{user_id}/messages/disabled | Enable or disable notification of group messages
 [**GetGroup**](UsersGroupsApi.md#getgroup) | **GET** /users/groups/{unique_name} | Loads a specific group&#39;s details
 [**GetGroupAncestors**](UsersGroupsApi.md#getgroupancestors) | **GET** /users/groups/{unique_name}/ancestors | Get group ancestors
 [**GetGroupMember**](UsersGroupsApi.md#getgroupmember) | **GET** /users/groups/{unique_name}/members/{user_id} | Get a user from a group
 [**GetGroupMemberTemplate**](UsersGroupsApi.md#getgroupmembertemplate) | **GET** /users/groups/members/templates/{id} | Get a single group member template
 [**GetGroupMemberTemplates**](UsersGroupsApi.md#getgroupmembertemplates) | **GET** /users/groups/members/templates | List and search group member templates
 [**GetGroupMembers**](UsersGroupsApi.md#getgroupmembers) | **GET** /users/groups/{unique_name}/members | Lists members of the group
+[**GetGroupMessages**](UsersGroupsApi.md#getgroupmessages) | **GET** /users/groups/{unique_name}/messages | Get a list of group messages
 [**GetGroupTemplate**](UsersGroupsApi.md#getgrouptemplate) | **GET** /users/groups/templates/{id} | Get a single group template
 [**GetGroupTemplates**](UsersGroupsApi.md#getgrouptemplates) | **GET** /users/groups/templates | List and search group templates
 [**GetGroupsForUser**](UsersGroupsApi.md#getgroupsforuser) | **GET** /users/{user_id}/groups | List groups a user is in
 [**ListGroups**](UsersGroupsApi.md#listgroups) | **GET** /users/groups | List and search groups
+[**PostGroupMessage**](UsersGroupsApi.md#postgroupmessage) | **POST** /users/groups/{unique_name}/messages | Send a group message
 [**RemoveGroupMember**](UsersGroupsApi.md#removegroupmember) | **DELETE** /users/groups/{unique_name}/members/{user_id} | Removes a user from a group
 [**UpdateGroup**](UsersGroupsApi.md#updategroup) | **PUT** /users/groups/{unique_name} | Update a group
 [**UpdateGroupMemberProperties**](UsersGroupsApi.md#updategroupmemberproperties) | **PUT** /users/groups/{unique_name}/members/{user_id}/order | Change a user&#39;s order
@@ -36,6 +39,8 @@ Method | HTTP request | Description
 > GroupMemberResource AddMemberToGroup (string uniqueName, GroupMemberResource user)
 
 Adds a new member to the group
+
+<b>Permissions Needed:</b> GROUP_ADMIN or self if open
 
 ### Example
 ```csharp
@@ -103,6 +108,8 @@ Name | Type | Description  | Notes
 
 Adds multiple members to the group
 
+<b>Permissions Needed:</b> GROUP_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -169,6 +176,8 @@ Name | Type | Description  | Notes
 
 Create a group
 
+<b>Permissions Needed:</b> GROUP_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -233,7 +242,7 @@ Name | Type | Description  | Notes
 
 Create an group member template
 
-GroupMember Templates define a type of group member and the properties they have
+GroupMember Templates define a type of group member and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
 
 ### Example
 ```csharp
@@ -299,7 +308,7 @@ Name | Type | Description  | Notes
 
 Create a group template
 
-Group Templates define a type of group and the properties they have
+Group Templates define a type of group and the properties they have. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
 
 ### Example
 ```csharp
@@ -365,7 +374,7 @@ Name | Type | Description  | Notes
 
 Removes a group from the system
 
-All groups listing this as the parent are also removed and users are in turn removed from this and those groups. This may result in users no longer being in this group's parent if they were not added to it directly as well.
+All groups listing this as the parent are also removed and users are in turn removed from this and those groups. This may result in users no longer being in this group's parent if they were not added to it directly as well. <br><br><b>Permissions Needed:</b> GROUP_ADMIN
 
 ### Example
 ```csharp
@@ -419,7 +428,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -430,7 +439,7 @@ void (empty response body)
 
 Delete an group member template
 
-If cascade = 'detach', it will force delete the template even if it's attached to other objects
+If cascade = 'detach', it will force delete the template even if it's attached to other objects. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
 
 ### Example
 ```csharp
@@ -486,7 +495,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -497,7 +506,7 @@ void (empty response body)
 
 Delete a group template
 
-If cascade = 'detach', it will force delete the template even if it's attached to other objects
+If cascade = 'detach', it will force delete the template even if it's attached to other objects. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
 
 ### Example
 ```csharp
@@ -553,6 +562,73 @@ void (empty response body)
 
 ### HTTP request headers
 
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="disablegroupnotification"></a>
+# **DisableGroupNotification**
+> void DisableGroupNotification (string uniqueName, string userId, ValueWrapperboolean disabled)
+
+Enable or disable notification of group messages
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using com.knetikcloud.Api;
+using com.knetikcloud.Client;
+using com.knetikcloud.Model;
+
+namespace Example
+{
+    public class DisableGroupNotificationExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersGroupsApi();
+            var uniqueName = uniqueName_example;  // string | The group unique name
+            var userId = userId_example;  // string | The user id of the member or 'me'
+            var disabled = new ValueWrapperboolean(); // ValueWrapperboolean | disabled
+
+            try
+            {
+                // Enable or disable notification of group messages
+                apiInstance.DisableGroupNotification(uniqueName, userId, disabled);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersGroupsApi.DisableGroupNotification: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uniqueName** | **string**| The group unique name | 
+ **userId** | **string**| The user id of the member or &#39;me&#39; | 
+ **disabled** | [**ValueWrapperboolean**](ValueWrapperboolean.md)| disabled | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
+
+### HTTP request headers
+
  - **Content-Type**: application/json
  - **Accept**: application/json
 
@@ -563,6 +639,8 @@ void (empty response body)
 > GroupResource GetGroup (string uniqueName)
 
 Loads a specific group's details
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -617,7 +695,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -628,7 +706,7 @@ Name | Type | Description  | Notes
 
 Get group ancestors
 
-Returns a list of ancestor groups in reverse order (parent, then grandparent, etc
+Returns a list of ancestor groups in reverse order (parent, then grandparent, etc). <br><br><b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -644,6 +722,11 @@ namespace Example
     {
         public void main()
         {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
             var apiInstance = new UsersGroupsApi();
             var uniqueName = uniqueName_example;  // string | The group unique name
 
@@ -674,11 +757,11 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -688,6 +771,8 @@ No authorization required
 > GroupMemberResource GetGroupMember (string uniqueName, int? userId)
 
 Get a user from a group
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -744,7 +829,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -754,6 +839,8 @@ Name | Type | Description  | Notes
 > TemplateResource GetGroupMemberTemplate (string id)
 
 Get a single group member template
+
+<b>Permissions Needed:</b> TEMPLATE_ADMIN or GROUP_ADMIN
 
 ### Example
 ```csharp
@@ -808,7 +895,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -818,6 +905,8 @@ Name | Type | Description  | Notes
 > PageResourceTemplateResource GetGroupMemberTemplates (int? size = null, int? page = null, string order = null)
 
 List and search group member templates
+
+<b>Permissions Needed:</b> TEMPLATE_ADMIN or GROUP_ADMIN
 
 ### Example
 ```csharp
@@ -876,7 +965,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -886,6 +975,8 @@ Name | Type | Description  | Notes
 > PageResourceGroupMemberResource GetGroupMembers (string uniqueName, int? size = null, int? page = null, string order = null)
 
 Lists members of the group
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -946,7 +1037,77 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getgroupmessages"></a>
+# **GetGroupMessages**
+> PageResourceChatMessageResource GetGroupMessages (string uniqueName, int? size = null, int? page = null)
+
+Get a list of group messages
+
+<b>Permissions Needed:</b> ANY
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using com.knetikcloud.Api;
+using com.knetikcloud.Client;
+using com.knetikcloud.Model;
+
+namespace Example
+{
+    public class GetGroupMessagesExample
+    {
+        public void main()
+        {
+            // Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+            // Configure OAuth2 access token for authorization: oauth2_password_grant
+            Configuration.Default.AccessToken = "YOUR_ACCESS_TOKEN";
+
+            var apiInstance = new UsersGroupsApi();
+            var uniqueName = uniqueName_example;  // string | The group unique name
+            var size = 56;  // int? | The number of objects returned per page (optional)  (default to 25)
+            var page = 56;  // int? | The number of the page returned, starting with 1 (optional)  (default to 1)
+
+            try
+            {
+                // Get a list of group messages
+                PageResourceChatMessageResource result = apiInstance.GetGroupMessages(uniqueName, size, page);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersGroupsApi.GetGroupMessages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uniqueName** | **string**| The group unique name | 
+ **size** | **int?**| The number of objects returned per page | [optional] [default to 25]
+ **page** | **int?**| The number of the page returned, starting with 1 | [optional] [default to 1]
+
+### Return type
+
+[**PageResourceChatMessageResource**](PageResourceChatMessageResource.md)
+
+### Authorization
+
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -956,6 +1117,8 @@ Name | Type | Description  | Notes
 > TemplateResource GetGroupTemplate (string id)
 
 Get a single group template
+
+<b>Permissions Needed:</b> TEMPLATE_ADMIN or GROUP_ADMIN
 
 ### Example
 ```csharp
@@ -1010,7 +1173,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1020,6 +1183,8 @@ Name | Type | Description  | Notes
 > PageResourceTemplateResource GetGroupTemplates (int? size = null, int? page = null, string order = null)
 
 List and search group templates
+
+<b>Permissions Needed:</b> TEMPLATE_ADMIN or GROUP_ADMIN
 
 ### Example
 ```csharp
@@ -1078,7 +1243,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1088,6 +1253,8 @@ Name | Type | Description  | Notes
 > List<string> GetGroupsForUser (int? userId, bool? filterChildren = null)
 
 List groups a user is in
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -1144,7 +1311,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1154,6 +1321,8 @@ Name | Type | Description  | Notes
 > PageResourceGroupResource ListGroups (string filterTemplate = null, string filterMemberCount = null, string filterName = null, string filterUniqueName = null, string filterParent = null, string filterStatus = null, int? size = null, int? page = null, string order = null)
 
 List and search groups
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -1224,6 +1393,67 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="postgroupmessage"></a>
+# **PostGroupMessage**
+> ChatMessageResource PostGroupMessage (string uniqueName, ChatMessageRequest chatMessageRequest = null)
+
+Send a group message
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using com.knetikcloud.Api;
+using com.knetikcloud.Client;
+using com.knetikcloud.Model;
+
+namespace Example
+{
+    public class PostGroupMessageExample
+    {
+        public void main()
+        {
+            var apiInstance = new UsersGroupsApi();
+            var uniqueName = uniqueName_example;  // string | The group unique name
+            var chatMessageRequest = new ChatMessageRequest(); // ChatMessageRequest | The chat message request (optional) 
+
+            try
+            {
+                // Send a group message
+                ChatMessageResource result = apiInstance.PostGroupMessage(uniqueName, chatMessageRequest);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersGroupsApi.PostGroupMessage: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **uniqueName** | **string**| The group unique name | 
+ **chatMessageRequest** | [**ChatMessageRequest**](ChatMessageRequest.md)| The chat message request | [optional] 
+
+### Return type
+
+[**ChatMessageResource**](ChatMessageResource.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
  - **Content-Type**: application/json
  - **Accept**: application/json
 
@@ -1234,6 +1464,8 @@ Name | Type | Description  | Notes
 > void RemoveGroupMember (string uniqueName, int? userId)
 
 Removes a user from a group
+
+<b>Permissions Needed:</b> GROUP_ADMIN or self if open
 
 ### Example
 ```csharp
@@ -1289,7 +1521,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1300,7 +1532,7 @@ void (empty response body)
 
 Update a group
 
-If adding/removing/changing parent, user membership in group/new parent groups may be modified. The parent being removed will remove members from this sub group unless they were added explicitly to the parent and the new parent will gain members unless they were already a part of it.
+If adding/removing/changing parent, user membership in group/new parent groups may be modified. The parent being removed will remove members from this sub group unless they were added explicitly to the parent and the new parent will gain members unless they were already a part of it. <br><br><b>Permissions Needed:</b> GROUP_ADMIN or admin of the group
 
 ### Example
 ```csharp
@@ -1366,6 +1598,8 @@ void (empty response body)
 > void UpdateGroupMemberProperties (string uniqueName, int? userId, StringWrapper order)
 
 Change a user's order
+
+<b>Permissions Needed:</b> GROUP_ADMIN
 
 ### Example
 ```csharp
@@ -1434,6 +1668,8 @@ void (empty response body)
 
 Change a user's membership properties
 
+<b>Permissions Needed:</b> GROUP_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -1500,6 +1736,8 @@ void (empty response body)
 > void UpdateGroupMemberStatus (string uniqueName, int? userId, string status)
 
 Change a user's status
+
+<b>Permissions Needed:</b> GROUP_ADMIN
 
 ### Example
 ```csharp
@@ -1568,6 +1806,8 @@ void (empty response body)
 
 Update an group member template
 
+<b>Permissions Needed:</b> TEMPLATE_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -1633,6 +1873,8 @@ Name | Type | Description  | Notes
 > TemplateResource UpdateGroupTemplate (string id, TemplateResource groupTemplateResource = null)
 
 Update a group template
+
+<b>Permissions Needed:</b> TEMPLATE_ADMIN
 
 ### Example
 ```csharp

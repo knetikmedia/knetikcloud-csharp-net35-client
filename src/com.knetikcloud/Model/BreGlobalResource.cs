@@ -43,7 +43,7 @@ namespace com.knetikcloud.Model
         /// <param name="Key">The key for the global. Must be unique when combined with scope names. Usually a single descriptive word like &#39;purchases&#39; or &#39;logins&#39; (required).</param>
         /// <param name="Name">A human readable name for display in admin pages.</param>
         /// <param name="Scopes">A list of scoping parameters. Allows the global to have a different value in different context such as a count of purchases for each user (by putting a &#39;user&#39; scope in this list). When using this global in a rule these scopes will need to be mapped with an expression to provide a value, similar to the parameters in an action.</param>
-        /// <param name="Type">The variable type the global stores. See the See Bre Variables enpoint for list (required).</param>
+        /// <param name="Type">The variable type the global stores. See the BRE variables endpoint for list (required).</param>
         public BreGlobalResource(string Description = default(string), string Id = default(string), string Key = default(string), string Name = default(string), List<BreGlobalScopeDefinition> Scopes = default(List<BreGlobalScopeDefinition>), string Type = default(string))
         {
             // to ensure "Key" is required (not null)
@@ -113,9 +113,9 @@ namespace com.knetikcloud.Model
         public bool? SystemGlobal { get; private set; }
 
         /// <summary>
-        /// The variable type the global stores. See the See Bre Variables enpoint for list
+        /// The variable type the global stores. See the BRE variables endpoint for list
         /// </summary>
-        /// <value>The variable type the global stores. See the See Bre Variables enpoint for list</value>
+        /// <value>The variable type the global stores. See the BRE variables endpoint for list</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
 

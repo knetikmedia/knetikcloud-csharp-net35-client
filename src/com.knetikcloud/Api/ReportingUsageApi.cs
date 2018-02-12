@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Returns aggregated endpoint usage information by day
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -45,7 +45,7 @@ namespace com.knetikcloud.Api
         /// Returns aggregated endpoint usage information by day
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -61,7 +61,7 @@ namespace com.knetikcloud.Api
         /// Returns aggregated endpoint usage information by hour
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -78,7 +78,7 @@ namespace com.knetikcloud.Api
         /// Returns aggregated endpoint usage information by hour
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -94,7 +94,7 @@ namespace com.knetikcloud.Api
         /// Returns aggregated endpoint usage information by minute
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -111,7 +111,7 @@ namespace com.knetikcloud.Api
         /// Returns aggregated endpoint usage information by minute
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -127,7 +127,7 @@ namespace com.knetikcloud.Api
         /// Returns aggregated endpoint usage information by month
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -144,7 +144,7 @@ namespace com.knetikcloud.Api
         /// Returns aggregated endpoint usage information by month
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -160,7 +160,7 @@ namespace com.knetikcloud.Api
         /// Returns aggregated endpoint usage information by year
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -177,7 +177,7 @@ namespace com.knetikcloud.Api
         /// Returns aggregated endpoint usage information by year
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -193,7 +193,7 @@ namespace com.knetikcloud.Api
         /// Returns list of endpoints called (method and url)
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -205,7 +205,7 @@ namespace com.knetikcloud.Api
         /// Returns list of endpoints called (method and url)
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -313,7 +313,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns aggregated endpoint usage information by day 
+        /// Returns aggregated endpoint usage information by day &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -331,7 +331,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns aggregated endpoint usage information by day 
+        /// Returns aggregated endpoint usage information by day &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -361,7 +361,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -413,7 +412,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns aggregated endpoint usage information by hour 
+        /// Returns aggregated endpoint usage information by hour &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -431,7 +430,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns aggregated endpoint usage information by hour 
+        /// Returns aggregated endpoint usage information by hour &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -461,7 +460,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -513,7 +511,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns aggregated endpoint usage information by minute 
+        /// Returns aggregated endpoint usage information by minute &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -531,7 +529,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns aggregated endpoint usage information by minute 
+        /// Returns aggregated endpoint usage information by minute &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -561,7 +559,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -613,7 +610,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns aggregated endpoint usage information by month 
+        /// Returns aggregated endpoint usage information by month &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -631,7 +628,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns aggregated endpoint usage information by month 
+        /// Returns aggregated endpoint usage information by month &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -661,7 +658,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -713,7 +709,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns aggregated endpoint usage information by year 
+        /// Returns aggregated endpoint usage information by year &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -731,7 +727,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns aggregated endpoint usage information by year 
+        /// Returns aggregated endpoint usage information by year &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -761,7 +757,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -813,7 +808,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns list of endpoints called (method and url) 
+        /// Returns list of endpoints called (method and url) &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -826,7 +821,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns list of endpoints called (method and url) 
+        /// Returns list of endpoints called (method and url) &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The beginning of the range being requested, unix timestamp in seconds</param>
@@ -851,7 +846,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 

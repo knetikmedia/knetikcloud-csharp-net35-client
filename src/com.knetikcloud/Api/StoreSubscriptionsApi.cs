@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Creates a subscription item and associated plans
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subscriptionResource">The subscription to be created (optional)</param>
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         /// Creates a subscription item and associated plans
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subscriptionResource">The subscription to be created (optional)</param>
@@ -49,7 +49,7 @@ namespace com.knetikcloud.Api
         /// Create a subscription template
         /// </summary>
         /// <remarks>
-        /// Subscription Templates define a type of subscription and the properties they have.
+        /// Subscription Templates define a type of subscription and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subscriptionTemplateResource">The new subscription template (optional)</param>
@@ -60,7 +60,7 @@ namespace com.knetikcloud.Api
         /// Create a subscription template
         /// </summary>
         /// <remarks>
-        /// Subscription Templates define a type of subscription and the properties they have.
+        /// Subscription Templates define a type of subscription and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subscriptionTemplateResource">The new subscription template (optional)</param>
@@ -70,7 +70,7 @@ namespace com.knetikcloud.Api
         /// Delete a subscription plan
         /// </summary>
         /// <remarks>
-        /// Must not be locked or a migration target
+        /// Must not be locked or a migration target. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the subscription</param>
@@ -82,7 +82,7 @@ namespace com.knetikcloud.Api
         /// Delete a subscription plan
         /// </summary>
         /// <remarks>
-        /// Must not be locked or a migration target
+        /// Must not be locked or a migration target. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the subscription</param>
@@ -93,7 +93,7 @@ namespace com.knetikcloud.Api
         /// Delete a subscription template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -105,7 +105,7 @@ namespace com.knetikcloud.Api
         /// Delete a subscription template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -116,7 +116,7 @@ namespace com.knetikcloud.Api
         /// Retrieve a single subscription item and associated plans
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the subscription</param>
@@ -127,7 +127,7 @@ namespace com.knetikcloud.Api
         /// Retrieve a single subscription item and associated plans
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the subscription</param>
@@ -137,7 +137,7 @@ namespace com.knetikcloud.Api
         /// Get a single subscription template
         /// </summary>
         /// <remarks>
-        /// Subscription Templates define a type of subscription and the properties they have.
+        /// Subscription Templates define a type of subscription and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -148,7 +148,7 @@ namespace com.knetikcloud.Api
         /// Get a single subscription template
         /// </summary>
         /// <remarks>
-        /// Subscription Templates define a type of subscription and the properties they have.
+        /// Subscription Templates define a type of subscription and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -158,7 +158,7 @@ namespace com.knetikcloud.Api
         /// List and search subscription templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SUBSCRIPTIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -171,7 +171,7 @@ namespace com.knetikcloud.Api
         /// List and search subscription templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SUBSCRIPTIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -183,7 +183,7 @@ namespace com.knetikcloud.Api
         /// List available subscription items and associated plans
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -196,7 +196,7 @@ namespace com.knetikcloud.Api
         /// List available subscription items and associated plans
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -208,7 +208,7 @@ namespace com.knetikcloud.Api
         /// Processes subscriptions and charge dues
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -218,7 +218,7 @@ namespace com.knetikcloud.Api
         /// Processes subscriptions and charge dues
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -227,7 +227,7 @@ namespace com.knetikcloud.Api
         /// Updates a subscription item and associated plans
         /// </summary>
         /// <remarks>
-        /// Will not remove plans left out
+        /// Will not remove plans left out. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the subscription</param>
@@ -239,7 +239,7 @@ namespace com.knetikcloud.Api
         /// Updates a subscription item and associated plans
         /// </summary>
         /// <remarks>
-        /// Will not remove plans left out
+        /// Will not remove plans left out. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the subscription</param>
@@ -250,7 +250,7 @@ namespace com.knetikcloud.Api
         /// Update a subscription template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -262,7 +262,7 @@ namespace com.knetikcloud.Api
         /// Update a subscription template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -370,7 +370,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Creates a subscription item and associated plans 
+        /// Creates a subscription item and associated plans &lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subscriptionResource">The subscription to be created (optional)</param>
@@ -382,7 +382,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Creates a subscription item and associated plans 
+        /// Creates a subscription item and associated plans &lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subscriptionResource">The subscription to be created (optional)</param>
@@ -453,7 +453,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a subscription template Subscription Templates define a type of subscription and the properties they have.
+        /// Create a subscription template Subscription Templates define a type of subscription and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subscriptionTemplateResource">The new subscription template (optional)</param>
@@ -465,7 +465,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a subscription template Subscription Templates define a type of subscription and the properties they have.
+        /// Create a subscription template Subscription Templates define a type of subscription and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subscriptionTemplateResource">The new subscription template (optional)</param>
@@ -536,7 +536,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a subscription plan Must not be locked or a migration target
+        /// Delete a subscription plan Must not be locked or a migration target. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the subscription</param>
@@ -548,7 +548,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a subscription plan Must not be locked or a migration target
+        /// Delete a subscription plan Must not be locked or a migration target. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the subscription</param>
@@ -573,7 +573,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -620,7 +619,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a subscription template 
+        /// Delete a subscription template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -632,7 +631,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a subscription template 
+        /// Delete a subscription template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -654,7 +653,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -701,7 +699,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve a single subscription item and associated plans 
+        /// Retrieve a single subscription item and associated plans &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the subscription</param>
@@ -713,7 +711,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve a single subscription item and associated plans 
+        /// Retrieve a single subscription item and associated plans &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the subscription</param>
@@ -734,7 +732,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -780,7 +777,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single subscription template Subscription Templates define a type of subscription and the properties they have.
+        /// Get a single subscription template Subscription Templates define a type of subscription and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -792,7 +789,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single subscription template Subscription Templates define a type of subscription and the properties they have.
+        /// Get a single subscription template Subscription Templates define a type of subscription and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -813,7 +810,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -859,7 +855,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search subscription templates 
+        /// List and search subscription templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SUBSCRIPTIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -873,7 +869,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search subscription templates 
+        /// List and search subscription templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SUBSCRIPTIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -893,7 +889,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -941,7 +936,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List available subscription items and associated plans 
+        /// List available subscription items and associated plans &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -955,7 +950,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List available subscription items and associated plans 
+        /// List available subscription items and associated plans &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -975,7 +970,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1023,7 +1017,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Processes subscriptions and charge dues 
+        /// Processes subscriptions and charge dues &lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -1033,7 +1027,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Processes subscriptions and charge dues 
+        /// Processes subscriptions and charge dues &lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -1095,7 +1089,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Updates a subscription item and associated plans Will not remove plans left out
+        /// Updates a subscription item and associated plans Will not remove plans left out. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the subscription</param>
@@ -1107,7 +1101,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Updates a subscription item and associated plans Will not remove plans left out
+        /// Updates a subscription item and associated plans Will not remove plans left out. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the subscription</param>
@@ -1183,7 +1177,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a subscription template 
+        /// Update a subscription template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1196,7 +1190,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a subscription template 
+        /// Update a subscription template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>

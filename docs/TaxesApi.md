@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.TaxesApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,6 +22,8 @@ Method | HTTP request | Description
 > CountryTaxResource CreateCountryTax (CountryTaxResource taxResource = null)
 
 Create a country tax
+
+<b>Permissions Needed:</b> TAX_ADMIN
 
 ### Example
 ```csharp
@@ -86,6 +88,8 @@ Name | Type | Description  | Notes
 > StateTaxResource CreateStateTax (string countryCodeIso3, StateTaxResource taxResource = null)
 
 Create a state tax
+
+<b>Permissions Needed:</b> TAX_ADMIN
 
 ### Example
 ```csharp
@@ -153,6 +157,8 @@ Name | Type | Description  | Notes
 
 Delete an existing tax
 
+<b>Permissions Needed:</b> TAX_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -205,7 +211,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -215,6 +221,8 @@ void (empty response body)
 > void DeleteStateTax (string countryCodeIso3, string stateCode)
 
 Delete an existing state tax
+
+<b>Permissions Needed:</b> TAX_ADMIN
 
 ### Example
 ```csharp
@@ -270,7 +278,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -280,6 +288,8 @@ void (empty response body)
 > CountryTaxResource GetCountryTax (string countryCodeIso3)
 
 Get a single tax
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -334,7 +344,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -345,7 +355,7 @@ Name | Type | Description  | Notes
 
 List and search taxes
 
-Get a list of taxes
+<b>Permissions Needed:</b> TAX_ADMIN
 
 ### Example
 ```csharp
@@ -404,7 +414,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -414,6 +424,8 @@ Name | Type | Description  | Notes
 > StateTaxResource GetStateTax (string countryCodeIso3, string stateCode)
 
 Get a single state tax
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -470,7 +482,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -481,7 +493,7 @@ Name | Type | Description  | Notes
 
 List and search taxes across all countries
 
-Get a list of taxes
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -540,7 +552,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -551,7 +563,7 @@ Name | Type | Description  | Notes
 
 List and search taxes within a country
 
-Get a list of taxes
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -612,7 +624,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -622,6 +634,8 @@ Name | Type | Description  | Notes
 > CountryTaxResource UpdateCountryTax (string countryCodeIso3, CountryTaxResource taxResource = null)
 
 Create or update a tax
+
+<b>Permissions Needed:</b> TAX_ADMIN
 
 ### Example
 ```csharp
@@ -688,6 +702,8 @@ Name | Type | Description  | Notes
 > StateTaxResource UpdateStateTax (string countryCodeIso3, string stateCode, StateTaxResource taxResource = null)
 
 Create or update a state tax
+
+<b>Permissions Needed:</b> TAX_ADMIN
 
 ### Example
 ```csharp

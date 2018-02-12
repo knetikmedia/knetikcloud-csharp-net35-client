@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Adds an item to the user inventory
         /// </summary>
         /// <remarks>
-        /// The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skipped. Depending on the use case, it might require the client to verify that the entitlement was added after the fact or configure a BRE rule to get a notification in real time
+        /// The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skipped. Depending on the use case, it might require the client to verify that the entitlement was added after the fact or configure a BRE rule to get a notification in real time. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -40,7 +40,7 @@ namespace com.knetikcloud.Api
         /// Adds an item to the user inventory
         /// </summary>
         /// <remarks>
-        /// The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skipped. Depending on the use case, it might require the client to verify that the entitlement was added after the fact or configure a BRE rule to get a notification in real time
+        /// The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skipped. Depending on the use case, it might require the client to verify that the entitlement was added after the fact or configure a BRE rule to get a notification in real time. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -51,7 +51,7 @@ namespace com.knetikcloud.Api
         /// Check for access to an item without consuming
         /// </summary>
         /// <remarks>
-        /// Useful for pre-check and accounts for all various buisness rules
+        /// Useful for pre-check and accounts for all various buisness rules. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user to check for or &#39;me&#39; for logged in user</param>
@@ -64,7 +64,7 @@ namespace com.knetikcloud.Api
         /// Check for access to an item without consuming
         /// </summary>
         /// <remarks>
-        /// Useful for pre-check and accounts for all various buisness rules
+        /// Useful for pre-check and accounts for all various buisness rules. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user to check for or &#39;me&#39; for logged in user</param>
@@ -76,7 +76,7 @@ namespace com.knetikcloud.Api
         /// Create an entitlement item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cascade">Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)</param>
@@ -88,7 +88,7 @@ namespace com.knetikcloud.Api
         /// Create an entitlement item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cascade">Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)</param>
@@ -99,7 +99,7 @@ namespace com.knetikcloud.Api
         /// Create an entitlement template
         /// </summary>
         /// <remarks>
-        /// Entitlement templates define a type of entitlement and the properties they have
+        /// Entitlement templates define a type of entitlement and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="template">The entitlement template to be created (optional)</param>
@@ -110,7 +110,7 @@ namespace com.knetikcloud.Api
         /// Create an entitlement template
         /// </summary>
         /// <remarks>
-        /// Entitlement templates define a type of entitlement and the properties they have
+        /// Entitlement templates define a type of entitlement and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="template">The entitlement template to be created (optional)</param>
@@ -120,7 +120,7 @@ namespace com.knetikcloud.Api
         /// Delete an entitlement item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entitlementId">The id of the entitlement</param>
@@ -131,7 +131,7 @@ namespace com.knetikcloud.Api
         /// Delete an entitlement item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entitlementId">The id of the entitlement</param>
@@ -141,7 +141,7 @@ namespace com.knetikcloud.Api
         /// Delete an entitlement template
         /// </summary>
         /// <remarks>
-        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -153,7 +153,7 @@ namespace com.knetikcloud.Api
         /// Delete an entitlement template
         /// </summary>
         /// <remarks>
-        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -164,7 +164,7 @@ namespace com.knetikcloud.Api
         /// Get a single entitlement item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entitlementId">The id of the entitlement</param>
@@ -175,7 +175,7 @@ namespace com.knetikcloud.Api
         /// Get a single entitlement item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entitlementId">The id of the entitlement</param>
@@ -185,7 +185,7 @@ namespace com.knetikcloud.Api
         /// List and search entitlement items
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTemplate">Filter for entitlements using a specified template (optional)</param>
@@ -199,7 +199,7 @@ namespace com.knetikcloud.Api
         /// List and search entitlement items
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTemplate">Filter for entitlements using a specified template (optional)</param>
@@ -212,7 +212,7 @@ namespace com.knetikcloud.Api
         /// Get a single entitlement template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -223,7 +223,7 @@ namespace com.knetikcloud.Api
         /// Get a single entitlement template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -233,7 +233,7 @@ namespace com.knetikcloud.Api
         /// List and search entitlement templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -246,7 +246,7 @@ namespace com.knetikcloud.Api
         /// List and search entitlement templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -258,7 +258,7 @@ namespace com.knetikcloud.Api
         /// List the user inventory entries for a given user
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -277,7 +277,7 @@ namespace com.knetikcloud.Api
         /// List the user inventory entries for a given user
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -295,30 +295,30 @@ namespace com.knetikcloud.Api
         /// Get an inventory entry
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the inventory owner or &#39;me&#39; for the logged in user</param>
         /// <param name="id">The id of the user inventory</param>
         /// <returns>UserInventoryResource</returns>
-        UserInventoryResource GetUserInventory (int? userId, int? id);
+        UserInventoryResource GetUserInventory (string userId, int? id);
 
         /// <summary>
         /// Get an inventory entry
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the inventory owner or &#39;me&#39; for the logged in user</param>
         /// <param name="id">The id of the user inventory</param>
         /// <returns>ApiResponse of UserInventoryResource</returns>
-        ApiResponse<UserInventoryResource> GetUserInventoryWithHttpInfo (int? userId, int? id);
+        ApiResponse<UserInventoryResource> GetUserInventoryWithHttpInfo (string userId, int? id);
         /// <summary>
         /// List the log entries for this inventory entry
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the inventory owner or &#39;me&#39; for the logged in user</param>
@@ -332,7 +332,7 @@ namespace com.knetikcloud.Api
         /// List the log entries for this inventory entry
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the inventory owner or &#39;me&#39; for the logged in user</param>
@@ -345,7 +345,7 @@ namespace com.knetikcloud.Api
         /// List the user inventory entries for all users
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inactive">If true, accepts inactive user inventories (optional, default to false)</param>
@@ -363,7 +363,7 @@ namespace com.knetikcloud.Api
         /// List the user inventory entries for all users
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inactive">If true, accepts inactive user inventories (optional, default to false)</param>
@@ -380,7 +380,7 @@ namespace com.knetikcloud.Api
         /// Grant an entitlement
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user to grant the entitlement to</param>
@@ -392,7 +392,7 @@ namespace com.knetikcloud.Api
         /// Grant an entitlement
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user to grant the entitlement to</param>
@@ -403,7 +403,7 @@ namespace com.knetikcloud.Api
         /// Update an entitlement item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entitlementId">The id of the entitlement</param>
@@ -416,7 +416,7 @@ namespace com.knetikcloud.Api
         /// Update an entitlement item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entitlementId">The id of the entitlement</param>
@@ -428,7 +428,7 @@ namespace com.knetikcloud.Api
         /// Update an entitlement template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -440,7 +440,7 @@ namespace com.knetikcloud.Api
         /// Update an entitlement template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -451,7 +451,7 @@ namespace com.knetikcloud.Api
         /// Set the behavior data for an inventory entry
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -464,7 +464,7 @@ namespace com.knetikcloud.Api
         /// Set the behavior data for an inventory entry
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -476,7 +476,7 @@ namespace com.knetikcloud.Api
         /// Set the expiration date
         /// </summary>
         /// <remarks>
-        /// Will change the current grace period for a subscription but not the bill date (possibly even ending before having the chance to re-bill)
+        /// Will change the current grace period for a subscription but not the bill date (possibly even ending before having the chance to re-bill). &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user_id</param>
@@ -489,7 +489,7 @@ namespace com.knetikcloud.Api
         /// Set the expiration date
         /// </summary>
         /// <remarks>
-        /// Will change the current grace period for a subscription but not the bill date (possibly even ending before having the chance to re-bill)
+        /// Will change the current grace period for a subscription but not the bill date (possibly even ending before having the chance to re-bill). &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user_id</param>
@@ -501,7 +501,7 @@ namespace com.knetikcloud.Api
         /// Set the status for an inventory entry
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -514,7 +514,7 @@ namespace com.knetikcloud.Api
         /// Set the status for an inventory entry
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -526,7 +526,7 @@ namespace com.knetikcloud.Api
         /// Use an item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user to check for or &#39;me&#39; for logged in user</param>
@@ -540,7 +540,7 @@ namespace com.knetikcloud.Api
         /// Use an item
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user to check for or &#39;me&#39; for logged in user</param>
@@ -650,7 +650,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Adds an item to the user inventory The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skipped. Depending on the use case, it might require the client to verify that the entitlement was added after the fact or configure a BRE rule to get a notification in real time
+        /// Adds an item to the user inventory The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skipped. Depending on the use case, it might require the client to verify that the entitlement was added after the fact or configure a BRE rule to get a notification in real time. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -663,7 +663,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Adds an item to the user inventory The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skipped. Depending on the use case, it might require the client to verify that the entitlement was added after the fact or configure a BRE rule to get a notification in real time
+        /// Adds an item to the user inventory The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skipped. Depending on the use case, it might require the client to verify that the entitlement was added after the fact or configure a BRE rule to get a notification in real time. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -739,7 +739,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Check for access to an item without consuming Useful for pre-check and accounts for all various buisness rules
+        /// Check for access to an item without consuming Useful for pre-check and accounts for all various buisness rules. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user to check for or &#39;me&#39; for logged in user</param>
@@ -752,7 +752,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Check for access to an item without consuming Useful for pre-check and accounts for all various buisness rules
+        /// Check for access to an item without consuming Useful for pre-check and accounts for all various buisness rules. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user to check for or &#39;me&#39; for logged in user</param>
@@ -778,7 +778,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -826,7 +825,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create an entitlement item 
+        /// Create an entitlement item &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cascade">Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)</param>
@@ -839,7 +838,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create an entitlement item 
+        /// Create an entitlement item &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cascade">Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)</param>
@@ -912,7 +911,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create an entitlement template Entitlement templates define a type of entitlement and the properties they have
+        /// Create an entitlement template Entitlement templates define a type of entitlement and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="template">The entitlement template to be created (optional)</param>
@@ -924,7 +923,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create an entitlement template Entitlement templates define a type of entitlement and the properties they have
+        /// Create an entitlement template Entitlement templates define a type of entitlement and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="template">The entitlement template to be created (optional)</param>
@@ -995,7 +994,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete an entitlement item 
+        /// Delete an entitlement item &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entitlementId">The id of the entitlement</param>
@@ -1006,7 +1005,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete an entitlement item 
+        /// Delete an entitlement item &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entitlementId">The id of the entitlement</param>
@@ -1027,7 +1026,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1073,7 +1071,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete an entitlement template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// Delete an entitlement template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1085,7 +1083,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete an entitlement template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// Delete an entitlement template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1107,7 +1105,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1154,7 +1151,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single entitlement item 
+        /// Get a single entitlement item &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entitlementId">The id of the entitlement</param>
@@ -1166,7 +1163,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single entitlement item 
+        /// Get a single entitlement item &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entitlementId">The id of the entitlement</param>
@@ -1187,7 +1184,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1233,7 +1229,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search entitlement items 
+        /// List and search entitlement items &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTemplate">Filter for entitlements using a specified template (optional)</param>
@@ -1248,7 +1244,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search entitlement items 
+        /// List and search entitlement items &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTemplate">Filter for entitlements using a specified template (optional)</param>
@@ -1269,7 +1265,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1318,7 +1313,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single entitlement template 
+        /// Get a single entitlement template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1330,7 +1325,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single entitlement template 
+        /// Get a single entitlement template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1351,7 +1346,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1397,7 +1391,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search entitlement templates 
+        /// List and search entitlement templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -1411,7 +1405,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search entitlement templates 
+        /// List and search entitlement templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -1431,7 +1425,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1479,7 +1472,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List the user inventory entries for a given user 
+        /// List the user inventory entries for a given user &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -1499,7 +1492,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List the user inventory entries for a given user 
+        /// List the user inventory entries for a given user &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -1528,7 +1521,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1582,26 +1574,26 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get an inventory entry 
+        /// Get an inventory entry &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the inventory owner or &#39;me&#39; for the logged in user</param>
         /// <param name="id">The id of the user inventory</param>
         /// <returns>UserInventoryResource</returns>
-        public UserInventoryResource GetUserInventory (int? userId, int? id)
+        public UserInventoryResource GetUserInventory (string userId, int? id)
         {
              ApiResponse<UserInventoryResource> localVarResponse = GetUserInventoryWithHttpInfo(userId, id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get an inventory entry 
+        /// Get an inventory entry &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the inventory owner or &#39;me&#39; for the logged in user</param>
         /// <param name="id">The id of the user inventory</param>
         /// <returns>ApiResponse of UserInventoryResource</returns>
-        public ApiResponse< UserInventoryResource > GetUserInventoryWithHttpInfo (int? userId, int? id)
+        public ApiResponse< UserInventoryResource > GetUserInventoryWithHttpInfo (string userId, int? id)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -1620,7 +1612,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1667,7 +1658,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List the log entries for this inventory entry 
+        /// List the log entries for this inventory entry &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the inventory owner or &#39;me&#39; for the logged in user</param>
@@ -1682,7 +1673,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List the log entries for this inventory entry 
+        /// List the log entries for this inventory entry &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the inventory owner or &#39;me&#39; for the logged in user</param>
@@ -1709,7 +1700,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1758,7 +1748,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List the user inventory entries for all users 
+        /// List the user inventory entries for all users &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inactive">If true, accepts inactive user inventories (optional, default to false)</param>
@@ -1777,7 +1767,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List the user inventory entries for all users 
+        /// List the user inventory entries for all users &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="inactive">If true, accepts inactive user inventories (optional, default to false)</param>
@@ -1802,7 +1792,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1855,7 +1844,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Grant an entitlement 
+        /// Grant an entitlement &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user to grant the entitlement to</param>
@@ -1867,7 +1856,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Grant an entitlement 
+        /// Grant an entitlement &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user to grant the entitlement to</param>
@@ -1946,7 +1935,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update an entitlement item 
+        /// Update an entitlement item &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entitlementId">The id of the entitlement</param>
@@ -1959,7 +1948,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update an entitlement item 
+        /// Update an entitlement item &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="entitlementId">The id of the entitlement</param>
@@ -2037,7 +2026,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update an entitlement template 
+        /// Update an entitlement template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -2050,7 +2039,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update an entitlement template 
+        /// Update an entitlement template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -2126,7 +2115,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the behavior data for an inventory entry 
+        /// Set the behavior data for an inventory entry &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -2139,7 +2128,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the behavior data for an inventory entry 
+        /// Set the behavior data for an inventory entry &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -2220,7 +2209,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the expiration date Will change the current grace period for a subscription but not the bill date (possibly even ending before having the chance to re-bill)
+        /// Set the expiration date Will change the current grace period for a subscription but not the bill date (possibly even ending before having the chance to re-bill). &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user_id</param>
@@ -2233,7 +2222,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the expiration date Will change the current grace period for a subscription but not the bill date (possibly even ending before having the chance to re-bill)
+        /// Set the expiration date Will change the current grace period for a subscription but not the bill date (possibly even ending before having the chance to re-bill). &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user_id</param>
@@ -2314,7 +2303,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the status for an inventory entry 
+        /// Set the status for an inventory entry &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -2327,7 +2316,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set the status for an inventory entry 
+        /// Set the status for an inventory entry &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -2408,7 +2397,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Use an item 
+        /// Use an item &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user to check for or &#39;me&#39; for logged in user</param>
@@ -2422,7 +2411,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Use an item 
+        /// Use an item &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user to check for or &#39;me&#39; for logged in user</param>

@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.CurrenciesApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,6 +16,8 @@ Method | HTTP request | Description
 > CurrencyResource CreateCurrency (CurrencyResource currency = null)
 
 Create a currency
+
+<b>Permissions Needed:</b> CURRENCIES_ADMIN
 
 ### Example
 ```csharp
@@ -81,6 +83,8 @@ Name | Type | Description  | Notes
 
 Delete a currency
 
+<b>Permissions Needed:</b> CURRENCIES_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -133,7 +137,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -143,6 +147,8 @@ void (empty response body)
 > PageResourceCurrencyResource GetCurrencies (bool? filterDefault = null, bool? filterEnabledCurrencies = null, string filterType = null, int? size = null, int? page = null, string order = null)
 
 List and search currencies
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -207,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -217,6 +223,8 @@ Name | Type | Description  | Notes
 > CurrencyResource GetCurrency (string code)
 
 Get a single currency
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -271,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -281,6 +289,8 @@ Name | Type | Description  | Notes
 > void UpdateCurrency (string code, CurrencyResource currency = null)
 
 Update a currency
+
+<b>Permissions Needed:</b> CURRENCIES_ADMIN
 
 ### Example
 ```csharp

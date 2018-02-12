@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.LogsApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,6 +18,8 @@ Method | HTTP request | Description
 > void AddUserLog (UserActionLog logEntry = null)
 
 Add a user log entry
+
+<b>Permissions Needed:</b> owner
 
 ### Example
 ```csharp
@@ -82,6 +84,8 @@ void (empty response body)
 
 Get an existing BRE event log entry by id
 
+<b>Permissions Needed:</b> BRE_RULE_ENGINE_EVENTS_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -135,16 +139,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getbreeventlogs"></a>
 # **GetBREEventLogs**
-> PageResourceBreEventLog GetBREEventLogs (string filterStartDate = null, string filterEventName = null, string filterEventId = null, int? size = null, int? page = null, string order = null)
+> PageResourceBreEventLog GetBREEventLogs (string filterStartDate = null, string filterEventName = null, string filterEventId = null, int? size = null, int? page = null, string order = null, string filterRuleId = null)
 
 Returns a list of BRE event log entries
+
+<b>Permissions Needed:</b> BRE_RULE_ENGINE_EVENTS_ADMIN
 
 ### Example
 ```csharp
@@ -172,11 +178,12 @@ namespace Example
             var size = 56;  // int? | The number of objects returned per page (optional)  (default to 25)
             var page = 56;  // int? | The number of the page returned, starting with 1 (optional)  (default to 1)
             var order = order_example;  // string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)  (default to id:DESC)
+            var filterRuleId = filterRuleId_example;  // string | Filter event logs by request id (optional) 
 
             try
             {
                 // Returns a list of BRE event log entries
-                PageResourceBreEventLog result = apiInstance.GetBREEventLogs(filterStartDate, filterEventName, filterEventId, size, page, order);
+                PageResourceBreEventLog result = apiInstance.GetBREEventLogs(filterStartDate, filterEventName, filterEventId, size, page, order, filterRuleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -198,6 +205,7 @@ Name | Type | Description  | Notes
  **size** | **int?**| The number of objects returned per page | [optional] [default to 25]
  **page** | **int?**| The number of the page returned, starting with 1 | [optional] [default to 1]
  **order** | **string**| A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] | [optional] [default to id:DESC]
+ **filterRuleId** | **string**| Filter event logs by request id | [optional] 
 
 ### Return type
 
@@ -209,7 +217,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -219,6 +227,8 @@ Name | Type | Description  | Notes
 > ForwardLog GetBREForwardLog (string id)
 
 Get an existing forward log entry by id
+
+<b>Permissions Needed:</b> BRE_RULE_ENGINE_EVENTS_ADMIN
 
 ### Example
 ```csharp
@@ -273,16 +283,18 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="getbreforwardlogs"></a>
 # **GetBREForwardLogs**
-> PageResourceForwardLog GetBREForwardLogs (string filterStartDate = null, string filterEndDate = null, int? filterStatusCode = null, int? size = null, int? page = null, string order = null)
+> PageResourceForwardLog GetBREForwardLogs (string filterStartDate = null, string filterEndDate = null, int? filterStatusCode = null, int? filterUrl = null, int? size = null, int? page = null, string order = null)
 
 Returns a list of forward log entries
+
+<b>Permissions Needed:</b> BRE_RULE_ENGINE_EVENTS_ADMIN
 
 ### Example
 ```csharp
@@ -307,6 +319,7 @@ namespace Example
             var filterStartDate = filterStartDate_example;  // string | A comma separated string without spaces.  First value is the operator to search on, second value is the log start date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE). (optional) 
             var filterEndDate = filterEndDate_example;  // string | A comma separated string without spaces.  First value is the operator to search on, second value is the log end date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE). (optional) 
             var filterStatusCode = 56;  // int? | Filter forward logs by http status code (optional) 
+            var filterUrl = 56;  // int? | Filter forward logs by URL starting with... (optional) 
             var size = 56;  // int? | The number of objects returned per page (optional)  (default to 25)
             var page = 56;  // int? | The number of the page returned, starting with 1 (optional)  (default to 1)
             var order = order_example;  // string | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)  (default to id:DESC)
@@ -314,7 +327,7 @@ namespace Example
             try
             {
                 // Returns a list of forward log entries
-                PageResourceForwardLog result = apiInstance.GetBREForwardLogs(filterStartDate, filterEndDate, filterStatusCode, size, page, order);
+                PageResourceForwardLog result = apiInstance.GetBREForwardLogs(filterStartDate, filterEndDate, filterStatusCode, filterUrl, size, page, order);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -333,6 +346,7 @@ Name | Type | Description  | Notes
  **filterStartDate** | **string**| A comma separated string without spaces.  First value is the operator to search on, second value is the log start date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE). | [optional] 
  **filterEndDate** | **string**| A comma separated string without spaces.  First value is the operator to search on, second value is the log end date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE). | [optional] 
  **filterStatusCode** | **int?**| Filter forward logs by http status code | [optional] 
+ **filterUrl** | **int?**| Filter forward logs by URL starting with... | [optional] 
  **size** | **int?**| The number of objects returned per page | [optional] [default to 25]
  **page** | **int?**| The number of the page returned, starting with 1 | [optional] [default to 1]
  **order** | **string**| A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] | [optional] [default to id:DESC]
@@ -347,7 +361,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -357,6 +371,8 @@ Name | Type | Description  | Notes
 > UserActionLog GetUserLog (string id)
 
 Returns a user log entry by id
+
+<b>Permissions Needed:</b> LOGS_ADMIN or owner
 
 ### Example
 ```csharp
@@ -411,7 +427,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -421,6 +437,8 @@ Name | Type | Description  | Notes
 > PageResourceUserActionLog GetUserLogs (int? filterUser = null, string filterActionName = null, int? size = null, int? page = null, string order = null)
 
 Returns a page of user logs entries
+
+<b>Permissions Needed:</b> LOGS_ADMIN or owner
 
 ### Example
 ```csharp
@@ -483,7 +501,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

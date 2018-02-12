@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.GamificationTriviaApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -41,6 +41,8 @@ Method | HTTP request | Description
 > AnswerResource AddQuestionAnswers (string questionId, AnswerResource answer = null)
 
 Add an answer to a question
+
+<b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -108,6 +110,8 @@ Name | Type | Description  | Notes
 
 Add a tag to a question
 
+<b>Permissions Needed:</b> TRIVIA_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -173,7 +177,7 @@ void (empty response body)
 
 Add a tag to a batch of questions
 
-All questions that dont't have the tag and match filters will have it added. The returned number is the number of questions updated.
+All questions that dont't have the tag and match filters will have it added. The returned number is the number of questions updated. <br><br><b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -255,7 +259,7 @@ Name | Type | Description  | Notes
 
 Create an import job
 
-Set up a job to import a set of trivia questions from a cvs file at a remote url. the file will be validated asynchronously but will not be processed until started manually with the process endpoint.
+Set up a job to import a set of trivia questions from a cvs file at a remote url. the file will be validated asynchronously but will not be processed until started manually with the process endpoint. <br><br><b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -321,6 +325,8 @@ Name | Type | Description  | Notes
 
 Create a question
 
+<b>Permissions Needed:</b> TRIVIA_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -385,7 +391,7 @@ Name | Type | Description  | Notes
 
 Create a question template
 
-Question templates define a type of question and the properties they have
+Question templates define a type of question and the properties they have. <br><br><b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -451,7 +457,7 @@ Name | Type | Description  | Notes
 
 Delete an import job
 
-Also deletes all questions that were imported by it
+Also deletes all questions that were imported by it. <br><br><b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -505,7 +511,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -515,6 +521,8 @@ void (empty response body)
 > void DeleteQuestion (string id)
 
 Delete a question
+
+<b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -568,7 +576,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -578,6 +586,8 @@ void (empty response body)
 > void DeleteQuestionAnswers (string questionId, string id)
 
 Remove an answer from a question
+
+<b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -633,7 +643,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -644,7 +654,7 @@ void (empty response body)
 
 Delete a question template
 
-If cascade = 'detach', it will force delete the template even if it's attached to other objects
+If cascade = 'detach', it will force delete the template even if it's attached to other objects. <br><br><b>Permissions Needed:</b> TEMPLATE_ADMIN
 
 ### Example
 ```csharp
@@ -700,7 +710,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -710,6 +720,8 @@ void (empty response body)
 > ImportJobResource GetImportJob (long? id)
 
 Get an import job
+
+<b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -764,7 +776,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -774,6 +786,8 @@ Name | Type | Description  | Notes
 > PageResourceImportJobResource GetImportJobs (string filterVendor = null, string filterCategory = null, string filterName = null, string filterStatus = null, int? size = null, int? page = null, string order = null)
 
 Get a list of import job
+
+<b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -840,7 +854,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -850,6 +864,8 @@ Name | Type | Description  | Notes
 > QuestionResource GetQuestion (string id)
 
 Get a single question
+
+<b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -904,7 +920,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -914,6 +930,8 @@ Name | Type | Description  | Notes
 > AnswerResource GetQuestionAnswer (string questionId, string id)
 
 Get an answer for a question
+
+<b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -970,7 +988,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -980,6 +998,8 @@ Name | Type | Description  | Notes
 > List<AnswerResource> GetQuestionAnswers (string questionId)
 
 List the answers available for a question
+
+<b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -1034,7 +1054,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1045,7 +1065,7 @@ Name | Type | Description  | Notes
 
 List question deltas in ascending order of updated date
 
-The 'since' parameter is important to avoid getting a full list of all questions. Implementors should make sure they pass the updated date of the last resource loaded, not the date of the last request, in order to avoid gaps
+The 'since' parameter is important to avoid getting a full list of all questions. Implementors should make sure they pass the updated date of the last resource loaded, not the date of the last request, in order to avoid gaps. <br><br><b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -1100,7 +1120,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1110,6 +1130,8 @@ Name | Type | Description  | Notes
 > List<string> GetQuestionTags (string id)
 
 List the tags for a question
+
+<b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -1164,7 +1186,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1174,6 +1196,8 @@ Name | Type | Description  | Notes
 > QuestionTemplateResource GetQuestionTemplate (string id)
 
 Get a single question template
+
+<b>Permissions Needed:</b> TEMPLATE_ADMIN or TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -1228,7 +1252,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1238,6 +1262,8 @@ Name | Type | Description  | Notes
 > PageResourceQuestionTemplateResource GetQuestionTemplates (int? size = null, int? page = null, string order = null)
 
 List and search question templates
+
+<b>Permissions Needed:</b> TEMPLATE_ADMIN or TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -1296,7 +1322,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1306,6 +1332,8 @@ Name | Type | Description  | Notes
 > PageResourceQuestionResource GetQuestions (int? size = null, int? page = null, string order = null, string filterSearch = null, string filterIdset = null, string filterCategory = null, string filterTagset = null, string filterTag = null, string filterType = null, bool? filterPublished = null, long? filterImportId = null)
 
 List and search questions
+
+<b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -1380,7 +1408,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1391,7 +1419,7 @@ Name | Type | Description  | Notes
 
 Count questions based on filters
 
-This is also provided by the list endpoint so you don't need to call this for pagination purposes
+This is also provided by the list endpoint so you don't need to call this for pagination purposes. <br><br><b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -1458,7 +1486,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1469,7 +1497,7 @@ Name | Type | Description  | Notes
 
 Start processing an import job
 
-Will process the CSV file and add new questions asynchronously. The status of the job must be 'VALID'.
+Will process the CSV file and add new questions asynchronously. The status of the job must be 'VALID'. <br><br><b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -1537,6 +1565,8 @@ Name | Type | Description  | Notes
 
 Remove a tag from a question
 
+<b>Permissions Needed:</b> TRIVIA_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -1591,7 +1621,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1602,7 +1632,7 @@ void (empty response body)
 
 Remove a tag from a batch of questions
 
-ll questions that have the tag and match filters will have it removed. The returned number is the number of questions updated.
+ll questions that have the tag and match filters will have it removed. The returned number is the number of questions updated. <br><br><b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -1673,7 +1703,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1684,7 +1714,7 @@ Name | Type | Description  | Notes
 
 List and search tags by the beginning of the string
 
-For performance reasons, search & category filters are mutually exclusive. If category is specified, search filter will be ignored in order to do fast matches for typeahead.
+For performance reasons, search & category filters are mutually exclusive. If category is specified, search filter will be ignored in order to do fast matches for typeahead. <br><br><b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -1743,7 +1773,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1754,7 +1784,7 @@ Name | Type | Description  | Notes
 
 Update an import job
 
-Changes should be made before process is started for there to be any effect.
+Changes should be made before process is started for there to be any effect. <br><br><b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -1822,6 +1852,8 @@ Name | Type | Description  | Notes
 
 Update a question
 
+<b>Permissions Needed:</b> TRIVIA_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -1887,6 +1919,8 @@ Name | Type | Description  | Notes
 > void UpdateQuestionAnswer (string questionId, string id, AnswerResource answer = null)
 
 Update an answer for a question
+
+<b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp
@@ -1955,6 +1989,8 @@ void (empty response body)
 
 Update a question template
 
+<b>Permissions Needed:</b> TEMPLATE_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -2021,7 +2057,7 @@ Name | Type | Description  | Notes
 
 Bulk update questions
 
-Will update all questions that match filters used (or all questions in system if no filters used). Body should match a question resource with only those properties you wish to set. Null values will be ignored. Returned number is how many were updated.
+Will update all questions that match filters used (or all questions in system if no filters used). Body should match a question resource with only those properties you wish to set. Null values will be ignored. Returned number is how many were updated. <br><br><b>Permissions Needed:</b> TRIVIA_ADMIN
 
 ### Example
 ```csharp

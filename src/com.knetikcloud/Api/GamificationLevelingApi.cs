@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Create a level schema
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">The level schema definition (optional)</param>
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         /// Create a level schema
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">The level schema definition (optional)</param>
@@ -49,7 +49,7 @@ namespace com.knetikcloud.Api
         /// Delete a level
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The level schema name</param>
@@ -60,7 +60,7 @@ namespace com.knetikcloud.Api
         /// Delete a level
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The level schema name</param>
@@ -70,7 +70,7 @@ namespace com.knetikcloud.Api
         /// Retrieve a level
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The level schema name</param>
@@ -81,7 +81,7 @@ namespace com.knetikcloud.Api
         /// Retrieve a level
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The level schema name</param>
@@ -91,7 +91,7 @@ namespace com.knetikcloud.Api
         /// Get the list of triggers that can be used to trigger a leveling progress update
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;BreTriggerResource&gt;</returns>
@@ -101,7 +101,7 @@ namespace com.knetikcloud.Api
         /// Get the list of triggers that can be used to trigger a leveling progress update
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;BreTriggerResource&gt;</returns>
@@ -110,7 +110,7 @@ namespace com.knetikcloud.Api
         /// List and search levels
         /// </summary>
         /// <remarks>
-        /// Get a list of levels schemas with optional filtering
+        /// Get a list of levels schemas with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterName">Filter for level schemas whose name contains a given string (optional)</param>
@@ -124,7 +124,7 @@ namespace com.knetikcloud.Api
         /// List and search levels
         /// </summary>
         /// <remarks>
-        /// Get a list of levels schemas with optional filtering
+        /// Get a list of levels schemas with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterName">Filter for level schemas whose name contains a given string (optional)</param>
@@ -137,7 +137,7 @@ namespace com.knetikcloud.Api
         /// Get a user&#39;s progress for a given level schema
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN or self
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user or &#39;me&#39;</param>
@@ -149,7 +149,7 @@ namespace com.knetikcloud.Api
         /// Get a user&#39;s progress for a given level schema
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN or self
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user or &#39;me&#39;</param>
@@ -160,7 +160,7 @@ namespace com.knetikcloud.Api
         /// Get a user&#39;s progress for all level schemas
         /// </summary>
         /// <remarks>
-        /// Filtering and sorting is based on the LevelingResource object, not the UserLevelingResource that is returned here.
+        /// Filtering and sorting is based on the LevelingResource object, not the UserLevelingResource that is returned here. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN or self
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user or &#39;me&#39;</param>
@@ -175,7 +175,7 @@ namespace com.knetikcloud.Api
         /// Get a user&#39;s progress for all level schemas
         /// </summary>
         /// <remarks>
-        /// Filtering and sorting is based on the LevelingResource object, not the UserLevelingResource that is returned here.
+        /// Filtering and sorting is based on the LevelingResource object, not the UserLevelingResource that is returned here. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN or self
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user or &#39;me&#39;</param>
@@ -189,7 +189,7 @@ namespace com.knetikcloud.Api
         /// Update or create a leveling progress record for a user
         /// </summary>
         /// <remarks>
-        /// If no progress record yet exists for the user, it will be created. Otherwise the provided value will be added to it. May be negative. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;.
+        /// If no progress record yet exists for the user, it will be created. Otherwise the provided value will be added to it. May be negative. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -202,7 +202,7 @@ namespace com.knetikcloud.Api
         /// Update or create a leveling progress record for a user
         /// </summary>
         /// <remarks>
-        /// If no progress record yet exists for the user, it will be created. Otherwise the provided value will be added to it. May be negative. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;.
+        /// If no progress record yet exists for the user, it will be created. Otherwise the provided value will be added to it. May be negative. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -214,7 +214,7 @@ namespace com.knetikcloud.Api
         /// Set leveling progress for a user
         /// </summary>
         /// <remarks>
-        /// If no progress record yet exists for the user, it will be created. Otherwise it will be updated to the provided value. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;.
+        /// If no progress record yet exists for the user, it will be created. Otherwise it will be updated to the provided value. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -227,7 +227,7 @@ namespace com.knetikcloud.Api
         /// Set leveling progress for a user
         /// </summary>
         /// <remarks>
-        /// If no progress record yet exists for the user, it will be created. Otherwise it will be updated to the provided value. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;.
+        /// If no progress record yet exists for the user, it will be created. Otherwise it will be updated to the provided value. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -239,7 +239,7 @@ namespace com.knetikcloud.Api
         /// Update a level
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The level schema name</param>
@@ -251,7 +251,7 @@ namespace com.knetikcloud.Api
         /// Update a level
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The level schema name</param>
@@ -359,7 +359,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a level schema 
+        /// Create a level schema &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">The level schema definition (optional)</param>
@@ -371,7 +371,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a level schema 
+        /// Create a level schema &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="level">The level schema definition (optional)</param>
@@ -442,7 +442,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a level 
+        /// Delete a level &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The level schema name</param>
@@ -453,7 +453,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a level 
+        /// Delete a level &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The level schema name</param>
@@ -474,7 +474,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -520,7 +519,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve a level 
+        /// Retrieve a level &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The level schema name</param>
@@ -532,7 +531,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Retrieve a level 
+        /// Retrieve a level &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The level schema name</param>
@@ -553,7 +552,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -599,7 +597,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get the list of triggers that can be used to trigger a leveling progress update 
+        /// Get the list of triggers that can be used to trigger a leveling progress update &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;BreTriggerResource&gt;</returns>
@@ -610,7 +608,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get the list of triggers that can be used to trigger a leveling progress update 
+        /// Get the list of triggers that can be used to trigger a leveling progress update &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;BreTriggerResource&gt;</returns>
@@ -627,7 +625,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -672,7 +669,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search levels Get a list of levels schemas with optional filtering
+        /// List and search levels Get a list of levels schemas with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterName">Filter for level schemas whose name contains a given string (optional)</param>
@@ -687,7 +684,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search levels Get a list of levels schemas with optional filtering
+        /// List and search levels Get a list of levels schemas with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterName">Filter for level schemas whose name contains a given string (optional)</param>
@@ -708,7 +705,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -757,7 +753,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a user&#39;s progress for a given level schema 
+        /// Get a user&#39;s progress for a given level schema &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN or self
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user or &#39;me&#39;</param>
@@ -770,7 +766,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a user&#39;s progress for a given level schema 
+        /// Get a user&#39;s progress for a given level schema &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN or self
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user or &#39;me&#39;</param>
@@ -795,7 +791,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -842,7 +837,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a user&#39;s progress for all level schemas Filtering and sorting is based on the LevelingResource object, not the UserLevelingResource that is returned here.
+        /// Get a user&#39;s progress for all level schemas Filtering and sorting is based on the LevelingResource object, not the UserLevelingResource that is returned here. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN or self
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user or &#39;me&#39;</param>
@@ -858,7 +853,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a user&#39;s progress for all level schemas Filtering and sorting is based on the LevelingResource object, not the UserLevelingResource that is returned here.
+        /// Get a user&#39;s progress for all level schemas Filtering and sorting is based on the LevelingResource object, not the UserLevelingResource that is returned here. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN or self
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user or &#39;me&#39;</param>
@@ -883,7 +878,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -933,7 +927,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update or create a leveling progress record for a user If no progress record yet exists for the user, it will be created. Otherwise the provided value will be added to it. May be negative. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;.
+        /// Update or create a leveling progress record for a user If no progress record yet exists for the user, it will be created. Otherwise the provided value will be added to it. May be negative. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -946,7 +940,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update or create a leveling progress record for a user If no progress record yet exists for the user, it will be created. Otherwise the provided value will be added to it. May be negative. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;.
+        /// Update or create a leveling progress record for a user If no progress record yet exists for the user, it will be created. Otherwise the provided value will be added to it. May be negative. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -1027,7 +1021,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set leveling progress for a user If no progress record yet exists for the user, it will be created. Otherwise it will be updated to the provided value. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;.
+        /// Set leveling progress for a user If no progress record yet exists for the user, it will be created. Otherwise it will be updated to the provided value. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -1040,7 +1034,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set leveling progress for a user If no progress record yet exists for the user, it will be created. Otherwise it will be updated to the provided value. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;.
+        /// Set leveling progress for a user If no progress record yet exists for the user, it will be created. Otherwise it will be updated to the provided value. If progress meets or exceeds the level&#39;s max_value it will be marked as earned and a BRE event will be triggered for the &lt;code&gt;BreAchievementEarnedTrigger&lt;/code&gt;. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -1121,7 +1115,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a level 
+        /// Update a level &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The level schema name</param>
@@ -1134,7 +1128,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a level 
+        /// Update a level &lt;b&gt;Permissions Needed:&lt;/b&gt; LEVELING_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="name">The level schema name</param>

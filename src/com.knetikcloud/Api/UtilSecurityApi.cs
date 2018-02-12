@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Returns the authentication log for a user
         /// </summary>
         /// <remarks>
-        /// A log entry is recorded everytime a user requests a new token. Standard pagination available
+        /// A log entry is recorded everytime a user requests a new token. Standard pagination available. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SECURITY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The user id (optional)</param>
@@ -42,7 +42,7 @@ namespace com.knetikcloud.Api
         /// Returns the authentication log for a user
         /// </summary>
         /// <remarks>
-        /// A log entry is recorded everytime a user requests a new token. Standard pagination available
+        /// A log entry is recorded everytime a user requests a new token. Standard pagination available. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SECURITY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The user id (optional)</param>
@@ -55,7 +55,7 @@ namespace com.knetikcloud.Api
         /// Returns the authentication token details. Use /users endpoint for detailed user&#39;s info
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; SECURITY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>TokenDetailsResource</returns>
@@ -65,7 +65,7 @@ namespace com.knetikcloud.Api
         /// Returns the authentication token details. Use /users endpoint for detailed user&#39;s info
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; SECURITY_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of TokenDetailsResource</returns>
@@ -171,7 +171,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns the authentication log for a user A log entry is recorded everytime a user requests a new token. Standard pagination available
+        /// Returns the authentication log for a user A log entry is recorded everytime a user requests a new token. Standard pagination available. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SECURITY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The user id (optional)</param>
@@ -186,7 +186,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns the authentication log for a user A log entry is recorded everytime a user requests a new token. Standard pagination available
+        /// Returns the authentication log for a user A log entry is recorded everytime a user requests a new token. Standard pagination available. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SECURITY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The user id (optional)</param>
@@ -207,7 +207,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -256,7 +255,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns the authentication token details. Use /users endpoint for detailed user&#39;s info 
+        /// Returns the authentication token details. Use /users endpoint for detailed user&#39;s info &lt;b&gt;Permissions Needed:&lt;/b&gt; SECURITY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>TokenDetailsResource</returns>
@@ -267,7 +266,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns the authentication token details. Use /users endpoint for detailed user&#39;s info 
+        /// Returns the authentication token details. Use /users endpoint for detailed user&#39;s info &lt;b&gt;Permissions Needed:&lt;/b&gt; SECURITY_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of TokenDetailsResource</returns>
@@ -284,7 +283,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 

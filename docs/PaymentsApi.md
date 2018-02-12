@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.PaymentsApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,6 +20,8 @@ Method | HTTP request | Description
 > PaymentMethodResource CreatePaymentMethod (int? userId, PaymentMethodResource paymentMethod = null)
 
 Create a new payment method for a user
+
+<b>Permissions Needed:</b> PAYMENTS_ADMIN or owner
 
 ### Example
 ```csharp
@@ -87,6 +89,8 @@ Name | Type | Description  | Notes
 
 Delete an existing payment method for a user
 
+<b>Permissions Needed:</b> PAYMENTS_ADMIN or owner
+
 ### Example
 ```csharp
 using System;
@@ -141,7 +145,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -151,6 +155,8 @@ void (empty response body)
 > PaymentMethodResource GetPaymentMethod (int? userId, int? id)
 
 Get a single payment method for a user
+
+<b>Permissions Needed:</b> PAYMENTS_ADMIN or owner
 
 ### Example
 ```csharp
@@ -207,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -217,6 +223,8 @@ Name | Type | Description  | Notes
 > PaymentMethodTypeResource GetPaymentMethodType (int? id)
 
 Get a single payment method type
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -271,7 +279,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -281,6 +289,8 @@ Name | Type | Description  | Notes
 > PageResourcePaymentMethodTypeResource GetPaymentMethodTypes (string filterName = null, int? size = null, int? page = null, string order = null)
 
 Get all payment method types
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -341,7 +351,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -351,6 +361,8 @@ Name | Type | Description  | Notes
 > List<PaymentMethodResource> GetPaymentMethods (int? userId, string filterName = null, string filterPaymentType = null, int? filterPaymentMethodTypeId = null, string filterPaymentMethodTypeName = null, int? size = null, int? page = null, string order = null)
 
 Get all payment methods for a user
+
+<b>Permissions Needed:</b> PAYMENTS_ADMIN or owner
 
 ### Example
 ```csharp
@@ -419,7 +431,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -429,6 +441,8 @@ Name | Type | Description  | Notes
 > PaymentAuthorizationResource PaymentAuthorization (PaymentAuthorizationResource request = null)
 
 Authorize payment of an invoice for later capture
+
+<b>Permissions Needed:</b> PAYMENTS_ADMIN or PAYMENTS_USER
 
 ### Example
 ```csharp
@@ -494,6 +508,8 @@ Name | Type | Description  | Notes
 
 Capture an existing invoice payment authorization
 
+<b>Permissions Needed:</b> PAYMENTS_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -556,6 +572,8 @@ void (empty response body)
 > PaymentMethodResource UpdatePaymentMethod (int? userId, int? id, PaymentMethodResource paymentMethod = null)
 
 Update an existing payment method for a user
+
+<b>Permissions Needed:</b> PAYMENTS_ADMIN or owner
 
 ### Example
 ```csharp

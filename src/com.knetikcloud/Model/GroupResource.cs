@@ -66,7 +66,7 @@ namespace com.knetikcloud.Model
         /// Initializes a new instance of the <see cref="GroupResource" /> class.
         /// </summary>
         /// <param name="AdditionalProperties">A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type.</param>
-        /// <param name="Description">A description of the group. Max 250 characters.</param>
+        /// <param name="Description">A description of the group.</param>
         /// <param name="MessageOfTheDay">A message of the day for members of the group.</param>
         /// <param name="Name">The name of the group. Max 50 characters (required).</param>
         /// <param name="Parent">The unique name of another group that this group is a subset of.</param>
@@ -111,9 +111,9 @@ namespace com.knetikcloud.Model
         public Dictionary<string, Property> AdditionalProperties { get; set; }
 
         /// <summary>
-        /// A description of the group. Max 250 characters
+        /// A description of the group
         /// </summary>
-        /// <value>A description of the group. Max 250 characters</value>
+        /// <value>A description of the group</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 

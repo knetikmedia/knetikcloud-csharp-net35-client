@@ -65,6 +65,14 @@ namespace com.knetikcloud.Test
         }
 
         /// <summary>
+        /// Test the property 'Actions'
+        /// </summary>
+        [Test]
+        public void ActionsTest()
+        {
+            // TODO unit test for the property 'Actions'
+        }
+        /// <summary>
         /// Test the property 'Ran'
         /// </summary>
         [Test]

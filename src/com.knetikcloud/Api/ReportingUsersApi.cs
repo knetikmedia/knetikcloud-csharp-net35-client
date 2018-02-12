@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Get user registration info
         /// </summary>
         /// <remarks>
-        /// Get user registration counts grouped by time range
+        /// Get user registration counts grouped by time range. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; REPORTING_USER_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="granularity">The time duration to aggregate by (optional, default to day)</param>
@@ -43,7 +43,7 @@ namespace com.knetikcloud.Api
         /// Get user registration info
         /// </summary>
         /// <remarks>
-        /// Get user registration counts grouped by time range
+        /// Get user registration counts grouped by time range. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; REPORTING_USER_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="granularity">The time duration to aggregate by (optional, default to day)</param>
@@ -154,7 +154,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get user registration info Get user registration counts grouped by time range
+        /// Get user registration info Get user registration counts grouped by time range. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; REPORTING_USER_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="granularity">The time duration to aggregate by (optional, default to day)</param>
@@ -170,7 +170,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get user registration info Get user registration counts grouped by time range
+        /// Get user registration info Get user registration counts grouped by time range. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; REPORTING_USER_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="granularity">The time duration to aggregate by (optional, default to day)</param>
@@ -192,7 +192,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 

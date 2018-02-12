@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Create a payment token that should be used to forward the user to Xsolla so they can complete payment
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; XSOLLA_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The payment request to be sent to XSolla (optional)</param>
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         /// Create a payment token that should be used to forward the user to Xsolla so they can complete payment
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; XSOLLA_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The payment request to be sent to XSolla (optional)</param>
@@ -146,7 +146,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a payment token that should be used to forward the user to Xsolla so they can complete payment 
+        /// Create a payment token that should be used to forward the user to Xsolla so they can complete payment &lt;b&gt;Permissions Needed:&lt;/b&gt; XSOLLA_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The payment request to be sent to XSolla (optional)</param>
@@ -158,7 +158,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a payment token that should be used to forward the user to Xsolla so they can complete payment 
+        /// Create a payment token that should be used to forward the user to Xsolla so they can complete payment &lt;b&gt;Permissions Needed:&lt;/b&gt; XSOLLA_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The payment request to be sent to XSolla (optional)</param>

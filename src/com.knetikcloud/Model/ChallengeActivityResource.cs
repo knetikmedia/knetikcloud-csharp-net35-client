@@ -41,11 +41,12 @@ namespace com.knetikcloud.Model
         /// <param name="ActivityId">The id of the activity (required).</param>
         /// <param name="AdditionalProperties">A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type.</param>
         /// <param name="ChallengeId">The id of the challenge.</param>
+        /// <param name="CoreSettings">Defines core settings about the activity that affect how it can be created/played by users. Values may be left null to inherit from parent activity..</param>
         /// <param name="Entitlement">The entitlement item needed to participate in the activity as part of this event. Null indicates free entry. When creating/updating only id is used. Item must be pre-existing.</param>
         /// <param name="RewardSet">The rewards to give at the end of each occurence of the activity. When creating/updating only id is used. Reward set must be pre-existing.</param>
         /// <param name="Settings">The list of settings and the select options.</param>
         /// <param name="Template">A challenge activity template this challenge activity is validated against (private). May be null and no validation of additional_properties will be done.</param>
-        public ChallengeActivityResource(long? ActivityId = default(long?), Dictionary<string, Property> AdditionalProperties = default(Dictionary<string, Property>), long? ChallengeId = default(long?), ActivityEntitlementResource Entitlement = default(ActivityEntitlementResource), RewardSetResource RewardSet = default(RewardSetResource), List<SelectedSettingResource> Settings = default(List<SelectedSettingResource>), string Template = default(string))
+        public ChallengeActivityResource(long? ActivityId = default(long?), Dictionary<string, Property> AdditionalProperties = default(Dictionary<string, Property>), long? ChallengeId = default(long?), CoreChallengeActivitySettings CoreSettings = default(CoreChallengeActivitySettings), ActivityEntitlementResource Entitlement = default(ActivityEntitlementResource), RewardSetResource RewardSet = default(RewardSetResource), List<SelectedSettingResource> Settings = default(List<SelectedSettingResource>), string Template = default(string))
         {
             // to ensure "ActivityId" is required (not null)
             if (ActivityId == null)
@@ -58,6 +59,7 @@ namespace com.knetikcloud.Model
             }
             this.AdditionalProperties = AdditionalProperties;
             this.ChallengeId = ChallengeId;
+            this.CoreSettings = CoreSettings;
             this.Entitlement = Entitlement;
             this.RewardSet = RewardSet;
             this.Settings = Settings;
@@ -84,6 +86,13 @@ namespace com.knetikcloud.Model
         /// <value>The id of the challenge</value>
         [DataMember(Name="challenge_id", EmitDefaultValue=false)]
         public long? ChallengeId { get; set; }
+
+        /// <summary>
+        /// Defines core settings about the activity that affect how it can be created/played by users. Values may be left null to inherit from parent activity.
+        /// </summary>
+        /// <value>Defines core settings about the activity that affect how it can be created/played by users. Values may be left null to inherit from parent activity.</value>
+        [DataMember(Name="core_settings", EmitDefaultValue=false)]
+        public CoreChallengeActivitySettings CoreSettings { get; set; }
 
         /// <summary>
         /// The entitlement item needed to participate in the activity as part of this event. Null indicates free entry. When creating/updating only id is used. Item must be pre-existing
@@ -131,6 +140,7 @@ namespace com.knetikcloud.Model
             sb.Append("  ActivityId: ").Append(ActivityId).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  ChallengeId: ").Append(ChallengeId).Append("\n");
+            sb.Append("  CoreSettings: ").Append(CoreSettings).Append("\n");
             sb.Append("  Entitlement: ").Append(Entitlement).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  RewardSet: ").Append(RewardSet).Append("\n");
@@ -186,6 +196,11 @@ namespace com.knetikcloud.Model
                     this.ChallengeId.Equals(input.ChallengeId))
                 ) && 
                 (
+                    this.CoreSettings == input.CoreSettings ||
+                    (this.CoreSettings != null &&
+                    this.CoreSettings.Equals(input.CoreSettings))
+                ) && 
+                (
                     this.Entitlement == input.Entitlement ||
                     (this.Entitlement != null &&
                     this.Entitlement.Equals(input.Entitlement))
@@ -227,6 +242,8 @@ namespace com.knetikcloud.Model
                     hashCode = hashCode * 59 + this.AdditionalProperties.GetHashCode();
                 if (this.ChallengeId != null)
                     hashCode = hashCode * 59 + this.ChallengeId.GetHashCode();
+                if (this.CoreSettings != null)
+                    hashCode = hashCode * 59 + this.CoreSettings.GetHashCode();
                 if (this.Entitlement != null)
                     hashCode = hashCode * 59 + this.Entitlement.GetHashCode();
                 if (this.Id != null)

@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.StoreSalesApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,6 +16,8 @@ Method | HTTP request | Description
 > CatalogSale CreateCatalogSale (CatalogSale catalogSale = null)
 
 Create a sale
+
+<b>Permissions Needed:</b> SALES_ADMIN
 
 ### Example
 ```csharp
@@ -81,6 +83,8 @@ Name | Type | Description  | Notes
 
 Delete a sale
 
+<b>Permissions Needed:</b> SALES_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -133,7 +137,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -143,6 +147,8 @@ void (empty response body)
 > CatalogSale GetCatalogSale (int? id)
 
 Get a single sale
+
+<b>Permissions Needed:</b> SALES_USER or SALES_ADMIN
 
 ### Example
 ```csharp
@@ -197,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -207,6 +213,8 @@ Name | Type | Description  | Notes
 > PageResourceCatalogSale GetCatalogSales (int? size = null, int? page = null, string order = null)
 
 List and search sales
+
+<b>Permissions Needed:</b> SALES_USER or SALES_ADMIN
 
 ### Example
 ```csharp
@@ -265,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -275,6 +283,8 @@ Name | Type | Description  | Notes
 > CatalogSale UpdateCatalogSale (int? id, CatalogSale catalogSale = null)
 
 Update a sale
+
+<b>Permissions Needed:</b> SALES_ADMIN
 
 ### Example
 ```csharp

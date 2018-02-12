@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Add device users
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userResources">userResources</param>
@@ -40,7 +40,7 @@ namespace com.knetikcloud.Api
         /// Add device users
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userResources">userResources</param>
@@ -51,7 +51,7 @@ namespace com.knetikcloud.Api
         /// Create a device
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="device">device</param>
@@ -62,7 +62,7 @@ namespace com.knetikcloud.Api
         /// Create a device
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="device">device</param>
@@ -72,7 +72,7 @@ namespace com.knetikcloud.Api
         /// Create a device template
         /// </summary>
         /// <remarks>
-        /// Device Templates define a type of device and the properties they have
+        /// Device Templates define a type of device and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceTemplateResource">The device template resource object (optional)</param>
@@ -83,7 +83,7 @@ namespace com.knetikcloud.Api
         /// Create a device template
         /// </summary>
         /// <remarks>
-        /// Device Templates define a type of device and the properties they have
+        /// Device Templates define a type of device and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceTemplateResource">The device template resource object (optional)</param>
@@ -93,7 +93,7 @@ namespace com.knetikcloud.Api
         /// Delete a device
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
@@ -104,7 +104,7 @@ namespace com.knetikcloud.Api
         /// Delete a device
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
@@ -114,7 +114,7 @@ namespace com.knetikcloud.Api
         /// Delete an device template
         /// </summary>
         /// <remarks>
-        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -126,7 +126,7 @@ namespace com.knetikcloud.Api
         /// Delete an device template
         /// </summary>
         /// <remarks>
-        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -137,7 +137,7 @@ namespace com.knetikcloud.Api
         /// Delete a device user
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the device</param>
@@ -149,7 +149,7 @@ namespace com.knetikcloud.Api
         /// Delete a device user
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the device</param>
@@ -160,7 +160,7 @@ namespace com.knetikcloud.Api
         /// Delete all device users
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the device</param>
@@ -172,7 +172,7 @@ namespace com.knetikcloud.Api
         /// Delete all device users
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the device</param>
@@ -183,7 +183,7 @@ namespace com.knetikcloud.Api
         /// Get a single device
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
@@ -194,7 +194,7 @@ namespace com.knetikcloud.Api
         /// Get a single device
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
@@ -204,7 +204,7 @@ namespace com.knetikcloud.Api
         /// Get a single device template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; description
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -215,7 +215,7 @@ namespace com.knetikcloud.Api
         /// Get a single device template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; description
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -225,7 +225,7 @@ namespace com.knetikcloud.Api
         /// List and search device templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or DEVICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -238,7 +238,7 @@ namespace com.knetikcloud.Api
         /// List and search device templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or DEVICES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -250,7 +250,7 @@ namespace com.knetikcloud.Api
         /// List and search devices
         /// </summary>
         /// <remarks>
-        /// Get a list of devices with optional filtering
+        /// Get a list of devices with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or user
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterMake">Filter for devices with specified make (optional)</param>
@@ -269,7 +269,7 @@ namespace com.knetikcloud.Api
         /// List and search devices
         /// </summary>
         /// <remarks>
-        /// Get a list of devices with optional filtering
+        /// Get a list of devices with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or user
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterMake">Filter for devices with specified make (optional)</param>
@@ -287,7 +287,7 @@ namespace com.knetikcloud.Api
         /// Update a device
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CUSTOMERS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="device">device</param>
@@ -299,7 +299,7 @@ namespace com.knetikcloud.Api
         /// Update a device
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CUSTOMERS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="device">device</param>
@@ -310,7 +310,7 @@ namespace com.knetikcloud.Api
         /// Update an device template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -322,7 +322,7 @@ namespace com.knetikcloud.Api
         /// Update an device template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -430,7 +430,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Add device users 
+        /// Add device users &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userResources">userResources</param>
@@ -443,7 +443,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Add device users 
+        /// Add device users &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userResources">userResources</param>
@@ -522,7 +522,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a device 
+        /// Create a device &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="device">device</param>
@@ -534,7 +534,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a device 
+        /// Create a device &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="device">device</param>
@@ -608,7 +608,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a device template Device Templates define a type of device and the properties they have
+        /// Create a device template Device Templates define a type of device and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceTemplateResource">The device template resource object (optional)</param>
@@ -620,7 +620,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a device template Device Templates define a type of device and the properties they have
+        /// Create a device template Device Templates define a type of device and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deviceTemplateResource">The device template resource object (optional)</param>
@@ -691,7 +691,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a device 
+        /// Delete a device &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
@@ -702,7 +702,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a device 
+        /// Delete a device &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
@@ -723,7 +723,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -769,7 +768,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete an device template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// Delete an device template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -781,7 +780,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete an device template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// Delete an device template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -803,7 +802,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -850,7 +848,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a device user 
+        /// Delete a device user &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the device</param>
@@ -862,7 +860,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a device user 
+        /// Delete a device user &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the device</param>
@@ -887,7 +885,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -934,7 +931,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete all device users 
+        /// Delete all device users &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the device</param>
@@ -946,7 +943,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete all device users 
+        /// Delete all device users &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the device</param>
@@ -968,7 +965,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1015,7 +1011,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single device 
+        /// Get a single device &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
@@ -1027,7 +1023,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single device 
+        /// Get a single device &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">id</param>
@@ -1048,7 +1044,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1094,7 +1089,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single device template 
+        /// Get a single device template &lt;b&gt;Permissions Needed:&lt;/b&gt; description
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1106,7 +1101,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single device template 
+        /// Get a single device template &lt;b&gt;Permissions Needed:&lt;/b&gt; description
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1127,7 +1122,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1173,7 +1167,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search device templates 
+        /// List and search device templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or DEVICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -1187,7 +1181,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search device templates 
+        /// List and search device templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or DEVICES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -1207,7 +1201,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1255,7 +1248,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search devices Get a list of devices with optional filtering
+        /// List and search devices Get a list of devices with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or user
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterMake">Filter for devices with specified make (optional)</param>
@@ -1275,7 +1268,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search devices Get a list of devices with optional filtering
+        /// List and search devices Get a list of devices with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or user
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterMake">Filter for devices with specified make (optional)</param>
@@ -1301,7 +1294,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1355,7 +1347,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a device 
+        /// Update a device &lt;b&gt;Permissions Needed:&lt;/b&gt; CUSTOMERS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="device">device</param>
@@ -1368,7 +1360,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a device 
+        /// Update a device &lt;b&gt;Permissions Needed:&lt;/b&gt; CUSTOMERS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="device">device</param>
@@ -1447,7 +1439,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update an device template 
+        /// Update an device template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1460,7 +1452,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update an device template 
+        /// Update an device template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>

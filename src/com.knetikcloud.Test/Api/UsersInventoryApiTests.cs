@@ -221,7 +221,7 @@ namespace com.knetikcloud.Test
         public void GetUserInventoryTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //int? userId = null;
+            //string userId = null;
             //int? id = null;
             //var response = instance.GetUserInventory(userId, id);
             //Assert.IsInstanceOf<UserInventoryResource> (response, "response is UserInventoryResource");

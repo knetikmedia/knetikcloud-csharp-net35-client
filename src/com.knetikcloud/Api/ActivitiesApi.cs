@@ -25,10 +25,37 @@ namespace com.knetikcloud.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Add a user to an occurrence
+        /// </summary>
+        /// <remarks>
+        /// If called with no body, defaults to the user making the call.
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="test">if true, indicates that the user should NOT be added. This can be used to test for eligibility (optional, default to false)</param>
+        /// <param name="bypassRestrictions">if true, indicates that restrictions such as max player count should be ignored. Can only be used with ACTIVITIES_ADMIN (optional, default to false)</param>
+        /// <param name="userId">The id of the user, or null for &#39;caller&#39; (optional)</param>
+        /// <returns>ActivityOccurrenceResource</returns>
+        ActivityOccurrenceResource AddUser (long? activityOccurrenceId, bool? test = null, bool? bypassRestrictions = null, IntWrapper userId = null);
+
+        /// <summary>
+        /// Add a user to an occurrence
+        /// </summary>
+        /// <remarks>
+        /// If called with no body, defaults to the user making the call.
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="test">if true, indicates that the user should NOT be added. This can be used to test for eligibility (optional, default to false)</param>
+        /// <param name="bypassRestrictions">if true, indicates that restrictions such as max player count should be ignored. Can only be used with ACTIVITIES_ADMIN (optional, default to false)</param>
+        /// <param name="userId">The id of the user, or null for &#39;caller&#39; (optional)</param>
+        /// <returns>ApiResponse of ActivityOccurrenceResource</returns>
+        ApiResponse<ActivityOccurrenceResource> AddUserWithHttpInfo (long? activityOccurrenceId, bool? test = null, bool? bypassRestrictions = null, IntWrapper userId = null);
+        /// <summary>
         /// Create an activity
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityResource">The activity resource object (optional)</param>
@@ -39,7 +66,7 @@ namespace com.knetikcloud.Api
         /// Create an activity
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityResource">The activity resource object (optional)</param>
@@ -49,7 +76,7 @@ namespace com.knetikcloud.Api
         /// Create a new activity occurrence. Ex: start a game
         /// </summary>
         /// <remarks>
-        /// Has to enforce extra rules if not used as an admin
+        /// Has to enforce extra rules if not used as an admin. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER or ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="test">if true, indicates that the occurrence should NOT be created. This can be used to test for eligibility and valid settings (optional, default to false)</param>
@@ -61,7 +88,7 @@ namespace com.knetikcloud.Api
         /// Create a new activity occurrence. Ex: start a game
         /// </summary>
         /// <remarks>
-        /// Has to enforce extra rules if not used as an admin
+        /// Has to enforce extra rules if not used as an admin. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER or ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="test">if true, indicates that the occurrence should NOT be created. This can be used to test for eligibility and valid settings (optional, default to false)</param>
@@ -72,7 +99,7 @@ namespace com.knetikcloud.Api
         /// Create a activity template
         /// </summary>
         /// <remarks>
-        /// Activity Templates define a type of activity and the properties they have
+        /// Activity Templates define a type of activity and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityTemplateResource">The activity template resource object (optional)</param>
@@ -83,7 +110,7 @@ namespace com.knetikcloud.Api
         /// Create a activity template
         /// </summary>
         /// <remarks>
-        /// Activity Templates define a type of activity and the properties they have
+        /// Activity Templates define a type of activity and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityTemplateResource">The activity template resource object (optional)</param>
@@ -93,7 +120,7 @@ namespace com.knetikcloud.Api
         /// Delete an activity
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the activity</param>
@@ -104,7 +131,7 @@ namespace com.knetikcloud.Api
         /// Delete an activity
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the activity</param>
@@ -114,7 +141,7 @@ namespace com.knetikcloud.Api
         /// Delete a activity template
         /// </summary>
         /// <remarks>
-        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -126,7 +153,7 @@ namespace com.knetikcloud.Api
         /// Delete a activity template
         /// </summary>
         /// <remarks>
-        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -137,7 +164,7 @@ namespace com.knetikcloud.Api
         /// List activity definitions
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTemplate">Filter for activities that are templates, or specifically not if false (optional)</param>
@@ -153,7 +180,7 @@ namespace com.knetikcloud.Api
         /// List activity definitions
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTemplate">Filter for activities that are templates, or specifically not if false (optional)</param>
@@ -168,7 +195,7 @@ namespace com.knetikcloud.Api
         /// Get a single activity
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the activity</param>
@@ -179,7 +206,7 @@ namespace com.knetikcloud.Api
         /// Get a single activity
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the activity</param>
@@ -189,7 +216,7 @@ namespace com.knetikcloud.Api
         /// Load a single activity occurrence details
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
@@ -200,7 +227,7 @@ namespace com.knetikcloud.Api
         /// Load a single activity occurrence details
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
@@ -210,7 +237,7 @@ namespace com.knetikcloud.Api
         /// Get a single activity template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -221,7 +248,7 @@ namespace com.knetikcloud.Api
         /// Get a single activity template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -231,7 +258,7 @@ namespace com.knetikcloud.Api
         /// List and search activity templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -244,7 +271,7 @@ namespace com.knetikcloud.Api
         /// List and search activity templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -256,11 +283,11 @@ namespace com.knetikcloud.Api
         /// List activity occurrences
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterActivity">Filter for occurrences of the given activity ID (optional)</param>
-        /// <param name="filterStatus">Filter for occurrences of the given activity ID (optional)</param>
+        /// <param name="filterStatus">Filter for occurrences in the given status (optional)</param>
         /// <param name="filterEvent">Filter for occurrences played during the given event (optional)</param>
         /// <param name="filterChallenge">Filter for occurrences played within the given challenge (optional)</param>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -273,11 +300,11 @@ namespace com.knetikcloud.Api
         /// List activity occurrences
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterActivity">Filter for occurrences of the given activity ID (optional)</param>
-        /// <param name="filterStatus">Filter for occurrences of the given activity ID (optional)</param>
+        /// <param name="filterStatus">Filter for occurrences in the given status (optional)</param>
         /// <param name="filterEvent">Filter for occurrences played during the given event (optional)</param>
         /// <param name="filterChallenge">Filter for occurrences played within the given challenge (optional)</param>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -286,10 +313,37 @@ namespace com.knetikcloud.Api
         /// <returns>ApiResponse of PageResourceActivityOccurrenceResource</returns>
         ApiResponse<PageResourceActivityOccurrenceResource> ListActivityOccurrencesWithHttpInfo (string filterActivity = null, string filterStatus = null, int? filterEvent = null, int? filterChallenge = null, int? size = null, int? page = null, string order = null);
         /// <summary>
-        /// Sets the status of an activity occurrence to FINISHED and logs metrics
+        /// Remove a user from an occurrence
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="userId">The id of the user, or &#39;me&#39;</param>
+        /// <param name="ban">if true, indicates that the user should not be allowed to re-join. Can only be set by host or admin (optional, default to false)</param>
+        /// <param name="bypassRestrictions">if true, indicates that restrictions such as current status should be ignored. Can only be used with ACTIVITIES_ADMIN (optional, default to false)</param>
+        /// <returns></returns>
+        void RemoveUser (long? activityOccurrenceId, string userId, bool? ban = null, bool? bypassRestrictions = null);
+
+        /// <summary>
+        /// Remove a user from an occurrence
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="userId">The id of the user, or &#39;me&#39;</param>
+        /// <param name="ban">if true, indicates that the user should not be allowed to re-join. Can only be set by host or admin (optional, default to false)</param>
+        /// <param name="bypassRestrictions">if true, indicates that restrictions such as current status should be ignored. Can only be used with ACTIVITIES_ADMIN (optional, default to false)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> RemoveUserWithHttpInfo (long? activityOccurrenceId, string userId, bool? ban = null, bool? bypassRestrictions = null);
+        /// <summary>
+        /// Sets the status of an activity occurrence to FINISHED and logs metrics
+        /// </summary>
+        /// <remarks>
+        /// In addition to user permissions requirements there is security based on the core_settings.results_trust setting.
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
@@ -301,7 +355,7 @@ namespace com.knetikcloud.Api
         /// Sets the status of an activity occurrence to FINISHED and logs metrics
         /// </summary>
         /// <remarks>
-        /// 
+        /// In addition to user permissions requirements there is security based on the core_settings.results_trust setting.
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
@@ -309,10 +363,58 @@ namespace com.knetikcloud.Api
         /// <returns>ApiResponse of ActivityOccurrenceResults</returns>
         ApiResponse<ActivityOccurrenceResults> SetActivityOccurrenceResultsWithHttpInfo (long? activityOccurrenceId, ActivityOccurrenceResultsResource activityOccurrenceResults = null);
         /// <summary>
-        /// Update an activity
+        /// Sets the settings of an activity occurrence
         /// </summary>
         /// <remarks>
         /// 
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="settings">The new settings (optional)</param>
+        /// <returns>ActivityOccurrenceResource</returns>
+        ActivityOccurrenceResource SetActivityOccurrenceSettings (long? activityOccurrenceId, ActivityOccurrenceSettingsResource settings = null);
+
+        /// <summary>
+        /// Sets the settings of an activity occurrence
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="settings">The new settings (optional)</param>
+        /// <returns>ApiResponse of ActivityOccurrenceResource</returns>
+        ApiResponse<ActivityOccurrenceResource> SetActivityOccurrenceSettingsWithHttpInfo (long? activityOccurrenceId, ActivityOccurrenceSettingsResource settings = null);
+        /// <summary>
+        /// Set a user&#39;s status within an occurrence
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="userId">The id of the user</param>
+        /// <param name="status">The new status (optional)</param>
+        /// <returns>ActivityUserResource</returns>
+        ActivityUserResource SetUserStatus (long? activityOccurrenceId, string userId, string status = null);
+
+        /// <summary>
+        /// Set a user&#39;s status within an occurrence
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="userId">The id of the user</param>
+        /// <param name="status">The new status (optional)</param>
+        /// <returns>ApiResponse of ActivityUserResource</returns>
+        ApiResponse<ActivityUserResource> SetUserStatusWithHttpInfo (long? activityOccurrenceId, string userId, string status = null);
+        /// <summary>
+        /// Update an activity
+        /// </summary>
+        /// <remarks>
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the activity</param>
@@ -324,7 +426,7 @@ namespace com.knetikcloud.Api
         /// Update an activity
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the activity</param>
@@ -332,33 +434,33 @@ namespace com.knetikcloud.Api
         /// <returns>ApiResponse of ActivityResource</returns>
         ApiResponse<ActivityResource> UpdateActivityWithHttpInfo (long? id, ActivityResource activityResource = null);
         /// <summary>
-        /// Updated the status of an activity occurrence
+        /// Update the status of an activity occurrence
         /// </summary>
         /// <remarks>
-        /// If setting to &#39;FINISHED&#39; reward will be run based on current metrics that have been recorded already. Aternatively, see results endpoint to finish and record all metrics at once.
+        /// If setting to &#39;FINISHED&#39; reward will be run based on current metrics that have been recorded already. Alternatively, see results endpoint to finish and record all metrics at once. Can be called by non-host participants if non_host_status_control is true
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
         /// <param name="activityOccurrenceStatus">The activity occurrence status object (optional)</param>
         /// <returns></returns>
-        void UpdateActivityOccurrence (long? activityOccurrenceId, string activityOccurrenceStatus = null);
+        void UpdateActivityOccurrenceStatus (long? activityOccurrenceId, ValueWrapperstring activityOccurrenceStatus = null);
 
         /// <summary>
-        /// Updated the status of an activity occurrence
+        /// Update the status of an activity occurrence
         /// </summary>
         /// <remarks>
-        /// If setting to &#39;FINISHED&#39; reward will be run based on current metrics that have been recorded already. Aternatively, see results endpoint to finish and record all metrics at once.
+        /// If setting to &#39;FINISHED&#39; reward will be run based on current metrics that have been recorded already. Alternatively, see results endpoint to finish and record all metrics at once. Can be called by non-host participants if non_host_status_control is true
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
         /// <param name="activityOccurrenceStatus">The activity occurrence status object (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> UpdateActivityOccurrenceWithHttpInfo (long? activityOccurrenceId, string activityOccurrenceStatus = null);
+        ApiResponse<Object> UpdateActivityOccurrenceStatusWithHttpInfo (long? activityOccurrenceId, ValueWrapperstring activityOccurrenceStatus = null);
         /// <summary>
         /// Update an activity template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -370,7 +472,7 @@ namespace com.knetikcloud.Api
         /// Update an activity template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -478,7 +580,102 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create an activity 
+        /// Add a user to an occurrence If called with no body, defaults to the user making the call.
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="test">if true, indicates that the user should NOT be added. This can be used to test for eligibility (optional, default to false)</param>
+        /// <param name="bypassRestrictions">if true, indicates that restrictions such as max player count should be ignored. Can only be used with ACTIVITIES_ADMIN (optional, default to false)</param>
+        /// <param name="userId">The id of the user, or null for &#39;caller&#39; (optional)</param>
+        /// <returns>ActivityOccurrenceResource</returns>
+        public ActivityOccurrenceResource AddUser (long? activityOccurrenceId, bool? test = null, bool? bypassRestrictions = null, IntWrapper userId = null)
+        {
+             ApiResponse<ActivityOccurrenceResource> localVarResponse = AddUserWithHttpInfo(activityOccurrenceId, test, bypassRestrictions, userId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add a user to an occurrence If called with no body, defaults to the user making the call.
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="test">if true, indicates that the user should NOT be added. This can be used to test for eligibility (optional, default to false)</param>
+        /// <param name="bypassRestrictions">if true, indicates that restrictions such as max player count should be ignored. Can only be used with ACTIVITIES_ADMIN (optional, default to false)</param>
+        /// <param name="userId">The id of the user, or null for &#39;caller&#39; (optional)</param>
+        /// <returns>ApiResponse of ActivityOccurrenceResource</returns>
+        public ApiResponse< ActivityOccurrenceResource > AddUserWithHttpInfo (long? activityOccurrenceId, bool? test = null, bool? bypassRestrictions = null, IntWrapper userId = null)
+        {
+            // verify the required parameter 'activityOccurrenceId' is set
+            if (activityOccurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'activityOccurrenceId' when calling ActivitiesApi->AddUser");
+
+            var localVarPath = "/activity-occurrences/{activity_occurrence_id}/users";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (activityOccurrenceId != null) localVarPathParams.Add("activity_occurrence_id", Configuration.ApiClient.ParameterToString(activityOccurrenceId)); // path parameter
+            if (test != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "test", test)); // query parameter
+            if (bypassRestrictions != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "bypass_restrictions", bypassRestrictions)); // query parameter
+            if (userId != null && userId.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(userId); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = userId; // byte array
+            }
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AddUser", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ActivityOccurrenceResource>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ActivityOccurrenceResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityOccurrenceResource)));
+        }
+
+        /// <summary>
+        /// Create an activity &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityResource">The activity resource object (optional)</param>
@@ -490,7 +687,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create an activity 
+        /// Create an activity &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityResource">The activity resource object (optional)</param>
@@ -561,7 +758,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a new activity occurrence. Ex: start a game Has to enforce extra rules if not used as an admin
+        /// Create a new activity occurrence. Ex: start a game Has to enforce extra rules if not used as an admin. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER or ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="test">if true, indicates that the occurrence should NOT be created. This can be used to test for eligibility and valid settings (optional, default to false)</param>
@@ -574,7 +771,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a new activity occurrence. Ex: start a game Has to enforce extra rules if not used as an admin
+        /// Create a new activity occurrence. Ex: start a game Has to enforce extra rules if not used as an admin. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER or ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="test">if true, indicates that the occurrence should NOT be created. This can be used to test for eligibility and valid settings (optional, default to false)</param>
@@ -647,7 +844,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a activity template Activity Templates define a type of activity and the properties they have
+        /// Create a activity template Activity Templates define a type of activity and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityTemplateResource">The activity template resource object (optional)</param>
@@ -659,7 +856,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a activity template Activity Templates define a type of activity and the properties they have
+        /// Create a activity template Activity Templates define a type of activity and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityTemplateResource">The activity template resource object (optional)</param>
@@ -730,7 +927,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete an activity 
+        /// Delete an activity &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the activity</param>
@@ -741,7 +938,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete an activity 
+        /// Delete an activity &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the activity</param>
@@ -762,7 +959,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -808,7 +1004,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a activity template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// Delete a activity template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -820,7 +1016,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a activity template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// Delete a activity template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -842,7 +1038,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -889,7 +1084,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List activity definitions 
+        /// List activity definitions &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTemplate">Filter for activities that are templates, or specifically not if false (optional)</param>
@@ -906,7 +1101,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List activity definitions 
+        /// List activity definitions &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterTemplate">Filter for activities that are templates, or specifically not if false (optional)</param>
@@ -929,7 +1124,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -980,7 +1174,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single activity 
+        /// Get a single activity &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the activity</param>
@@ -992,7 +1186,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single activity 
+        /// Get a single activity &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the activity</param>
@@ -1013,7 +1207,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1059,7 +1252,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Load a single activity occurrence details 
+        /// Load a single activity occurrence details &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
@@ -1071,7 +1264,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Load a single activity occurrence details 
+        /// Load a single activity occurrence details &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
@@ -1092,7 +1285,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1138,7 +1330,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single activity template 
+        /// Get a single activity template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1150,7 +1342,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single activity template 
+        /// Get a single activity template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1171,7 +1363,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1217,7 +1408,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search activity templates 
+        /// List and search activity templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -1231,7 +1422,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search activity templates 
+        /// List and search activity templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -1251,7 +1442,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1299,11 +1489,11 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List activity occurrences 
+        /// List activity occurrences &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterActivity">Filter for occurrences of the given activity ID (optional)</param>
-        /// <param name="filterStatus">Filter for occurrences of the given activity ID (optional)</param>
+        /// <param name="filterStatus">Filter for occurrences in the given status (optional)</param>
         /// <param name="filterEvent">Filter for occurrences played during the given event (optional)</param>
         /// <param name="filterChallenge">Filter for occurrences played within the given challenge (optional)</param>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -1317,11 +1507,11 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List activity occurrences 
+        /// List activity occurrences &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterActivity">Filter for occurrences of the given activity ID (optional)</param>
-        /// <param name="filterStatus">Filter for occurrences of the given activity ID (optional)</param>
+        /// <param name="filterStatus">Filter for occurrences in the given status (optional)</param>
         /// <param name="filterEvent">Filter for occurrences played during the given event (optional)</param>
         /// <param name="filterChallenge">Filter for occurrences played within the given challenge (optional)</param>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -1341,7 +1531,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1393,7 +1582,96 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Sets the status of an activity occurrence to FINISHED and logs metrics 
+        /// Remove a user from an occurrence 
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="userId">The id of the user, or &#39;me&#39;</param>
+        /// <param name="ban">if true, indicates that the user should not be allowed to re-join. Can only be set by host or admin (optional, default to false)</param>
+        /// <param name="bypassRestrictions">if true, indicates that restrictions such as current status should be ignored. Can only be used with ACTIVITIES_ADMIN (optional, default to false)</param>
+        /// <returns></returns>
+        public void RemoveUser (long? activityOccurrenceId, string userId, bool? ban = null, bool? bypassRestrictions = null)
+        {
+             RemoveUserWithHttpInfo(activityOccurrenceId, userId, ban, bypassRestrictions);
+        }
+
+        /// <summary>
+        /// Remove a user from an occurrence 
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="userId">The id of the user, or &#39;me&#39;</param>
+        /// <param name="ban">if true, indicates that the user should not be allowed to re-join. Can only be set by host or admin (optional, default to false)</param>
+        /// <param name="bypassRestrictions">if true, indicates that restrictions such as current status should be ignored. Can only be used with ACTIVITIES_ADMIN (optional, default to false)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> RemoveUserWithHttpInfo (long? activityOccurrenceId, string userId, bool? ban = null, bool? bypassRestrictions = null)
+        {
+            // verify the required parameter 'activityOccurrenceId' is set
+            if (activityOccurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'activityOccurrenceId' when calling ActivitiesApi->RemoveUser");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ActivitiesApi->RemoveUser");
+
+            var localVarPath = "/activity-occurrences/{activity_occurrence_id}/users/{user_id}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (activityOccurrenceId != null) localVarPathParams.Add("activity_occurrence_id", Configuration.ApiClient.ParameterToString(activityOccurrenceId)); // path parameter
+            if (userId != null) localVarPathParams.Add("user_id", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (ban != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ban", ban)); // query parameter
+            if (bypassRestrictions != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "bypass_restrictions", bypassRestrictions)); // query parameter
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("RemoveUser", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                null);
+        }
+
+        /// <summary>
+        /// Sets the status of an activity occurrence to FINISHED and logs metrics In addition to user permissions requirements there is security based on the core_settings.results_trust setting.
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
@@ -1406,7 +1684,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Sets the status of an activity occurrence to FINISHED and logs metrics 
+        /// Sets the status of an activity occurrence to FINISHED and logs metrics In addition to user permissions requirements there is security based on the core_settings.results_trust setting.
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
@@ -1482,7 +1760,191 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update an activity 
+        /// Sets the settings of an activity occurrence 
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="settings">The new settings (optional)</param>
+        /// <returns>ActivityOccurrenceResource</returns>
+        public ActivityOccurrenceResource SetActivityOccurrenceSettings (long? activityOccurrenceId, ActivityOccurrenceSettingsResource settings = null)
+        {
+             ApiResponse<ActivityOccurrenceResource> localVarResponse = SetActivityOccurrenceSettingsWithHttpInfo(activityOccurrenceId, settings);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Sets the settings of an activity occurrence 
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="settings">The new settings (optional)</param>
+        /// <returns>ApiResponse of ActivityOccurrenceResource</returns>
+        public ApiResponse< ActivityOccurrenceResource > SetActivityOccurrenceSettingsWithHttpInfo (long? activityOccurrenceId, ActivityOccurrenceSettingsResource settings = null)
+        {
+            // verify the required parameter 'activityOccurrenceId' is set
+            if (activityOccurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'activityOccurrenceId' when calling ActivitiesApi->SetActivityOccurrenceSettings");
+
+            var localVarPath = "/activity-occurrences/{activity_occurrence_id}/settings";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (activityOccurrenceId != null) localVarPathParams.Add("activity_occurrence_id", Configuration.ApiClient.ParameterToString(activityOccurrenceId)); // path parameter
+            if (settings != null && settings.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(settings); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = settings; // byte array
+            }
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetActivityOccurrenceSettings", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ActivityOccurrenceResource>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ActivityOccurrenceResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityOccurrenceResource)));
+        }
+
+        /// <summary>
+        /// Set a user&#39;s status within an occurrence 
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="userId">The id of the user</param>
+        /// <param name="status">The new status (optional)</param>
+        /// <returns>ActivityUserResource</returns>
+        public ActivityUserResource SetUserStatus (long? activityOccurrenceId, string userId, string status = null)
+        {
+             ApiResponse<ActivityUserResource> localVarResponse = SetUserStatusWithHttpInfo(activityOccurrenceId, userId, status);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set a user&#39;s status within an occurrence 
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
+        /// <param name="userId">The id of the user</param>
+        /// <param name="status">The new status (optional)</param>
+        /// <returns>ApiResponse of ActivityUserResource</returns>
+        public ApiResponse< ActivityUserResource > SetUserStatusWithHttpInfo (long? activityOccurrenceId, string userId, string status = null)
+        {
+            // verify the required parameter 'activityOccurrenceId' is set
+            if (activityOccurrenceId == null)
+                throw new ApiException(400, "Missing required parameter 'activityOccurrenceId' when calling ActivitiesApi->SetUserStatus");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ActivitiesApi->SetUserStatus");
+
+            var localVarPath = "/activity-occurrences/{activity_occurrence_id}/users/{user_id}/status";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (activityOccurrenceId != null) localVarPathParams.Add("activity_occurrence_id", Configuration.ApiClient.ParameterToString(activityOccurrenceId)); // path parameter
+            if (userId != null) localVarPathParams.Add("user_id", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            if (status != null && status.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(status); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = status; // byte array
+            }
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("SetUserStatus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ActivityUserResource>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ActivityUserResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityUserResource)));
+        }
+
+        /// <summary>
+        /// Update an activity &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the activity</param>
@@ -1495,7 +1957,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update an activity 
+        /// Update an activity &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the activity</param>
@@ -1571,29 +2033,29 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Updated the status of an activity occurrence If setting to &#39;FINISHED&#39; reward will be run based on current metrics that have been recorded already. Aternatively, see results endpoint to finish and record all metrics at once.
+        /// Update the status of an activity occurrence If setting to &#39;FINISHED&#39; reward will be run based on current metrics that have been recorded already. Alternatively, see results endpoint to finish and record all metrics at once. Can be called by non-host participants if non_host_status_control is true
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
         /// <param name="activityOccurrenceStatus">The activity occurrence status object (optional)</param>
         /// <returns></returns>
-        public void UpdateActivityOccurrence (long? activityOccurrenceId, string activityOccurrenceStatus = null)
+        public void UpdateActivityOccurrenceStatus (long? activityOccurrenceId, ValueWrapperstring activityOccurrenceStatus = null)
         {
-             UpdateActivityOccurrenceWithHttpInfo(activityOccurrenceId, activityOccurrenceStatus);
+             UpdateActivityOccurrenceStatusWithHttpInfo(activityOccurrenceId, activityOccurrenceStatus);
         }
 
         /// <summary>
-        /// Updated the status of an activity occurrence If setting to &#39;FINISHED&#39; reward will be run based on current metrics that have been recorded already. Aternatively, see results endpoint to finish and record all metrics at once.
+        /// Update the status of an activity occurrence If setting to &#39;FINISHED&#39; reward will be run based on current metrics that have been recorded already. Alternatively, see results endpoint to finish and record all metrics at once. Can be called by non-host participants if non_host_status_control is true
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="activityOccurrenceId">The id of the activity occurrence</param>
         /// <param name="activityOccurrenceStatus">The activity occurrence status object (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> UpdateActivityOccurrenceWithHttpInfo (long? activityOccurrenceId, string activityOccurrenceStatus = null)
+        public ApiResponse<Object> UpdateActivityOccurrenceStatusWithHttpInfo (long? activityOccurrenceId, ValueWrapperstring activityOccurrenceStatus = null)
         {
             // verify the required parameter 'activityOccurrenceId' is set
             if (activityOccurrenceId == null)
-                throw new ApiException(400, "Missing required parameter 'activityOccurrenceId' when calling ActivitiesApi->UpdateActivityOccurrence");
+                throw new ApiException(400, "Missing required parameter 'activityOccurrenceId' when calling ActivitiesApi->UpdateActivityOccurrenceStatus");
 
             var localVarPath = "/activity-occurrences/{activity_occurrence_id}/status";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1649,7 +2111,7 @@ namespace com.knetikcloud.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UpdateActivityOccurrence", localVarResponse);
+                Exception exception = ExceptionFactory("UpdateActivityOccurrenceStatus", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1659,7 +2121,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update an activity template 
+        /// Update an activity template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1672,7 +2134,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update an activity template 
+        /// Update an activity template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>

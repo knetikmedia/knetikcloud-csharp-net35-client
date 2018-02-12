@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Get a list of countries
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;CountryResource&gt;</returns>
@@ -38,7 +38,7 @@ namespace com.knetikcloud.Api
         /// Get a list of countries
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;CountryResource&gt;</returns>
@@ -47,7 +47,7 @@ namespace com.knetikcloud.Api
         /// Get the iso3 code of your country
         /// </summary>
         /// <remarks>
-        /// Determined by geo ip location
+        /// Determined by geo ip location. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
@@ -57,7 +57,7 @@ namespace com.knetikcloud.Api
         /// Get the iso3 code of your country
         /// </summary>
         /// <remarks>
-        /// Determined by geo ip location
+        /// Determined by geo ip location. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
@@ -66,7 +66,7 @@ namespace com.knetikcloud.Api
         /// Get a list of a country&#39;s states
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -77,7 +77,7 @@ namespace com.knetikcloud.Api
         /// Get a list of a country&#39;s states
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -87,7 +87,7 @@ namespace com.knetikcloud.Api
         /// Get the currency information of your country
         /// </summary>
         /// <remarks>
-        /// Determined by geo ip location, currency to country mapping and a fallback setting
+        /// Determined by geo ip location, currency to country mapping and a fallback setting. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>CurrencyResource</returns>
@@ -97,7 +97,7 @@ namespace com.knetikcloud.Api
         /// Get the currency information of your country
         /// </summary>
         /// <remarks>
-        /// Determined by geo ip location, currency to country mapping and a fallback setting
+        /// Determined by geo ip location, currency to country mapping and a fallback setting. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CurrencyResource</returns>
@@ -203,7 +203,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a list of countries 
+        /// Get a list of countries &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;CountryResource&gt;</returns>
@@ -214,7 +214,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a list of countries 
+        /// Get a list of countries &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;CountryResource&gt;</returns>
@@ -231,7 +231,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -276,7 +275,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get the iso3 code of your country Determined by geo ip location
+        /// Get the iso3 code of your country Determined by geo ip location. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>string</returns>
@@ -287,7 +286,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get the iso3 code of your country Determined by geo ip location
+        /// Get the iso3 code of your country Determined by geo ip location. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of string</returns>
@@ -304,7 +303,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -349,7 +347,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a list of a country&#39;s states 
+        /// Get a list of a country&#39;s states &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -361,7 +359,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a list of a country&#39;s states 
+        /// Get a list of a country&#39;s states &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="countryCodeIso3">The iso3 code of the country</param>
@@ -382,7 +380,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -428,7 +425,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get the currency information of your country Determined by geo ip location, currency to country mapping and a fallback setting
+        /// Get the currency information of your country Determined by geo ip location, currency to country mapping and a fallback setting. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>CurrencyResource</returns>
@@ -439,7 +436,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get the currency information of your country Determined by geo ip location, currency to country mapping and a fallback setting
+        /// Get the currency information of your country Determined by geo ip location, currency to country mapping and a fallback setting. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CurrencyResource</returns>
@@ -456,7 +453,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 

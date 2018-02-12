@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.CampaignsRewardsApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,6 +16,8 @@ Method | HTTP request | Description
 > RewardSetResource CreateRewardSet (RewardSetResource rewardSetResource = null)
 
 Create a reward set
+
+<b>Permissions Needed:</b> REWARDS_ADMIN
 
 ### Example
 ```csharp
@@ -81,6 +83,8 @@ Name | Type | Description  | Notes
 
 Delete a reward set
 
+<b>Permissions Needed:</b> REWARDS_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -133,7 +137,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -143,6 +147,8 @@ void (empty response body)
 > RewardSetResource GetRewardSet (int? id)
 
 Get a single reward set
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -197,7 +203,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -207,6 +213,8 @@ Name | Type | Description  | Notes
 > PageResourceRewardSetResource GetRewardSets (int? size = null, int? page = null, string order = null)
 
 List and search reward sets
+
+<b>Permissions Needed:</b> ANY
 
 ### Example
 ```csharp
@@ -265,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -275,6 +283,8 @@ Name | Type | Description  | Notes
 > RewardSetResource UpdateRewardSet (int? id, RewardSetResource rewardSetResource = null)
 
 Update a reward set
+
+<b>Permissions Needed:</b> REWARDS_ADMIN
 
 ### Example
 ```csharp

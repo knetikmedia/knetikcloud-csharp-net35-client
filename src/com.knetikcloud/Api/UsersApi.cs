@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Add a tag to a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -40,7 +40,7 @@ namespace com.knetikcloud.Api
         /// Add a tag to a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -51,7 +51,7 @@ namespace com.knetikcloud.Api
         /// Create a user template
         /// </summary>
         /// <remarks>
-        /// User Templates define a type of user and the properties they have
+        /// User Templates define a type of user and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userTemplateResource">The user template resource object (optional)</param>
@@ -62,7 +62,7 @@ namespace com.knetikcloud.Api
         /// Create a user template
         /// </summary>
         /// <remarks>
-        /// User Templates define a type of user and the properties they have
+        /// User Templates define a type of user and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userTemplateResource">The user template resource object (optional)</param>
@@ -72,7 +72,7 @@ namespace com.knetikcloud.Api
         /// Delete a user template
         /// </summary>
         /// <remarks>
-        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -84,7 +84,7 @@ namespace com.knetikcloud.Api
         /// Delete a user template
         /// </summary>
         /// <remarks>
-        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -92,10 +92,35 @@ namespace com.knetikcloud.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteUserTemplateWithHttpInfo (string id, string cascade = null);
         /// <summary>
+        /// Get a list of direct messages with this user
+        /// </summary>
+        /// <remarks>
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recipientId">The user id</param>
+        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <returns>PageResourceChatMessageResource</returns>
+        PageResourceChatMessageResource GetDirectMessages1 (int? recipientId, int? size = null, int? page = null);
+
+        /// <summary>
+        /// Get a list of direct messages with this user
+        /// </summary>
+        /// <remarks>
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recipientId">The user id</param>
+        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <returns>ApiResponse of PageResourceChatMessageResource</returns>
+        ApiResponse<PageResourceChatMessageResource> GetDirectMessages1WithHttpInfo (int? recipientId, int? size = null, int? page = null);
+        /// <summary>
         /// Get a single user
         /// </summary>
         /// <remarks>
-        /// Additional private info is included as USERS_ADMIN
+        /// Additional private info is included as USERS_ADMIN. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user or &#39;me&#39;</param>
@@ -106,7 +131,7 @@ namespace com.knetikcloud.Api
         /// Get a single user
         /// </summary>
         /// <remarks>
-        /// Additional private info is included as USERS_ADMIN
+        /// Additional private info is included as USERS_ADMIN. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user or &#39;me&#39;</param>
@@ -116,7 +141,7 @@ namespace com.knetikcloud.Api
         /// List tags for a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -127,7 +152,7 @@ namespace com.knetikcloud.Api
         /// List tags for a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -137,7 +162,7 @@ namespace com.knetikcloud.Api
         /// Get a single user template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or USERS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -148,7 +173,7 @@ namespace com.knetikcloud.Api
         /// Get a single user template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or USERS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -158,7 +183,7 @@ namespace com.knetikcloud.Api
         /// List and search user templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or USERS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -171,7 +196,7 @@ namespace com.knetikcloud.Api
         /// List and search user templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or USERS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -183,7 +208,7 @@ namespace com.knetikcloud.Api
         /// List and search users
         /// </summary>
         /// <remarks>
-        /// Additional private info is included as USERS_ADMIN
+        /// Additional private info is included as USERS_ADMIN. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterDisplayname">Filter for users whose display name starts with provided string. (optional)</param>
@@ -208,7 +233,7 @@ namespace com.knetikcloud.Api
         /// List and search users
         /// </summary>
         /// <remarks>
-        /// Additional private info is included as USERS_ADMIN
+        /// Additional private info is included as USERS_ADMIN. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterDisplayname">Filter for users whose display name starts with provided string. (optional)</param>
@@ -232,7 +257,7 @@ namespace com.knetikcloud.Api
         /// Choose a new password after a reset
         /// </summary>
         /// <remarks>
-        /// Finish resetting a user&#39;s password using the secret provided from the password-reset endpoint.  Password should be in plain text and will be encrypted on receipt. Use SSL for security.
+        /// Finish resetting a user&#39;s password using the secret provided from the password-reset endpoint.  Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -244,7 +269,7 @@ namespace com.knetikcloud.Api
         /// Choose a new password after a reset
         /// </summary>
         /// <remarks>
-        /// Finish resetting a user&#39;s password using the secret provided from the password-reset endpoint.  Password should be in plain text and will be encrypted on receipt. Use SSL for security.
+        /// Finish resetting a user&#39;s password using the secret provided from the password-reset endpoint.  Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -252,10 +277,33 @@ namespace com.knetikcloud.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PasswordResetWithHttpInfo (int? id, NewPasswordRequest newPasswordRequest = null);
         /// <summary>
+        /// Send a user message
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recipientId">The user id</param>
+        /// <param name="chatMessageRequest">The chat message request (optional)</param>
+        /// <returns>ChatMessageResource</returns>
+        ChatMessageResource PostUserMessage (int? recipientId, ChatMessageRequest chatMessageRequest = null);
+
+        /// <summary>
+        /// Send a user message
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recipientId">The user id</param>
+        /// <param name="chatMessageRequest">The chat message request (optional)</param>
+        /// <returns>ApiResponse of ChatMessageResource</returns>
+        ApiResponse<ChatMessageResource> PostUserMessageWithHttpInfo (int? recipientId, ChatMessageRequest chatMessageRequest = null);
+        /// <summary>
         /// Register a new user
         /// </summary>
         /// <remarks>
-        /// Password should be in plain text and will be encrypted on receipt. Use SSL for security
+        /// Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userResource">The user resource object (optional)</param>
@@ -266,7 +314,7 @@ namespace com.knetikcloud.Api
         /// Register a new user
         /// </summary>
         /// <remarks>
-        /// Password should be in plain text and will be encrypted on receipt. Use SSL for security
+        /// Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userResource">The user resource object (optional)</param>
@@ -276,7 +324,7 @@ namespace com.knetikcloud.Api
         /// Remove a tag from a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -288,7 +336,7 @@ namespace com.knetikcloud.Api
         /// Remove a tag from a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -299,7 +347,7 @@ namespace com.knetikcloud.Api
         /// Set a user&#39;s password
         /// </summary>
         /// <remarks>
-        /// Password should be in plain text and will be encrypted on receipt. Use SSL for security.
+        /// Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or (USERS_USER and owner)
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -311,7 +359,7 @@ namespace com.knetikcloud.Api
         /// Set a user&#39;s password
         /// </summary>
         /// <remarks>
-        /// Password should be in plain text and will be encrypted on receipt. Use SSL for security.
+        /// Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or (USERS_USER and owner)
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -322,7 +370,7 @@ namespace com.knetikcloud.Api
         /// Reset a user&#39;s password
         /// </summary>
         /// <remarks>
-        /// A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit
+        /// A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -333,7 +381,7 @@ namespace com.knetikcloud.Api
         /// Reset a user&#39;s password
         /// </summary>
         /// <remarks>
-        /// A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit
+        /// A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -343,7 +391,7 @@ namespace com.knetikcloud.Api
         /// Reset a user&#39;s password without user id
         /// </summary>
         /// <remarks>
-        /// A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit.  Must submit their email, username, or mobile phone number
+        /// A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit.  Must submit their email, username, or mobile phone number. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="passwordReset">An object containing one of three methods to look up a user (optional)</param>
@@ -354,7 +402,7 @@ namespace com.knetikcloud.Api
         /// Reset a user&#39;s password without user id
         /// </summary>
         /// <remarks>
-        /// A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit.  Must submit their email, username, or mobile phone number
+        /// A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit.  Must submit their email, username, or mobile phone number. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="passwordReset">An object containing one of three methods to look up a user (optional)</param>
@@ -364,7 +412,7 @@ namespace com.knetikcloud.Api
         /// Update a user
         /// </summary>
         /// <remarks>
-        /// Password will not be edited on this endpoint, use password specific endpoints.
+        /// Password will not be edited on this endpoint, use password specific endpoints. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user or &#39;me&#39;</param>
@@ -376,7 +424,7 @@ namespace com.knetikcloud.Api
         /// Update a user
         /// </summary>
         /// <remarks>
-        /// Password will not be edited on this endpoint, use password specific endpoints.
+        /// Password will not be edited on this endpoint, use password specific endpoints. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user or &#39;me&#39;</param>
@@ -387,7 +435,7 @@ namespace com.knetikcloud.Api
         /// Update a user template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -399,7 +447,7 @@ namespace com.knetikcloud.Api
         /// Update a user template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -507,7 +555,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Add a tag to a user 
+        /// Add a tag to a user &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -519,7 +567,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Add a tag to a user 
+        /// Add a tag to a user &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -598,7 +646,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a user template User Templates define a type of user and the properties they have
+        /// Create a user template User Templates define a type of user and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userTemplateResource">The user template resource object (optional)</param>
@@ -610,7 +658,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a user template User Templates define a type of user and the properties they have
+        /// Create a user template User Templates define a type of user and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userTemplateResource">The user template resource object (optional)</param>
@@ -681,7 +729,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a user template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// Delete a user template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -693,7 +741,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a user template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// Delete a user template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -715,7 +763,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -762,7 +809,91 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single user Additional private info is included as USERS_ADMIN
+        /// Get a list of direct messages with this user &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recipientId">The user id</param>
+        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <returns>PageResourceChatMessageResource</returns>
+        public PageResourceChatMessageResource GetDirectMessages1 (int? recipientId, int? size = null, int? page = null)
+        {
+             ApiResponse<PageResourceChatMessageResource> localVarResponse = GetDirectMessages1WithHttpInfo(recipientId, size, page);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of direct messages with this user &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recipientId">The user id</param>
+        /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
+        /// <param name="page">The number of the page returned, starting with 1 (optional, default to 1)</param>
+        /// <returns>ApiResponse of PageResourceChatMessageResource</returns>
+        public ApiResponse< PageResourceChatMessageResource > GetDirectMessages1WithHttpInfo (int? recipientId, int? size = null, int? page = null)
+        {
+            // verify the required parameter 'recipientId' is set
+            if (recipientId == null)
+                throw new ApiException(400, "Missing required parameter 'recipientId' when calling UsersApi->GetDirectMessages1");
+
+            var localVarPath = "/users/users/{recipient_id}/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (recipientId != null) localVarPathParams.Add("recipient_id", Configuration.ApiClient.ParameterToString(recipientId)); // path parameter
+            if (size != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "size", size)); // query parameter
+            if (page != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "page", page)); // query parameter
+
+            // authentication (oauth2_client_credentials_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            // authentication (oauth2_password_grant) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GetDirectMessages1", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<PageResourceChatMessageResource>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (PageResourceChatMessageResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PageResourceChatMessageResource)));
+        }
+
+        /// <summary>
+        /// Get a single user Additional private info is included as USERS_ADMIN. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user or &#39;me&#39;</param>
@@ -774,7 +905,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single user Additional private info is included as USERS_ADMIN
+        /// Get a single user Additional private info is included as USERS_ADMIN. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user or &#39;me&#39;</param>
@@ -795,7 +926,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -841,7 +971,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List tags for a user 
+        /// List tags for a user &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -853,7 +983,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List tags for a user 
+        /// List tags for a user &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -874,7 +1004,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -920,7 +1049,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single user template 
+        /// Get a single user template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or USERS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -932,7 +1061,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single user template 
+        /// Get a single user template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or USERS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -953,7 +1082,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -999,7 +1127,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search user templates 
+        /// List and search user templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or USERS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -1013,7 +1141,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search user templates 
+        /// List and search user templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or USERS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -1033,7 +1161,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1081,7 +1208,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search users Additional private info is included as USERS_ADMIN
+        /// List and search users Additional private info is included as USERS_ADMIN. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterDisplayname">Filter for users whose display name starts with provided string. (optional)</param>
@@ -1107,7 +1234,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search users Additional private info is included as USERS_ADMIN
+        /// List and search users Additional private info is included as USERS_ADMIN. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterDisplayname">Filter for users whose display name starts with provided string. (optional)</param>
@@ -1139,7 +1266,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1199,7 +1325,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Choose a new password after a reset Finish resetting a user&#39;s password using the secret provided from the password-reset endpoint.  Password should be in plain text and will be encrypted on receipt. Use SSL for security.
+        /// Choose a new password after a reset Finish resetting a user&#39;s password using the secret provided from the password-reset endpoint.  Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -1211,7 +1337,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Choose a new password after a reset Finish resetting a user&#39;s password using the secret provided from the password-reset endpoint.  Password should be in plain text and will be encrypted on receipt. Use SSL for security.
+        /// Choose a new password after a reset Finish resetting a user&#39;s password using the secret provided from the password-reset endpoint.  Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -1287,7 +1413,84 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Register a new user Password should be in plain text and will be encrypted on receipt. Use SSL for security
+        /// Send a user message 
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recipientId">The user id</param>
+        /// <param name="chatMessageRequest">The chat message request (optional)</param>
+        /// <returns>ChatMessageResource</returns>
+        public ChatMessageResource PostUserMessage (int? recipientId, ChatMessageRequest chatMessageRequest = null)
+        {
+             ApiResponse<ChatMessageResource> localVarResponse = PostUserMessageWithHttpInfo(recipientId, chatMessageRequest);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Send a user message 
+        /// </summary>
+        /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="recipientId">The user id</param>
+        /// <param name="chatMessageRequest">The chat message request (optional)</param>
+        /// <returns>ApiResponse of ChatMessageResource</returns>
+        public ApiResponse< ChatMessageResource > PostUserMessageWithHttpInfo (int? recipientId, ChatMessageRequest chatMessageRequest = null)
+        {
+            // verify the required parameter 'recipientId' is set
+            if (recipientId == null)
+                throw new ApiException(400, "Missing required parameter 'recipientId' when calling UsersApi->PostUserMessage");
+
+            var localVarPath = "/users/{recipient_id}/messages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (recipientId != null) localVarPathParams.Add("recipient_id", Configuration.ApiClient.ParameterToString(recipientId)); // path parameter
+            if (chatMessageRequest != null && chatMessageRequest.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(chatMessageRequest); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = chatMessageRequest; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("PostUserMessage", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ChatMessageResource>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (ChatMessageResource) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ChatMessageResource)));
+        }
+
+        /// <summary>
+        /// Register a new user Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userResource">The user resource object (optional)</param>
@@ -1299,7 +1502,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Register a new user Password should be in plain text and will be encrypted on receipt. Use SSL for security
+        /// Register a new user Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userResource">The user resource object (optional)</param>
@@ -1370,7 +1573,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Remove a tag from a user 
+        /// Remove a tag from a user &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -1382,7 +1585,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Remove a tag from a user 
+        /// Remove a tag from a user &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The id of the user</param>
@@ -1407,7 +1610,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1454,7 +1656,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set a user&#39;s password Password should be in plain text and will be encrypted on receipt. Use SSL for security.
+        /// Set a user&#39;s password Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or (USERS_USER and owner)
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -1466,7 +1668,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set a user&#39;s password Password should be in plain text and will be encrypted on receipt. Use SSL for security.
+        /// Set a user&#39;s password Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or (USERS_USER and owner)
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -1542,7 +1744,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Reset a user&#39;s password A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit
+        /// Reset a user&#39;s password A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -1553,7 +1755,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Reset a user&#39;s password A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit
+        /// Reset a user&#39;s password A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user</param>
@@ -1620,7 +1822,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Reset a user&#39;s password without user id A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit.  Must submit their email, username, or mobile phone number
+        /// Reset a user&#39;s password without user id A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit.  Must submit their email, username, or mobile phone number. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="passwordReset">An object containing one of three methods to look up a user (optional)</param>
@@ -1631,7 +1833,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Reset a user&#39;s password without user id A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit.  Must submit their email, username, or mobile phone number
+        /// Reset a user&#39;s password without user id A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit.  Must submit their email, username, or mobile phone number. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="passwordReset">An object containing one of three methods to look up a user (optional)</param>
@@ -1702,7 +1904,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a user Password will not be edited on this endpoint, use password specific endpoints.
+        /// Update a user Password will not be edited on this endpoint, use password specific endpoints. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user or &#39;me&#39;</param>
@@ -1714,7 +1916,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a user Password will not be edited on this endpoint, use password specific endpoints.
+        /// Update a user Password will not be edited on this endpoint, use password specific endpoints. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the user or &#39;me&#39;</param>
@@ -1790,7 +1992,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a user template 
+        /// Update a user template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1803,7 +2005,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a user template 
+        /// Update a user template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>

@@ -51,6 +51,12 @@ namespace com.knetikcloud.Model
             OPEN,
             
             /// <summary>
+            /// Enum LAUNCHING for "LAUNCHING"
+            /// </summary>
+            [EnumMember(Value = "LAUNCHING")]
+            LAUNCHING,
+            
+            /// <summary>
             /// Enum PLAYING for "PLAYING"
             /// </summary>
             [EnumMember(Value = "PLAYING")]
@@ -80,18 +86,22 @@ namespace com.knetikcloud.Model
         /// </summary>
         /// <param name="ActivityId">The id of the activity, only needed when outside of challenge/event.</param>
         /// <param name="ChallengeActivityId">The id of the challenge activity (required if playing in a challenge/event). Note that this is the challenge_activity_id in case the same activity apears twice in the challenge..</param>
+        /// <param name="CoreSettings">Defines core settings about the activity that affect how it can be created/played by users..</param>
         /// <param name="Entitlement">The entitlement item required to enter the occurrence. Required if not part of an event. Must come from the set of entitlement items listed in the activity.</param>
         /// <param name="EventId">The id of the event this occurence is a part of, if any.</param>
+        /// <param name="Host">The host of the occurrence, if not a participant (will be left out of users array). Must be the caller that creates the occurrence unless admin. Requires activity/challenge to allow host_option of &#39;non_player&#39; if not admin as well.</param>
         /// <param name="Settings">The values selected from the available settings defined for the activity. Ex: difficulty: hard. Can be left out if the activity is played during an event and the settings are already set at the event level. Ex: every monday, difficulty: hard, number of questions: 10, category: sport. Otherwise, the set must exactly match those of the activity..</param>
         /// <param name="Simulated">Whether this occurrence will be ran as a simulation. Simulations will not be rewarded. Useful for bot play or trials.</param>
         /// <param name="Status">The current status of the occurrence (default: SETUP)..</param>
         /// <param name="Users">The list of users participating in this occurrence. Can only be set directly with ACTIVITIES_ADMIN permission.</param>
-        public CreateActivityOccurrenceRequest(long? ActivityId = default(long?), long? ChallengeActivityId = default(long?), ItemIdRequest Entitlement = default(ItemIdRequest), long? EventId = default(long?), List<SelectedSettingRequest> Settings = default(List<SelectedSettingRequest>), bool? Simulated = default(bool?), StatusEnum? Status = default(StatusEnum?), List<Participant> Users = default(List<Participant>))
+        public CreateActivityOccurrenceRequest(long? ActivityId = default(long?), long? ChallengeActivityId = default(long?), CoreActivityOccurrenceSettings CoreSettings = default(CoreActivityOccurrenceSettings), ItemIdRequest Entitlement = default(ItemIdRequest), long? EventId = default(long?), int? Host = default(int?), List<SelectedSettingRequest> Settings = default(List<SelectedSettingRequest>), bool? Simulated = default(bool?), StatusEnum? Status = default(StatusEnum?), List<Participant> Users = default(List<Participant>))
         {
             this.ActivityId = ActivityId;
             this.ChallengeActivityId = ChallengeActivityId;
+            this.CoreSettings = CoreSettings;
             this.Entitlement = Entitlement;
             this.EventId = EventId;
+            this.Host = Host;
             this.Settings = Settings;
             this.Simulated = Simulated;
             this.Status = Status;
@@ -113,6 +123,13 @@ namespace com.knetikcloud.Model
         public long? ChallengeActivityId { get; set; }
 
         /// <summary>
+        /// Defines core settings about the activity that affect how it can be created/played by users.
+        /// </summary>
+        /// <value>Defines core settings about the activity that affect how it can be created/played by users.</value>
+        [DataMember(Name="core_settings", EmitDefaultValue=false)]
+        public CoreActivityOccurrenceSettings CoreSettings { get; set; }
+
+        /// <summary>
         /// The entitlement item required to enter the occurrence. Required if not part of an event. Must come from the set of entitlement items listed in the activity
         /// </summary>
         /// <value>The entitlement item required to enter the occurrence. Required if not part of an event. Must come from the set of entitlement items listed in the activity</value>
@@ -125,6 +142,13 @@ namespace com.knetikcloud.Model
         /// <value>The id of the event this occurence is a part of, if any</value>
         [DataMember(Name="event_id", EmitDefaultValue=false)]
         public long? EventId { get; set; }
+
+        /// <summary>
+        /// The host of the occurrence, if not a participant (will be left out of users array). Must be the caller that creates the occurrence unless admin. Requires activity/challenge to allow host_option of &#39;non_player&#39; if not admin as well
+        /// </summary>
+        /// <value>The host of the occurrence, if not a participant (will be left out of users array). Must be the caller that creates the occurrence unless admin. Requires activity/challenge to allow host_option of &#39;non_player&#39; if not admin as well</value>
+        [DataMember(Name="host", EmitDefaultValue=false)]
+        public int? Host { get; set; }
 
         /// <summary>
         /// The values selected from the available settings defined for the activity. Ex: difficulty: hard. Can be left out if the activity is played during an event and the settings are already set at the event level. Ex: every monday, difficulty: hard, number of questions: 10, category: sport. Otherwise, the set must exactly match those of the activity.
@@ -158,8 +182,10 @@ namespace com.knetikcloud.Model
             sb.Append("class CreateActivityOccurrenceRequest {\n");
             sb.Append("  ActivityId: ").Append(ActivityId).Append("\n");
             sb.Append("  ChallengeActivityId: ").Append(ChallengeActivityId).Append("\n");
+            sb.Append("  CoreSettings: ").Append(CoreSettings).Append("\n");
             sb.Append("  Entitlement: ").Append(Entitlement).Append("\n");
             sb.Append("  EventId: ").Append(EventId).Append("\n");
+            sb.Append("  Host: ").Append(Host).Append("\n");
             sb.Append("  Settings: ").Append(Settings).Append("\n");
             sb.Append("  Simulated: ").Append(Simulated).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
@@ -209,6 +235,11 @@ namespace com.knetikcloud.Model
                     this.ChallengeActivityId.Equals(input.ChallengeActivityId))
                 ) && 
                 (
+                    this.CoreSettings == input.CoreSettings ||
+                    (this.CoreSettings != null &&
+                    this.CoreSettings.Equals(input.CoreSettings))
+                ) && 
+                (
                     this.Entitlement == input.Entitlement ||
                     (this.Entitlement != null &&
                     this.Entitlement.Equals(input.Entitlement))
@@ -217,6 +248,11 @@ namespace com.knetikcloud.Model
                     this.EventId == input.EventId ||
                     (this.EventId != null &&
                     this.EventId.Equals(input.EventId))
+                ) && 
+                (
+                    this.Host == input.Host ||
+                    (this.Host != null &&
+                    this.Host.Equals(input.Host))
                 ) && 
                 (
                     this.Settings == input.Settings ||
@@ -253,10 +289,14 @@ namespace com.knetikcloud.Model
                     hashCode = hashCode * 59 + this.ActivityId.GetHashCode();
                 if (this.ChallengeActivityId != null)
                     hashCode = hashCode * 59 + this.ChallengeActivityId.GetHashCode();
+                if (this.CoreSettings != null)
+                    hashCode = hashCode * 59 + this.CoreSettings.GetHashCode();
                 if (this.Entitlement != null)
                     hashCode = hashCode * 59 + this.Entitlement.GetHashCode();
                 if (this.EventId != null)
                     hashCode = hashCode * 59 + this.EventId.GetHashCode();
+                if (this.Host != null)
+                    hashCode = hashCode * 59 + this.Host.GetHashCode();
                 if (this.Settings != null)
                     hashCode = hashCode * 59 + this.Settings.GetHashCode();
                 if (this.Simulated != null)

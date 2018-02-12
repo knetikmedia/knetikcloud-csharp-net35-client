@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.GamificationLevelingApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -21,6 +21,8 @@ Method | HTTP request | Description
 > LevelingResource CreateLevel (LevelingResource level = null)
 
 Create a level schema
+
+<b>Permissions Needed:</b> LEVELING_ADMIN
 
 ### Example
 ```csharp
@@ -86,6 +88,8 @@ Name | Type | Description  | Notes
 
 Delete a level
 
+<b>Permissions Needed:</b> LEVELING_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -138,7 +142,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -148,6 +152,8 @@ void (empty response body)
 > LevelingResource GetLevel (string name)
 
 Retrieve a level
+
+<b>Permissions Needed:</b> LEVELING_ADMIN
 
 ### Example
 ```csharp
@@ -202,7 +208,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -212,6 +218,8 @@ Name | Type | Description  | Notes
 > List<BreTriggerResource> GetLevelTriggers ()
 
 Get the list of triggers that can be used to trigger a leveling progress update
+
+<b>Permissions Needed:</b> LEVELING_ADMIN
 
 ### Example
 ```csharp
@@ -262,7 +270,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -273,7 +281,7 @@ This endpoint does not need any parameter.
 
 List and search levels
 
-Get a list of levels schemas with optional filtering
+Get a list of levels schemas with optional filtering. <br><br><b>Permissions Needed:</b> LEVELING_ADMIN
 
 ### Example
 ```csharp
@@ -334,7 +342,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -344,6 +352,8 @@ Name | Type | Description  | Notes
 > UserLevelingResource GetUserLevel (string userId, string name)
 
 Get a user's progress for a given level schema
+
+<b>Permissions Needed:</b> LEVELING_ADMIN or self
 
 ### Example
 ```csharp
@@ -400,7 +410,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -411,7 +421,7 @@ Name | Type | Description  | Notes
 
 Get a user's progress for all level schemas
 
-Filtering and sorting is based on the LevelingResource object, not the UserLevelingResource that is returned here.
+Filtering and sorting is based on the LevelingResource object, not the UserLevelingResource that is returned here. <br><br><b>Permissions Needed:</b> LEVELING_ADMIN or self
 
 ### Example
 ```csharp
@@ -474,7 +484,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -485,7 +495,7 @@ Name | Type | Description  | Notes
 
 Update or create a leveling progress record for a user
 
-If no progress record yet exists for the user, it will be created. Otherwise the provided value will be added to it. May be negative. If progress meets or exceeds the level's max_value it will be marked as earned and a BRE event will be triggered for the <code>BreAchievementEarnedTrigger</code>.
+If no progress record yet exists for the user, it will be created. Otherwise the provided value will be added to it. May be negative. If progress meets or exceeds the level's max_value it will be marked as earned and a BRE event will be triggered for the <code>BreAchievementEarnedTrigger</code>. <br><br><b>Permissions Needed:</b> LEVELING_ADMIN
 
 ### Example
 ```csharp
@@ -554,7 +564,7 @@ void (empty response body)
 
 Set leveling progress for a user
 
-If no progress record yet exists for the user, it will be created. Otherwise it will be updated to the provided value. If progress meets or exceeds the level's max_value it will be marked as earned and a BRE event will be triggered for the <code>BreAchievementEarnedTrigger</code>.
+If no progress record yet exists for the user, it will be created. Otherwise it will be updated to the provided value. If progress meets or exceeds the level's max_value it will be marked as earned and a BRE event will be triggered for the <code>BreAchievementEarnedTrigger</code>. <br><br><b>Permissions Needed:</b> LEVELING_ADMIN
 
 ### Example
 ```csharp
@@ -622,6 +632,8 @@ void (empty response body)
 > LevelingResource UpdateLevel (string name, LevelingResource newLevel = null)
 
 Update a level
+
+<b>Permissions Needed:</b> LEVELING_ADMIN
 
 ### Example
 ```csharp

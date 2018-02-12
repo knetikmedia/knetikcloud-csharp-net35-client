@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Create a new permission
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permissionResource">The permission resource object (optional)</param>
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         /// Create a new permission
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permissionResource">The permission resource object (optional)</param>
@@ -49,7 +49,7 @@ namespace com.knetikcloud.Api
         /// Delete a permission
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission value</param>
@@ -61,7 +61,7 @@ namespace com.knetikcloud.Api
         /// Delete a permission
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission value</param>
@@ -72,7 +72,7 @@ namespace com.knetikcloud.Api
         /// Get a single permission
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission value</param>
@@ -83,7 +83,7 @@ namespace com.knetikcloud.Api
         /// Get a single permission
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission value</param>
@@ -93,7 +93,7 @@ namespace com.knetikcloud.Api
         /// List and search permissions
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -106,7 +106,7 @@ namespace com.knetikcloud.Api
         /// List and search permissions
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -118,7 +118,7 @@ namespace com.knetikcloud.Api
         /// Update a permission
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission value</param>
@@ -130,7 +130,7 @@ namespace com.knetikcloud.Api
         /// Update a permission
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission value</param>
@@ -238,7 +238,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a new permission 
+        /// Create a new permission &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permissionResource">The permission resource object (optional)</param>
@@ -250,7 +250,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a new permission 
+        /// Create a new permission &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permissionResource">The permission resource object (optional)</param>
@@ -321,7 +321,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a permission 
+        /// Delete a permission &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission value</param>
@@ -333,7 +333,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a permission 
+        /// Delete a permission &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission value</param>
@@ -355,7 +355,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -402,7 +401,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single permission 
+        /// Get a single permission &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission value</param>
@@ -414,7 +413,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single permission 
+        /// Get a single permission &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission value</param>
@@ -435,7 +434,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -481,7 +479,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search permissions 
+        /// List and search permissions &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -495,7 +493,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search permissions 
+        /// List and search permissions &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -515,7 +513,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -563,7 +560,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a permission 
+        /// Update a permission &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission value</param>
@@ -576,7 +573,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a permission 
+        /// Update a permission &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="permission">The permission value</param>

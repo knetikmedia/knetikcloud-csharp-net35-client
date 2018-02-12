@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.PaymentsWalletsApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,6 +18,8 @@ Method | HTTP request | Description
 > SimpleWallet GetUserWallet (int? userId, string currencyCode)
 
 Returns the user's wallet for the given currency code
+
+<b>Permissions Needed:</b> WALLETS_ADMIN or owner
 
 ### Example
 ```csharp
@@ -74,7 +76,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -84,6 +86,8 @@ Name | Type | Description  | Notes
 > PageResourceWalletTransactionResource GetUserWalletTransactions (int? userId, string currencyCode, string filterType = null, long? filterMaxDate = null, long? filterMinDate = null, string filterSign = null, int? size = null, int? page = null, string order = null)
 
 Retrieve a user's wallet transactions
+
+<b>Permissions Needed:</b> WALLETS_ADMIN or owner
 
 ### Example
 ```csharp
@@ -154,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -164,6 +168,8 @@ Name | Type | Description  | Notes
 > List<SimpleWallet> GetUserWallets (int? userId)
 
 List all of a user's wallets
+
+<b>Permissions Needed:</b> WALLETS_ADMIN or owner
 
 ### Example
 ```csharp
@@ -218,7 +224,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -228,6 +234,8 @@ Name | Type | Description  | Notes
 > PageResourceWalletTotalResponse GetWalletBalances ()
 
 Retrieves a summation of wallet balances by currency code
+
+<b>Permissions Needed:</b> WALLETS_ADMIN
 
 ### Example
 ```csharp
@@ -278,7 +286,7 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -288,6 +296,8 @@ This endpoint does not need any parameter.
 > PageResourceWalletTransactionResource GetWalletTransactions (int? filterInvoice = null, string filterType = null, string filterDate = null, string filterSign = null, int? filterUserId = null, string filterUsername = null, string filterDetails = null, string filterCurrencyCode = null, int? size = null, int? page = null, string order = null)
 
 Retrieve wallet transactions across the system
+
+<b>Permissions Needed:</b> WALLETS_ADMIN
 
 ### Example
 ```csharp
@@ -362,7 +372,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -372,6 +382,8 @@ Name | Type | Description  | Notes
 > PageResourceSimpleWallet GetWallets (int? size = null, int? page = null, string order = null)
 
 Retrieve a list of wallets across the system
+
+<b>Permissions Needed:</b> WALLETS_ADMIN
 
 ### Example
 ```csharp
@@ -430,7 +442,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -440,6 +452,8 @@ Name | Type | Description  | Notes
 > WalletTransactionResource UpdateWalletBalance (int? userId, string currencyCode, WalletAlterRequest request = null)
 
 Updates the balance for a user's wallet
+
+<b>Permissions Needed:</b> WALLETS_ADMIN
 
 ### Example
 ```csharp

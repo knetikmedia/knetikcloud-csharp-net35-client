@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Add a new comment
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="commentResource">The comment to be added (optional)</param>
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         /// Add a new comment
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="commentResource">The comment to be added (optional)</param>
@@ -49,7 +49,7 @@ namespace com.knetikcloud.Api
         /// Delete a comment
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The comment id</param>
@@ -60,7 +60,7 @@ namespace com.knetikcloud.Api
         /// Delete a comment
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The comment id</param>
@@ -70,7 +70,7 @@ namespace com.knetikcloud.Api
         /// Return a comment
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The comment id</param>
@@ -81,7 +81,7 @@ namespace com.knetikcloud.Api
         /// Return a comment
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The comment id</param>
@@ -91,7 +91,7 @@ namespace com.knetikcloud.Api
         /// Returns a page of comments
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="context">Get comments by context type</param>
@@ -105,7 +105,7 @@ namespace com.knetikcloud.Api
         /// Returns a page of comments
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="context">Get comments by context type</param>
@@ -118,7 +118,7 @@ namespace com.knetikcloud.Api
         /// Update a comment
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The comment id</param>
@@ -130,7 +130,7 @@ namespace com.knetikcloud.Api
         /// Update a comment
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The comment id</param>
@@ -238,7 +238,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Add a new comment 
+        /// Add a new comment &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="commentResource">The comment to be added (optional)</param>
@@ -250,7 +250,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Add a new comment 
+        /// Add a new comment &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="commentResource">The comment to be added (optional)</param>
@@ -321,7 +321,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a comment 
+        /// Delete a comment &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The comment id</param>
@@ -332,7 +332,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a comment 
+        /// Delete a comment &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The comment id</param>
@@ -353,7 +353,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -399,7 +398,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Return a comment 
+        /// Return a comment &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The comment id</param>
@@ -411,7 +410,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Return a comment 
+        /// Return a comment &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The comment id</param>
@@ -432,7 +431,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -478,7 +476,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns a page of comments 
+        /// Returns a page of comments &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="context">Get comments by context type</param>
@@ -493,7 +491,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Returns a page of comments 
+        /// Returns a page of comments &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="context">Get comments by context type</param>
@@ -520,7 +518,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -569,7 +566,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a comment 
+        /// Update a comment &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The comment id</param>
@@ -581,7 +578,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a comment 
+        /// Update a comment &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The comment id</param>

@@ -38,7 +38,7 @@ namespace com.knetikcloud.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Config" /> class.
         /// </summary>
-        /// <param name="Description">The description of the config.  Max 140 characters.</param>
+        /// <param name="Description">The description of the config.  Max 255 characters.</param>
         /// <param name="Name">The name of the config (required).</param>
         /// <param name="PublicRead">Whether the config is public for viewing. True means that it can be publicly viewed by all. Default: false.</param>
         /// <param name="Value">The value of the config.</param>
@@ -59,9 +59,9 @@ namespace com.knetikcloud.Model
         }
         
         /// <summary>
-        /// The description of the config.  Max 140 characters
+        /// The description of the config.  Max 255 characters
         /// </summary>
-        /// <value>The description of the config.  Max 140 characters</value>
+        /// <value>The description of the config.  Max 255 characters</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
 

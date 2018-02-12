@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Get batch result with token
         /// </summary>
         /// <remarks>
-        /// Tokens expire in 24 hours
+        /// Tokens expire in 24 hours. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="token">token</param>
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         /// Get batch result with token
         /// </summary>
         /// <remarks>
-        /// Tokens expire in 24 hours
+        /// Tokens expire in 24 hours. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="token">token</param>
@@ -49,7 +49,7 @@ namespace com.knetikcloud.Api
         /// Request to run API call given the method, content type, path url, and body of request
         /// </summary>
         /// <remarks>
-        /// Should the request take longer than one of the alloted timeout parameters, a token will be returned instead, which can be used on the token endpoint in this service
+        /// Should the request take longer than one of the alloted timeout parameters, a token will be returned instead, which can be used on the token endpoint in this service. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batch">The batch object (optional)</param>
@@ -60,7 +60,7 @@ namespace com.knetikcloud.Api
         /// Request to run API call given the method, content type, path url, and body of request
         /// </summary>
         /// <remarks>
-        /// Should the request take longer than one of the alloted timeout parameters, a token will be returned instead, which can be used on the token endpoint in this service
+        /// Should the request take longer than one of the alloted timeout parameters, a token will be returned instead, which can be used on the token endpoint in this service. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batch">The batch object (optional)</param>
@@ -167,7 +167,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get batch result with token Tokens expire in 24 hours
+        /// Get batch result with token Tokens expire in 24 hours. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="token">token</param>
@@ -179,7 +179,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get batch result with token Tokens expire in 24 hours
+        /// Get batch result with token Tokens expire in 24 hours. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="token">token</param>
@@ -200,7 +200,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -246,7 +245,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Request to run API call given the method, content type, path url, and body of request Should the request take longer than one of the alloted timeout parameters, a token will be returned instead, which can be used on the token endpoint in this service
+        /// Request to run API call given the method, content type, path url, and body of request Should the request take longer than one of the alloted timeout parameters, a token will be returned instead, which can be used on the token endpoint in this service. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batch">The batch object (optional)</param>
@@ -258,7 +257,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Request to run API call given the method, content type, path url, and body of request Should the request take longer than one of the alloted timeout parameters, a token will be returned instead, which can be used on the token endpoint in this service
+        /// Request to run API call given the method, content type, path url, and body of request Should the request take longer than one of the alloted timeout parameters, a token will be returned instead, which can be used on the token endpoint in this service. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="batch">The batch object (optional)</param>

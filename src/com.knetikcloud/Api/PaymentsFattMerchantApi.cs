@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Create or update a FattMerchant payment method for a user
         /// </summary>
         /// <remarks>
-        /// Stores customer information and creates a payment method that can be used to pay invoices through the payments endpoints.
+        /// Stores customer information and creates a payment method that can be used to pay invoices through the payments endpoints. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; FATTMERCHANT_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">Request containing payment method information for user (optional)</param>
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         /// Create or update a FattMerchant payment method for a user
         /// </summary>
         /// <remarks>
-        /// Stores customer information and creates a payment method that can be used to pay invoices through the payments endpoints.
+        /// Stores customer information and creates a payment method that can be used to pay invoices through the payments endpoints. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; FATTMERCHANT_ADMIN or owner
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">Request containing payment method information for user (optional)</param>
@@ -146,7 +146,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create or update a FattMerchant payment method for a user Stores customer information and creates a payment method that can be used to pay invoices through the payments endpoints.
+        /// Create or update a FattMerchant payment method for a user Stores customer information and creates a payment method that can be used to pay invoices through the payments endpoints. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; FATTMERCHANT_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">Request containing payment method information for user (optional)</param>
@@ -158,7 +158,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create or update a FattMerchant payment method for a user Stores customer information and creates a payment method that can be used to pay invoices through the payments endpoints.
+        /// Create or update a FattMerchant payment method for a user Stores customer information and creates a payment method that can be used to pay invoices through the payments endpoints. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; FATTMERCHANT_ADMIN or owner
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">Request containing payment method information for user (optional)</param>

@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Create a new client
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientResource">The client resource object (optional)</param>
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         /// Create a new client
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientResource">The client resource object (optional)</param>
@@ -49,7 +49,7 @@ namespace com.knetikcloud.Api
         /// Delete a client
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -60,7 +60,7 @@ namespace com.knetikcloud.Api
         /// Delete a client
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -70,7 +70,7 @@ namespace com.knetikcloud.Api
         /// Get a single client
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -81,7 +81,7 @@ namespace com.knetikcloud.Api
         /// Get a single client
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -91,7 +91,7 @@ namespace com.knetikcloud.Api
         /// List available client grant types
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;GrantTypeResource&gt;</returns>
@@ -101,7 +101,7 @@ namespace com.knetikcloud.Api
         /// List available client grant types
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;GrantTypeResource&gt;</returns>
@@ -110,7 +110,7 @@ namespace com.knetikcloud.Api
         /// List and search clients
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -123,7 +123,7 @@ namespace com.knetikcloud.Api
         /// List and search clients
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -135,7 +135,7 @@ namespace com.knetikcloud.Api
         /// Set grant types for a client
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -147,7 +147,7 @@ namespace com.knetikcloud.Api
         /// Set grant types for a client
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -158,7 +158,7 @@ namespace com.knetikcloud.Api
         /// Set redirect uris for a client
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -170,7 +170,7 @@ namespace com.knetikcloud.Api
         /// Set redirect uris for a client
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -181,7 +181,7 @@ namespace com.knetikcloud.Api
         /// Update a client
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -193,7 +193,7 @@ namespace com.knetikcloud.Api
         /// Update a client
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -301,7 +301,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a new client 
+        /// Create a new client &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientResource">The client resource object (optional)</param>
@@ -313,7 +313,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a new client 
+        /// Create a new client &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientResource">The client resource object (optional)</param>
@@ -384,7 +384,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a client 
+        /// Delete a client &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -395,7 +395,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete a client 
+        /// Delete a client &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -416,7 +416,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -462,7 +461,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single client 
+        /// Get a single client &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -474,7 +473,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single client 
+        /// Get a single client &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -495,7 +494,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -541,7 +539,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List available client grant types 
+        /// List available client grant types &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List&lt;GrantTypeResource&gt;</returns>
@@ -552,7 +550,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List available client grant types 
+        /// List available client grant types &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;GrantTypeResource&gt;</returns>
@@ -569,7 +567,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -614,7 +611,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search clients 
+        /// List and search clients &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -628,7 +625,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search clients 
+        /// List and search clients &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -648,7 +645,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -696,7 +692,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set grant types for a client 
+        /// Set grant types for a client &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -708,7 +704,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set grant types for a client 
+        /// Set grant types for a client &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -784,7 +780,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set redirect uris for a client 
+        /// Set redirect uris for a client &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -796,7 +792,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Set redirect uris for a client 
+        /// Set redirect uris for a client &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -872,7 +868,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a client 
+        /// Update a client &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>
@@ -885,7 +881,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update a client 
+        /// Update a client &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientKey">The key of the client</param>

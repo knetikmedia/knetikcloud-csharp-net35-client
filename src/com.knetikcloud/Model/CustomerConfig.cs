@@ -35,14 +35,12 @@ namespace com.knetikcloud.Model
         /// </summary>
         /// <param name="Aliases">Aliases.</param>
         /// <param name="Database">Database.</param>
-        /// <param name="Io">Io.</param>
         /// <param name="Name">Name.</param>
         /// <param name="S3Config">S3Config.</param>
-        public CustomerConfig(string Aliases = default(string), DatabaseConfig Database = default(DatabaseConfig), IOConfig Io = default(IOConfig), string Name = default(string), S3Config S3Config = default(S3Config))
+        public CustomerConfig(string Aliases = default(string), DatabaseConfig Database = default(DatabaseConfig), string Name = default(string), S3Config S3Config = default(S3Config))
         {
             this.Aliases = Aliases;
             this.Database = Database;
-            this.Io = Io;
             this.Name = Name;
             this.S3Config = S3Config;
         }
@@ -58,12 +56,6 @@ namespace com.knetikcloud.Model
         /// </summary>
         [DataMember(Name="database", EmitDefaultValue=false)]
         public DatabaseConfig Database { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Io
-        /// </summary>
-        [DataMember(Name="io", EmitDefaultValue=false)]
-        public IOConfig Io { get; set; }
 
         /// <summary>
         /// Gets or Sets Name
@@ -87,7 +79,6 @@ namespace com.knetikcloud.Model
             sb.Append("class CustomerConfig {\n");
             sb.Append("  Aliases: ").Append(Aliases).Append("\n");
             sb.Append("  Database: ").Append(Database).Append("\n");
-            sb.Append("  Io: ").Append(Io).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  S3Config: ").Append(S3Config).Append("\n");
             sb.Append("}\n");
@@ -135,11 +126,6 @@ namespace com.knetikcloud.Model
                     this.Database.Equals(input.Database))
                 ) && 
                 (
-                    this.Io == input.Io ||
-                    (this.Io != null &&
-                    this.Io.Equals(input.Io))
-                ) && 
-                (
                     this.Name == input.Name ||
                     (this.Name != null &&
                     this.Name.Equals(input.Name))
@@ -164,8 +150,6 @@ namespace com.knetikcloud.Model
                     hashCode = hashCode * 59 + this.Aliases.GetHashCode();
                 if (this.Database != null)
                     hashCode = hashCode * 59 + this.Database.GetHashCode();
-                if (this.Io != null)
-                    hashCode = hashCode * 59 + this.Io.GetHashCode();
                 if (this.Name != null)
                     hashCode = hashCode * 59 + this.Name.GetHashCode();
                 if (this.S3Config != null)

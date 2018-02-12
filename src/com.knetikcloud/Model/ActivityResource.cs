@@ -39,6 +39,7 @@ namespace com.knetikcloud.Model
         /// Initializes a new instance of the <see cref="ActivityResource" /> class.
         /// </summary>
         /// <param name="AdditionalProperties">A map of additional properties keyed on the property name. Used to further describe an activity. While settings will vary from one activity occurrence (a game) to another, additional properties are shared by all the occurrences of this activity. Ex: Activity Logo, Disclaimer, Greeting, etc. Validated against template if one exists for activities.</param>
+        /// <param name="CoreSettings">Defines core settings about the activity that affect how it can be created/played by users..</param>
         /// <param name="Entitlements">The list of items that can be used for entitlement (wager amounts/etc).</param>
         /// <param name="Launch">Details about how to launch the activity.</param>
         /// <param name="LeaderboardStrategy">The strategy for calculating the leaderboard. No strategy means no leaderboard for the top level context. Value MUST come from the list of available strategies from the Leaderboard Service.</param>
@@ -49,9 +50,9 @@ namespace com.knetikcloud.Model
         /// <param name="ShortDescription">The user friendly name of that resource. Defaults to blank string.</param>
         /// <param name="Template">Whether this activity is a template for other activities. Default: false.</param>
         /// <param name="TemplateId">An activity template this activity is validated against (private). May be null and no validation of additional_properties will be done.</param>
-        /// <param name="Type">The type of the activity (required).</param>
+        /// <param name="Type">The type of the activity.</param>
         /// <param name="UniqueKey">The unique key (for static reference in code) of the activity.</param>
-        public ActivityResource(Dictionary<string, Property> AdditionalProperties = default(Dictionary<string, Property>), List<ActivityEntitlementResource> Entitlements = default(List<ActivityEntitlementResource>), string Launch = default(string), string LeaderboardStrategy = default(string), string LongDescription = default(string), string Name = default(string), RewardSetResource RewardSet = default(RewardSetResource), List<AvailableSettingResource> Settings = default(List<AvailableSettingResource>), string ShortDescription = default(string), bool? Template = default(bool?), string TemplateId = default(string), string Type = default(string), string UniqueKey = default(string))
+        public ActivityResource(Dictionary<string, Property> AdditionalProperties = default(Dictionary<string, Property>), CoreActivitySettings CoreSettings = default(CoreActivitySettings), List<ActivityEntitlementResource> Entitlements = default(List<ActivityEntitlementResource>), string Launch = default(string), string LeaderboardStrategy = default(string), string LongDescription = default(string), string Name = default(string), RewardSetResource RewardSet = default(RewardSetResource), List<AvailableSettingResource> Settings = default(List<AvailableSettingResource>), string ShortDescription = default(string), bool? Template = default(bool?), string TemplateId = default(string), string Type = default(string), string UniqueKey = default(string))
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -62,16 +63,8 @@ namespace com.knetikcloud.Model
             {
                 this.Name = Name;
             }
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for ActivityResource and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
-            }
             this.AdditionalProperties = AdditionalProperties;
+            this.CoreSettings = CoreSettings;
             this.Entitlements = Entitlements;
             this.Launch = Launch;
             this.LeaderboardStrategy = LeaderboardStrategy;
@@ -81,6 +74,7 @@ namespace com.knetikcloud.Model
             this.ShortDescription = ShortDescription;
             this.Template = Template;
             this.TemplateId = TemplateId;
+            this.Type = Type;
             this.UniqueKey = UniqueKey;
         }
         
@@ -90,6 +84,13 @@ namespace com.knetikcloud.Model
         /// <value>A map of additional properties keyed on the property name. Used to further describe an activity. While settings will vary from one activity occurrence (a game) to another, additional properties are shared by all the occurrences of this activity. Ex: Activity Logo, Disclaimer, Greeting, etc. Validated against template if one exists for activities</value>
         [DataMember(Name="additional_properties", EmitDefaultValue=false)]
         public Dictionary<string, Property> AdditionalProperties { get; set; }
+
+        /// <summary>
+        /// Defines core settings about the activity that affect how it can be created/played by users.
+        /// </summary>
+        /// <value>Defines core settings about the activity that affect how it can be created/played by users.</value>
+        [DataMember(Name="core_settings", EmitDefaultValue=false)]
+        public CoreActivitySettings CoreSettings { get; set; }
 
         /// <summary>
         /// The date/time this resource was created in seconds since unix epoch
@@ -205,6 +206,7 @@ namespace com.knetikcloud.Model
             var sb = new StringBuilder();
             sb.Append("class ActivityResource {\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            sb.Append("  CoreSettings: ").Append(CoreSettings).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("  Entitlements: ").Append(Entitlements).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
@@ -258,6 +260,11 @@ namespace com.knetikcloud.Model
                     this.AdditionalProperties == input.AdditionalProperties ||
                     (this.AdditionalProperties != null &&
                     this.AdditionalProperties.SequenceEqual(input.AdditionalProperties))
+                ) && 
+                (
+                    this.CoreSettings == input.CoreSettings ||
+                    (this.CoreSettings != null &&
+                    this.CoreSettings.Equals(input.CoreSettings))
                 ) && 
                 (
                     this.CreatedDate == input.CreatedDate ||
@@ -347,6 +354,8 @@ namespace com.knetikcloud.Model
                 int hashCode = 41;
                 if (this.AdditionalProperties != null)
                     hashCode = hashCode * 59 + this.AdditionalProperties.GetHashCode();
+                if (this.CoreSettings != null)
+                    hashCode = hashCode * 59 + this.CoreSettings.GetHashCode();
                 if (this.CreatedDate != null)
                     hashCode = hashCode * 59 + this.CreatedDate.GetHashCode();
                 if (this.Entitlements != null)

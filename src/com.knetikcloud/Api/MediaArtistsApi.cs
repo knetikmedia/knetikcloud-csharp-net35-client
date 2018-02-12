@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Adds a new artist in the system
         /// </summary>
         /// <remarks>
-        /// Adds a new artist in the system. Use specific media contributions endpoint to add contributions
+        /// Adds a new artist in the system. Use specific media contributions endpoint to add contributions. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistResource">The new artist (optional)</param>
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         /// Adds a new artist in the system
         /// </summary>
         /// <remarks>
-        /// Adds a new artist in the system. Use specific media contributions endpoint to add contributions
+        /// Adds a new artist in the system. Use specific media contributions endpoint to add contributions. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistResource">The new artist (optional)</param>
@@ -49,7 +49,7 @@ namespace com.knetikcloud.Api
         /// Create an artist template
         /// </summary>
         /// <remarks>
-        /// Artist Templates define a type of artist and the properties they have
+        /// Artist Templates define a type of artist and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistTemplateResource">The artist template resource object (optional)</param>
@@ -60,7 +60,7 @@ namespace com.knetikcloud.Api
         /// Create an artist template
         /// </summary>
         /// <remarks>
-        /// Artist Templates define a type of artist and the properties they have
+        /// Artist Templates define a type of artist and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistTemplateResource">The artist template resource object (optional)</param>
@@ -70,7 +70,7 @@ namespace com.knetikcloud.Api
         /// Removes an artist from the system IF no resources are attached to it
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTISTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The artist id</param>
@@ -81,7 +81,7 @@ namespace com.knetikcloud.Api
         /// Removes an artist from the system IF no resources are attached to it
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTISTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The artist id</param>
@@ -91,7 +91,7 @@ namespace com.knetikcloud.Api
         /// Delete an artist template
         /// </summary>
         /// <remarks>
-        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -103,7 +103,7 @@ namespace com.knetikcloud.Api
         /// Delete an artist template
         /// </summary>
         /// <remarks>
-        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -114,7 +114,7 @@ namespace com.knetikcloud.Api
         /// Loads a specific artist details
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The artist id</param>
@@ -126,7 +126,7 @@ namespace com.knetikcloud.Api
         /// Loads a specific artist details
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The artist id</param>
@@ -137,7 +137,7 @@ namespace com.knetikcloud.Api
         /// Get a single artist template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ARTISTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -148,7 +148,7 @@ namespace com.knetikcloud.Api
         /// Get a single artist template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ARTISTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -158,7 +158,7 @@ namespace com.knetikcloud.Api
         /// List and search artist templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ARTISTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -171,7 +171,7 @@ namespace com.knetikcloud.Api
         /// List and search artist templates
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ARTISTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -183,7 +183,7 @@ namespace com.knetikcloud.Api
         /// Search for artists
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterArtistsByName">Filter for artists which name *STARTS* with the given string (optional)</param>
@@ -197,7 +197,7 @@ namespace com.knetikcloud.Api
         /// Search for artists
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterArtistsByName">Filter for artists which name *STARTS* with the given string (optional)</param>
@@ -210,7 +210,7 @@ namespace com.knetikcloud.Api
         /// Modifies an artist details
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTISTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The artist id</param>
@@ -222,7 +222,7 @@ namespace com.knetikcloud.Api
         /// Modifies an artist details
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTISTS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The artist id</param>
@@ -233,7 +233,7 @@ namespace com.knetikcloud.Api
         /// Update an artist template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -245,7 +245,7 @@ namespace com.knetikcloud.Api
         /// Update an artist template
         /// </summary>
         /// <remarks>
-        /// 
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -353,7 +353,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Adds a new artist in the system Adds a new artist in the system. Use specific media contributions endpoint to add contributions
+        /// Adds a new artist in the system Adds a new artist in the system. Use specific media contributions endpoint to add contributions. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistResource">The new artist (optional)</param>
@@ -365,7 +365,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Adds a new artist in the system Adds a new artist in the system. Use specific media contributions endpoint to add contributions
+        /// Adds a new artist in the system Adds a new artist in the system. Use specific media contributions endpoint to add contributions. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistResource">The new artist (optional)</param>
@@ -436,7 +436,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create an artist template Artist Templates define a type of artist and the properties they have
+        /// Create an artist template Artist Templates define a type of artist and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistTemplateResource">The artist template resource object (optional)</param>
@@ -448,7 +448,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create an artist template Artist Templates define a type of artist and the properties they have
+        /// Create an artist template Artist Templates define a type of artist and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="artistTemplateResource">The artist template resource object (optional)</param>
@@ -519,7 +519,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Removes an artist from the system IF no resources are attached to it 
+        /// Removes an artist from the system IF no resources are attached to it &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTISTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The artist id</param>
@@ -530,7 +530,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Removes an artist from the system IF no resources are attached to it 
+        /// Removes an artist from the system IF no resources are attached to it &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTISTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The artist id</param>
@@ -551,7 +551,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -597,7 +596,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete an artist template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// Delete an artist template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -609,7 +608,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Delete an artist template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+        /// Delete an artist template If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -631,7 +630,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -678,7 +676,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Loads a specific artist details 
+        /// Loads a specific artist details &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The artist id</param>
@@ -691,7 +689,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Loads a specific artist details 
+        /// Loads a specific artist details &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The artist id</param>
@@ -713,7 +711,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -760,7 +757,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single artist template 
+        /// Get a single artist template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ARTISTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -772,7 +769,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Get a single artist template 
+        /// Get a single artist template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ARTISTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -793,7 +790,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -839,7 +835,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search artist templates 
+        /// List and search artist templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ARTISTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -853,7 +849,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// List and search artist templates 
+        /// List and search artist templates &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ARTISTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="size">The number of objects returned per page (optional, default to 25)</param>
@@ -873,7 +869,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -921,7 +916,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Search for artists 
+        /// Search for artists &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterArtistsByName">Filter for artists which name *STARTS* with the given string (optional)</param>
@@ -936,7 +931,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Search for artists 
+        /// Search for artists &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="filterArtistsByName">Filter for artists which name *STARTS* with the given string (optional)</param>
@@ -957,7 +952,6 @@ namespace com.knetikcloud.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
-                "application/json"
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
@@ -1006,7 +1000,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Modifies an artist details 
+        /// Modifies an artist details &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTISTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The artist id</param>
@@ -1018,7 +1012,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Modifies an artist details 
+        /// Modifies an artist details &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTISTS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The artist id</param>
@@ -1094,7 +1088,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update an artist template 
+        /// Update an artist template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>
@@ -1107,7 +1101,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Update an artist template 
+        /// Update an artist template &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">The id of the template</param>

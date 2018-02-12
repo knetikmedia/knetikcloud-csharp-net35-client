@@ -40,9 +40,10 @@ namespace com.knetikcloud.Model
         /// </summary>
         /// <param name="From">Address to attribute the outgoing message to. Optional if the config email.out_address is set..</param>
         /// <param name="Recipients">A list of user ids to send the message to. (required).</param>
+        /// <param name="Subject">The subject for email.</param>
         /// <param name="TemplateKey">The key for the template (required).</param>
         /// <param name="TemplateVars">A list of variables to fill in the template.</param>
-        public TemplateEmailResource(string From = default(string), List<int?> Recipients = default(List<int?>), string TemplateKey = default(string), List<KeyValuePairstringstring> TemplateVars = default(List<KeyValuePairstringstring>))
+        public TemplateEmailResource(string From = default(string), List<int?> Recipients = default(List<int?>), string Subject = default(string), string TemplateKey = default(string), List<KeyValuePairstringstring> TemplateVars = default(List<KeyValuePairstringstring>))
         {
             // to ensure "Recipients" is required (not null)
             if (Recipients == null)
@@ -63,6 +64,7 @@ namespace com.knetikcloud.Model
                 this.TemplateKey = TemplateKey;
             }
             this.From = From;
+            this.Subject = Subject;
             this.TemplateVars = TemplateVars;
         }
         
@@ -79,6 +81,13 @@ namespace com.knetikcloud.Model
         /// <value>A list of user ids to send the message to.</value>
         [DataMember(Name="recipients", EmitDefaultValue=false)]
         public List<int?> Recipients { get; set; }
+
+        /// <summary>
+        /// The subject for email
+        /// </summary>
+        /// <value>The subject for email</value>
+        [DataMember(Name="subject", EmitDefaultValue=false)]
+        public string Subject { get; set; }
 
         /// <summary>
         /// The key for the template
@@ -104,6 +113,7 @@ namespace com.knetikcloud.Model
             sb.Append("class TemplateEmailResource {\n");
             sb.Append("  From: ").Append(From).Append("\n");
             sb.Append("  Recipients: ").Append(Recipients).Append("\n");
+            sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  TemplateKey: ").Append(TemplateKey).Append("\n");
             sb.Append("  TemplateVars: ").Append(TemplateVars).Append("\n");
             sb.Append("}\n");
@@ -151,6 +161,11 @@ namespace com.knetikcloud.Model
                     this.Recipients.SequenceEqual(input.Recipients))
                 ) && 
                 (
+                    this.Subject == input.Subject ||
+                    (this.Subject != null &&
+                    this.Subject.Equals(input.Subject))
+                ) && 
+                (
                     this.TemplateKey == input.TemplateKey ||
                     (this.TemplateKey != null &&
                     this.TemplateKey.Equals(input.TemplateKey))
@@ -175,6 +190,8 @@ namespace com.knetikcloud.Model
                     hashCode = hashCode * 59 + this.From.GetHashCode();
                 if (this.Recipients != null)
                     hashCode = hashCode * 59 + this.Recipients.GetHashCode();
+                if (this.Subject != null)
+                    hashCode = hashCode * 59 + this.Subject.GetHashCode();
                 if (this.TemplateKey != null)
                     hashCode = hashCode * 59 + this.TemplateKey.GetHashCode();
                 if (this.TemplateVars != null)
