@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.ActivitiesApi
 
-All URIs are relative to *https://sandbox.knetikcloud.com*
+All URIs are relative to *https://jsapi-integration.us-east-1.elasticbeanstalk.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -577,7 +577,7 @@ Name | Type | Description  | Notes
 
 Load a single activity occurrence details
 
-<b>Permissions Needed:</b> ACTIVITIES_ADMIN
+<b>Permissions Needed:</b> ACTIVITIES_USER or ACTIVITIES_ADMIN
 
 ### Example
 ```csharp
@@ -779,7 +779,7 @@ Name | Type | Description  | Notes
 
 List activity occurrences
 
-<b>Permissions Needed:</b> ACTIVITIES_ADMIN
+<b>Permissions Needed:</b> ACTIVITIES_USER or ACTIVITIES_ADMIN
 
 ### Example
 ```csharp
@@ -926,7 +926,7 @@ void (empty response body)
 
 Sets the status of an activity occurrence to FINISHED and logs metrics
 
-In addition to user permissions requirements there is security based on the core_settings.results_trust setting.
+In addition to user permissions requirements there is security based on the core_settings.results_trust setting. <br><br><b>Permissions Needed:</b> ACTIVITIES_USER or ACTIVITIES_ADMIN
 
 ### Example
 ```csharp
@@ -994,6 +994,8 @@ Name | Type | Description  | Notes
 
 Sets the settings of an activity occurrence
 
+<b>Permissions Needed:</b> ACTIVITIES_USER and host or ACTIVITIES_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -1056,7 +1058,7 @@ Name | Type | Description  | Notes
 
 <a name="setuserstatus"></a>
 # **SetUserStatus**
-> ActivityUserResource SetUserStatus (long? activityOccurrenceId, string userId, string status = null)
+> ActivityUserResource SetUserStatus (long? activityOccurrenceId, string userId, ActivityUserStatusWrapper status = null)
 
 Set a user's status within an occurrence
 
@@ -1082,7 +1084,7 @@ namespace Example
             var apiInstance = new ActivitiesApi();
             var activityOccurrenceId = 789;  // long? | The id of the activity occurrence
             var userId = userId_example;  // string | The id of the user
-            var status = status_example;  // string | The new status (optional) 
+            var status = new ActivityUserStatusWrapper(); // ActivityUserStatusWrapper | The new status (optional) 
 
             try
             {
@@ -1105,7 +1107,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activityOccurrenceId** | **long?**| The id of the activity occurrence | 
  **userId** | **string**| The id of the user | 
- **status** | **string**| The new status | [optional] 
+ **status** | [**ActivityUserStatusWrapper**](ActivityUserStatusWrapper.md)| The new status | [optional] 
 
 ### Return type
 
@@ -1192,11 +1194,11 @@ Name | Type | Description  | Notes
 
 <a name="updateactivityoccurrencestatus"></a>
 # **UpdateActivityOccurrenceStatus**
-> void UpdateActivityOccurrenceStatus (long? activityOccurrenceId, ValueWrapperstring activityOccurrenceStatus = null)
+> void UpdateActivityOccurrenceStatus (long? activityOccurrenceId, ActivityOccurrenceStatusWrapper activityOccurrenceStatus = null)
 
 Update the status of an activity occurrence
 
-If setting to 'FINISHED' reward will be run based on current metrics that have been recorded already. Alternatively, see results endpoint to finish and record all metrics at once. Can be called by non-host participants if non_host_status_control is true
+If setting to 'FINISHED' reward will be run based on current metrics that have been recorded already. Alternatively, see results endpoint to finish and record all metrics at once. Can be called by non-host participants if non_host_status_control is true. <br><br><b>Permissions Needed:</b> ACTIVITIES_USER and host or ACTIVITIES_ADMIN
 
 ### Example
 ```csharp
@@ -1219,7 +1221,7 @@ namespace Example
 
             var apiInstance = new ActivitiesApi();
             var activityOccurrenceId = 789;  // long? | The id of the activity occurrence
-            var activityOccurrenceStatus = new ValueWrapperstring(); // ValueWrapperstring | The activity occurrence status object (optional) 
+            var activityOccurrenceStatus = new ActivityOccurrenceStatusWrapper(); // ActivityOccurrenceStatusWrapper | The activity occurrence status object (optional) 
 
             try
             {
@@ -1240,7 +1242,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **activityOccurrenceId** | **long?**| The id of the activity occurrence | 
- **activityOccurrenceStatus** | [**ValueWrapperstring**](ValueWrapperstring.md)| The activity occurrence status object | [optional] 
+ **activityOccurrenceStatus** | [**ActivityOccurrenceStatusWrapper**](ActivityOccurrenceStatusWrapper.md)| The activity occurrence status object | [optional] 
 
 ### Return type
 

@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.MessagingApi
 
-All URIs are relative to *https://sandbox.knetikcloud.com*
+All URIs are relative to *https://jsapi-integration.us-east-1.elasticbeanstalk.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 [**DeleteMessageTemplate**](MessagingApi.md#deletemessagetemplate) | **DELETE** /messaging/templates/{id} | Delete an existing message template
 [**GetMessageTemplate**](MessagingApi.md#getmessagetemplate) | **GET** /messaging/templates/{id} | Get a single message template
 [**GetMessageTemplates**](MessagingApi.md#getmessagetemplates) | **GET** /messaging/templates | List and search message templates
-[**SendMessage1**](MessagingApi.md#sendmessage1) | **POST** /messaging/message | Send a message
+[**SendMessage**](MessagingApi.md#sendmessage) | **POST** /messaging/message | Send a message
 [**SendRawEmail**](MessagingApi.md#sendrawemail) | **POST** /messaging/raw-email | Send a raw email to one or more users
 [**SendRawPush**](MessagingApi.md#sendrawpush) | **POST** /messaging/raw-push | Send a raw push notification
 [**SendRawSMS**](MessagingApi.md#sendrawsms) | **POST** /messaging/raw-sms | Send a raw SMS
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 Delete an existing message template
 
-<b>Permissions Needed:</b> ARTICLES_ADMIN
+<b>Permissions Needed:</b> MESSAGING_ADMIN
 
 ### Example
 ```csharp
@@ -223,7 +223,7 @@ void (empty response body)
 
 Get a single message template
 
-<b>Permissions Needed:</b> ARTICLES_ADMIN
+<b>Permissions Needed:</b> MESSAGING_ADMIN
 
 ### Example
 ```csharp
@@ -289,7 +289,7 @@ Name | Type | Description  | Notes
 
 List and search message templates
 
-Get a list of message templates with optional filtering. <br><br><b>Permissions Needed:</b> ARTICLES_ADMIN
+Get a list of message templates with optional filtering. <br><br><b>Permissions Needed:</b> MESSAGING_ADMIN
 
 ### Example
 ```csharp
@@ -359,9 +359,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="sendmessage1"></a>
-# **SendMessage1**
-> void SendMessage1 (MessageResource messageResource = null)
+<a name="sendmessage"></a>
+# **SendMessage**
+> void SendMessage (MessageResource messageResource = null)
 
 Send a message
 
@@ -377,7 +377,7 @@ using com.knetikcloud.Model;
 
 namespace Example
 {
-    public class SendMessage1Example
+    public class SendMessageExample
     {
         public void main()
         {
@@ -392,11 +392,11 @@ namespace Example
             try
             {
                 // Send a message
-                apiInstance.SendMessage1(messageResource);
+                apiInstance.SendMessage(messageResource);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling MessagingApi.SendMessage1: " + e.Message );
+                Debug.Print("Exception when calling MessagingApi.SendMessage: " + e.Message );
             }
         }
     }
@@ -885,7 +885,7 @@ void (empty response body)
 
 Update an existing message template
 
-<b>Permissions Needed:</b> ARTICLES_ADMIN
+<b>Permissions Needed:</b> MESSAGING_ADMIN
 
 ### Example
 ```csharp

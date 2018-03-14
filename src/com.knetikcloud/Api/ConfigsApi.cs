@@ -28,7 +28,7 @@ namespace com.knetikcloud.Api
         /// Create a new config
         /// </summary>
         /// <remarks>
-        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CONFIGS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="config">The config object (optional)</param>
@@ -39,7 +39,7 @@ namespace com.knetikcloud.Api
         /// Create a new config
         /// </summary>
         /// <remarks>
-        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN
+        /// &lt;b&gt;Permissions Needed:&lt;/b&gt; CONFIGS_ADMIN
         /// </remarks>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="config">The config object (optional)</param>
@@ -238,7 +238,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a new config &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN
+        /// Create a new config &lt;b&gt;Permissions Needed:&lt;/b&gt; CONFIGS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="config">The config object (optional)</param>
@@ -250,7 +250,7 @@ namespace com.knetikcloud.Api
         }
 
         /// <summary>
-        /// Create a new config &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN
+        /// Create a new config &lt;b&gt;Permissions Needed:&lt;/b&gt; CONFIGS_ADMIN
         /// </summary>
         /// <exception cref="com.knetikcloud.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="config">The config object (optional)</param>

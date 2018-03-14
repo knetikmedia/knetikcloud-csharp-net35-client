@@ -212,14 +212,14 @@ namespace com.knetikcloud.Test
         }
         
         /// <summary>
-        /// Test SendMessage
+        /// Test SendChatMessage
         /// </summary>
         [Test]
-        public void SendMessageTest()
+        public void SendChatMessageTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //ChatMessageResource chatMessageResource = null;
-            //var response = instance.SendMessage(chatMessageResource);
+            //var response = instance.SendChatMessage(chatMessageResource);
             //Assert.IsInstanceOf<ChatMessageResource> (response, "response is ChatMessageResource");
         }
         

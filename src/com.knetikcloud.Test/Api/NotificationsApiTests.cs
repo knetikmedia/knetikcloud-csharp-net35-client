@@ -179,7 +179,7 @@ namespace com.knetikcloud.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string userId = null;
             //string notificationId = null;
-            //ValueWrapperstring notification = null;
+            //UserNotificationStatusWrapper notification = null;
             //instance.SetUserNotificationStatus(userId, notificationId, notification);
             
         }

@@ -42,7 +42,7 @@ namespace com.knetikcloud.Model
         /// <param name="ItemRewards">Any items rewarded to this user.</param>
         /// <param name="Rank">The position of the user in the leaderboard. Null means non-compete or disqualification.</param>
         /// <param name="Score">The raw score in this leaderboard. Null means non-compete or disqualification.</param>
-        /// <param name="Tags">Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 5 tags and 50 characters each.</param>
+        /// <param name="Tags">Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 10 tags and 50 characters each.</param>
         /// <param name="UpdatedDate">The date this score was recorded or updated. Unix timestamp in seconds.</param>
         /// <param name="User">The player for this entry (required).</param>
         public UserActivityResults(List<RewardCurrencyResource> CurrencyRewards = default(List<RewardCurrencyResource>), List<RewardItemResource> ItemRewards = default(List<RewardItemResource>), long? Rank = default(long?), long? Score = default(long?), List<string> Tags = default(List<string>), long? UpdatedDate = default(long?), SimpleUserResource User = default(SimpleUserResource))
@@ -93,9 +93,9 @@ namespace com.knetikcloud.Model
         public long? Score { get; set; }
 
         /// <summary>
-        /// Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 5 tags and 50 characters each
+        /// Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 10 tags and 50 characters each
         /// </summary>
-        /// <value>Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 5 tags and 50 characters each</value>
+        /// <value>Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 10 tags and 50 characters each</value>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
 

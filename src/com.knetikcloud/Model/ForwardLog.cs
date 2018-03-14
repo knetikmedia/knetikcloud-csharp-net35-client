@@ -34,11 +34,23 @@ namespace com.knetikcloud.Model
         /// Initializes a new instance of the <see cref="ForwardLog" /> class.
         /// </summary>
         /// <param name="ErrorMsg">ErrorMsg.</param>
+        /// <param name="EventId">EventId.</param>
+        /// <param name="Headers">Headers.</param>
+        /// <param name="Method">Method.</param>
         /// <param name="Payload">The payload of the forward log entry.</param>
-        public ForwardLog(string ErrorMsg = default(string), Object Payload = default(Object))
+        /// <param name="Retryable">Retryable.</param>
+        /// <param name="RuleId">RuleId.</param>
+        /// <param name="Success">Success.</param>
+        public ForwardLog(string ErrorMsg = default(string), string EventId = default(string), string Headers = default(string), string Method = default(string), Object Payload = default(Object), bool? Retryable = default(bool?), string RuleId = default(string), bool? Success = default(bool?))
         {
             this.ErrorMsg = ErrorMsg;
+            this.EventId = EventId;
+            this.Headers = Headers;
+            this.Method = Method;
             this.Payload = Payload;
+            this.Retryable = Retryable;
+            this.RuleId = RuleId;
+            this.Success = Success;
         }
         
         /// <summary>
@@ -55,6 +67,18 @@ namespace com.knetikcloud.Model
         public string ErrorMsg { get; set; }
 
         /// <summary>
+        /// Gets or Sets EventId
+        /// </summary>
+        [DataMember(Name="event_id", EmitDefaultValue=false)]
+        public string EventId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Headers
+        /// </summary>
+        [DataMember(Name="headers", EmitDefaultValue=false)]
+        public string Headers { get; set; }
+
+        /// <summary>
         /// The http status code the forward log entry
         /// </summary>
         /// <value>The http status code the forward log entry</value>
@@ -67,6 +91,12 @@ namespace com.knetikcloud.Model
         /// <value>The id of the forward log entry</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets Method
+        /// </summary>
+        [DataMember(Name="method", EmitDefaultValue=false)]
+        public string Method { get; set; }
 
         /// <summary>
         /// The payload of the forward log entry
@@ -90,11 +120,29 @@ namespace com.knetikcloud.Model
         public int? RetryCount { get; private set; }
 
         /// <summary>
+        /// Gets or Sets Retryable
+        /// </summary>
+        [DataMember(Name="retryable", EmitDefaultValue=false)]
+        public bool? Retryable { get; set; }
+
+        /// <summary>
+        /// Gets or Sets RuleId
+        /// </summary>
+        [DataMember(Name="rule_id", EmitDefaultValue=false)]
+        public string RuleId { get; set; }
+
+        /// <summary>
         /// The start date of the forward log entry
         /// </summary>
         /// <value>The start date of the forward log entry</value>
         [DataMember(Name="start_date", EmitDefaultValue=false)]
         public long? StartDate { get; private set; }
+
+        /// <summary>
+        /// Gets or Sets Success
+        /// </summary>
+        [DataMember(Name="success", EmitDefaultValue=false)]
+        public bool? Success { get; set; }
 
         /// <summary>
         /// The endpoint url of the forward log entry
@@ -113,12 +161,18 @@ namespace com.knetikcloud.Model
             sb.Append("class ForwardLog {\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("  ErrorMsg: ").Append(ErrorMsg).Append("\n");
+            sb.Append("  EventId: ").Append(EventId).Append("\n");
+            sb.Append("  Headers: ").Append(Headers).Append("\n");
             sb.Append("  HttpStatusCode: ").Append(HttpStatusCode).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Method: ").Append(Method).Append("\n");
             sb.Append("  Payload: ").Append(Payload).Append("\n");
             sb.Append("  Response: ").Append(Response).Append("\n");
             sb.Append("  RetryCount: ").Append(RetryCount).Append("\n");
+            sb.Append("  Retryable: ").Append(Retryable).Append("\n");
+            sb.Append("  RuleId: ").Append(RuleId).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  Success: ").Append(Success).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -165,6 +219,16 @@ namespace com.knetikcloud.Model
                     this.ErrorMsg.Equals(input.ErrorMsg))
                 ) && 
                 (
+                    this.EventId == input.EventId ||
+                    (this.EventId != null &&
+                    this.EventId.Equals(input.EventId))
+                ) && 
+                (
+                    this.Headers == input.Headers ||
+                    (this.Headers != null &&
+                    this.Headers.Equals(input.Headers))
+                ) && 
+                (
                     this.HttpStatusCode == input.HttpStatusCode ||
                     (this.HttpStatusCode != null &&
                     this.HttpStatusCode.Equals(input.HttpStatusCode))
@@ -173,6 +237,11 @@ namespace com.knetikcloud.Model
                     this.Id == input.Id ||
                     (this.Id != null &&
                     this.Id.Equals(input.Id))
+                ) && 
+                (
+                    this.Method == input.Method ||
+                    (this.Method != null &&
+                    this.Method.Equals(input.Method))
                 ) && 
                 (
                     this.Payload == input.Payload ||
@@ -190,9 +259,24 @@ namespace com.knetikcloud.Model
                     this.RetryCount.Equals(input.RetryCount))
                 ) && 
                 (
+                    this.Retryable == input.Retryable ||
+                    (this.Retryable != null &&
+                    this.Retryable.Equals(input.Retryable))
+                ) && 
+                (
+                    this.RuleId == input.RuleId ||
+                    (this.RuleId != null &&
+                    this.RuleId.Equals(input.RuleId))
+                ) && 
+                (
                     this.StartDate == input.StartDate ||
                     (this.StartDate != null &&
                     this.StartDate.Equals(input.StartDate))
+                ) && 
+                (
+                    this.Success == input.Success ||
+                    (this.Success != null &&
+                    this.Success.Equals(input.Success))
                 ) && 
                 (
                     this.Url == input.Url ||
@@ -214,18 +298,30 @@ namespace com.knetikcloud.Model
                     hashCode = hashCode * 59 + this.EndDate.GetHashCode();
                 if (this.ErrorMsg != null)
                     hashCode = hashCode * 59 + this.ErrorMsg.GetHashCode();
+                if (this.EventId != null)
+                    hashCode = hashCode * 59 + this.EventId.GetHashCode();
+                if (this.Headers != null)
+                    hashCode = hashCode * 59 + this.Headers.GetHashCode();
                 if (this.HttpStatusCode != null)
                     hashCode = hashCode * 59 + this.HttpStatusCode.GetHashCode();
                 if (this.Id != null)
                     hashCode = hashCode * 59 + this.Id.GetHashCode();
+                if (this.Method != null)
+                    hashCode = hashCode * 59 + this.Method.GetHashCode();
                 if (this.Payload != null)
                     hashCode = hashCode * 59 + this.Payload.GetHashCode();
                 if (this.Response != null)
                     hashCode = hashCode * 59 + this.Response.GetHashCode();
                 if (this.RetryCount != null)
                     hashCode = hashCode * 59 + this.RetryCount.GetHashCode();
+                if (this.Retryable != null)
+                    hashCode = hashCode * 59 + this.Retryable.GetHashCode();
+                if (this.RuleId != null)
+                    hashCode = hashCode * 59 + this.RuleId.GetHashCode();
                 if (this.StartDate != null)
                     hashCode = hashCode * 59 + this.StartDate.GetHashCode();
+                if (this.Success != null)
+                    hashCode = hashCode * 59 + this.Success.GetHashCode();
                 if (this.Url != null)
                     hashCode = hashCode * 59 + this.Url.GetHashCode();
                 return hashCode;

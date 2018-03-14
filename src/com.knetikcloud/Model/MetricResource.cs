@@ -39,7 +39,7 @@ namespace com.knetikcloud.Model
         /// Initializes a new instance of the <see cref="MetricResource" /> class.
         /// </summary>
         /// <param name="ActivityOccurenceId">The id of the activity occurence where this score/metric occurred (required).</param>
-        /// <param name="Tags">Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 5 tags and 50 characters each.</param>
+        /// <param name="Tags">Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 10 tags and 50 characters each.</param>
         /// <param name="UserId">The id of the user this metric is for. Default to caller and requires METRICS_ADMIN permission to specify another.</param>
         /// <param name="Value">The value/score of the metric (required).</param>
         public MetricResource(long? ActivityOccurenceId = default(long?), List<string> Tags = default(List<string>), int? UserId = default(int?), long? Value = default(long?))
@@ -74,9 +74,9 @@ namespace com.knetikcloud.Model
         public long? ActivityOccurenceId { get; set; }
 
         /// <summary>
-        /// Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 5 tags and 50 characters each
+        /// Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 10 tags and 50 characters each
         /// </summary>
-        /// <value>Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 5 tags and 50 characters each</value>
+        /// <value>Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 10 tags and 50 characters each</value>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
 

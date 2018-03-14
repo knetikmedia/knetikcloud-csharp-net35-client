@@ -130,14 +130,14 @@ namespace com.knetikcloud.Test
         }
         
         /// <summary>
-        /// Test SendMessage1
+        /// Test SendMessage
         /// </summary>
         [Test]
-        public void SendMessage1Test()
+        public void SendMessageTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //MessageResource messageResource = null;
-            //instance.SendMessage1(messageResource);
+            //instance.SendMessage(messageResource);
             
         }
         

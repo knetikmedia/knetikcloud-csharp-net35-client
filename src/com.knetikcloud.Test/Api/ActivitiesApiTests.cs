@@ -276,7 +276,7 @@ namespace com.knetikcloud.Test
             // TODO uncomment below to test the method and replace null with proper value
             //long? activityOccurrenceId = null;
             //string userId = null;
-            //string status = null;
+            //ActivityUserStatusWrapper status = null;
             //var response = instance.SetUserStatus(activityOccurrenceId, userId, status);
             //Assert.IsInstanceOf<ActivityUserResource> (response, "response is ActivityUserResource");
         }
@@ -302,7 +302,7 @@ namespace com.knetikcloud.Test
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? activityOccurrenceId = null;
-            //ValueWrapperstring activityOccurrenceStatus = null;
+            //ActivityOccurrenceStatusWrapper activityOccurrenceStatus = null;
             //instance.UpdateActivityOccurrenceStatus(activityOccurrenceId, activityOccurrenceStatus);
             
         }

@@ -81,6 +81,22 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'ErrorMsg'
         }
         /// <summary>
+        /// Test the property 'EventId'
+        /// </summary>
+        [Test]
+        public void EventIdTest()
+        {
+            // TODO unit test for the property 'EventId'
+        }
+        /// <summary>
+        /// Test the property 'Headers'
+        /// </summary>
+        [Test]
+        public void HeadersTest()
+        {
+            // TODO unit test for the property 'Headers'
+        }
+        /// <summary>
         /// Test the property 'HttpStatusCode'
         /// </summary>
         [Test]
@@ -95,6 +111,14 @@ namespace com.knetikcloud.Test
         public void IdTest()
         {
             // TODO unit test for the property 'Id'
+        }
+        /// <summary>
+        /// Test the property 'Method'
+        /// </summary>
+        [Test]
+        public void MethodTest()
+        {
+            // TODO unit test for the property 'Method'
         }
         /// <summary>
         /// Test the property 'Payload'
@@ -121,12 +145,36 @@ namespace com.knetikcloud.Test
             // TODO unit test for the property 'RetryCount'
         }
         /// <summary>
+        /// Test the property 'Retryable'
+        /// </summary>
+        [Test]
+        public void RetryableTest()
+        {
+            // TODO unit test for the property 'Retryable'
+        }
+        /// <summary>
+        /// Test the property 'RuleId'
+        /// </summary>
+        [Test]
+        public void RuleIdTest()
+        {
+            // TODO unit test for the property 'RuleId'
+        }
+        /// <summary>
         /// Test the property 'StartDate'
         /// </summary>
         [Test]
         public void StartDateTest()
         {
             // TODO unit test for the property 'StartDate'
+        }
+        /// <summary>
+        /// Test the property 'Success'
+        /// </summary>
+        [Test]
+        public void SuccessTest()
+        {
+            // TODO unit test for the property 'Success'
         }
         /// <summary>
         /// Test the property 'Url'

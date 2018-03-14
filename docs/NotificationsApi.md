@@ -1,6 +1,6 @@
 # com.knetikcloud.Api.NotificationsApi
 
-All URIs are relative to *https://sandbox.knetikcloud.com*
+All URIs are relative to *https://jsapi-integration.us-east-1.elasticbeanstalk.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,6 +22,8 @@ Method | HTTP request | Description
 > NotificationTypeResource CreateNotificationType (NotificationTypeResource notificationType = null)
 
 Create a notification type
+
+<b>Permissions Needed:</b> NOTIFICATIONS_ADMIN
 
 ### Example
 ```csharp
@@ -87,6 +89,8 @@ Name | Type | Description  | Notes
 
 Delete a notification type
 
+<b>Permissions Needed:</b> NOTIFICATIONS_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -149,6 +153,8 @@ void (empty response body)
 > NotificationTypeResource GetNotificationType (string id)
 
 Get a single notification type
+
+<b>Permissions Needed:</b> NOTIFICATIONS_ADMIN
 
 ### Example
 ```csharp
@@ -214,7 +220,7 @@ Name | Type | Description  | Notes
 
 List and search notification types
 
-Get a list of notification type with optional filtering
+Get a list of notification type with optional filtering. <br><br><b>Permissions Needed:</b> NOTIFICATIONS_ADMIN
 
 ### Example
 ```csharp
@@ -284,6 +290,8 @@ Name | Type | Description  | Notes
 
 View a user's notification settings for a type
 
+<b>Permissions Needed:</b> NOTIFICATIONS_ADMIN or self
+
 ### Example
 ```csharp
 using System;
@@ -349,6 +357,8 @@ Name | Type | Description  | Notes
 > PageResourceNotificationUserTypeResource GetUserNotificationInfoList (string userId, int? size = null, int? page = null, string order = null)
 
 View a user's notification settings
+
+<b>Permissions Needed:</b> NOTIFICATIONS_ADMIN or self
 
 ### Example
 ```csharp
@@ -419,6 +429,8 @@ Name | Type | Description  | Notes
 > PageResourceUserNotificationResource GetUserNotifications (string id, string filterStatus = null, int? size = null, int? page = null, string order = null)
 
 Get notifications
+
+<b>Permissions Needed:</b> NOTIFICATIONS_ADMIN or self
 
 ### Example
 ```csharp
@@ -492,6 +504,8 @@ Name | Type | Description  | Notes
 
 Send a notification
 
+<b>Permissions Needed:</b> NOTIFICATIONS_ADMIN
+
 ### Example
 ```csharp
 using System;
@@ -552,9 +566,11 @@ Name | Type | Description  | Notes
 
 <a name="setusernotificationstatus"></a>
 # **SetUserNotificationStatus**
-> void SetUserNotificationStatus (string userId, string notificationId, ValueWrapperstring notification = null)
+> void SetUserNotificationStatus (string userId, string notificationId, UserNotificationStatusWrapper notification = null)
 
 Set notification status
+
+<b>Permissions Needed:</b> NOTIFICATIONS_ADMIN or self
 
 ### Example
 ```csharp
@@ -578,7 +594,7 @@ namespace Example
             var apiInstance = new NotificationsApi();
             var userId = userId_example;  // string | The id of the user or 'me'
             var notificationId = notificationId_example;  // string | The id of the notification
-            var notification = new ValueWrapperstring(); // ValueWrapperstring | status (optional) 
+            var notification = new UserNotificationStatusWrapper(); // UserNotificationStatusWrapper | status (optional) 
 
             try
             {
@@ -600,7 +616,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **string**| The id of the user or &#39;me&#39; | 
  **notificationId** | **string**| The id of the notification | 
- **notification** | [**ValueWrapperstring**](ValueWrapperstring.md)| status | [optional] 
+ **notification** | [**UserNotificationStatusWrapper**](UserNotificationStatusWrapper.md)| status | [optional] 
 
 ### Return type
 
@@ -623,7 +639,7 @@ void (empty response body)
 
 Enable or disable direct notifications for a user
 
-Allows enabling or disabling messages for a given notification type when sent direct to the user. Notifications can still be retrieved by endpoint. For notifications broadcased to a topic, see the topic service to disable messages for the user there.
+Allows enabling or disabling messages for a given notification type when sent direct to the user. Notifications can still be retrieved by endpoint. For notifications broadcased to a topic, see the topic service to disable messages for the user there. <br><br><b>Permissions Needed:</b> NOTIFICATIONS_ADMIN or self
 
 ### Example
 ```csharp
@@ -691,6 +707,8 @@ void (empty response body)
 > NotificationTypeResource UpdateNotificationType (string id, NotificationTypeResource notificationType = null)
 
 Update a notificationType
+
+<b>Permissions Needed:</b> NOTIFICATIONS_ADMIN
 
 ### Example
 ```csharp
